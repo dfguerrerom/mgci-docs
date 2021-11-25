@@ -455,7 +455,6 @@ It uses function ‘as.vector’ assigned to each of one of the two coordinates 
    #Columns x and y have the coordinates of each cell and column layer has the elevation value of each cell
    col.X <- as.vector(m1[,1]) #just the coordinates values from X column 
    col.Y <- as.vector(m1[,2]) #just the coordinates values from Y column
-
   
 **Calculate the real surface area of each grid cell within the DEM**
 
