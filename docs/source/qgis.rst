@@ -242,23 +242,23 @@ Check that the ***MGCI_v02beta*** toolbox is visible in the ***processing toolbo
 Check that your R installation is correctly installed by running the real surface area script with the small test sample data included in the 
 MGCI repository download.
 
-Add ***aoiDEM_testing_sample1.tif*** to you QGIS project
+-  Add ***aoiDEM_testing_sample1.tif*** to you QGIS project
+   
+   |image25|
 
-|image25|
+-  Double click on *** Tool C1. Generate Real Surface Area raster from DEM *** and save to a temportary output
+   
+   |image27|
 
-Double click on *** Tool C1. Generate Real Surface Area raster from DEM *** and save to a temportary output
-
-|image27|
-
-Change the symbology of the output dataset to orange. 
-
-|image28|
+-  Change the symbology of the output dataset to orange. 
+   
+   |image28|
 
 You should see that the real surface area output is one cell less than the input dataset as the RSA requires the surrounding pixels for it's calculations.
 
 |image29|
 
-If the script runs and produces the outputs above your R integration with QGIS has been set up correctly. If the script fails or does not produce the output please revisit the sections in this guidance to check that you have installed R correctly and pointed your QGIS to the relvant folder.
+***If the script runs and produces the outputs above your R integration with QGIS has been set up correctly. If the script fails or does not produce the output please revisit the sections in this guidance to check that you have installed R correctly and pointed your QGIS to the relvant folder.***
 
 Define projection and generate an AOI
 -------------------------------------
