@@ -226,7 +226,7 @@ Once downloaded users need to navidate to the ****sources>>qgis>>QGIS_models fol
 |imagerepository2|
 
 
-The QGIS R-script ***rsa_v1.rsx*** for real surface Area will need to be placed in R scripts folder and the ***MGCI_v01beta*** folder placed in the Models folder.
+The QGIS R-script ***MGCI_QGIS_rsa_v2.rsx*** for real surface Area will need to be placed in R scripts folder and the ***MGCI_v02beta*** folder placed in the Models folder.
 You can find the location in QGIS under **Settings>>Options**. The other style and template files can be stored in your own project working location.
 
 |imagesettings|
@@ -235,6 +235,30 @@ We suggest users create a folder for working in the following strucure
 
 |imagerepository3|
 
+Check that the ***MGCI_v02beta*** toolbox is visible in the ***processing toolbox***
+
+|toolbox_access|
+
+Check that your R installation is correctly installed by running the real surface area script with the small test sample data included in the 
+MGCI repository download.
+
+Add ***aoiDEM_testing_sample1.tif*** to you QGIS project
+
+|image25|
+
+Double click on *** Tool C1. Generate Real Surface Area raster from DEM *** and save to a temportary output
+
+|image27|
+
+Change the symbology of the output dataset to orange. 
+
+|image28|
+
+You should see that the real surface area output is one cell less than the input dataset as the RSA requires the surrounding pixels for it's calculations.
+
+|image29|
+
+If the script runs and produces the outputs above your R integration with QGIS has been set up correctly. If the script fails or does not produce the output please revisit the sections in this guidance to check that you have installed R correctly and pointed your QGIS to the relvant folder.
 
 Define projection and generate an AOI
 -------------------------------------
@@ -2427,6 +2451,10 @@ Export to standard reporting table
 
 .. |imageF2_w| image:: media_QGIS/Toolbox_images/F2w.png
    :width: 1100
+   
+.. |toolbox_access| image:: media_QGIS/Toolbox_images/toolbox_access.png
+   :width: 600   
+   
 .. |imagesettings| image:: media_QGIS/settings.png
    :width: 900
 
