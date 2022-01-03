@@ -235,7 +235,7 @@ We suggest users create a folder for working in the following strucure
 
 |imagerepository3|
 
-Check that the ***MGCI_v02beta*** toolbox is visible in the ***processing toolbox***
+Check that the ***MGCI_v02beta*** toolbox is visible in the ***processing toolbox***. It is from here that you will run the tools if you choose to use the MGCI toolbox rather than the manual steps.
 
 |toolbox_access|
 
@@ -401,30 +401,12 @@ equal area projection
    |image40|
 
 Now that the country boundary is in the chosen equal area projection, we
-can generate a rectangular bounding box which we will use as an area of
+can generate a 10km buffer which we will use as an area of
 interest (AOI). As indicated previously, the AOI needs to be larger than
 the country boundary to avoid errors during the processing. A distance
-of 10km around the bounding box is added to ensure the AOI is large
+of 10km around the country boundary is added to ensure the AOI is large
 enough to accommodate the 7km focal range function used in the mountain
 descriptor layer generation.
-
--  In the processing toolbox search for the **minimum bounding geometry
-   tool**
-
-   |imagemin_bou|
-   
--  Select your **projected** **country boundary** for the Input layer
-
--  Choose Envelope (bounding Box) for the Geometry type
-
--  Set a new output with the prefix **bounds\_** for the name e.g.
-   **bounds\_CRI\_LAEA**
-
-   |image41|
-   
--  Click **Run** to run the tool.
-
-This has generated the bounding box. The next step adds the 10km buffer.
 
 -  In the processing toolbox search for the **buffer tool**
 
@@ -434,8 +416,8 @@ This has generated the bounding box. The next step adds the 10km buffer.
 
 -  Set the buffer **Units** to **Kilometres**
 
--  Set the **endcap style** to **square** and the **join style** to
-   **Miter**
+-  Set the **endcap style** to **round** and the **join style** to
+   **round**
 
 -  Save the Buffered output to the same name as the input with the
    suffix **\_BUF10**
@@ -445,13 +427,12 @@ This has generated the bounding box. The next step adds the 10km buffer.
 -  Click **Run** to run the tool.
 
 -  If you change the symbology to semi-transparent symbol and draw it over
-   the original bounding box you should be able to see the additional
+   the original country boundary you should be able to see the additional
    buffered area.
 
    |image43|
 
-The output is a bounding box 10km larger than the bounding box for the
-country. This will be used as the Area of Interest (AOI) when preparing
+The output will be used as the Area of Interest (AOI) when preparing
 the various layers for the MGCI analysis.
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
