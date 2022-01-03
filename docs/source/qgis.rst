@@ -939,44 +939,56 @@ Clip and project merged DEM
 
 The DEM tiles are likely to cover a much wider area than the country
 being analysed therefore it is important to crop the extent to minimise
-processing time. As indicated in section 2.3.2, the country boundary is
+processing time. As indicated previously,  the country boundary is
 not used to clip the dataset directly as the various calculations during
 the generation of the mountain descriptor layer require neighbouring
-pixels to be analyses therefore the buffered bounding box generated in
-section 5.1 should be used.
+pixels to be analyses therefore the buffered AOI which you have already generated 
+should be used.
 
--  In the processing toolbox search for **Clip**
+-  search for **project** in the processing toolbox.
 
-   |image49|
+   |image54|
 
--  Double click on the **Clip raster by mask layer** under the GDAL
-   toolset
+-  Double click on the GDAL tool **Warp (reproject)**
 
 -  Select the **merged DEM dataset** for the **Input Layer**
 
--  Select the **buffered bounding box layer** for the **Mask Layer**
-
 -  Select the **Project CRS** for the **Target CRS**
 
--  Tick **Match the extent of the clipped raster to the extent of the
-   mask layer**
+-  Set the resampling method to **bilinear**
 
--  Tick **set the output file resolution**
+-  Set NoData value for output bands to -9999
 
--  Type the **X and Y resolution in metres** (in this case the
-   resolution of the DEM dataset is 90)
+-  Set the output **Reprojected** layer name e.g. to
+   **DEM_MERGE_LAEA.tif**
 
--  Tick **Use Input Layer Data Type**
+-  Click **Run** to run the tool
 
--  Set the output **Clipped (mask)** e.g. to
+The new DEM dataset in the equal area projection should be added
+should be added to the map canvas\ **.**
+
+  
+   |image75|
+   
+ -  search for **mask** in the processing toolbox.  
+   
+
+-  Double click on the **r.mask.vect** under the GRASS
+   toolset
+
+-  Select the **AOI buffered country boundary** for the **Name of vector dataset to use as mask**
+
+-  Select the **Merged DEM in equal area projection r** for the **Name of raster map to which apply the mask**
+
+-  Set the  the **GRASS GIS 7 Region Extent**  to the **AOI buffered country boundary**
+
+-  Set the output **Masked** e.g. to
    DEM_copernicus_merge_AOI_LAEA.tif
    
-   |image75|
+   |image75b|
   
 -  Click **Run** to run the tool
    
-    
-    
 The new clipped DEM dataset in the equal area projection should be added
 should be added to the map canvas\ **.**
     
