@@ -1099,7 +1099,7 @@ First we need to project the merged DEM to equidistant projection.
     *Note: it is important not to use the one that has already been projected as this can introduce errors into the DEM *
 - Set the Source CRS to be **EPSG: 4326 (Geographic)**
 - Set the Target CRS to be **your custom equidistant projection** e.g. CRI\_AZ\_EQUI
-- Set the resampling method to Nearest Neighbour
+- Set the resampling method to **bilinear**
 - Set the output file resolution to the resolution of the DEM in meters e.g. 90m in this example
 - Set the Reprojected output to e.g. **DEM\_copernicus\_merge\_CRI\_AZ\_EQUI.tif**
 
