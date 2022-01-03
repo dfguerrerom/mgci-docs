@@ -957,7 +957,7 @@ should be used.
 
 -  Set the resampling method to **bilinear**
 
--  Set NoData value for output bands to -9999
+-  Set NoData value for output bands to **-9999**
 
 -  Set the output **Reprojected** layer name e.g. to
    **DEM_MERGE_LAEA.tif**
@@ -1178,9 +1178,9 @@ descriptor layer generation.
 
    |imagebuffer|
    
--  Set the buffer **Distance** to **10**
+-  Set the buffer **Distance** to **10000**
 
--  Set the buffer **Units** to **Kilometres**
+-  Set the buffer **Units** to **meters**
 
 -  Set the **endcap style** to **round** and the **join style** to
    **round**
@@ -2670,6 +2670,8 @@ Export to standard reporting table
 .. |intersection2| image:: media_QGIS/intersection2.png
    :width: 900
 .. |intersection3| image:: media_QGIS/intersection3.png
+   :width: 900
+.. |manualiterate| image:: media_QGIS/manualiterate.png
    :width: 900
 
 
