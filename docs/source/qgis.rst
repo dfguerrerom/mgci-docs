@@ -1085,7 +1085,12 @@ projection before following the next steps.
 |    |image78|                                                                                                                                                          |
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+ 
 
--  Next, In the **processing toolbox** search for **reproject** 
+This step can take a long time to run so we will implement with the option to 
+generate slope iteratively in a chosen number of tiles.
+
+First we need to project the merged DEM to equidistant projection
+
+-  In the **processing toolbox** search for **reproject** 
 
    |image54|                                                                                                                                                                  
     
@@ -1103,7 +1108,106 @@ projection before following the next steps.
 - Click **Run** to run the tool
  
 The reprojected layer is added to the QGIS project. 
- 
+
+Next we will extract the extent from the merged DEM in equidistant projection. This generates a polygon layer 
+which aligns with the outer cells of the DEM. It also provides a height and width field in the attribute table of the layer
+which we can use to split the dataset into a selected number of tiles for iterative processing
+
+-  In the **processing toolbox** search for **Extract layer** 
+
+|extract_layer_extent|
+
+- Open the attribute table of the extent layer
+
+|extent_attr|
+
+- add and calculate an attribute for tile_width by dividing the width field by your number of chosen tiles 
+e.g. in this example we have chosen 6 tiles.
+
+|extent_attr_width|
+
+- add and calculate an attribute for tile_width by dividing the height field by your number of chosen tiles 
+e.g. in this example we have chosen 6 tiles.
+
+|extent_attr_height|
+
+-  In the **processing toolbox** search for **Create grid** 
+
+   |creategrid|  
+
+-  Set the **Grid Type** to **Rectangle (polygon)**
+-  Set the **Grid extent** to **the merged DEM in equidistant projection**
+-  Set the **Grid extent** to **the merged DEM in equidistant projection**
+-  Copy the tile_width number from the step above to the **Horizontal spacing** and the tile height to the **Vertical spacing**
+-  Copy the cellsize to the **Horizontal overlay** and **Vertical overlay**. This will mean that the tiles will overlap by one cell
+and ensure there are no gaps when the tiles are merged back together (as the internal tile lines will not match a grid cell line)
+-  Set the **Grid CRS** to **your chosen equidistant projection**
+
+-  In the **processing toolbox** search for **reproject** 
+
+Use the reproject tool to project the country boundary layer to the
+equidistant projection
+
+-  In the processing toolbox search for the **Reproject** tool
+
+   |image39|
+   
+-  Set the Input layer to be the **country boundary**
+
+-  Set the Target CRS to be the **your chosen equidistant CRS** 
+
+-  Set the output name to be the same as the input with a suffix to
+   indicate the projection e.g. in this example
+   **BND_CTY_CRI_EQUI**
+   
+   |reprojequi|
+
+Now that the country boundary is in the chosen equidistant projection, we
+can generate the 10km buffer which we will use as an area of
+interest (AOI). As indicated previously, the AOI needs to be larger than
+the country boundary to avoid errors during the processing. A distance
+of 10km around the country boundary is added to ensure the AOI is large
+enough to accommodate the 7km focal range function used in the mountain
+descriptor layer generation.
+
+-  In the processing toolbox search for the **buffer tool**
+
+   |imagebuffer|
+   
+-  Set the buffer **Distance** to **10**
+
+-  Set the buffer **Units** to **Kilometres**
+
+-  Set the **endcap style** to **round** and the **join style** to
+   **round**
+
+-  Save the Buffered output to the same name as the input with the
+   suffix **_BUF10**
+   
+   |buffequi|
+
+-  Click **Run** to run the tool.
+
+The last step is to intersect the equidistant vector grid with the buffered AOI in equidistant projection.
+
+
+
+The output will be used as the Area of Interest (AOI) when preparing
+the various layers for the MGCI analysis.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | .. rubric:: **MGCI Toolbox B3. MountainDescriptor: Project merged DEM to Equidistant projection**:                                                                    |
 |    :name: toolbox_B3                                                                                                                                                  |
@@ -2473,6 +2577,10 @@ Export to standard reporting table
    :width: 400
 .. |imageslopemask| image:: media_QGIS/slopemask.png
    :width: 900
+   .. |imageslopemask| image:: media_QGIS/slopemask.png
+   :width: 900
+.. |extract_layer_extent| image:: media_QGIS/extract_layer_extent.png
+   :width: 300
 .. |imageneighbors| image:: media_QGIS/neighbors.png
    :width: 400
 .. |imagersa1| image:: media_QGIS/rsa1.png
