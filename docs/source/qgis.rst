@@ -2591,3 +2591,24 @@ Export to standard reporting table
    :width: 900
 .. |imageresamp| image:: media_QGIS/resamp.png
    :width: 400
+   
+.. |extent_attr| image:: media_QGIS/extent_attr.png
+   :width: 900
+.. |extent_attr_width| image:: media_QGIS/extent_attr_width.png
+   :width: 900
+.. |extent_attr_height| image:: media_QGIS/extent_attr_height.png
+   :width: 900
+.. |creategrid| image:: media_QGIS/creategrid.png
+   :width: 900
+.. |reprojequi| image:: media_QGIS/reprojequi.png
+   :width: 900
+.. |buffequi| image:: media_QGIS/buffequi.png
+   :width: 900
+.. |intersection| image:: media_QGIS/intersection.png
+   :width: 900
+.. |intersection2| image:: media_QGIS/intersection2.png
+   :width: 900
+.. |intersection3| image:: media_QGIS/intersection3.png
+   :width: 900
+
+
