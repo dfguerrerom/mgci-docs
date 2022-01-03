@@ -886,14 +886,14 @@ Copernicus data can be found in the Annexes).
    The next step is to merge the DEM tiles into a single raster.
    
 -  Search for **Merge** in the processing toolbox window
-  
+   
    |image70|
-
+   
 -  Double click the **GDAL Merge tool**.
-
+   
 -  For the Input layers **select the DEM tiles** covering your area of
    interest
-
+   
    |image71|
 
 -  Tick the DEM tiles to merge and Click **OK** to make the selection
@@ -903,9 +903,9 @@ Copernicus data can be found in the Annexes).
 
 -  Set the **Merged** output name e.g. C:/MGCI\_tutorial/
    DEM\_copernicus\_merge.tif
-
+   
    |image72|
-
+   
    |image73|
 
 -  Click **Run** to run the tool
@@ -963,15 +963,15 @@ should be used.
    **DEM_MERGE_LAEA.tif**
 
 -  Click **Run** to run the tool
+   
+   |image75|
 
 The new DEM dataset in the equal area projection should be added
 should be added to the map canvas\ **.**
 
-  
-   |image75|
+   |image74a|
    
- -  search for **mask** in the processing toolbox.  
-   
+-  search for **mask** in the processing toolbox.  
 
 -  Double click on the **r.mask.vect** under the GRASS
    toolset
@@ -983,11 +983,11 @@ should be added to the map canvas\ **.**
 -  Set the  the **GRASS GIS 7 Region Extent**  to the **AOI buffered country boundary**
 
 -  Set the output **Masked** e.g. to
-   DEM_copernicus_merge_AOI_LAEA.tif
+   DEM_merge_LAEA_AOI.tif
    
-   |image75b|
-  
 -  Click **Run** to run the tool
+
+   |image74b|
    
 The new clipped DEM dataset in the equal area projection should be added
 should be added to the map canvas\ **.**
@@ -2114,6 +2114,10 @@ Export to standard reporting table
 .. |image74| image:: media_QGIS/image73.png
    :width: 900
 .. |image75| image:: media_QGIS/image74.png
+   :width: 900
+.. |image74a| image:: media_QGIS/image74a.png
+   :width: 900
+.. |image74b| image:: media_QGIS/image74b.png
    :width: 900
 .. |image76| image:: media_QGIS/image75.png
    :width: 900
