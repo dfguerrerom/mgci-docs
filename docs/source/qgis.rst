@@ -1010,14 +1010,14 @@ should be added to the map canvas\ **.**
 
 |imageB2_w| 
 
-Generating slope layer from layer DEM
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Project merged DEM to Equidistant projection (and generate AOI with tiled approach) 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-In this section the projection used for the slope
+In this section the projection used for the slope and 7km Local Elevation Range
 calculation will differ as it is important to use an equidistant
-projection to reduce errors in slope calculation. An overview of slope
+projection to reduce errors, particularly in slope calculation. An overview of slope
 calculation methods is provided in the Dendining analysis environments section 
-of the tutorial.
+of the tutorial. 
 
 IF your country falls within **a single UTM Zone only** ***AND*** **you
 have used the UTM projection for the previous steps**, or **if the
@@ -1085,10 +1085,10 @@ projection before following the next steps.
 |    |image78|                                                                                                                                                          |
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+ 
 
-This step can take a long time to run so we will implement with the option to 
-generate slope iteratively in a chosen number of tiles.
+This slope and local elevation range generation can take a long time to run so we will 
+generate and AOI split into a chosen number of tiles so uses can choose to run these steps iteratively.
 
-First we need to project the merged DEM to equidistant projection
+First we need to project the merged DEM to equidistant projection.
 
 -  In the **processing toolbox** search for **reproject** 
 
@@ -1205,19 +1205,8 @@ the slope and local elevation range datasets.
 
 |intersection3|
 
-
-
-
-
-
-
-
-
-
-
-
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| .. rubric:: **MGCI Toolbox B3. MountainDescriptor: Project merged DEM to Equidistant projection**:                                                                    |
+| .. rubric:: **MGCI Toolbox B3. MountainDescriptor:  Project merged DEM to Equidistant projection (and generate AOI with tiled approach) **:                           |
 |    :name: toolbox_B3                                                                                                                                                  |
 |                                                                                                                                                                       |
 | These steps can be run using a single tool in the MGCI toolbox.                                                                                                       |
@@ -1231,6 +1220,11 @@ the slope and local elevation range datasets.
 |imageB3|
 
 |imageB3_w| 
+
+
+Generating slope layer from layer DEM
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 
 Slope can now be generated from this layer
 
