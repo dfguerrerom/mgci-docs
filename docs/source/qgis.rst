@@ -1190,12 +1190,20 @@ descriptor layer generation.
 
 The last step is to intersect the equidistant vector grid with the buffered AOI in equidistant projection.
 
+-  In the **processing toolbox** search for **intersection** 
 
+   |intersection|
 
-The output will be used as the Area of Interest (AOI) when preparing
-the various layers for the MGCI analysis.
+-  Set the **Input layer** to **the buffered country boundary in equidistant projection**
+-  Set the **Overlay layer** to **the vector grid in equidistant projection**
+-  Set the output **Intersection** toe.g. **BND_BUF_AOI_EQUI_tiles.shp**
 
+   |intersection2|
+   
+The output tiled Area of Interest (AOI) will be used when preparing
+the slope and local elevation range datasets.
 
+|intersection3|
 
 
 
