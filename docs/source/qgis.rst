@@ -1115,11 +1115,15 @@ which we can use to split the dataset into a selected number of tiles for iterat
 
 -  In the **processing toolbox** search for **Extract layer** 
 
-|extract_layer_extent|
-
+   |extract_layer_extent|
+   
+-  Set the **Input Layer ** to **the merged DEM in equidistant projection**
+   
+   |extract_layer_extent2|
+   
 - Open the attribute table of the extent layer
 
-|extent_attr|
+  |extent_attr|
 
 - add and calculate an attribute for tile_width by dividing the width field by your number of chosen tiles 
 e.g. in this example we have chosen 6 tiles.
@@ -2593,6 +2597,8 @@ Export to standard reporting table
    :width: 400
    
 .. |extent_attr| image:: media_QGIS/extent_attr.png
+   :width: 900
+.. |extract_layer_extent2| image:: media_QGIS/extract_layer_extent2.png
    :width: 900
 .. |extent_attr_width| image:: media_QGIS/extent_attr_width.png
    :width: 900
