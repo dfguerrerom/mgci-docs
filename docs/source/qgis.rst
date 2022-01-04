@@ -2035,7 +2035,7 @@ Aggregation to standard resolution and clipping to country
 Aggregating mountain and RSA rasters to match resolution of vegetation descriptor layer
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Now that we have 3 raster datasets in their native resolutions we need to bring the datasets together and ensure that correct aggregation is undertaken and that the all the layers align to the VegetationDescriptor layer.   In this example we have the Mountain Descriptor layer and the RealSurfaceArea Rasters at 90m resolution but a VegetationDescriptor layer at 300m resolution. There are various tools that can be used but we have opted for the GRASS tool r.resamp.stats as it allowed for various methods when resampling to a coarser grid.
+Now that we have 3 raster datasets in their native resolutions we need to bring the datasets together and ensure that correct aggregation is undertaken and that the all the layers align to the coarsest resolution layer.   In this example we have the Mountain Descriptor layer and the RealSurfaceArea Rasters at 90m resolution but a VegetationDescriptor layer at 300m resolution. There are various tools that can be used but we have opted for the GRASS tool r.resamp.stats as it allowed for various methods when resampling to a coarser grid.
 
 In the processing toolbox search for ***r.resamp.stats***
 
@@ -2068,9 +2068,10 @@ In the processing toolbox search for ***r.resamp.stats***
 
    |image173|  
 
+If the Vegetation Descriptor is coarser resolution use:
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| .. rubric:: **MGCI Toolbox D1. Generic: Aggregate rasters to resolution of Vegetation Descriptor**:                                                                   |
-|    :name: toolbox_D1                                                                                                                                                  |
+| .. rubric:: **MGCI Toolbox D1a. Generic: Aggregate to resolution of Vegetation Descriptor**:                                                                          |
+|    :name: toolbox_D1a                                                                                                                                                  |
 |                                                                                                                                                                       |
 | These steps can be run using a single tool in the MGCI toolbox.                                                                                                       |
 |                                                                                                                                                                       |
@@ -2080,9 +2081,24 @@ In the processing toolbox search for ***r.resamp.stats***
 |                                                                                                                                                                       |
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-|imageD1|
+|imageD1a|
+|imageD1a_w|
 
-|imageD1_w|
+If the Mountain Descriptor is coarser resolution use:
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| .. rubric:: **MGCI Toolbox D1b. Generic: Aggregate to resolution of Mountain Descriptor**:                                                                            |
+|    :name: toolbox_D1b                                                                                                                                                  |
+|                                                                                                                                                                       |
+| These steps can be run using a single tool in the MGCI toolbox.                                                                                                       |
+|                                                                                                                                                                       |
+| In the **custom MGCI toolbox** these step are run by the tool below                                                                                                   |
+|                                                                                                                                                                       |
+| The workflow steps can be viewed QGIS Model Designer                                                                                                                  |
+|                                                                                                                                                                       |
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+|imageD1b|
+|imageD1b_w|
 
 Combine mountain and vegetation descriptor layers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
