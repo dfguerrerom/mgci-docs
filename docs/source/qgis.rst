@@ -1395,13 +1395,13 @@ The slope raster can now be projected to the main analysis equal area projection
  
 The new **SLOPE dataset in the equal area projection** is now added should be added to the map canvas\ **.**
 
-
+|slopeinequalarea|
 
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| .. rubric:: **MGCI Toolbox B4b. MountainDescriptor: merge slope tiles (run if iteration used in B4a)**:                                                               |
-|    :name: toolbox_B4b                                                                                                                                                 |
+| .. rubric:: **MGCI Toolbox B5. MountainDescriptor: Project SLOPE raster to Equal Area projection**:                                                                   |
+|    :name: toolbox_B5                                                                                                                                                 |
 |                                                                                                                                                                       |
 | These steps can be run using a single tool in the MGCI toolbox.                                                                                                       |
 |                                                                                                                                                                       |
@@ -2736,6 +2736,8 @@ Export to standard reporting table
 .. |mergeslope2| image:: media_QGIS/mergeslope2.png
    :width: 900
 .. |mergedslope| image:: media_QGIS/mergedslope.png
+   :width: 900
+.. |slopeinequalarea| image:: media_QGIS/mergedslope.png
    :width: 900
 
 
