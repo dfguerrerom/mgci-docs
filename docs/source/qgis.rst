@@ -1304,7 +1304,7 @@ Then repeat the slope process above for each of the tiles.
 |                                                                                                                                                                       |
 | These steps can be run using a single tool in the MGCI toolbox.                                                                                                       |
 |                                                                                                                                                                       |
-| This tool can run generating the slope in one layer or users can click the iterate button too process the slope in smaller chunks                                     |
+| This tool can run generating the slope in one layer or users can click the green iterate button too process the slope in smaller chunks                               |
 | In the **custom MGCI toolbox** these step are run by the tool below                                                                                                   |
 |                                                                                                                                                                       |
 | The workflow steps can be viewed QGIS Model Designer                                                                                                                  |
@@ -1497,6 +1497,7 @@ added to the map canvas.
 |    :name: toolbox_B6a                                                                                                                                                 |
 |                                                                                                                                                                       |
 | These steps can be run using a single tool in the MGCI toolbox.                                                                                                       |
+| This tool can run generating the Ler7KM in one layer or users can click the green iterate button too process the ler7KM in smaller chunks                             |
 |                                                                                                                                                                       |
 | In the **custom MGCI toolbox** these step are run by the tool below                                                                                                   |
 |                                                                                                                                                                       |
@@ -1527,7 +1528,7 @@ Next, if you have processed the LER7km layer in chunks use the merge tool to com
 
 -  Click **Run** to run the tool
 
-You will notice when compared to the output image it no longer looks clipped to the buffer. This is because the no data value in the slope images is set to nan and it was not possible to set the No data value in the merge tool to a non numeric value. You therefore must clip the merged slope layer back to the buffered AOI:
+You will notice when compared to the output image it no longer looks clipped to the buffer. This is because the no data value in the LER7km images is set to nan and it was not possible to set the No data value in the merge tool to a non numeric value. You therefore must clip the merged LER7km layer back to the buffered AOI:
 
 -  search for **r.mask** in the processing toolbox.  
 
@@ -1661,8 +1662,8 @@ AND"LocalElevationRange7km\_AOI\_LAEA@1" > 300
 |image106|
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| .. rubric:: **MGCI Toolbox B6. MountainDescriptor: Generating layers for each Kapos mountain class**:                                                                 |
-|    :name: toolbox_B6                                                                                                                                                  |
+| .. rubric:: **MGCI Toolbox B8. MountainDescriptor: Generating layers for each Kapos mountain class**:                                                                 |
+|    :name: toolbox_B8                                                                                                                                                  |
 |                                                                                                                                                                       |
 | These steps can be run using a single tool in the MGCI toolbox.                                                                                                       |
 |                                                                                                                                                                       |
@@ -1672,9 +1673,9 @@ AND"LocalElevationRange7km\_AOI\_LAEA@1" > 300
 |                                                                                                                                                                       |
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-|imageB6|
+|imageB8|
 
-|imageB6_w| 
+|imageB8_w| 
 
 Generate an interim mountain layer with classes 1-6
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1706,8 +1707,8 @@ At the bottom of the layer properties dialogue window click the
 |image110|
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| .. rubric:: **MGCI Toolbox B7. MountainDescriptor: Generate Mountain Descriptor layer (EXCLUDING isolated pixels from class 7)**:                                     |
-|    :name: toolbox_B7                                                                                                                                                  |
+| .. rubric:: **MGCI Toolbox B9. MountainDescriptor: Generate Mountain Descriptor layer (EXCLUDING isolated pixels from class 7)**:                                     |
+|    :name: toolbox_B9                                                                                                                                                  |
 |                                                                                                                                                                       |
 | These steps can be run using a single tool in the MGCI toolbox.                                                                                                       |
 |                                                                                                                                                                       |
@@ -1717,9 +1718,9 @@ At the bottom of the layer properties dialogue window click the
 |                                                                                                                                                                       |
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-|imageB7| 
+|imageB9| 
 
-|imageB7_w|
+|imageB9_w|
 
 Filling isolated pixels within mountain areas and merging into classes 1-6 (****NOTE: This step is still in development****)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -2034,7 +2035,7 @@ Aggregation to standard resolution and clipping to country
 Aggregating mountain and RSA rasters to match resolution of vegetation descriptor layer
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Now that we have 3 raster datasets in their native resolutions we need to bring the datasets together and ensure that correct aggregation is undertaken and that the all the layers align to the VegetationDescriptor layer.   In this example we have the Mountain Descriptor layer and the RealSurfaceArea Rasters at 90m resolution but a VegetationDescriptor layer at 300m resolution. There are various tools that can be used but we have opted for the GRASS tool r.resamp.stats as it allowed for various methods when resampling to a coarser grid.
+Now that we have 3 raster datasets in their native resolutions we need to bring the datasets together and ensure that correct aggregation is undertaken and that the all the layers align to the coarsest resolution layer.   In this example we have the Mountain Descriptor layer and the RealSurfaceArea Rasters at 90m resolution but a VegetationDescriptor layer at 300m resolution. There are various tools that can be used but we have opted for the GRASS tool r.resamp.stats as it allowed for various methods when resampling to a coarser grid.
 
 In the processing toolbox search for ***r.resamp.stats***
 
@@ -2067,9 +2068,10 @@ In the processing toolbox search for ***r.resamp.stats***
 
    |image173|  
 
+If the Vegetation Descriptor is coarser resolution use:
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| .. rubric:: **MGCI Toolbox D1. Generic: Aggregate rasters to resolution of Vegetation Descriptor**:                                                                   |
-|    :name: toolbox_D1                                                                                                                                                  |
+| .. rubric:: **MGCI Toolbox D1a. Generic: Aggregate to resolution of Vegetation Descriptor**:                                                                          |
+|    :name: toolbox_D1a                                                                                                                                                  |
 |                                                                                                                                                                       |
 | These steps can be run using a single tool in the MGCI toolbox.                                                                                                       |
 |                                                                                                                                                                       |
@@ -2079,9 +2081,24 @@ In the processing toolbox search for ***r.resamp.stats***
 |                                                                                                                                                                       |
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-|imageD1|
+|imageD1a|
+|imageD1a_w|
 
-|imageD1_w|
+If the Mountain Descriptor is coarser resolution use:
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| .. rubric:: **MGCI Toolbox D1b. Generic: Aggregate to resolution of Mountain Descriptor**:                                                                            |
+|    :name: toolbox_D1b                                                                                                                                                  |
+|                                                                                                                                                                       |
+| These steps can be run using a single tool in the MGCI toolbox.                                                                                                       |
+|                                                                                                                                                                       |
+| In the **custom MGCI toolbox** these step are run by the tool below                                                                                                   |
+|                                                                                                                                                                       |
+| The workflow steps can be viewed QGIS Model Designer                                                                                                                  |
+|                                                                                                                                                                       |
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+|imageD1b|
+|imageD1b_w|
 
 Combine mountain and vegetation descriptor layers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
