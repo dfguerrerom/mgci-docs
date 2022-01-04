@@ -1096,18 +1096,20 @@ First we need to project the merged DEM to equidistant projection.
     
 - Double click on the **Warp (reproject)** tool under the **GDAL toolset** 
 - Set the Input layer to be the **merged DEM in geographic coordinate system**
-    *Note: it is important not to use the one that has already been projected as this can introduce errors into the DEM *
+    *Note: it is important not to use the one that has already been projected as this can introduce errors into the DEM*
 - Set the Source CRS to be **EPSG: 4326 (Geographic)**
 - Set the Target CRS to be **your custom equidistant projection** e.g. CRI\_AZ\_EQUI
 - Set the resampling method to **bilinear**
 - Set the output file resolution to the resolution of the DEM in meters e.g. 90m in this example
-- Set the Reprojected output to e.g. **DEM\_copernicus\_merge\_CRI\_AZ\_EQUI.tif**
+- Set the Reprojected output to e.g. **DEM_merge_EQUI.tif**
 
   |image79|
   
 - Click **Run** to run the tool
  
 The reprojected layer is added to the QGIS project. 
+
+  |reprojequi2|
 
 Next we will extract the extent from the merged DEM in equidistant projection. This generates a polygon layer 
 which aligns with the outer cells of the DEM. It also provides a height and width field in the attribute table of the layer
@@ -1127,13 +1129,12 @@ which we can use to split the dataset into a selected number of tiles for iterat
 
 - add and calculate an attribute for tile_width by dividing the width field by your number of chosen tiles 
 e.g. in this example we have chosen 6 tiles.
+  
+  |extent_attr_width|
 
-|extent_attr_width|
-
-- add and calculate an attribute for tile_width by dividing the height field by your number of chosen tiles 
-e.g. in this example we have chosen 6 tiles.
-
-|extent_attr_height|
+- add and calculate an attribute for tile_width by dividing the height field by your number of chosen tiles e.g. in this example we have chosen 6 tiles.
+  
+  |extent_attr_height|
 
 -  In the **processing toolbox** search for **Create grid** 
 
@@ -1143,18 +1144,27 @@ e.g. in this example we have chosen 6 tiles.
 -  Set the **Grid extent** to **the merged DEM in equidistant projection**
 -  Set the **Grid extent** to **the merged DEM in equidistant projection**
 -  Copy the tile_width number from the step above to the **Horizontal spacing** and the tile height to the **Vertical spacing**
--  Copy the cellsize to the **Horizontal overlay** and **Vertical overlay**. This will mean that the tiles will overlap by one cell
-and ensure there are no gaps when the tiles are merged back together (as the internal tile lines will not match a grid cell line)
+-  Copy the cellsize to the **Horizontal overlay** and **Vertical overlay**. 
+
+This will mean that the tiles will overlap by one cell and ensure there are no gaps when the tiles are merged back together
+(as the internal tile lines will not match a grid cell line)
+
 -  Set the **Grid CRS** to **your chosen equidistant projection**
 
--  In the **processing toolbox** search for **reproject** 
+   |creategrid2|  
+   
+-  Click **Run** to run the tool.
 
-Use the reproject tool to project the country boundary layer to the
+The vector grid is added to the QGIS project. 
+
+   |creategrid3|  
+
+Next, use the reproject tool to project the country boundary layer to the
 equidistant projection
 
 -  In the processing toolbox search for the **Reproject** tool
 
-   |image39|
+   |image54|
    
 -  Set the Input layer to be the **country boundary**
 
@@ -2673,5 +2683,10 @@ Export to standard reporting table
    :width: 900
 .. |manualiterate| image:: media_QGIS/manualiterate.png
    :width: 900
+.. |reprojequi2| image:: media_QGIS/reprojequi2.png
+   :width: 900
+.. |creategrid3| image:: media_QGIS/creategrid3.png
+   :width: 900
+
 
 
