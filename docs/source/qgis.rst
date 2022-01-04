@@ -1607,8 +1607,8 @@ The new **LER7km dataset in the equal area projection** is now added should be a
 |imageB7_w| 
 
 
-**Generating layers for each mountain class**
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Generating layers for each mountain class
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 We now have all the inputs required for generating the mountain classes
 for the mountain descriptor layer. We will use the raster calculator to
 input the followings expression to generate a raster layer for each
@@ -2069,9 +2069,10 @@ In the processing toolbox search for ***r.resamp.stats***
    |image173|  
 
 If the Vegetation Descriptor is coarser resolution use:
+
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | .. rubric:: **MGCI Toolbox D1a. Generic: Aggregate to resolution of Vegetation Descriptor**:                                                                          |
-|    :name: toolbox_D1a                                                                                                                                                  |
+|    :name: toolbox_D1a                                                                                                                                                 |
 |                                                                                                                                                                       |
 | These steps can be run using a single tool in the MGCI toolbox.                                                                                                       |
 |                                                                                                                                                                       |
@@ -2085,9 +2086,10 @@ If the Vegetation Descriptor is coarser resolution use:
 |imageD1a_w|
 
 If the Mountain Descriptor is coarser resolution use:
+
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | .. rubric:: **MGCI Toolbox D1b. Generic: Aggregate to resolution of Mountain Descriptor**:                                                                            |
-|    :name: toolbox_D1b                                                                                                                                                  |
+|    :name: toolbox_D1b                                                                                                                                                 |
 |                                                                                                                                                                       |
 | These steps can be run using a single tool in the MGCI toolbox.                                                                                                       |
 |                                                                                                                                                                       |
