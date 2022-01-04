@@ -1274,9 +1274,11 @@ run the slope tool multiple times for each tile and then merge the slope at the 
 
 **NOTE: the MGCI toolbox tools B4a will be far more efficient (as users can choose to iterate automatically through the tiles and produce slope at the same time).**
 
-If you wish to iterate manually. Split the Merged DEM in equidistant projection into tiles.
+If you wish to iterate manually. Split the Merged DEM in equidistant projection into tiles as follows:
 
--  search for **mask** in the processing toolbox.  
+-  search for **r.mask** in the processing toolbox.  
+   
+   |rmask|
 
 -  Double click on the **r.mask.vect** under the GRASS
    toolset
@@ -1322,14 +1324,40 @@ Next, if you haave processed the slope layer chunks use the merge tool to combin
 -  Double click the **GDAL Merge tool**.
    
 -  For the Input layers select all of the SLOPE tiles. Tick the SLOPE tiles to merge and Click **OK** to make the selection
-   and return to main **Merge Dialog window**
+   and return to the main **Merge Dialog window**
 
 -  Set the **output data type** to Float32 (same as the input slope tiles)
-
 -  Set the **Merged** output name e.g. C:/MGCI\_tutorial/
-   SLOPE_AOI_merge.tif
+   SLOPE_merge_EQUI.tif
+   
+   |mergeslope1| |mergeslope2|
 
 -  Click **Run** to run the tool
+
+You will notice when compared to the output image it no longer looks clipped to the buffer. This is because the no data value in the slope images is set to nan and it was not possible to set the No data value in the merge tool to a non numeric value. You therefore must clip the merged slope layer back to the buffered AOI:
+
+-  search for **r.mask** in the processing toolbox.  
+
+   |rmask|
+
+-  Double click on the **r.mask.vect** under the GRASS
+   toolset
+
+-  Select the **AOI tiles layer** for the **Name of vector dataset to use as mask**
+
+-  Select the **merged SLOPE layer in equidistant projection** for the **Name of raster map to which apply the mask**
+
+-  Set the  the **GRASS GIS 7 Region Extent**  to the **AOI tiles layer**
+
+-  Set the output **Masked** e.g. to  **Slope_merge_EQUI_AOI.tif**
+   
+-  Click **Run** to run the tool
+
+The merged slope is added to the QGIS project. 
+
+|mergedslope| 
+
+
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | .. rubric:: **MGCI Toolbox B4b. MountainDescriptor: merge slope tiles (run if iteration used in B4a)**:                                                               |
@@ -1347,8 +1375,7 @@ Next, if you haave processed the slope layer chunks use the merge tool to combin
 
 |imageB4b_w| 
 
-The slope raster can now be projected to the main analysis equal area
-projection
+The slope raster can now be projected to the main analysis equal area projection
 
 -  In the **processing toolbox** search for **reproject** 
 
@@ -1361,13 +1388,16 @@ projection
 - Set the resampling method to **bilinear**
 - Set the output file resolution to the resolution of the slope in meters e.g. 90m in this example
 - Set the Reprojected output to e.g. **Slope_AOI_LAEA.tif**
+  
+  
+  
 - Click **Run** to run the tool
  
-The reprojected layer is added to the QGIS project. 
-
-|imageslopemask|
-
 The new **SLOPE dataset in the equal area projection** is now added should be added to the map canvas\ **.**
+
+
+
+
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | .. rubric:: **MGCI Toolbox B4b. MountainDescriptor: merge slope tiles (run if iteration used in B4a)**:                                                               |
@@ -2566,6 +2596,11 @@ Export to standard reporting table
 .. |imageB4a_w| image:: media_QGIS/Toolbox_images/B4a_w.png
    :width: 800
 
+.. |imageB4b| image:: media_QGIS/Toolbox_images/B4b.png
+   :width: 1100
+ 
+.. |imageB4b_w| image:: media_QGIS/Toolbox_images/B4b_w.png
+   :width: 800
 .. |imageB5| image:: media_QGIS/Toolbox_images/B5.png
     :width: 1100
 
@@ -2694,6 +2729,13 @@ Export to standard reporting table
    :width: 900
 .. |creategrid2| image:: media_QGIS/creategrid2.png
    :width: 900
-
+.. |rmask| image:: media_QGIS/rmask.png
+   :width: 300
+.. |mergeslope1| image:: media_QGIS/mergeslope1.png
+   :width: 900
+.. |mergeslope2| image:: media_QGIS/mergeslope2.png
+   :width: 900
+.. |mergedslope| image:: media_QGIS/mergedslope.png
+   :width: 900
 
 
