@@ -2792,6 +2792,18 @@ Export to standard reporting table
 .. |imageD1_w| image:: media_QGIS/Toolbox_images/D1_w.png
    :width: 1100
 
+.. |imageD1a| image:: media_QGIS/Toolbox_images/D1a.png
+   :width: 1100
+
+.. |imageD1a_w| image:: media_QGIS/Toolbox_images/D1a_w.png
+   :width: 1100
+
+.. |imageD1b| image:: media_QGIS/Toolbox_images/D1b.png
+   :width: 1100
+
+.. |imageD1b_w| image:: media_QGIS/Toolbox_images/D1b_w.png
+   :width: 1100
+
 .. |imageD2| image:: media_QGIS/Toolbox_images/D2.png
    :width: 1100
 
