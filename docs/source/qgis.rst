@@ -2735,7 +2735,8 @@ Export to standard reporting table
    
 .. |imageB6a_w| image:: media_QGIS/Toolbox_images/B6a_w.png
    :width: 1100
- |imageB6b| image:: media_QGIS/Toolbox_images/B6b.png
+ 
+.. |imageB6b| image:: media_QGIS/Toolbox_images/B6b.png
    :width: 1100
    
 .. |imageB6b_w| image:: media_QGIS/Toolbox_images/B6b_w.png
