@@ -1508,7 +1508,7 @@ added to the map canvas.
 
 |imageB6a_w|  
 
-Next, if you haave processed the LER7km layer in chunks use the merge tool to combine the slope tiles into a single layer
+Next, if you have processed the LER7km layer in chunks use the merge tool to combine the slope tiles into a single layer
 
 -  Search for **Merge** in the processing toolbox window
    
@@ -1576,7 +1576,7 @@ The LER7km raster can now be projected to the main analysis equal area projectio
 - Double click on the **Warp (reproject)** tool under the **GDAL toolset** 
 - Set the Input layer to be the **LER7km layer in equidistant projection**
 - Set the Source CRS to be **your equidistant projection**
-- Set the Target CRS to be **your equal area projection** e.g. CRI\_AZ\_EQUI
+- Set the Target CRS to be **your equal area projection** 
 - Set the resampling method to **bilinear**
 - Set the output file resolution to the resolution of the LER7km in meters e.g. 90m in this example
 - Set the Reprojected output to e.g. **LER7km_AOI_LAEA.tif**
