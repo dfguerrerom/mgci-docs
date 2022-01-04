@@ -1109,7 +1109,7 @@ First we need to project the merged DEM to equidistant projection.
  
 The reprojected layer is added to the QGIS project. 
 
-  |reprojequi2|
+|reprojequi2|
 
 Next we will extract the extent from the merged DEM in equidistant projection. This generates a polygon layer 
 which aligns with the outer cells of the DEM. It also provides a height and width field in the attribute table of the layer
@@ -1127,11 +1127,10 @@ which we can use to split the dataset into a selected number of tiles for iterat
 
   |extent_attr|
 
-- add and calculate an attribute for tile_width by dividing the width field by your number of chosen tiles 
-e.g. in this example we have chosen 6 tiles.
+- add and calculate an attribute for tile_width by dividing the width field by your number of chosen tiles e.g. in this example we have chosen 6 tiles.
   
   |extent_attr_width|
-
+  
 - add and calculate an attribute for tile_width by dividing the height field by your number of chosen tiles e.g. in this example we have chosen 6 tiles.
   
   |extent_attr_height|
@@ -1157,7 +1156,7 @@ This will mean that the tiles will overlap by one cell and ensure there are no g
 
 The vector grid is added to the QGIS project. 
 
-   |creategrid3|  
+|creategrid3|  
 
 Next, use the reproject tool to project the country boundary layer to the
 equidistant projection
@@ -1187,7 +1186,9 @@ descriptor layer generation.
 -  In the processing toolbox search for the **buffer tool**
 
    |imagebuffer|
-   
+
+-  Set the **Input layer** to **your country boundary in equidistant projection e.g. BND_CTR_EQUI**
+
 -  Set the buffer **Distance** to **10000**
 
 -  Set the buffer **Units** to **meters**
@@ -1195,9 +1196,8 @@ descriptor layer generation.
 -  Set the **endcap style** to **round** and the **join style** to
    **round**
 
--  Save the Buffered output to the same name as the input with the
-   suffix **_BUF10**
-   
+-  Save the Buffered output to a new name **e.g. BND_BUF_AOI_EQUI**
+
    |buffequi|
 
 -  Click **Run** to run the tool.
@@ -2553,13 +2553,18 @@ Export to standard reporting table
    :width: 1100
   
 .. |imageB3_w| image:: media_QGIS/Toolbox_images/B3_w.png
-    :width: 600
+    :width: 1100
      
 .. |imageB4| image:: media_QGIS/Toolbox_images/B4.png
    :width: 1100
  
 .. |imageB4_w| image:: media_QGIS/Toolbox_images/B4_w.png
    :width: 600
+.. |imageB4a| image:: media_QGIS/Toolbox_images/B4a.png
+   :width: 1100
+ 
+.. |imageB4a_w| image:: media_QGIS/Toolbox_images/B4a_w.png
+   :width: 800
 
 .. |imageB5| image:: media_QGIS/Toolbox_images/B5.png
     :width: 1100
@@ -2686,6 +2691,8 @@ Export to standard reporting table
 .. |reprojequi2| image:: media_QGIS/reprojequi2.png
    :width: 900
 .. |creategrid3| image:: media_QGIS/creategrid3.png
+   :width: 900
+.. |creategrid2| image:: media_QGIS/creategrid2.png
    :width: 900
 
 
