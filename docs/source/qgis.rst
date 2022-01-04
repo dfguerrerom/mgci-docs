@@ -1417,7 +1417,7 @@ The new **SLOPE dataset in the equal area projection** is now added should be ad
 
 
 Generating 7km local elevation range from DEM
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 For UNEP-WCMC mountain classes 5 and 6 a 7km local elevation range (LER7km) is required for
 the identification of areas that occur in regions with significant
@@ -1481,16 +1481,32 @@ Then for each of the tiles run the following steps:
    specified above**
 
 -  Set the output **Neighbors layer** e.g. to
-   LER\_copernicus\_merge\_AOI\_LAEA
+   LER7km_EQUI
 
--  Click **Run** to run the tool
-   
    |image99|
    
-   |image100| 
+  
+-  Click **Run** to run the tool
+   
  
-TThe LER7km layer (or set of LER7km tiles) in the equidistant projection should have been
+The LER7km layer (or set of LER7km tiles) in the equidistant projection should have been
 added to the map canvas.
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| .. rubric:: **MGCI Toolbox B6a. MountainDescriptor: generate 7km LER in equidistant projection**:                                                                     |
+|    :name: toolbox_B6a                                                                                                                                                 |
+|                                                                                                                                                                       |
+| These steps can be run using a single tool in the MGCI toolbox.                                                                                                       |
+|                                                                                                                                                                       |
+| In the **custom MGCI toolbox** these step are run by the tool below                                                                                                   |
+|                                                                                                                                                                       |
+| The workflow steps can be viewed QGIS Model Designer                                                                                                                  |
+|                                                                                                                                                                       |
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+|imageB6a|
+
+|imageB6a_w|  
 
 Next, if you haave processed the LER7km layer in chunks use the merge tool to combine the slope tiles into a single layer
 
@@ -1530,15 +1546,14 @@ You will notice when compared to the output image it no longer looks clipped to 
    
 -  Click **Run** to run the tool
 
-The merged slope is added to the QGIS project. 
+The merged LER7km is added to the QGIS project. 
 
 |mergedLER7km| 
 
 
-
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| .. rubric:: **MGCI Toolbox B5. MountainDescriptor: Generate local elevation range from DEM**:                                                                         |
-|    :name: toolbox_B5                                                                                                                                                  |
+| .. rubric:: **MGCI Toolbox B6b. MountainDescriptor: merge LER7km tiles (run if iteration used in B6a)**:                                                              |
+|    :name: toolbox_B6b                                                                                                                                                 |
 |                                                                                                                                                                       |
 | These steps can be run using a single tool in the MGCI toolbox.                                                                                                       |
 |                                                                                                                                                                       |
@@ -1548,12 +1563,51 @@ The merged slope is added to the QGIS project.
 |                                                                                                                                                                       |
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-|imageB5|
+|imageB6b|
 
-|imageB5_w|  
+|imageB6b_w|  
+
+The LER7km raster can now be projected to the main analysis equal area projection
+
+-  In the **processing toolbox** search for **reproject** 
+
+   |image54|                                                                                                                                                                  
+    
+- Double click on the **Warp (reproject)** tool under the **GDAL toolset** 
+- Set the Input layer to be the **LER7km layer in equidistant projection**
+- Set the Source CRS to be **your equidistant projection**
+- Set the Target CRS to be **your equal area projection** e.g. CRI\_AZ\_EQUI
+- Set the resampling method to **bilinear**
+- Set the output file resolution to the resolution of the LER7km in meters e.g. 90m in this example
+- Set the Reprojected output to e.g. **LER7km_AOI_LAEA.tif**
+  
+  
+  
+- Click **Run** to run the tool
+ 
+The new **LER7km dataset in the equal area projection** is now added should be added to the map canvas\ **.**
+
+|LER7kminequalarea|
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| .. rubric:: **MGCI Toolbox B7. MountainDescriptor: Project LER7km raster to Equal Area projection**:                                                                  |
+|    :name: toolbox_B7                                                                                                                                                  |
+|                                                                                                                                                                       |
+| These steps can be run using a single tool in the MGCI toolbox.                                                                                                       |
+|                                                                                                                                                                       |
+| In the **custom MGCI toolbox** these step are run by the tool below                                                                                                   |
+|                                                                                                                                                                       |
+| The workflow steps can be viewed QGIS Model Designer                                                                                                                  |
+|                                                                                                                                                                       |
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+|imageB7|
+
+|imageB7_w| 
+
 
 **Generating layers for each mountain class**
-
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 We now have all the inputs required for generating the mountain classes
 for the mountain descriptor layer. We will use the raster calculator to
 input the followings expression to generate a raster layer for each
@@ -2676,12 +2730,16 @@ Export to standard reporting table
 .. |imageB5_w| image:: media_QGIS/Toolbox_images/B5_w.png
    :width: 600
    
-.. |imageB6| image:: media_QGIS/Toolbox_images/B6.png
+.. |imageB6a| image:: media_QGIS/Toolbox_images/B6a.png
    :width: 1100
    
-.. |imageB6_w| image:: media_QGIS/Toolbox_images/B6_w.png
+.. |imageB6a_w| image:: media_QGIS/Toolbox_images/B6a_w.png
    :width: 1100
-
+ |imageB6b| image:: media_QGIS/Toolbox_images/B6b.png
+   :width: 1100
+   
+.. |imageB6b_w| image:: media_QGIS/Toolbox_images/B6b_w.png
+   :width: 1100
    
 .. |imageB7| image:: media_QGIS/Toolbox_images/B7.png
    :width: 1100
@@ -2689,6 +2747,19 @@ Export to standard reporting table
 .. |imageB7_w| image:: media_QGIS/Toolbox_images/B7_w.png
    :width: 1100
 
+
+.. |imageB8| image:: media_QGIS/Toolbox_images/B8.png
+   :width: 1100
+ 
+.. |imageB8_w| image:: media_QGIS/Toolbox_images/B8_w.png
+   :width: 1100
+
+.. |imageB9| image:: media_QGIS/Toolbox_images/B9.png
+   :width: 1100
+ 
+.. |imageB9_w| image:: media_QGIS/Toolbox_images/B9_w.png
+   :width: 1100
+   
    
 .. |imageC1| image:: media_QGIS/Toolbox_images/C1.png
    :width: 1100
@@ -2812,6 +2883,10 @@ Export to standard reporting table
    :width: 900
 .. |mergeLER7km_1| image:: media_QGIS/mergeLER7km_1.png
    :width: 900
+.. |LER7kminequalarea| image:: media_QGIS/LER7kminequalarea.png
+   :width: 900
+   
+   
 
 
 
