@@ -2596,6 +2596,11 @@ Export to standard reporting table
 .. |imageB4a_w| image:: media_QGIS/Toolbox_images/B4a_w.png
    :width: 800
 
+.. |imageB4b| image:: media_QGIS/Toolbox_images/B4b.png
+   :width: 1100
+ 
+.. |imageB4b_w| image:: media_QGIS/Toolbox_images/B4b_w.png
+   :width: 800
 .. |imageB5| image:: media_QGIS/Toolbox_images/B5.png
     :width: 1100
 
@@ -2726,6 +2731,11 @@ Export to standard reporting table
    :width: 900
 .. |rmask| image:: media_QGIS/rmask.png
    :width: 300
-
+.. |mergeslope1| image:: media_QGIS/mergeslope1.png
+   :width: 900
+.. |mergeslope2| image:: media_QGIS/mergeslope2.png
+   :width: 900
+.. |mergedslope| image:: media_QGIS/mergedslope.png
+   :width: 900
 
 
