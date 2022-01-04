@@ -1401,7 +1401,7 @@ The new **SLOPE dataset in the equal area projection** is now added should be ad
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | .. rubric:: **MGCI Toolbox B5. MountainDescriptor: Project SLOPE raster to Equal Area projection**:                                                                   |
-|    :name: toolbox_B5                                                                                                                                                 |
+|    :name: toolbox_B5                                                                                                                                                  |
 |                                                                                                                                                                       |
 | These steps can be run using a single tool in the MGCI toolbox.                                                                                                       |
 |                                                                                                                                                                       |
@@ -1416,10 +1416,10 @@ The new **SLOPE dataset in the equal area projection** is now added should be ad
 |imageB5_w| 
 
 
-Generating local elevation range from DEM
+Generating 7km local elevation range from DEM
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-For UNEP-WCMC mountain classes 5 and 6 a 7km local elevation range is required for
+For UNEP-WCMC mountain classes 5 and 6 a 7km local elevation range (LER7km) is required for
 the identification of areas that occur in regions with significant
 relief, even though elevations may not be especially high, and
 conversely high-elevation areas with little local relief. This local
@@ -1435,14 +1435,39 @@ the neighborhhod will be influenced by the cellsize of the DEM.
 To calculate the neighborhood size for your analysis in pixels divide 7000m by your cellsize and multiply by two. Round to the nearest odd integer.
 This is because the neighborhood size in pixels in this tool represents diameter rather than radius. 
 
+This step is very slow and it is recommended that the same tiled approach is used to generate the LER7km layer.
+
+If you wish to iterate manually. Split the Merged DEM in equidistant projection into tiles. If you have used tiles for generating slope you can skip the following r.mask step:
+
+-  search for **r.mask** in the processing toolbox.  
+   
+   |rmask|
+
+-  Double click on the **r.mask.vect** under the GRASS
+   toolset
+
+-  Select the **AOI tiles layer** for the **Name of vector dataset to use as mask**
+
+-  Select the **Merged DEM in equidistant projection** for the **Name of raster map to which apply the mask**
+
+-  Set the  the **GRASS GIS 7 Region Extent**  to the **AOI tiles layer**
+
+-  Set the output **Masked** e.g. to
+   DEM_merge_EQUI_AOI_tiles.tif
+   
+-  Click **Run** to run the tool
+
+   |manualiterate|
+
+Then for each of the tiles run the following steps:
+
 -  In the processing toolbox search for **r.neighbor**.
 
    |imageneighbors|
 
 -  Double click on the **r.neighbor** tool under the GRASS toolset
 
--  Select the **Input Raster Layer to** the Projected DEM clipped to the
-   AOI
+-  Select the **Input Raster Layer to** the merged equidistant DEM (or equidistant dem tile is you are running in smaller clumps)
 
 -  Set the **neighborhood operation** to **Range**
 
@@ -1464,8 +1489,52 @@ This is because the neighborhood size in pixels in this tool represents diameter
    
    |image100| 
  
-TThe local elevation range in the equal area projection should have been
-added to the map canvas\ **.**
+TThe LER7km layer (or set of LER7km tiles) in the equidistant projection should have been
+added to the map canvas.
+
+Next, if you haave processed the LER7km layer in chunks use the merge tool to combine the slope tiles into a single layer
+
+-  Search for **Merge** in the processing toolbox window
+   
+   |image70|
+   
+-  Double click the **GDAL Merge tool**.
+   
+-  For the Input layers select all of the SLOPE tiles. Tick the SLOPE tiles to merge and Click **OK** to make the selection
+   and return to the main **Merge Dialog window**
+
+-  Set the **output data type** to Float32 (same as the input slope tiles)
+-  Set the **Merged** output name e.g. C:/MGCI\_tutorial/
+   LER7km_merge_EQUI.tif
+   
+   |mergeLER7km_1|
+
+-  Click **Run** to run the tool
+
+You will notice when compared to the output image it no longer looks clipped to the buffer. This is because the no data value in the slope images is set to nan and it was not possible to set the No data value in the merge tool to a non numeric value. You therefore must clip the merged slope layer back to the buffered AOI:
+
+-  search for **r.mask** in the processing toolbox.  
+
+   |rmask|
+
+-  Double click on the **r.mask.vect** under the GRASS
+   toolset
+
+-  Select the **AOI tiles layer** for the **Name of vector dataset to use as mask**
+
+-  Select the **merged LER7km layer in equidistant projection** for the **Name of raster map to which apply the mask**
+
+-  Set the  the **GRASS GIS 7 Region Extent**  to the **AOI tiles layer**
+
+-  Set the output **Masked** e.g. to  **LER7km_merge_EQUI_AOI.tif**
+   
+-  Click **Run** to run the tool
+
+The merged slope is added to the QGIS project. 
+
+|mergedLER7km| 
+
+
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | .. rubric:: **MGCI Toolbox B5. MountainDescriptor: Generate local elevation range from DEM**:                                                                         |
@@ -2737,7 +2806,12 @@ Export to standard reporting table
    :width: 900
 .. |mergedslope| image:: media_QGIS/mergedslope.png
    :width: 900
-.. |slopeinequalarea| image:: media_QGIS/mergedslope.png
+.. |slopeinequalarea| image:: media_QGIS/slopeinequalarea.png
    :width: 900
+.. |mergedLER7km| image:: media_QGIS/mergedLER7km.png
+   :width: 900
+.. |mergeLER7km_1| image:: media_QGIS/mergeLER7km_1.png
+   :width: 900
+
 
 
