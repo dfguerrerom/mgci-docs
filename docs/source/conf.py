@@ -29,7 +29,6 @@ extensions = [
     "_extentions.line_break",
     # "_extentions.custom_edit",
     # "_extentions.logos",
-    "sphinx_simplepdf",
 ]
 
 templates_path = ["_templates"]
