@@ -4,7 +4,7 @@ QGIS
 A QGIS-based workflow to support the computation of SDG Indicator 15.4.2, which includes:
 sub-indicator a (Mountain Green Cover Index)
 and
-sub-indicator b (Proportion of degraded mountain land)
+sub-indicator b (Proportion of degraded mountain land).
 
 .. contents:: **Table of Contents**
 
@@ -16,7 +16,7 @@ About QGIS-SDG 15.4.2 :sub:`beta`
 
 This documentation and geospatial workflow has been developed by the UN Environment Programme World Conservation Monitoring Centre (UNEP-WCMC) in collaboration with the Food and Agriculture Organization (FAO) of the United Nations to support relevant national authorities to compute and report against SDG Indicator 15.4.2.
 
-The geospatial workflow was developed using QGIS 3.22.16, a free and open-source geographic information system licensed under the GNU General Public License. QGIS is an official project of the Open Source Geospatial Foundation (OSGeo). It runs on Linux, Unix, Mac OSX, Windows and Android and supports numerous vector, raster, and database formats and functionalities. We suggest users use the Long-Term Release version [1]_ of QGIS to undertake their analysis as this is the most stable version and users are less likely to incur technical difficulties and bugs. There are various installers depending on your operating system but for most users we recommend the QGIS Standalone Installer. Full instructions are on their website: `https://qgis.org/en/site/forusers/download.html# <https://qgis.org/en/site/forusers/download.html>`__\. To run this workflow, you will also need to have R Software 4.4.1.
+The geospatial workflow was developed using QGIS 3.22.16, a free and open-source geographic information system licensed under the GNU General Public License. QGIS is an official project of the Open Source Geospatial Foundation (OSGeo). It runs on Linux, Unix, Mac OSX, Windows and Android and supports numerous vector, raster, and database formats and functionalities. To run this workflow, you will also need to have R Software installed.
 
 The QGIS-SDG 15.4.2 :sub:`beta` workflow is in a beta stage and therefore it is still under development. Please contact the QGIS-SDG 15.4.2 :sub:`beta` development team with any comments or suggestions.
 
@@ -39,29 +39,17 @@ Initial setup
 QGIS software installation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Before using QGIS-SDG 15.4.2 :sub:`beta` to run this workflow you will need have QGIS 3.22.16 installed on your compute. We suggest users use the Long-Term Release version [1]_ of QGIS to undertake their analysis as this is the most stable version and users are less likely to incur technical difficulties and bugs. There are various installers depending on your operating system but for most users we recommend the QGIS Standalone Installer. Full instructions are on their website: `https://qgis.org/en/site/forusers/download.html# <https://qgis.org/en/site/forusers/download.html>`__\.
+Ensure QGIS 3.22.16 installed on your computer. We suggest users use the Long-Term Release version of QGIS to undertake their analysis as this is the most stable version and users are less likely to incur technical difficulties and bugs. There are various installers depending on your operating system but for most users we recommend the QGIS Standalone Installer. Full instructions are on their website: `https://qgis.org/en/site/forusers/download.html <https://qgis.org/en/site/forusers/download.html>`__\.
 
-Whilst the QGIS-SDG 15.4.2 :sub:`beta` analysis runs entirely within the QGIS interface, to run this workflow, you will also need to install R Software 4.4.1. R scripts will be run from within the QGIS interface and no prior knowledge of R is required.
+While the QGIS-SDG 15.4.2 :sub:`beta` analysis runs entirely within the QGIS interface, to run this workflow, you will also need to install R Software 4.4.1. R scripts will be run from within the QGIS interface and no prior knowledge of R is required. There have been a number of releases since 4.4.1 but we have found that some of the later versions cause the r-scripts to run slower within the toolbox.
 
 R software and packages installation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-1. Download and install R from https://www.r-project.org/ and then
-   download and install RStudio Desktop from
-   https://www.rstudio.com/products/rstudio/. Once the later has been
-   completed, open RStudio in your computer.
+Download and install R from https://www.r-project.org/ and then
+download and install RStudio Desktop from
+https://www.rstudio.com/products/rstudio/. 
 
-2. Click on ‘File’ (top left corner) and then on ‘Open File…’. Select
-   the file named ‘XXXXXXXX’ Click on …….to run and install all the
-   packages and check that there are no errors.
-
-3. Ensure the ‘sp ‘and ‘raster’ packages are correctly installed. Two of
-   the options to do so are:
-    -   install.packages("name\_of\_package")
-    -  library(name\_of\_package)
-
-       Or
-    -  (if(!require("name\_of\_package")) install.packages("name\_of\_package")
 
 A step-by-step guide on how to install R and R Studio (with images) can be found in Annex X.
 If you are not installing R and R studio from scratch, please make sure that your installations are upgraded. It is important to use the current version of R software (R-4.1.1 at the time of writing). The R version can be easily checked on the text within the ‘R Console’ box at the beginning of a new session (see Figure XX for standalone R and Figure ZZ for R Studio).
