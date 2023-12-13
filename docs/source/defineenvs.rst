@@ -31,7 +31,7 @@ Defining an area of interest
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 An area of interest (AOI) needs to be defined at the outset of this
-analysis. Due to the nature of the calculations of the the real surface area layer
+analysis. Due to the nature of the calculations of the real surface area layer
 this needs to go beyond the boundary of the country by at least 7km as the calculations
 look at focal cells around an individual pixel in the DEM dataset. We suggest
 users buffer the bounding box of the country boundary out by 10km.
