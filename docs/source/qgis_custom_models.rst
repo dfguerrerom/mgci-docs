@@ -303,29 +303,29 @@ In the Processing Toolbox, under Models, click on model **A1 Prepare and reclass
 
 **Input parameters**
 
-- Select country: Select country to process from the dropdown list.
+- **Select country**: Select country to process from the dropdown list.
 
-- Input: CSV_containing_UN_country_codes: Set the path to the csv file containing UN country codes (downloaded from the GitHub repository).
+- **Input: CSV_containing_UN_country_codes**: Set the path to the csv file containing UN country codes (downloaded from the GitHub repository).
 
-- Select type of LULC data to be used: Select the type of LULC data (i.e., either global raster, national raster or national vector).
+- **Select type of LULC data to be used**: Select the type of LULC data (i.e., either global raster, national raster or national vector).
 
-- Select input landuse landcover dataset: Set the path to the LULC data file.
+- **Select input landuse landcover dataset**: Set the path to the LULC data file.
 
-- Enter year of landcover: Enter the year of the LULC data being used.
+- **Enter year of landcover**: Enter the year of the LULC data being used.
 
-- Field containing landcover values: If your LULC data is in vector format, enter the name of the field containing landcover values.
+- **Field containing landcover values**: If your LULC data is in vector format, enter the name of the field containing landcover values.
 
-- Input: output resolution: If your LULC data is in vector format, enter the output resolution in metres.
+- **Input: output resolution**: If your LULC data is in vector format, enter the output resolution in metres.
 
-- LULC crosswalk to SEEA classes: You can either upload of a crosswalk text file or enter the crosswalk details directly in this box with the input LULC types on the left and the UN-SEEA reclass values on the right.
+- **LULC crosswalk to SEEA classes**: You can either upload of a crosswalk text file or enter the crosswalk details directly in this box with the input LULC types on the left and the UN-SEEA reclass values on the right.
 
-- Input: Target CRS (i.e. Select a relevant equal area projection for your area of interest): Select a CRS for your outputs. This should be an equal area projection relevant to the country being processed.
+- **Input: Target CRS** (i.e. Select a relevant equal area projection for your area of interest): Select a CRS for your outputs. This should be an equal area projection relevant to the country being processed.
 
-- Input layer style for LULC: Set the path to the layer style file for this dataset.
+- **Input layer style for LULC**: Set the path to the layer style file for this dataset.
 
-- Select folder for outputs: Select an output folder to store your outputs. The output folder should already exist. Make sure the folder name does not have any spaces.
+- **Select folder for outputs**: Select an output folder to store your outputs. The output folder should already exist. Make sure the folder name does not have any spaces.
 
-- Input NoData value: Set this as 999.
+- **Input NoData value**: Set this as 999.
 
 **Click Run.**
 
@@ -350,25 +350,25 @@ In the Processing Toolbox, under Models, click on model **A2 Prepare mountains a
 
 **Input parameters**:
 
-- Select country: Select country to process from the dropdown list.
+- **Select country**: Select country to process from the dropdown list.
 
-- CSV_containing_UN_country_codes: Set the path to the csv file containing UN country codes (downloaded from the GitHub repository).
+- **CSV_containing_UN_country_codes**: Set the path to the csv file containing UN country codes (downloaded from the GitHub repository).
 
-- LULC in SEEA classes: Set the path to the LULC in SEEA classes (output from previous model layer A1).
+- **LULC in SEEA classes**: Set the path to the LULC in SEEA classes (output from previous model layer A1).
 
-- Enter year of landcover: Enter the year of the LULC data being used.
+- **Enter year of landcover**: Enter the year of the LULC data being used.
 
-- Input: SDG1542_Mntn_BioclimaticBelts raster layer: Set the path to the Global Mountain Descriptor Map developed by FAO.
+- **Input: SDG1542_Mntn_BioclimaticBelts raster layer**: Set the path to the Global Mountain Descriptor Map developed by FAO.
 
-- Input: Target CRS (i.e., Select a relevant equal area projection for your area of interest): Select a CRS for your outputs. This should be an equal area projection relevant to the country being processed.
+- **Input: Target CRS (i.e., Select a relevant equal area projection for your area of interest)**: Select a CRS for your outputs. This should be an equal area projection relevant to the country being processed.
 
-- Input NoData value: Set this as 999.
+- **Input NoData value:** Set this as 999.
 
-- Select folder for outputs: Select an output folder to store your outputs. The output folder should already exist. Make sure the folder name does not have any spaces.
+- **Select folder for outputs**: Select an output folder to store your outputs. The output folder should already exist. Make sure the folder name does not have any spaces.
 
-- Input: Layer style for mountains: Set the path to the layer style file for the mountain layer.
+- **Input: Layer style for mountains**: Set the path to the layer style file for the mountain layer.
 
-- Input: Layer style for aggregated vegetation and mountains: Set the path to the layer style file for the aggregated vegetation and mountain layer.
+- **Input: Layer style for aggregated vegetation and mountains**: Set the path to the layer style file for the aggregated vegetation and mountain layer.
 
 First we will run for the year 2000
 
@@ -379,7 +379,7 @@ then clicking  **Change parameters** and change the LULC  to the 2015 dataset an
 
 This should produce the following outputs on the map canvas:
 
-- The new clipped mountain descriptor dataset in the national projection. The layer should now show all the mountain area for Colombia classified by Biolimatic belts (where 1 is ‘’Nival”, 2 is “Alpine”, 3 is ‘’Montane” and 4 is “Remaining Mountain Area”.
+- The new clipped mountain descriptor dataset in the national projection. The layer should now show all the mountain area for Colombia classified by Bioclimatic belts (where 1 is ‘’Nival”, 2 is “Alpine”, 3 is ‘’Montane” and 4 is “Remaining Mountain Area”.
 
 - The combined mountain and vegetation layer. In order to distinguish the vegetation class from the mountain all the vegetation values will be multiplied by 10. This means for example a value of 35 in the output means the pixel has class 3 in the vegetation descriptor layer and class 5 in the Mountain descriptor layer.
 
@@ -402,7 +402,7 @@ If you are choosing **NOT to calculate real surface area**, then you can **go st
 Otherwise:
 If you are choosing to calculate Real Surface Area and you already have a country DEM, you need to ensure that it goes at least 7km beyond the country boundary in all directions as the  and is at a resolution that is the same or higher resolution than your Land use land cover dataset then: Load your DEM into the QGIS project
 
-(Note: The higher the resolution (smaller the grid cells), the more detailed information. Higher resolution DEMs can improve the accuracy of analysis however, they are more computationally expensive to use, particularly over large extents. )
+*(Note: The higher the resolution (smaller the grid cells), the more detailed information. Higher resolution DEMs can improve the accuracy of analysis however, they are more computationally expensive to use, particularly over large extents.)*
 
  The selection of which DEM to use for this can be chosen by the countries. We do not advise countries which DEM to choose although table in section **Choice of DEM for generating real surface area calculations and data access**  in the **Defining analyses environments and land cover data selection** provides some suggestions for open access sources. There are also some step-by-step guidance in Annex 1 to help use some of the different download options.
 
@@ -421,23 +421,23 @@ In the Processing Toolbox, under Models, click on model **A4 Generate Real Surfa
 
 **Input parameters**:
 
-- Select country: Select country to process from the dropdown list.
+- **Select country**: Select country to process from the dropdown list.
 
-- CSV_containing_UN_country_codes: Set the path to the csv file containing UN country codes (downloaded from the GitHub repository).
+- **CSV_containing_UN_country_codes**: Set the path to the csv file containing UN country codes (downloaded from the GitHub repository).
 
-- Input: DEM raster: Set the path to the DEM raster chosen in the previous step.
+- **Input: DEM raster**: Set the path to the DEM raster chosen in the previous step.
 
-- Input NoData value: Set this as -9999.
+- **Input NoData value**: Set this as -9999.
 
-- Input: Target CRS (i.e., Select a relevant equal area projection for your area of interest): Select a CRS for your outputs. This should be an equal area projection relevant to the country being processed.
+- **Input: Target CRS** (i.e., Select a relevant equal area projection for your area of interest): Select a CRS for your outputs. This should be an equal area projection relevant to the country being processed.
 
-- Select folder for outputs: Select an output folder to store your outputs. The output folder should already exist. Make sure the folder name does not have any spaces.
+- **Select folder for outputs**: Select an output folder to store your outputs. The output folder should already exist. Make sure the folder name does not have any spaces.
 
-- Cellsize: Enter the cell size of the DEM raster in metres.
+- **Cellsize**: Enter the cell size of the DEM raster in metres.
 
 **Click Run.**
 
-This should produce the following outputs (a DEM raster and Real Surace Area raster) on the map canvas:
+This should produce the following outputs (a DEM raster and Real Surface Area raster) on the map canvas:
 
 |SubA_A4_tool_results1|
 
@@ -460,23 +460,23 @@ In the Processing Toolbox, under Models, click on model **A5 Generate Planimetri
 
 **Input parameters**
 
-- What statistics do you wish to calculate?: Select either Planimetric area or Planimetric area and real surface area.
+- **What statistics do you wish to calculate?**: Select either Planimetric area or Planimetric area and real surface area.
 
-- Select country: Select country to process from the dropdown list.
+- **Select country**: Select country to process from the dropdown list.
 
-- CSV_containing_UN_country_codes: Set the path to the csv file containing UN country codes (downloaded from the GitHub repository).
+- **CSV_containing_UN_country_codes**: Set the path to the csv file containing UN country codes (downloaded from the GitHub repository).
 
-- Enter year of landcover: Enter the year of the LULC data being used.
+- **Enter year of landcover**: Enter the year of the LULC data being used.
 
-- Input: Output A1a: LULC_UNSEEA in Equal Area projection: Set the path for the UNSEEA reclassified vegetation layer for the year you are processing (Generated in step A1).
+- **Input: Output A1a: LULC_UNSEEA in Equal Area projection**: Set the path for the UNSEEA reclassified vegetation layer for the year you are processing (Generated in step A1).
 
-- Enter Output A2c: Set the path for the combined mountain and vegetation layer for the year you are processing (generated in step A2).
+- **Enter Output A2c**: Set the path for the combined mountain and vegetation layer for the year you are processing (generated in step A2).
 
-- Input: RSA raster: Set the path to the RSA raster (generated in step A4).
+- **Input: RSA raster:** Set the path to the RSA raster (generated in step A4).
 
-- Input: Target CRS (i.e., Select a relevant equal area projection for your area of interest): Select a CRS for your outputs. This should be an equal area projection relevant to the country being processed.
+- **Input: Target CRS** (i.e., Select a relevant equal area projection for your area of interest): Select a CRS for your outputs. This should be an equal area projection relevant to the country being processed.
 
-- Select folder for outputs: Select an output folder to store your outputs. The output folder should already exist. Make sure the folder name does not have any spaces.
+- **Select folder for outputs**: Select an output folder to store your outputs. The output folder should already exist. Make sure the folder name does not have any spaces.
 
 **Click Run.**
 
@@ -499,33 +499,31 @@ In the Processing Toolbox, under Models, click on model **A6 Formatting to Repor
 
 **Input parameters**
 
-- Select country: Select country to process from the dropdown list.
+- **Select country**: Select country to process from the dropdown list.
 
-- CSV_containing_UN_country_codes: Set the path to the csv file containing UN country codes (downloaded from the GitHub repository).
+- **CSV_containing_UN_country_codes**: Set the path to the csv file containing UN country codes (downloaded from the GitHub repository).
 
-- Input: Statistics table: Set the path to the statistics table (generated in step A5).
+- **Input: Statistics table**: Set the path to the statistics table (generated in step A5).
 
-- Input: MGCI_template_table1: Set the path to MGCI template table 1 (downloaded from the GitHub repository).
+- **Input: MGCI_template_table1**: Set the path to MGCI template table 1 (downloaded from the GitHub repository).
 
-- Input: MGCI_template_table2: Set the path to MGCI template table 2 (downloaded from the GitHub repository).
+- **Input: MGCI_template_table2**: Set the path to MGCI template table 2 (downloaded from the GitHub repository).
 
-- Input: MGCI_template_table3: Set the path to MGCI template table 3 (downloaded from the GitHub repository).
+- **Input: MGCI_template_table3**: Set the path to MGCI template table 3 (downloaded from the GitHub repository).
 
-- NATURE: Information on the production and dissemination of the data. For what regards to the values produced by countries using the tools only two possible values are allowed: C (Country Data) for data values and N (Non relevant) when a given bioclimatc belt does not occur in a given country. When Nature = N then OBS_VALUE = NA. Linked to OBS_STATUS
+- **NATURE**: Information on the production and dissemination of the data. For what regards to the values produced by countries using the tools only two possible values are allowed: C (Country Data) for data values and N (Non relevant) when a given bioclimatc belt does not occur in a given country. When Nature = N then OBS_VALUE = NA. Linked to OBS_STATUS
 
-- OBS_STATUS: Information on the quality of a value or an unusual or missing value. For what regards to the values produced by countries using the tools only two possible values are allowed: A (Official figure) for data values and M (Missing) when a given bioclimatc belt does not occur in a given country. When Nature = N then OBS_STATUS=M and  OBS_VALUE = NA.
+- **OBS_STATUS**: Information on the quality of a value or an unusual or missing value. For what regards to the values produced by countries using the tools only two possible values are allowed: A (Official figure) for data values and M (Missing) when a given bioclimatc belt does not occur in a given country. When Nature = N then OBS_STATUS=M and  OBS_VALUE = NA.
 
-- TIME_DETAIL: Point in time to which the observation actually refers (in practice, the reference year of the land cover product used to compute the values). Same as TIME_PERIOD
+- **TIME_DETAIL**: Point in time to which the observation actually refers (in practice, the reference year of the land cover product used to compute the values). Same as TIME_PERIOD
 
-- TIME_PERIOD: Point in time to which the observation actually refers (in practice, the reference year of the land cover product used to compute the values). Same as TIME_DETAIL.
+- **TIME_PERIOD**: Point in time to which the observation actually refers (in practice, the reference year of the land cover product used to compute the values). Same as TIME_DETAIL.
 
-- COMMENT_OBS: Descriptive text which can be attached to the observation. Additional information on specific aspects of each observation, such as how the observation was computed/estimated or details that could affect the comparability of this data point with others in a time series (i.e. interpolated value).
+- **COMMENT_OBS**: Descriptive text which can be attached to the observation. Additional information on specific aspects of each observation, such as how the observation was computed/estimated or details that could affect the comparability of this data point with others in a time series (i.e. interpolated value).
 
-- SOURCE_DETAIL: Name of the institution which computed the indicator value (e.g. National Statistical Office of XXX).
+- **SOURCE_DETAIL**: Name of the institution which computed the indicator value (e.g. National Statistical Office of XXX).
 
-- Select folder for outputs: Select an output folder to store your outputs. The output folder should already exist. Make sure the folder name does not have any spaces.
-
-- Join2:
+- **Select folder for outputs**: Select an output folder to store your outputs. The output folder should already exist. Make sure the folder name does not have any spaces.
 
 **Click Run.**
 
