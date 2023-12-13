@@ -213,9 +213,9 @@ Next double-click on the R folder path and navigate to where you have installed 
 
 |setup14|
 
-Once done click OK to close the setting window and return to the main QGIS interface.
+Once done **click OK** to close the setting window and return to the main QGIS interface.
 
-On the right-hand side of QGIS you should see the processing Toolbox. (If it is not visible, from the main menu select View>>panels>>processing toolbox). In the processing toolbox if you expand models and R you should see the SDG15.4.2 models and scripts present.  It is from the toolbox that you will run the tools if you choose to use the SDG_15_4_2_beta toolbox rather than undertaking the manual steps.
+On the right-hand side of QGIS you should see the processing Toolbox. (If it is not visible, from the main menu select **View>>panels>>processing toolbox**). In the processing toolbox if you expand models and R you should see the SDG15.4.2 models and scripts present.  It is from the toolbox that you will run the tools if you choose to use the SDG_15_4_2_beta toolbox rather than undertaking the manual steps.
 
 |setup15|
 
@@ -223,13 +223,13 @@ On the right-hand side of QGIS you should see the processing Toolbox. (If it is 
 **Running analysis steps using the custom QGIS toolbox**
 ========================================================
 
-This section of the tutorial explains in detail how to calculate value estimates for sub-indicator 15.4.2a in QGIS, using Colombia as a case study. This section assumes that the user has already downloaded the global mountain map made available by FAO to compute this indicator and a land cover dataset meeting the requirements described in the :ref:`**Defining analyses environments and land cover data selection**<Defining analyses environments and land cover data selection>`  section.
+This section of the tutorial explains in detail how to calculate value estimates for sub-indicator 15.4.2a in QGIS, using Colombia as a case study. This section assumes that the user has already downloaded the global mountain map made available by FAO to compute this indicator and a land cover dataset meeting the requirements described in the **Background** section.
 
 We provide a custom toolbox to group and run the steps to help speed up the analysis and allow for easier repeat processing and to standardize the naming of outputs and how they appear within the QGIS interface.
 
 |setup15|
 
-Annex 2 of the tutorial outlines in detail the main steps each tool undertakes in the SDG 15.4.2 processing toolbox. This can be used as a reference if the user wishes to understand how each tool step would be carried out manually. Note that some plugins such as GroupStats and OpenDEMDownloader (which have been explained in steps in Annex 2) are not supported/easy to implement on model builder in QGIS. Therefore, it was more efficient to use slightly different approaches for the model builder in such cases.
+For each step we provide a tool diagram to illustrate the steps being undertaken within the toolstep, however Annex 2 of the tutorial outlines in detail the main steps each tool undertakes in the SDG 15.4.2 processing toolbox. This can be used as a reference if the user wishes to understand how each tool step would be carried out manually. Note that some plugins such as **GroupStats** and **OpenDEMDownloader** (which have been explained in steps in Annex 2) are not supported easy to implement on model builder in QGIS. Therefore, it was more efficient to use slightly different approaches for the model builder in such cases.
 
 
 Instructions to calculate Sub-indicator 15.4.2a in QGIS using the custom models
@@ -237,7 +237,7 @@ Instructions to calculate Sub-indicator 15.4.2a in QGIS using the custom models
 
 This section of the tutorial explains in detail how to use the custom QGIS toolbox to calculate value estimates for sub-indicator 15.4.2a in QGIS, using Colombia as a case study.
 
-Before we begin running the tools at this stage we want to set-up the projection for the analysis. We therefore want to set the project window to an equal area projection. For choosing an equal are projection for your country please see the **Defining analyses environments and land cover data selection** for guidance).
+Before we begin running the tools at this stage we want to set-up the projection for the analysis. We therefore want to set the project window to an equal area projection. For choosing an equal are projection for your country please see the **Defining projections to be used for the analysis** section for guidance).
 
  - Click on the project projection EPSG: 4326 in the bottom right hand corner of the QGIS project
 
@@ -253,9 +253,9 @@ Before we begin running the tools at this stage we want to set-up the projection
 Step A0 Prepare country boundary and buffer to 10 km
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The first step is to define the an Area of Interest (AOI) for the analysis. This should go beyond the country boundary as outlined in the **Defining analyses environments and land cover data selection** of the tutorial. In this example, the input boundary layer is in Geographic coordinate system (EPSG 4326). At this stage we want to set-up the projection for the main parts of the analysis. We therefore want to set the project window to an equal area projection and physically project the country boundary to the same projection.
+The first step is to define the Area of Interest (AOI) for the analysis. This should go beyond the country boundary as outlined in the **Defining an area of interest** section of the tutorial. In this example, the input boundary layer is in Geographic coordinate system (EPSG 4326). At this stage we want to set-up the projection for the main parts of the analysis. We therefore want to set the project window to an equal area projection and physically project the country boundary to the same projection.
 
-Colombia does have a National Projection that preserve both area and distance (see here) and therefore could be used as a custom projection. In case a national projection that minimize area distortion does not exist for a given country, it is recommended to define a custom Equal Area projection centered on the country area following the instructions in described here under **Defining analyses environments and land cover data selection**).
+Colombia does have a National Projection that preserve both area and distance (see here) and therefore could be used as a custom projection. In case a national projection that minimize area distortion does not exist for a given country, it is recommended to define a custom Equal Area projection centered on the country area following the instructions in described here under **Defining projections to be used for the analysis** section).
 
 In the Processing Toolbox, under Models, click on model **A0 Prepare country boundary and buffer to 10 km**
 
