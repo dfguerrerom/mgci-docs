@@ -546,9 +546,9 @@ This sub-indicator looks at the proportion of degraded mountain area, calculated
 
 Where:
 
-Degraded mountain area n = Total degraded mountain area (in Km2) in the reporting period n. This is, the sum of the areas where land cover change is considered to constitute degradation from the baseline period.
+ - **Degraded mountain area n** = Total degraded mountain area (in Km2) in the reporting period n. This is, the sum of the areas where land cover change is considered to constitute degradation from the baseline period.
 
-Total mountain area = Total area of mountains (in Km2).
+- **Total mountain area** = Total area of mountains (in Km2).
 
 As a reminder, in accordance with the SDG indicator’s metadata countries are required to compute estimates for Sub-Indicator 15.4.2b for a baseline for approximately 2000-2015, and subsequently every three years (2018, 2021, 2024, 2027 and 2030). Therefore, for the example in this tutorial we will use the ESA-CCI landcover products for 2000, 2015 (for the baseline) and 2018 (for the reporting year). ESA-CCI landcover data are not yet available beyond 2021 so we have therefore not yet been able to calculate subsequent years in this example.
 
@@ -581,19 +581,19 @@ We will calculate the baseline period first i.e., using 2000 landcover (year 1) 
 
 **Input parameters**
 
-- Select country: Select country to process from the dropdown list.
+- **Select country**: Select country to process from the dropdown list.
 
-- CSV_containing_UN_country_codes: Set the path to the csv file containing UN country codes (downloaded from the GitHub repository).
+- **CSV_containing_UN_country_codes**: Set the path to the csv file containing UN country codes (downloaded from the GitHub repository).
 
-- Enter year of landcover year 1: Enter the year of the LULC data used for year 1.
+- **Enter year of landcover year 1**: Enter the year of the LULC data used for year 1.
 
-- Enter year of landcover year 2: Enter the year of the LULC data used for year 2.
+- **Enter year of landcover year 2**: Enter the year of the LULC data used for year 2.
 
-- Select folder for outputs: Select an output folder to store your outputs. The output folder should already exist. Make sure the folder name does not have any spaces.
+- **Select folder for outputs**: Select an output folder to store your outputs. The output folder should already exist. Make sure the folder name does not have any spaces.
 
-- Input: LULC year 1: Set the path to your LULC data for year 1.
+- **Input: LULC year 1**: Set the path to your LULC data for year 1.
 
-- Input: LULC year 2: Set the path to your LULC data for year 2.
+- **Input: LULC year 2**: Set the path to your LULC data for year 2.
 
 **Click Run.**
 
@@ -628,25 +628,25 @@ In the Processing Toolbox, under Models, click on model **B2 Generate Transition
 
 **Input parameters**
 
-- Select country: Select country to process from the dropdown list.
+- **Select country**: Select country to process from the dropdown list.
 
-- Input: CSV_containing_UN_country_codes: Set the path to the csv file containing UN country codes (downloaded from the GitHub repository).
+- **Input: CSV_containing_UN_country_codes**: Set the path to the csv file containing UN country codes (downloaded from the GitHub repository).
 
-- Are you using the default transitions matrix or generating a National one?: Select the type of transition matrix you are using.
+- **Are you using the default transitions matrix or generating a National one?**: Select the type of transition matrix you are using.
 
-- Default transition_matrix: If you selected default transition matrix, set the path to the transition matrix file (downloaded from the GitHub repository). Skip this step if you selected national transition matrix.
+- **Default transition_matrix**: If you selected default transition matrix, set the path to the transition matrix file (downloaded from the GitHub repository). Skip this step if you selected national transition matrix.
 
-- Pre-generated national transition_matrix: If you selected national transition matrix, set the path to the national transition matrix file. Skip this step if you selected default transition matrix.
+- **Pre-generated national transition_matrix**: If you selected national transition matrix, set the path to the national transition matrix file. Skip this step if you selected default transition matrix.
 
-- Input: National land cover (yr1): If you are generating a national transition matrix, enter the path to the national land cover data for year 1. Skip this step if you selected default transition matrix.
+- **Input: National land cover (yr1)**: If you are generating a national transition matrix, enter the path to the national land cover data for year 1. Skip this step if you selected default transition matrix.
 
-- Enter year of landcover year 1: Enter the year of the LULC data used for year 1.
+- **Enter year of landcover year 1**: Enter the year of the LULC data used for year 1.
 
-- Input: National land cover (yr2): If you are generating a national transition matrix, enter the path to the national land cover data for year 2. Skip this step if you selected default transition matrix.
+- **Input: National land cover (yr2)**: If you are generating a national transition matrix, enter the path to the national land cover data for year 2. Skip this step if you selected default transition matrix.
 
-- Enter year of landcover year 2: Enter the year of the LULC data used for year 2.
+- **Enter year of landcover year 2**: Enter the year of the LULC data used for year 2.
 
-- Select folder for outputs: Select an output folder to store your outputs. The output folder should already exist. Make sure the folder name does not have any spaces.
+- **Select folder for outputs**: Select an output folder to store your outputs. The output folder should already exist. Make sure the folder name does not have any spaces.
 
 **Click Run.**
 
@@ -654,11 +654,9 @@ The resultant table should look like this:
 
 |SubB_B2_tool_results1|
 
-*The boundaries and names shown, and the designations used on this map do not imply official endorsement or acceptance by the United Nations.*
-
 |SubB_B2_tool_results2|
 
-Important Note: Be careful if using this same table for other time periods as it is based on transitions between two specified time periods. E.g., in this case 2000 and 2015. There may be other possible transitions that are not present in this time period but may be possible for other years. Therefore, before using this transitions matrix for other time periods either check for missing entries and manually add them to this table or generate a new transitions table for the new time period.
+***Important Note**: Be careful if using this same table for other time periods as it is based on transitions between two specified time periods. E.g., in this case 2000 and 2015. There may be other possible transitions that are not present in this time period but may be possible for other years. Therefore, before using this transitions matrix for other time periods either check for missing entries and manually add them to this table or generate a new transitions table for the new time period.*
 
 **Tool B2 model diagram**
 
@@ -681,25 +679,25 @@ In the Processing Toolbox, under Models, click on model **B3 Reclassify LULC Tra
 
 **Input parameters**
 
-- Select country: Select country to process from the dropdown list.
+- **Select country**: Select country to process from the dropdown list.
 
-- CSV_containing_UN_country_codes: Set the path to the csv file containing UN country codes (downloaded from the GitHub repository).
+- **CSV_containing_UN_country_codes**: Set the path to the csv file containing UN country codes (downloaded from the GitHub repository).
 
-- Input: transitions matrix: Enter the path to the transition matrix in QGIS format (generated in step B2).
+- **Input: transitions matrix**: Enter the path to the transition matrix in QGIS format (generated in step B2).
 
-- Input: concatenated LULC dataset: Enter the path to the concatenated LULC dataset (generated in step B1).
+- **Input: concatenated LULC dataset**: Enter the path to the concatenated LULC dataset (generated in step B1).
 
-- Enter year of landcover year 1: Enter the year of the LULC data used for year 1.
+- **Enter year of landcover year 1**: Enter the year of the LULC data used for year 1.
 
-- Enter year of landcover year 2: Enter the year of the LULC data used for year 2.
+- **Enter year of landcover year 2**: Enter the year of the LULC data used for year 2.
 
-- Select folder for outputs: Select an output folder to store your outputs. The output folder should already exist. Make sure the folder name does not have any spaces.
+- **Select folder for outputs**: Select an output folder to store your outputs. The output folder should already exist. Make sure the folder name does not have any spaces.
 
-- Impact style file: Set the path to the layer style file for this dataset.
+- **Impact style file**: Set the path to the layer style file for this dataset.
 
-- Have you assessed impact for a previous reporting period?: Select yes or no.
+- **Have you assessed impact for a previous reporting period?**: Select yes or no.
 
-- Input: previously calculated impact layer for baseline period (2000-2015): If you have already calculated the impact layer for the baseline period (2000-2015), enter the path to it.
+- **Input: previously calculated impact layer for baseline period (2000-2015)**: If you have already calculated the impact layer for the baseline period (2000-2015), enter the path to it.
 
 **Click Run.**
 
@@ -739,21 +737,21 @@ In the Processing Toolbox, under Models, click on model **B4 Combine Bioclimatic
 
 **Input parameters**
 
-- Select country: Select country to process from the dropdown list.
+- **Select country**: Select country to process from the dropdown list.
 
-- CSV_containing_UN_country_codes: Set the path to the csv file containing UN country codes (downloaded from the GitHub repository).
+- **CSV_containing_UN_country_codes**: Set the path to the csv file containing UN country codes (downloaded from the GitHub repository).
 
-- Bioclimatic belts: Enter the path to the mountain belts (Generated in step A2b).
+- **Bioclimatic belts**: Enter the path to the mountain belts (Generated in step A2b).
 
-- Enter year of landcover year 1: Enter the year of the LULC data used for year 1.
+- **Enter year of landcover year 1**: Enter the year of the LULC data used for year 1.
 
-- Enter year of landcover year 2: Enter the year of the LULC data used for year 2.
+- **Enter year of landcover year 2**: Enter the year of the LULC data used for year 2.
 
-- Select folder for outputs: Select an output folder to store your outputs. The output folder should already exist. Make sure the folder name does not have any spaces.
+- **Select folder for outputs**: Select an output folder to store your outputs. The output folder should already exist. Make sure the folder name does not have any spaces.
 
-- LULC transition impact status: Enter the path to the LULC transition impact status (generated in step B3). Use adjusted impact if it is not the initial reporting period.
+- **LULC transition impact status**: Enter the path to the LULC transition impact status (generated in step B3). Use adjusted impact if it is not the initial reporting period.
 
-- LULC transitions: Enter the path to the LULC transitions (generated in step B1).
+- **LULC transitions**: Enter the path to the LULC transitions (generated in step B1).
 
 **Click Run.**
 
@@ -778,23 +776,23 @@ In the Processing Toolbox, under Models, click on model **B5 Generate Planimetri
 
 **Input parameters**
 
-- What statistics do you wish to calculate?: Select either Planimetric area or Planimetric area and real surface area.
+- **What statistics do you wish to calculate?**: Select either Planimetric area or Planimetric area and real surface area.
 
-- Select country: Select country to process from the dropdown list.
+- **Select country**: Select country to process from the dropdown list.
 
-- CSV_containing_UN_country_codes: Set the path to the csv file containing UN country codes (downloaded from the GitHub repository).
+- **CSV_containing_UN_country_codes**: Set the path to the csv file containing UN country codes (downloaded from the GitHub repository).
 
-- Enter Output B4: Enter the path to the combined year 1 and year 2 LULC, Impact and Mountain layer for the period that you are processing (generated in step B4).
+- **Enter Output B4**: Enter the path to the combined year 1 and year 2 LULC, Impact and Mountain layer for the period that you are processing (generated in step B4).
 
-- Select folder for outputs: Select an output folder to store your outputs. The output folder should already exist. Make sure the folder name does not have any spaces.
+- **Select folder for outputs**: Select an output folder to store your outputs. The output folder should already exist. Make sure the folder name does not have any spaces.
 
-- Enter year of landcover year 1: Enter the year of the LULC data used for year 1.
+- **Enter year of landcover year 1**: Enter the year of the LULC data used for year 1.
 
-- Enter year of landcover year 2: Enter the year of the LULC data used for year 2.
+- **Enter year of landcover year 2**: Enter the year of the LULC data used for year 2.
 
-- Input RSA raster: Enter the path to the resampled or aggregated version of the real surface area raster (generated in step A5a).
+- **Input RSA raster**: Enter the path to the resampled or aggregated version of the real surface area raster (generated in step A5a).
 
-- Transition_matrix_for_QGIS: Enter the path to the transition matrix for QGIS (generated in step B2b).
+- **Transition_matrix_for_QGIS**: Enter the path to the transition matrix for QGIS (generated in step B2b).
 
 **Click Run.**
 
@@ -816,11 +814,9 @@ In the Processing Toolbox, under Models, click on model **B6 Formatting to Repor
 
 **Input parameters**
 
-- Select country: Select country to process from the dropdown list.
+- **Select country**: Select country to process from the dropdown list.
 
-- CSV_containing_UN_country_codes: Set the path to the csv file containing UN country codes (downloaded from the GitHub repository).
-
--
+- **CSV_containing_UN_country_codes**: Set the path to the csv file containing UN country codes (downloaded from the GitHub repository).
 
 **Click Run.**
 
