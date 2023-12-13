@@ -112,8 +112,9 @@ Several global standards of land cover classifications have been developed by in
     |                                       | The class also includes industrial areas, and waste          |
     |                                       | dump deposit and extraction sites.                           |
     +---------------------------------------+--------------------------------------------------------------+
-    | 2. Croplands                          | The class is composed of cultivated vegetation, including    |
-    |                                       | herbaceous plants, trees and/or shurbs. It includes:         |
+    | 2. Croplands                          |The class is composed of cultivated vegetation, including     |
+    |                                       |herbaceous plants, trees and/or shurbs. It includes:          |
+    |                                       |                                                              |
     |                                       |- Herbaceous crops used for hay. All the non-perennial        |
     |                                       |  crops that do not last for more than two growing seasons    |
     |                                       |  and crops like sugar cane, where the upper part of the      |
@@ -186,7 +187,7 @@ Several global standards of land cover classifications have been developed by in
 
 Land cover maps developed by relevant national authorities will generally provide the most relevant data source to compute this indicator. However, in certain cases, such data may not be available. In those cases, various regional or global products provide a viable alternative.
 
-The global default source of land cover data for this indicator is the European Space Agency Climate Change Initiative (ESA-CCI) Land Cover product (ESA, 2017). The ESA-CCI product consists of a series of annual Land Cover maps at 300 m resolution, providing 22 land cover classes based on 300m MERIS, 1km SPOT – VEGETATION, 1km PROBA –V and 1km AVHRR. The ESA CCI adheres to the Cover Classification System of the United Nations Food and Agriculture Organization (UN FAO) (Santoro et al. 2015). Annual updates are currently available from 1992 to 2020. Additional years will be made available by the European Space Agency
+The global default source of land cover data for this indicator is the European Space Agency Climate Change Initiative (ESA-CCI) Land Cover product (ESA, 2017). The ESA-CCI product consists of a series of annual Land Cover maps at 300 m resolution, providing 22 land cover classes based on 300m MERIS, 1km SPOT – VEGETATION, 1km PROBA –V and 1km AVHRR. The ESA CCI adheres to the Cover Classification System of the United Nations Food and Agriculture Organization (UN FAO) (Santoro et al. 2015). Annual updates are currently available from 1992 to 2020. Additional years will be made available by the European Space Agency.
 
 
 Planimetric area calculation vs Real surface area calculation
@@ -214,7 +215,7 @@ Recognizing that this indicator cannot fully capture the complexity of mountain 
 - Area estimations based on remote-sensing-derived land cover maps via pixel counting may lead to biased area estimates due to map errors. National authorities are encouraged to further refine those estimates by comparing them against reference datasets and applying bias corrections.
 
 
-Further information on the methdolofy is available at ` <https://unstats.un.org/sdgs/metadata/files/Metadata-15-04-02.pdf>`.
+Further information on the methdology is available at ` <https://unstats.un.org/sdgs/metadata/files/Metadata-15-04-02.pdf>`.
 
 
 Acknowledgements
