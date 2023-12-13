@@ -154,16 +154,16 @@ In a web browser navigate to the SDG15.4.2 beta repository using the following U
 
 |setup1|
 
-Next open a file explorer window and navigate to the folder where you have downloaded the file. At this stage we would recomment you move the zip file to a sensible location with a short and simple file structure. e.g. in this example we have moved the downloaded zip file to c:\workspace. Right-click on the file named mgci-docs-MGCI_DML.zip and click on 7-ZIP >> Extract here
+Next open a file explorer window and navigate to the folder where you have downloaded the file. At this stage we would recommend you move the zip file to a sensible location with a short and simple file structure. e.g. in this example we have moved the downloaded zip file to c:\\workspace. Right-click on the file named **mgci-docs-MGCI_DML.zip** and click on **7-ZIP >> Extract here**
 
 |setup2|
 
 
-Once unzipped you should see a folder of the same name (mgci-docs-MGCI_DML). Navigate inslide this folder and you should see the following file structure and a zip file called SDG15_4_2_beta.zip.
+Once unzipped you should see a folder of the same name (mgci-docs-MGCI_DML). Navigate inside this folder and you should see the following file structure and a zip file called **SDG15_4_2_beta.zip**.
 
 |setup2b|
 
-Right-click on SDG15_4_2_beta.zip and clcik on 7-ZIP >> Extract file . Note we are clicking on extract files this time and not extract here as we want to make some modifications to the path we are unzipping to.
+Right-click on **SDG15_4_2_beta.zip** and click on **7-ZIP >> Extract file**. Note we are clicking on extract files this time and not extract here as we want to make some modifications to the path we are unzipping to.
 
 |setup3|
 
@@ -171,7 +171,7 @@ you should see the unzip files window below. Do NOT click OK yet as we want to m
 
 |setup4|
 
-First remove 'mgci-docs-MGCI_DML' from the extract to path and then tick Eliminate duplication of root folder
+First remove **'mgci-docs-MGCI_DML'** from the extract to path and then tick **Eliminate duplication of root folder**
 
 |setup5|
 
@@ -181,31 +181,31 @@ Click okay once you have done these steps. You should now have a folder set up f
 
 |setup7|
 
-The next step is to go into the input_data folder and unzip the Global mountains map. Right-click on SDG1542_WorldMountainMap.zip and click on 7-ZIP >> Extract here
+The next step is to go into the input_data folder and unzip the Global mountains map. Right-click on **SDG1542_WorldMountainMap.zip** and click on **7-ZIP >> Extract here**.
 
 |setup8|
 
-You are now ready to open the QGIS project. Double-click to SDG_15_4_2_beta.qgz to open the project
+You are now ready to open the QGIS project. Double-click to **SDG_15_4_2_beta.qgz** to open the project
 
 |setup9|
 
 Next (once QGIS is open) there are a few steps that need to be undertaken to set up the QGIS project correctly and to link it to the custom toolbox and scripts.
 
 
-From the QGIS main menu goto settings>>options>>Data Sources and change the 'Representation of null values from Null to NA (this will ensure  the correct NA representation of Null values in the output reporting tables)
+From the QGIS main menu goto **settings>>options>>Data Sources** and change the **Representation of null values** from Null to **NA** (this will ensure  the correct NA representation of Null values in the output reporting tables)
 
 |setup10|
 
 
-In the same settings window click on processing>>general and change the 'Results group name' to OUTPUTS. Put this in capitals as this is how it will then appear in the QGIS table of contents. It means that any outputs from geoprocessing tools will be stored under this group heading and makes it easier to distinguish from the INPUT data.
+In the same settings window click on **processing>>general** and change the **Results group name** to **OUTPUTS**. Put this in capitals as this is how it will then appear in the QGIS table of contents. It means that any outputs from geoprocessing tools will be stored under this group heading and makes it easier to distinguish from the INPUT data.
 
 |setup11|
 
-In the same settings>>processing window, shrink down the general tab and expand Models. Double click on the models path to expose the three dots. Click on this and click add. Navigate to the QGIS models folder in the SDG15_4_2_beta folder. e.g. in this example C:\workspace\SDG15_4_2_beta\QGIS_models . Then click okay.
+In the same **settings>>processing** window, shrink down the general tab and expand Models. Double click on the models path to expose the three dots. Click on this and click **add**. Navigate to the QGIS models folder in the SDG15_4_2_beta folder. e.g. in this example **C:\\workspace\\SDG15_4_2_beta\\QGIS_models** . Then click **okay**.
 
 |setup12|
 
-In the same settings>>processing>>providers window, shrink down the Models tab and expand R. Double click on the models path to expose the three dots. Click on this and click add. Navigate to the R_scripts folder in the SDG15_4_2_beta folder. e.g. in this example C:\workspace\SDG15_4_2_beta\R_scriptss . Then click okay.
+In the same **settings>>processing>>providers** window, shrink down the Models tab and expand **R**. Double click on the models path to expose the three dots. Click on this and click add. Navigate to the R_scripts folder in the SDG15_4_2_beta folder. e.g. in this example **C:\\workspace\\SDG15_4_2_beta\\R_scripts** . Then click okay.
 
 |setup13|
 
@@ -215,7 +215,7 @@ Next double-click on the R folder path and navigate to where you have installed 
 
 Once done click OK to close the setting window and return to the main QGIS interface.
 
-On the righ-hand side of QGIS you should see the processing Toolbox. (If it is not visible, from the main menu select View>>panels>>processing toolbox). In the processing toolbox if you expand models and R you should see the SDG15.4.2 models and scripts present.  It is from the toolbox that you will run the tools if you choose to use the SDG_15_4_2_beta toolbox rather than undertaking the manual steps.
+On the right-hand side of QGIS you should see the processing Toolbox. (If it is not visible, from the main menu select View>>panels>>processing toolbox). In the processing toolbox if you expand models and R you should see the SDG15.4.2 models and scripts present.  It is from the toolbox that you will run the tools if you choose to use the SDG_15_4_2_beta toolbox rather than undertaking the manual steps.
 
 |setup15|
 
@@ -839,6 +839,8 @@ Repeat the above step for the next reporting period i.e., using 2015 landcover (
 .. |setup1| image:: media_toolbox/setup1.png
    :width: 800
 .. |setup2| image:: media_toolbox/setup2.png
+   :width: 800
+.. |setup2b| image:: media_toolbox/setup2b.png
    :width: 800
 .. |setup3| image:: media_toolbox/setup3.png
    :width: 800
