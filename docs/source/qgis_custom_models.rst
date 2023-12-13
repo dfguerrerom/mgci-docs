@@ -41,7 +41,7 @@ QGIS software installation
 
 Ensure QGIS 3.22.16 installed on your computer. We suggest users use the Long-Term Release version of QGIS to undertake their analysis as this is the most stable version and users are less likely to incur technical difficulties and bugs. There are various installers depending on your operating system but for most users we recommend the QGIS Standalone Installer. Full instructions are on their website: `https://qgis.org/en/site/forusers/download.html <https://qgis.org/en/site/forusers/download.html>`__\.
 
-While the QGIS-SDG 15.4.2 :sub:`beta` analysis runs entirely within the QGIS interface, to run this workflow, you will also need to install R Software 4.4.1. R scripts will be run from within the QGIS interface and no prior knowledge of R is required. There have been a number of releases since 4.4.1 but we have found that some of the later versions cause the r-scripts to run slower within the toolbox.
+While the QGIS-SDG 15.4.2 :sub:`beta` analysis runs entirely within the QGIS interface, to run this workflow, you will also need to install R Software 4.4.1. R scripts will be run from within the QGIS interface and no prior knowledge of R is required. 
 
 R software and packages installation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -51,8 +51,8 @@ download and install RStudio Desktop from
 https://www.rstudio.com/products/rstudio/. 
 
 
-A step-by-step guide on how to install R and R Studio (with images) can be found in Annex X.
-If you are not installing R and R studio from scratch, please make sure that your installations are upgraded. It is important to use the current version of R software (R-4.1.1 at the time of writing). The R version can be easily checked on the text within the ‘R Console’ box at the beginning of a new session (see Figure XX for standalone R and Figure ZZ for R Studio).
+A step-by-step guide on how to install R and R Studio (with images) can be found in Annex 1.
+If you are not installing R and R studio from scratch, please make sure that your installations are upgraded. It is important to use a current version of R software (We currently recommend R-4.1.1). Although there have been a number of releases since 4.4.1,  we have found that some of the later versions cause the r-scripts to run slower within the toolbox. The R version can be easily checked on the text within the ‘R Console’ box at the beginning of a new session (see Figures below for standalone R and  R Studio).
 
 |image5_orig|
 
@@ -147,12 +147,10 @@ processing toolbox menu
 
 
 QGIS-SDG 15.4.2 custom toolbox download and installation
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-QGIS custom toolbox download and installation
-----------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Users will also need to download the SDG_15_4_2_beta_Toolbox and set of templates and style files from the SDG_15_4_2_beta repository.
-In a web browser navigate to the SDG15.4.2 beta repository using the following URL: https://github.com/corinnar/mgci-docs
+In a web browser navigate to the SDG15.4.2 beta repository using the following URL: https://github.com/sepal-contrib/wcmc-mgci/tree/main/docs
 
 |setup1|
 
