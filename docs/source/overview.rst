@@ -47,7 +47,7 @@ disaggregated by the 10 SEEA classes based on UN Statistical Division (2014).  T
 
 |imageworkflow|
 
-Figure 1: Simplified Workflow (still need to edit and upload latest)
+Figure 1: Simplified Workflow
 
 
 Overview of Mountain Area Map
