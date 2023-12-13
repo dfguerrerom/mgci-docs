@@ -239,7 +239,7 @@ This section of the tutorial explains in detail how to use the custom QGIS toolb
 
 Before we begin running the tools at this stage we want to set-up the projection for the analysis. We therefore want to set the project window to an equal area projection. For choosing an equal are projection for your country please see the **Defining projections to be used for the analysis** section for guidance).
 
- - Click on the project projection EPSG: 4326 in the bottom right hand corner of the QGIS project
+- Click on the project projection EPSG: 4326 in the bottom right hand corner of the QGIS project
 
 |setup16|
 
@@ -263,15 +263,15 @@ In the Processing Toolbox, under Models, click on model **A0 Prepare country bou
 
 **Input parameters**
 
- - Select country: Select country to process from the dropdown list.
+- **Select country**: Select country to process from the dropdown list.
 
-- Input: CSV_containing_UN_country_codes: Set the path to the csv file containing UN country codes (downloaded from the GitHub repository).
+- **Input**: CSV_containing_UN_country_codes: Set the path to the csv file containing UN country codes (downloaded from the GitHub repository).
 
-- Input: Vector Country Boundary: Set the path to the country boundary shapefile.
+- **Input**: Vector Country Boundary: Set the path to the country boundary shapefile.
 
-- Input: Target CRS (i.e. Select a relevant equal area projection for your area of interest): Select a CRS for your outputs. This should be an equal area projection relevant to the country being processed.
+- **Input**: Target CRS (i.e. Select a relevant equal area projection for your area of interest): Select a CRS for your outputs. This should be an equal area projection relevant to the country being processed.
 
-- Select folder for outputs: Select an output folder to store your outputs. The output folder should already exist. Make sure the folder name does not have any spaces.
+- **Select folder for outputs**: Select an output folder to store your outputs. The output folder should already exist. Make sure the folder name does not have any spaces.
 
 **Click Run**
 
