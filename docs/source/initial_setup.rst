@@ -4,27 +4,11 @@ Initial set-up
 R software and packages installation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-1. Download and install R from https://www.r-project.org/ and then
-   download and install RStudio Desktop from
-   https://www.rstudio.com/products/rstudio/. Once the later has been
-   completed, open RStudio in your computer.
+Download and install R from https://www.r-project.org/ and then download and install RStudio Desktop from 
+https://www.rstudio.com/products/rstudio/. Once the later has been completed, open RStudio in your computer.
 
-2. Click on ‘File’ (top left corner) and then on ‘Open File…’. Select
-   the file named ‘XXXXXXXX’ Click on …….to run and install all the
-   packages and check that there are no errors.
-
-3. Ensure the ‘sp ‘and ‘raster’ packages are correctly installed. Two of
-   the options to do so are:
-
-   -   install.packages("name\_of\_package")
-   -  library(name\_of\_package)
-
-      **Or**
-
-   -  (if(!require("name\_of\_package")) install.packages("name\_of\_package")
-
-A step-by-step guide on how to install R and R Studio (with images) can be found in Annex X.
-If you are not installing R and R studio from scratch, please make sure that your installations are upgraded. It is important to use the current version of R software (R-4.1.1 at the time of writing). The R version can be easily checked on the text within the ‘R Console’ box at the beginning of a new session (see Figure XX for standalone R and Figure ZZ for R Studio).
+A step-by-step guide on how to install R and R Studio (with images) can be found in Annex 1.
+If you are not installing R and R studio from scratch, please make sure that your installations are upgraded. It is important to use a current version of R software (we currently recommend R-4.1.1). Although there have been a number of releases since 4.4.1,  we have found that some of the later versions cause the r-scripts to run slower within the toolbox. The R version can be easily checked on the text within the ‘R Console’ box at the beginning of a new session (see Figures below for standalone R and  R Studio).
 
 |image5|
 
@@ -111,7 +95,7 @@ Users may find that the R scripts button is missing at this stage.
 
    |image13|
    
-   and the processing Toolbox Menu should look like this with the missing R scripts button |image14|
+   The processing Toolbox Menu should look like this with the missing R scripts button |image14|
    
    |image15|
 
@@ -141,20 +125,17 @@ Next add additional resources to the R processing toolbox
 
    |image18|
 
--  Click on **All Collections** on the left hand panel and click **QGIS
-   R script collection (QGIS Official Repository)** then click
-   **Install**
-
-    |image19|
-
-A wider collection of scripts should now be present in the R-scripts
-collection. These are not required for MGCI but useful for R-Integration
-with QGIS.
-
-    |image20|
+-  Click on **All Collections** on the left hand panel and click **QGIS R script collection (QGIS Official Repository)** then click **Install**
+   
+   |image19|
+   
+A wider collection of scripts should now be present in the R-scripts collection. These are not required for MGCI but useful for R-Integration with QGIS.
+   
+|image20|
+   
 To check that the R integration is correctly installed and
-working check that a new script can be created by clicking **‘Create
-New R script’** button at the top of the Processing toolbox.
+working check that a new script can be created by clicking **Create
+New R script** button at the top of the Processing toolbox.
 
 -  Click the **Open Script** button and open the real surface area R
    script that has been adapted to run in QGIS. The file is called
@@ -175,23 +156,23 @@ v1.**
 -  Click the **Save** **script as** button |image23| to save the script
    in your QGIS rscripts folder. Save the script as
    **RSA\_R\_script\_with\_QGIS\_headers\_final\_v1.rsx**
-
-|image24|
+   
+   |image24|
 
 -  Click **Save**
 
 -  Add a sample raster (to be provided) to your QGIS project and run the
    following steps to check that the QGIS R-installation is working
    correctly for the RSA script.
-
-|image25|
+   
+   |image25|
 
 -  In the Processing Toolbox, double click on the **Create RSA Raster
    V1** tool to open the tool dialogue
 
     |image26|
-
-|image27|
+   
+   |image27|
 
 -  Leave the output to save to a temporary file
 
