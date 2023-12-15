@@ -1,42 +1,27 @@
 Initial set-up
 =================
 
+QGIS software installation
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+Ensure QGIS 3.22.16 installed on your computer. We suggest users use the Long-Term Release version of QGIS to undertake their analysis as this is the most stable version and users are less likely to incur technical difficulties and bugs. There are various installers depending on your operating system but for most users we recommend the QGIS Standalone Installer. Full instructions are on their website: https://qgis.org/en/site/forusers/download.html.
+
+While the QGIS-SDG 15.4.2 beta analysis runs entirely within the QGIS interface, to run this workflow, you will also need to install R Software 4.4.1. R scripts will be run from within the QGIS interface and no prior knowledge of R is required. There have been a number of releases since 4.4.1 we have found that some of the later versions cause the r-scripts to run slower within the toolbox.
+
+
 R software and packages installation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Download and install R from https://www.r-project.org/ and then download and install RStudio Desktop from 
-https://www.rstudio.com/products/rstudio/. Once the later has been completed, open RStudio in your computer.
-
+Download and install R from https://www.r-project.org/ and then download and install RStudio Desktop from https://www.rstudio.com/products/rstudio/. 
 A step-by-step guide on how to install R and R Studio (with images) can be found in Annex 1.
+
 It is important to use a current version of R software (we currently recommend R-4.1.1). Although there have been a number of releases since 4.4.1,  we have found that some of the later versions cause the r-scripts to run slower within the QGIS toolbox. If you already have R installed, the R version can be easily checked on the text within the ‘R Console’ box at the beginning of a new session (see Figures below for standalone R and  R Studio). You can have multiple versions of R installed on your computer at a time so if you don’t have this version.
 
 |image5|
 
 |image6|
 
-QGIS software and plugins
-^^^^^^^^^^^^^^^^^^^^^^^^^
-
-We suggest users use the Long-Term Release version1 [1]_ of QGIS to
-undertake their analysis as this is most stable versions and users are
-less likely to incur technical difficulties and bugs.
-
-There are various installers depending on your operating system but for
-most users we recommend the QGIS Standalone Installer. Full instructions
-are on their website
-`https://qgis.org/en/site/forusers/download.html# <https://qgis.org/en/site/forusers/download.html>`__
-
-Whilst the MGCI analysis runs entirely within the QGIS interface, users
-wishing to use QGIS for the MGCI analysis are also required to install R
-software (as outlined above). R scripts can be run from within the QGIS
-interface. The R script will be only be used for calculating real
-surface area during the MGCI calculation. Real surface area can be
-calculated using one of the ready to use SAGA tools in the processing
-toolbox, however after initial testing we found the results differed
-from the GEE and R methods and therefore due to the need for consistency
-between calculation methods for this SDG indicator, the best and easiest
-method was to integrate the ‘surfaceArea’ function from package ‘sp in R
-software.
+QGIS plugins
+^^^^^^^^^^^^
 
 Once QGIS and R are both correctly installed users will need to install
 the following plugins:
@@ -199,10 +184,12 @@ v1.**
 QGIS custom toolbox download and installation
 ----------------------------------------------
 
-Users will also need to download the SDG_15_4_2_beta_Toolbox and set of templates and style files from the SDG_15_4_2_beta repository.
-In a web browser navigate to the SDG15.4.2 beta repository using the following URL: https://github.com/corinnar/mgci-docs
+Users will also need to download the SDG_15_4_2_beta_Toolbox and set of templates and style files from the SDG_15_4_2_beta repository. In a web browser navigate to the SDG15.4.2 beta repository using the following URL: https://github.com/sepal-contrib/wcmc-mgci/tree/main
 
-|setup1|
+- Click on **Code>>Download ZIP**
+
+
+   |setup1|
 
 Next open a file explorer window and navigate to the folder where you have downloaded the file. At this stage we would recomment you move the zip file to a sensible location with a short and simple file structure. e.g. in this example we have moved the downloaded zip file to c:\workspace. Right-click on the file named mgci-docs-MGCI_DML.zip and click on 7-ZIP >> Extract here
 
