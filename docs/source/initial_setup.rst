@@ -33,26 +33,26 @@ Users will also need to download the SDG_15_4_2_beta_Toolbox and set of template
   |setup2|
 
 - Once unzipped you should see a folder of the same name (**wcmc-mgci-main**). Navigate inside this folder and you should see the following file structure and a zip file called **SDG15_4_2_beta.zip**.
-
-   |setup2b|
-
+   
+  |setup2b|
+   
 - Right-click on **SDG15_4_2_beta.zi** and click on **7-ZIP>>Extract file**. Note we are clicking on extract files this time and not extract here as we want to make some modifications to the path we are unzipping to.
 
- |setup3|
+  |setup3|
 
 - You should see the unzip files window below. Do NOT click OK yet as we want to make some changes.
 
- |setup4|
+  |setup4|
 
 - First remove **'wcmc-mgci-docs-main’** from the extract to path and then tick **Eliminate duplication of root folder**.
 
   |setup5|
 
- |setup6|
+  |setup6|
 
 - Click okay once you have done these steps. You should now have a folder set up for the QGIS processing. Please do not alter the folder structure as the tools rely on these to remain intact.
 
- |setup7|
+  |setup7|
 
 - The next step is to go into the input_data folder and unzip the Global mountains map. Right-click on **SDG1542_WorldMountainMap.zi** and click on **7-ZIP>>Extract here**.
 
@@ -90,6 +90,8 @@ within the QGIS interface.
    |image10|
 
 -  Click **Install Plugin** and then **Close**
+
+The Processing R Provider has now been installed.
 
 QGIS settings
 ^^^^^^^^^^^^^
