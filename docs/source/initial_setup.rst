@@ -15,11 +15,13 @@ R software and packages installation
 
 3. Ensure the ‘sp ‘and ‘raster’ packages are correctly installed. Two of
    the options to do so are:
-    -   install.packages("name\_of\_package")
-    -  library(name\_of\_package)
 
-       Or
-    -  (if(!require("name\_of\_package")) install.packages("name\_of\_package")
+   -   install.packages("name\_of\_package")
+   -  library(name\_of\_package)
+
+      **Or**
+
+   -  (if(!require("name\_of\_package")) install.packages("name\_of\_package")
 
 A step-by-step guide on how to install R and R Studio (with images) can be found in Annex X.
 If you are not installing R and R studio from scratch, please make sure that your installations are upgraded. It is important to use the current version of R software (R-4.1.1 at the time of writing). The R version can be easily checked on the text within the ‘R Console’ box at the beginning of a new session (see Figure XX for standalone R and Figure ZZ for R Studio).
