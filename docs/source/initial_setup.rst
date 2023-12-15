@@ -25,7 +25,7 @@ QGIS-SDG 15.4.2 custom toolbox download and installation
 Users will also need to download the SDG_15_4_2_beta_Toolbox and set of templates and style files from the SDG_15_4_2_beta repository. In a web browser navigate to the SDG15.4.2 beta repository using the following URL: **https://github.com/sepal-contrib/wcmc-mgci/tree/main**
 
 - Click on **Code>>Download ZIP**
-   
+
   |setup1|
 
 - Next open a file explorer window and navigate to the folder where you have downloaded the file. At this stage we would recommend you move the zip file to a sensible location with a short and simple file structure. e.g. in this example we have moved the downloaded zip file to **c:\\workspace**. Right-click on the file named **wcmc-mgci-main.zip** and click on **7-ZIP >>Extract here**.
@@ -100,82 +100,68 @@ Next some QGIS settings will be changed to ensure QGIS knows where to find the R
 
 - From the main menu select **settings>>processing**. Click on **providers** and expand the **R** tab. Double click on the **R-scripts folder** path to expose the three dots. Click on this and click **Add**. Navigate to the R_scripts folder in the SDG15_4_2_beta folder. e.g. in this example **C:\\workspace\\SDG15_4_2_beta\\R_scripts**. Then click **OK**.
    
-   |setup13|
+  |setup13|
    
 - Double-click on the **R folder path** and navigate to where you have installed your R software. This is to tell QGIS where to run R from. i.e. to check the R folder is pointing to the correct location (where it is installed on your computer)
    
-   |setup14|   
+  |setup14|   
    
-   - If you operating system is 64 bit, tick Use **64bit version**
-   - Click **OK**
+  - If you operating system is 64 bit, tick Use **64bit version**
+  - Click **OK**
    
-- In the same **settings>>processing** window, shrink down the R tab and expand **Model**. Double click on the models path to expose the three dots. Click on this and click **Add**.    
-Navigate to the QGIS models folder in the SDG15_4_2_beta folder. e.g. in this example **C:\\workspace\\SDG15_4_2_beta\\QGIS_models**. Then click **OK**.
-   
-   |setup12|
+- In the same **settings>>processing** window, shrink down the R tab and expand **Model**. Double click on the models path to expose the three dots. Click on this and click **Add**.
+
+- Navigate to the QGIS models folder in the SDG15_4_2_beta folder. e.g. in this example **C:\\workspace\\SDG15_4_2_beta\\QGIS_models**. Then click **OK**.
+
+  |setup12|
    
 - Next on the left hand panel click on **Data Sources** and change the **Representation of null values** from Null to **NA** (this will ensure  the correct NA representation of Null values in the output reporting tables).
    
-   |setup10|
+  |setup10|
 
 - In the same settings window click on **processing>>general** and change the **Results group name** to **OUTPUTS**. Put this in capitals as this is how it will then appear in the QGIS table of contents. It means that any outputs from geoprocessing tools will be stored under this group heading and makes it easier to distinguish from the INPUT data.
    
-   |setup11|
+  |setup11|
 
 - Once done click **OK** to close the setting window and return to the main QGIS interface.
    
-On the righ-hand side of QGIS you should see the processing Toolbox. (If it is not visible, from the main menu select **View>>panels>>processing toolbox**).
+- On the righ-hand side of QGIS you should see the processing Toolbox. (If it is not visible, from the main menu select **View>>panels>>processing toolbox**).
 
-You should see that the R script button has appeared on the processing toolbox menu.
+- You should also see that the R script button has appeared on the processing toolbox menu and R scripts tab visible in the toolbox.
 
-|image17|
+  |image17|
+
+  |image12|
 
 - In the processing toolbox if you expand models and R you should see the SDG15.4.2 models and scripts present.  It is from the toolbox that you will run the tools if you choose to use the **SDG_15_4_2_beta toolbox** rather than undertaking the manual steps.
    
-   |setup15|
+  |setup15|
 
 -  Save the QGIS project. 
 
-If everything is set up correctly you should also see the Rscript button on the processing toolbox menu. You may need to close and reopen if you have not used the r-integration before to activate the changes.
 
-|image19_processingtoolboxR2|
+Optional step: Add the **Resource sharing plugin:** This plugin is a useful R related plugin (which is not essential for the MGCI but useful for users  wishing to integrate R with QGIS).
 
+*Once the resource sharing plugin is installed some additional scripts will also be visible. They are grouped into several categories as in the screengrab below.*
 
-Optional step (not required for MGCI but a useful collection of R-scripts). This adds add additional R resources to the R processing toolbox
+|image30|
 
--  To add other R resources click on **plugins>>resource
-   sharing>>resource sharing**
-
-   |image18|
-
--  Click on **All Collections** on the left hand panel and click **QGIS R script collection (QGIS Official Repository)** then click **Install**
+- To add this plugin click on **plugins>>resource sharing>>resource sharing**
    
-   |image19|
+  |image18|
    
-A wider collection of scripts should now be present in the R-scripts collection. These are not required for MGCI but useful for R-Integration with QGIS.
+- Click on **All Collections** on the left hand panel and click **QGIS R script collection (QGIS Official Repository)** then click **Install**
    
-|image20|
+  |image19|
+
+- The wider collection of scripts should now be present in the R-scripts collection. These are not required for MGCI but useful for R-Integration with QGIS.
    
- **Resource sharing plugin:** This plugin is a useful R related
- plugin (which is not essential for the MGCI but useful for users
- wishing to integrate R with QGIS).
+  |image20|
 
- Once the resource sharing plugin is installed some scripts should
- also be visible. They are grouped into several categories as in the
- screengrab below.
+For further information see the following sections of the QGIS user  manual at
 
- |image30|
+https://docs.qgis.org/3.28/en/docs/user_manual/processing/3rdParty.html#r-libraries
 
- For further information see the following sections of the QGIS user
- manual at
-
--  https://docs.qgis.org/3.16/en/docs/user_manual/processing/3rdParty.html#r-scripts
-
--  docs.qgis.org/3.16/en/docs/user\_manual/processing/3rdParty.html#index-5
-
-   |image11|
-   
-   |image12|
 
 
 .. |setup1| image:: media_toolbox/setup1.png
