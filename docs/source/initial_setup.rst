@@ -38,17 +38,15 @@ for a step-by-step tutorial on how to do this or type the lines
 below on the R Console:
 
 - install.packages("installr")
+   *you’ll have to select the CRAN mirror for use in this session depending on your geographical location*
+   
+   |image7|
 
-  *you’ll have to select the CRAN mirror for use in this session depending on your geographical location*
-
- |image7|
 - library(installr)
-
 - updateR()
-
-  *Answer the questions to complete the update. The final set of questions are about copying your R packages to the new version of R.*
-
- |image8|
+   *Answer the questions to complete the update. The final set of questions are about copying your R packages to the new version of R.*
+   
+   |image8|
 
 QGIS software and plugins
 ^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -89,41 +87,39 @@ the following plugins:
    R and from QGIS about the tool to enable the R processing to happen
    within the QGIS interface.
 
--  From the QGIS Menu Toolbar click on **Plugins>>Manage and Install
-   Plugins**
-
-|image9|
+-  From the QGIS Menu Toolbar click on **Plugins>>Manage and Install Plugins**
+   
+   |image9|
 
 -  From the Plugin dialogue window search for **processing R**
-
-|image10|
+   
+   |image10|
 
 -  Click **Install Plugin** and then **Close**
-
-|image11|
-
-|image12|
+   
+   |image11|
+   
+   |image12|
 
 Once installed R will appear as a processing tool in the processing
 toolbox and an R Scripts button in the Processing Toolbox Menu.
 Users may find that the R scripts button is missing at this stage.
 
 -  Click the arrow next to the **R** Tools to expand the R toolset.
+   
+   The toolset should look similar to the below with a few example scripts.
 
-The toolset should look similar to the below with a few example scripts.
+   |image13|
+   
+   and the processing Toolbox Menu should look like this with the missing R scripts button |image14|
+   
+   |image15|
 
-|image13|
-
-and the processing Toolbox Menu should look like this with the missing R scripts button |image14|
-
-|image15|
-
--  From the QGIS main menu click on **settings>>
-   options>>processing>>providers**
-
--  expand **R** to see the R setting
-
-|image16|
+-  From the QGIS main menu click on **settings>>options>>processing>>providers**
+   
+-  Expand **R** to see the R setting
+   
+   |image16|
 
 If you operating system is 64 bit, tick **Use 64bit version**
 
@@ -134,17 +130,16 @@ If you operating system is 64 bit, tick **Use 64bit version**
 
 -  Save the QGIS project and re-open to activate the changes.
 
-You should now see that the R script button has appeared on the
-processing toolbox menu
-
-|image17|
+   You should now see that the R script button has appeared on the processing toolbox menu
+   
+   |image17|
 
 Next add additional resources to the R processing toolbox
 
 -  To add other R resources click on **plugins>>resource
    sharing>>resource sharing**
 
-    |image18|
+   |image18|
 
 -  Click on **All Collections** on the left hand panel and click **QGIS
    R script collection (QGIS Official Repository)** then click
