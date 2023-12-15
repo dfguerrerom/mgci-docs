@@ -51,7 +51,7 @@ A step-by-step guide on how to install R and R Studio (with images) can be found
 
 It is important to use a current version of R software (we currently recommend R-4.1.1). Although there have been a number of releases since 4.4.1,  we have found that some of the later versions cause the r-scripts to run slower within the QGIS toolbox. If you already have R installed, the R version can be easily checked on the text within the ‘R Console’ box at the beginning of a new session (see Figures below for standalone R and  R Studio). You can have multiple versions of R installed on your computer at a time so if you don’t have this version.
 
-|image5|
+|image5_orig|
 
 |image6|
 
@@ -118,11 +118,11 @@ within the QGIS interface.
 
 -  From the QGIS Menu Toolbar click on **Plugins>>Manage and Install Plugins**
    
-   |image9|
+   |image11_orig|
 
 -  From the Plugin dialogue window search for **processing R**
    
-   |image10|
+   |image12_orig|
 
 -  Click **Install Plugin** and then **Close**
 
@@ -165,9 +165,9 @@ Next some QGIS settings will be changed to ensure QGIS knows where to find the R
 
 - You should also see that the R script button has appeared on the processing toolbox menu and R scripts tab visible in the toolbox.
 
-  |image17|
+  |image17orig|
 
-  |image12|
+  |image14_orig|
 
 - In the processing toolbox if you expand models and R you should see the SDG15.4.2 models and scripts present.  It is from the toolbox that you will run the tools if you choose to use the **SDG_15_4_2_beta toolbox** rather than undertaking the manual steps.
    
@@ -180,19 +180,19 @@ Optional step: Add the **Resource sharing plugin:** This plugin is a useful R re
 
 *Once the resource sharing plugin is installed some additional scripts will also be visible. They are grouped into several categories as in the screengrab below.*
 
-|image30|
+|image32_orig|
 
 - To add this plugin click on **plugins>>resource sharing>>resource sharing**
    
-  |image18|
+  |image20_orig|
    
 - Click on **All Collections** on the left hand panel and click **QGIS R script collection (QGIS Official Repository)** then click **Install**
    
-  |image19|
+  |image21_orig|
 
 - The wider collection of scripts should now be present in the R-scripts collection. These are not required for MGCI but useful for R-Integration with QGIS.
    
-  |image20|
+  |image22_orig|
 
 For further information see the following sections of the QGIS user  manual at
 
@@ -204,9 +204,9 @@ https://docs.qgis.org/3.28/en/docs/user_manual/processing/3rdParty.html#r-librar
 
 This section of the tutorial explains in detail how to calculate value estimates for sub-indicator 15.4.2a in QGIS, using Colombia as a case study. This section assumes that the user has already downloaded the global mountain map made available by FAO to compute this indicator and a land cover dataset meeting the requirements described in the **Background** section.
 
-We provide a custom toolbox to group and run the steps to help speed up the analysis and allow for easier repeat processing and to standardize the naming of outputs and how they appear within the QGIS interface.
+We provide the SDG_15_4_2_beta toolbox custom toolbox to group and run the steps to help speed up the analysis and allow for easier repeat processing and to standardize the naming of outputs and how they appear within the QGIS interface.
 
-|setup15|
+|custom_toolbox|
 
 For each step we provide a tool diagram to illustrate the steps being undertaken within the toolstep, however Annex 2 of the tutorial outlines in detail the main steps each tool undertakes in the SDG 15.4.2 processing toolbox. This can be used as a reference if the user wishes to understand how each tool step would be carried out manually. Note that some plugins such as **GroupStats** and **OpenDEMDownloader** (which have been explained in steps in Annex 2) are not supported easy to implement on model builder in QGIS. Therefore, it was more efficient to use slightly different approaches for the model builder in such cases.
 
@@ -847,7 +847,8 @@ Repeat the above step for the next reporting period i.e., using 2015 landcover (
    :width: 800
 .. |projection| image:: media_toolbox/projection.png
    :width: 800
-
+.. |custom_toolbox| image:: media_toolbox/custom_toolbox.png
+   :width: 800
 
 
 
@@ -980,8 +981,8 @@ Repeat the above step for the next reporting period i.e., using 2015 landcover (
    :width: 1200
 .. |image5| image:: media_QGIS/image5.png
    :width: 1200
-.. |image6| image:: media_QGIS/image6.png
-   :width: 1200
+.. |image6| image:: media_QGIS/image8_orig.png
+   :width: 700
 .. |image7| image:: media_QGIS/image7.png
    :width: 1200
 .. |image8| image:: media_QGIS/image8.png
@@ -998,7 +999,7 @@ Repeat the above step for the next reporting period i.e., using 2015 landcover (
    :width: 1200
 .. |image14| image:: media_QGIS/image14.png
    :width: 1200
-.. |image15| image:: media_QGIS/image15.png
+.. |image15| image:: media_QGIS/custom_toolbox.png
    :width: 1200
 .. |image16| image:: media_QGIS/image16.png
    :width: 1200
@@ -1210,8 +1211,27 @@ Repeat the above step for the next reporting period i.e., using 2015 landcover (
 .. |image8_orig| image:: media_QGIS/image10_orig.png
    :width: 6.26806in
    :height: 3.33742in
-
-
+.. |image11_orig| image:: media_QGIS/image11_orig.png
+   :width: 5.52160in
+   :height: 0.94805in
+.. |image12_orig| image:: media_QGIS/image12_orig.png
+   :width: 6.26806in
+   :height: 3.70278in
+.. |image14_orig| image:: media_QGIS/image14_orig.png
+   :width: 4.42653in
+   :height: 4.71816in
+.. |image32_orig| image:: media_QGIS/image32_orig.png
+   :width: 4.42653in
+   :height: 4.71816in
+.. |image20_orig| image:: media_QGIS/image20_orig.png
+   :width: 4.42653in
+   :height: 4.71816in
+.. |image21_orig| image:: media_QGIS/image21_orig.png
+   :width: 4.42653in
+   :height: 4.71816in
+.. |image22_orig| image:: media_QGIS/image22_orig.png
+   :width: 1.95347in
+   :height: 2.17361in
 
 
 .. |image9orig| image:: media_QGIS/image11_install_plugins.png
@@ -1244,3 +1264,6 @@ Repeat the above step for the next reporting period i.e., using 2015 landcover (
 .. |image30orig| image:: media_QGIS/image32_Rscripts2.png
    :width: 3.37547in
    :height: 4.79234in
+
+
+
