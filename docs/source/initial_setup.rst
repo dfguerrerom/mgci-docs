@@ -4,51 +4,15 @@ Initial set-up
 R software and packages installation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-1. Download and install R from https://www.r-project.org/ and then
-   download and install RStudio Desktop from
-   https://www.rstudio.com/products/rstudio/. Once the later has been
-   completed, open RStudio in your computer.
+Download and install R from https://www.r-project.org/ and then download and install RStudio Desktop from 
+https://www.rstudio.com/products/rstudio/. Once the later has been completed, open RStudio in your computer.
 
-2. Click on ‘File’ (top left corner) and then on ‘Open File…’. Select
-   the file named ‘XXXXXXXX’ Click on …….to run and install all the
-   packages and check that there are no errors.
-
-3. Ensure the ‘sp ‘and ‘raster’ packages are correctly installed. Two of
-   the options to do so are:
-
-   -   install.packages("name\_of\_package")
-   -  library(name\_of\_package)
-
-      **Or**
-
-   -  (if(!require("name\_of\_package")) install.packages("name\_of\_package")
-
-A step-by-step guide on how to install R and R Studio (with images) can be found in Annex X.
-If you are not installing R and R studio from scratch, please make sure that your installations are upgraded. It is important to use the current version of R software (R-4.1.1 at the time of writing). The R version can be easily checked on the text within the ‘R Console’ box at the beginning of a new session (see Figure XX for standalone R and Figure ZZ for R Studio).
+A step-by-step guide on how to install R and R Studio (with images) can be found in Annex 1.
+It is important to use a current version of R software (we currently recommend R-4.1.1). Although there have been a number of releases since 4.4.1,  we have found that some of the later versions cause the r-scripts to run slower within the QGIS toolbox. If you already have R installed, the R version can be easily checked on the text within the ‘R Console’ box at the beginning of a new session (see Figures below for standalone R and  R Studio). You can have multiple versions of R installed on your computer at a time so if you don’t have this version.
 
 |image5|
 
 |image6|
-
-If you are running R on Windows, package ‘installr’ allows you to
-quickly update the R version and the packages saved in your library
-(please check
-https://www.r-statistics.com/2015/06/a-step-by-step-screenshots-tutorial-for-upgrading-r-on-windows/
-for a step-by-step tutorial on how to do this or type the lines
-below on the R Console:
-
-- install.packages("installr")
-
-  *you’ll have to select the CRAN mirror for use in this session depending on your geographical location*
-
- |image7|
-- library(installr)
-
-- updateR()
-
-  *Answer the questions to complete the update. The final set of questions are about copying your R packages to the new version of R.*
-
- |image8|
 
 QGIS software and plugins
 ^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -89,41 +53,39 @@ the following plugins:
    R and from QGIS about the tool to enable the R processing to happen
    within the QGIS interface.
 
--  From the QGIS Menu Toolbar click on **Plugins>>Manage and Install
-   Plugins**
-
-|image9|
+-  From the QGIS Menu Toolbar click on **Plugins>>Manage and Install Plugins**
+   
+   |image9|
 
 -  From the Plugin dialogue window search for **processing R**
-
-|image10|
+   
+   |image10|
 
 -  Click **Install Plugin** and then **Close**
-
-|image11|
-
-|image12|
+   
+   |image11|
+   
+   |image12|
 
 Once installed R will appear as a processing tool in the processing
 toolbox and an R Scripts button in the Processing Toolbox Menu.
 Users may find that the R scripts button is missing at this stage.
 
 -  Click the arrow next to the **R** Tools to expand the R toolset.
+   
+   The toolset should look similar to the below with a few example scripts.
 
-The toolset should look similar to the below with a few example scripts.
+   |image13|
+   
+   The processing Toolbox Menu should look like this with the missing R scripts button |image14|
+   
+   |image15|
 
-|image13|
-
-and the processing Toolbox Menu should look like this with the missing R scripts button |image14|
-
-|image15|
-
--  From the QGIS main menu click on **settings>>
-   options>>processing>>providers**
-
--  expand **R** to see the R setting
-
-|image16|
+-  From the QGIS main menu click on **settings>>options>>processing>>providers**
+   
+-  Expand **R** to see the R setting
+   
+   |image16|
 
 If you operating system is 64 bit, tick **Use 64bit version**
 
@@ -134,32 +96,28 @@ If you operating system is 64 bit, tick **Use 64bit version**
 
 -  Save the QGIS project and re-open to activate the changes.
 
-You should now see that the R script button has appeared on the
-processing toolbox menu
-
-|image17|
+   You should now see that the R script button has appeared on the processing toolbox menu
+   
+   |image17|
 
 Next add additional resources to the R processing toolbox
 
 -  To add other R resources click on **plugins>>resource
    sharing>>resource sharing**
 
-    |image18|
+   |image18|
 
--  Click on **All Collections** on the left hand panel and click **QGIS
-   R script collection (QGIS Official Repository)** then click
-   **Install**
-
-    |image19|
-
-A wider collection of scripts should now be present in the R-scripts
-collection. These are not required for MGCI but useful for R-Integration
-with QGIS.
-
-    |image20|
+-  Click on **All Collections** on the left hand panel and click **QGIS R script collection (QGIS Official Repository)** then click **Install**
+   
+   |image19|
+   
+A wider collection of scripts should now be present in the R-scripts collection. These are not required for MGCI but useful for R-Integration with QGIS.
+   
+|image20|
+   
 To check that the R integration is correctly installed and
-working check that a new script can be created by clicking **‘Create
-New R script’** button at the top of the Processing toolbox.
+working check that a new script can be created by clicking **Create
+New R script** button at the top of the Processing toolbox.
 
 -  Click the **Open Script** button and open the real surface area R
    script that has been adapted to run in QGIS. The file is called
@@ -180,23 +138,23 @@ v1.**
 -  Click the **Save** **script as** button |image23| to save the script
    in your QGIS rscripts folder. Save the script as
    **RSA\_R\_script\_with\_QGIS\_headers\_final\_v1.rsx**
-
-|image24|
+   
+   |image24|
 
 -  Click **Save**
 
 -  Add a sample raster (to be provided) to your QGIS project and run the
    following steps to check that the QGIS R-installation is working
    correctly for the RSA script.
-
-|image25|
+   
+   |image25|
 
 -  In the Processing Toolbox, double click on the **Create RSA Raster
    V1** tool to open the tool dialogue
 
     |image26|
-
-|image27|
+   
+   |image27|
 
 -  Leave the output to save to a temporary file
 
