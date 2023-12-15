@@ -20,23 +20,66 @@ It is important to use a current version of R software (we currently recommend R
 
 |image6|
 
-QGIS plugins
-^^^^^^^^^^^^
+QGIS-SDG 15.4.2 custom toolbox download and installation
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Users will also need to download the SDG_15_4_2_beta_Toolbox and set of templates and style files from the SDG_15_4_2_beta repository. In a web browser navigate to the SDG15.4.2 beta repository using the following URL: **https://github.com/sepal-contrib/wcmc-mgci/tree/main**
 
-Once QGIS and R are both correctly installed users will need to install
-the following plugins:
+- Click on **Code>>Download ZIP**
+   
+  |setup1|
 
-1. **Processing R Provider:** This plugin essentially allows R scripts
-   to be used directly within the QGIS processing toolbox with the
-   simple addition of some QGIS header information placed at the top of
-   the script to making the R script behave exactly like other
-   processing tools in the QGIS processing toolbox. The header
-   information allows graphical fields to be set in the processing
-   dialogue window when running the tool e.g. the input raster, a
-   specific field or the location and name of an output raster. Some
-   header information is used to tell QGIS to either pass information to
-   R and from QGIS about the tool to enable the R processing to happen
-   within the QGIS interface.
+- Next open a file explorer window and navigate to the folder where you have downloaded the file. At this stage we would recommend you move the zip file to a sensible location with a short and simple file structure. e.g. in this example we have moved the downloaded zip file to **c:\\workspace**. Right-click on the file named **wcmc-mgci-main.zip** and click on **7-ZIP >>Extract here**.
+   
+  |setup2|
+
+- Once unzipped you should see a folder of the same name (**wcmc-mgci-main**). Navigate inside this folder and you should see the following file structure and a zip file called **SDG15_4_2_beta.zip**.
+
+   |setup2b|
+
+- Right-click on **SDG15_4_2_beta.zi** and click on **7-ZIP>>Extract file**. Note we are clicking on extract files this time and not extract here as we want to make some modifications to the path we are unzipping to.
+
+ |setup3|
+
+- You should see the unzip files window below. Do NOT click OK yet as we want to make some changes.
+
+ |setup4|
+
+- First remove **'wcmc-mgci-docs-main’** from the extract to path and then tick **Eliminate duplication of root folder**.
+
+  |setup5|
+
+ |setup6|
+
+- Click okay once you have done these steps. You should now have a folder set up for the QGIS processing. Please do not alter the folder structure as the tools rely on these to remain intact.
+
+ |setup7|
+
+- The next step is to go into the input_data folder and unzip the Global mountains map. Right-click on **SDG1542_WorldMountainMap.zi** and click on **7-ZIP>>Extract here**.
+
+  |setup8|
+
+You are now ready to open the QGIS project. Double-click to **SDG_15_4_2_beta.qgz** to open the project.
+
+|setup9|
+
+QGIS plugins installation
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Next (once QGIS is open) there are a few steps that need to be undertaken to set up the QGIS project correctly and to link it to the custom toolbox and scripts.
+
+First you will need to install the following plugins:
+
+**Processing R Provider:** This plugin essentially allows R scripts
+to be used directly within the QGIS processing toolbox with the
+simple addition of some QGIS header information placed at the top of
+the script to making the R script behave exactly like other
+processing tools in the QGIS processing toolbox. The header
+information allows graphical fields to be set in the processing
+dialogue window when running the tool e.g. the input raster, a
+specific field or the location and name of an output raster. Some
+header information is used to tell QGIS to either pass information to
+R and from QGIS about the tool to enable the R processing to happen
+within the QGIS interface.
 
 -  From the QGIS Menu Toolbar click on **Plugins>>Manage and Install Plugins**
    
@@ -47,45 +90,56 @@ the following plugins:
    |image10|
 
 -  Click **Install Plugin** and then **Close**
+
+QGIS settings
+^^^^^^^^^^^^^
+
+Next some QGIS settings will be changed to ensure QGIS knows where to find the R installation, scripts and model folders. 
+
+- From the main menu select **settings>>processing**. Click on **providers** and expand the **R** tab. Double click on the **R-scripts folder** path to expose the three dots. Click on this and click **Add**. Navigate to the R_scripts folder in the SDG15_4_2_beta folder. e.g. in this example **C:\\workspace\\SDG15_4_2_beta\\R_scripts**. Then click **OK**.
    
-   |image11|
+   |setup13|
    
-   |image12|
-
-Once installed R will appear as a processing tool in the processing
-toolbox and an R Scripts button in the Processing Toolbox Menu.
-Users may find that the R scripts button is missing at this stage.
-
--  Click the arrow next to the **R** Tools to expand the R toolset.
+- Double-click on the **R folder path** and navigate to where you have installed your R software. This is to tell QGIS where to run R from. i.e. to check the R folder is pointing to the correct location (where it is installed on your computer)
    
-   The toolset should look similar to the below with a few example scripts.
-
-   |image13|
+   |setup14|   
    
-   The processing Toolbox Menu should look like this with the missing R scripts button |image14|
+   - If you operating system is 64 bit, tick Use **64bit version**
+   - Click **OK**
    
-   |image15|
-
--  From the QGIS main menu click on **settings>>options>>processing>>providers**
+- In the same **settings>>processing** window, shrink down the R tab and expand **Model**. Double click on the models path to expose the three dots. Click on this and click **Add**.    
+Navigate to the QGIS models folder in the SDG15_4_2_beta folder. e.g. in this example **C:\\workspace\\SDG15_4_2_beta\\QGIS_models**. Then click **OK**.
    
--  Expand **R** to see the R setting
+   |setup12|
    
-   |image16|
-
-If you operating system is 64 bit, tick **Use 64bit version**
-
--  Check the **R folder** is pointing to the correct location (where it
-   is installed on your computer)
-
--  Click okay
-
--  Save the QGIS project and re-open to activate the changes.
-
-   You should now see that the R script button has appeared on the processing toolbox menu
+- Next on the left hand panel click on **Data Sources** and change the **Representation of null values** from Null to **NA** (this will ensure  the correct NA representation of Null values in the output reporting tables).
    
-   |image17|
+   |setup10|
 
-Next add additional resources to the R processing toolbox
+- In the same settings window click on **processing>>general** and change the **Results group name** to **OUTPUTS**. Put this in capitals as this is how it will then appear in the QGIS table of contents. It means that any outputs from geoprocessing tools will be stored under this group heading and makes it easier to distinguish from the INPUT data.
+   
+   |setup11|
+
+- Once done click **OK** to close the setting window and return to the main QGIS interface.
+   
+On the righ-hand side of QGIS you should see the processing Toolbox. (If it is not visible, from the main menu select **View>>panels>>processing toolbox**).
+
+You should see that the R script button has appeared on the processing toolbox menu.
+
+|image17|
+
+- In the processing toolbox if you expand models and R you should see the SDG15.4.2 models and scripts present.  It is from the toolbox that you will run the tools if you choose to use the **SDG_15_4_2_beta toolbox** rather than undertaking the manual steps.
+   
+   |setup15|
+
+-  Save the QGIS project. 
+
+If everything is set up correctly you should also see the Rscript button on the processing toolbox menu. You may need to close and reopen if you have not used the r-integration before to activate the changes.
+
+|image19_processingtoolboxR2|
+
+
+Optional step (not required for MGCI but a useful collection of R-scripts). This adds add additional R resources to the R processing toolbox
 
 -  To add other R resources click on **plugins>>resource
    sharing>>resource sharing**
@@ -100,69 +154,6 @@ A wider collection of scripts should now be present in the R-scripts collection.
    
 |image20|
    
-To check that the R integration is correctly installed and
-working check that a new script can be created by clicking **Create
-New R script** button at the top of the Processing toolbox.
-
--  Click the **Open Script** button and open the real surface area R
-   script that has been adapted to run in QGIS. The file is called
-   **RSA\_R\_script\_with\_QGIS\_headers \_final\_v1.rsx** script (to be
-   provided)
-
-   |image21|
-
-   The RSA script should open
-
-   |image22|
-
-Note that the script header indicates that the R script will appear
-under the **Raster Processing group** in the R toolset in the QGIS
-Processing Toolbox, the name of the tool will be **Create RSA raster
-v1.**
-
--  Click the **Save** **script as** button |image23| to save the script
-   in your QGIS rscripts folder. Save the script as
-   **RSA\_R\_script\_with\_QGIS\_headers\_final\_v1.rsx**
-   
-   |image24|
-
--  Click **Save**
-
--  Add a sample raster (to be provided) to your QGIS project and run the
-   following steps to check that the QGIS R-installation is working
-   correctly for the RSA script.
-   
-   |image25|
-
--  In the Processing Toolbox, double click on the **Create RSA Raster
-   V1** tool to open the tool dialogue
-
-    |image26|
-   
-   |image27|
-
--  Leave the output to save to a temporary file
-
--  Click **Run**
-
-    If R has been installed correctly the script should run with no
-    errors and an output should be generated which is one cell less in
-    all directions compared to the input
-
--  To make it easier to check the output change the symbology on the
-   output to shade **Singleband/Pseudocolor**
-
-|image28|
-
- The temporary output should look like the below. The reason that the
- layer is one cell less all the way round is that the real surface
- area uses 8 surrounding cells around each cell in the calculation
- and the reason that when processing the data for calculating the
- mountain and real surface area layers that the area of interest
- needs to be defined large than the boundary of the country.
-
- |image29|
-
  **Resource sharing plugin:** This plugin is a useful R related
  plugin (which is not essential for the MGCI but useful for users
  wishing to integrate R with QGIS).
@@ -180,86 +171,16 @@ v1.**
 
 -  docs.qgis.org/3.16/en/docs/user\_manual/processing/3rdParty.html#index-5
 
-
-QGIS custom toolbox download and installation
-----------------------------------------------
-
-Users will also need to download the SDG_15_4_2_beta_Toolbox and set of templates and style files from the SDG_15_4_2_beta repository. In a web browser navigate to the SDG15.4.2 beta repository using the following URL: https://github.com/sepal-contrib/wcmc-mgci/tree/main
-
-- Click on **Code>>Download ZIP**
-
-
-   |setup1|
-
-Next open a file explorer window and navigate to the folder where you have downloaded the file. At this stage we would recomment you move the zip file to a sensible location with a short and simple file structure. e.g. in this example we have moved the downloaded zip file to c:\workspace. Right-click on the file named mgci-docs-MGCI_DML.zip and click on 7-ZIP >> Extract here
-
-|setup2|
-
-
-Once unzipped you should see a folder of the same name (mgci-docs-MGCI_DML). Navigate inslide this folder and you should see the following file structure and a zip file called SDG15_4_2_beta.zip.
-
-|setup2b|
-
-Right-click on SDG15_4_2_beta.zip and clcik on 7-ZIP >> Extract file . Note we are clicking on extract files this time and not extract here as we want to make some modifications to the path we are unzipping to.
-
-|setup3|
-
-you should see the unzip files window below. Do NOT click OK yet as we want to make some changes
-
-|setup4|
-
-First remove 'mgci-docs-MGCI_DML' from the extract to path and then tick Eliminate duplication of root folder
-
-|setup5|
-
-|setup6|
-
-Click okay once you have done these steps. You should now have a folder set up for the QGIS processing. Please do not alter the folder structure as the tools rely on these to remain intact.
-
-|setup7|
-
-The next step is to go into the input_data folder and unzip the Global mountains map. Right-click on SDG1542_WorldMountainMap.zip and click on 7-ZIP >> Extract here
-
-|setup8|
-
-You are now ready to open the QGIS project. Double-click to SDG_15_4_2_beta.qgz to open the project
-
-|setup9|
-
-Next (once QGIS is open) there are a few steps that need to be undertaken to set up the QGIS project correctly and to link it to the custom toolbox and scripts.
-
-
-From the QGIS main menu goto settings>>options>>Data Sources and change the 'Representation of null values from Null to NA (this will ensure  the correct NA representation of Null values in the output reporting tables)
-
-|setup10|
-
-
-In the same settings window click on processing>>general and change the 'Results group name' to OUTPUTS. Put this in capitals as this is how it will then appear in the QGIS table of contents. It means that any outputs from geoprocessing tools will be stored under this group heading and makes it easier to distinguish from the INPUT data.
-
-|setup11|
-
-In the same settings>>processing window, shrink down the general tab and expand Models. Double click on the models path to expose the three dots. Click on this and click add. Navigate to the QGIS models folder in the SDG15_4_2_beta folder. e.g. in this example C:\workspace\SDG15_4_2_beta\QGIS_models . Then click okay.
-
-|setup12|
-
-In the same settings>>processing>>providers window, shrink down the Models tab and expand R. Double click on the models path to expose the three dots. Click on this and click add. Navigate to the R_scripts folder in the SDG15_4_2_beta folder. e.g. in this example C:\workspace\SDG15_4_2_beta\R_scriptss . Then click okay.
-
-|setup13|
-
-Next double-click on the R folder path and navigate to where you have installed your R software. This is to tell QGIS where to run R from.
-
-|setup14|
-
-Once done click OK to close the setting window and return to the main QGIS interface.
-
-On the righ-hand side of QGIS you should see the processing Toolbox. (If it is not visible, from the main menu select View>>panels>>processing toolbox). In the processing toolbox if you expand models and R you should see the SDG15.4.2 models and scripts present.  It is from the toolbox that you will run the tools if you choose to use the SDG_15_4_2_beta toolbox rather than undertaking the manual steps.
-
-|setup15|
+   |image11|
+   
+   |image12|
 
 
 .. |setup1| image:: media_toolbox/setup1.png
    :width: 800
 .. |setup2| image:: media_toolbox/setup2.png
+   :width: 800
+.. |setup2b| image:: media_toolbox/setup2b.png
    :width: 800
 .. |setup3| image:: media_toolbox/setup3.png
    :width: 800
@@ -339,7 +260,7 @@ On the righ-hand side of QGIS you should see the processing Toolbox. (If it is n
 .. |image16| image:: media_QGIS/image18_orig.png
    :width: 6.26806in
    :height: 2.56667in
-.. |image17| image:: media_QGIS/image19_orig.png
+.. |image17| image:: media_QGIS/image19_processingtoolboxR2.png
    :width: 2.32263in
    :height: 0.97904in
 .. |image18| image:: media_QGIS/image20_orig.png
