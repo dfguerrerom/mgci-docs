@@ -8,29 +8,11 @@ Download and install R from https://www.r-project.org/ and then download and ins
 https://www.rstudio.com/products/rstudio/. Once the later has been completed, open RStudio in your computer.
 
 A step-by-step guide on how to install R and R Studio (with images) can be found in Annex 1.
-If you are not installing R and R studio from scratch, please make sure that your installations are upgraded. It is important to use a current version of R software (we currently recommend R-4.1.1). Although there have been a number of releases since 4.4.1,  we have found that some of the later versions cause the r-scripts to run slower within the toolbox. The R version can be easily checked on the text within the ‘R Console’ box at the beginning of a new session (see Figures below for standalone R and  R Studio).
+It is important to use a current version of R software (we currently recommend R-4.1.1). Although there have been a number of releases since 4.4.1,  we have found that some of the later versions cause the r-scripts to run slower within the QGIS toolbox. If you already have R installed, the R version can be easily checked on the text within the ‘R Console’ box at the beginning of a new session (see Figures below for standalone R and  R Studio). You can have multiple versions of R installed on your computer at a time so if you don’t have this version.
 
 |image5|
 
 |image6|
-
-If you are running R on Windows, package ‘installr’ allows you to
-quickly update the R version and the packages saved in your library
-(please check
-https://www.r-statistics.com/2015/06/a-step-by-step-screenshots-tutorial-for-upgrading-r-on-windows/
-for a step-by-step tutorial on how to do this or type the lines
-below on the R Console:
-
-- install.packages("installr")
-   *you’ll have to select the CRAN mirror for use in this session depending on your geographical location*
-   
-   |image7|
-
-- library(installr)
-- updateR()
-   *Answer the questions to complete the update. The final set of questions are about copying your R packages to the new version of R.*
-   
-   |image8|
 
 QGIS software and plugins
 ^^^^^^^^^^^^^^^^^^^^^^^^^
