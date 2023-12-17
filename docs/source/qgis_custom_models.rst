@@ -242,15 +242,7 @@ In the Processing Toolbox, under Models, click on model **A0 Prepare country bou
 
 **Input parameters**
 
-- **Select country**: Select country to process from the dropdown list.
-
-- **Input**: CSV_containing_UN_country_codes: Set the path to the csv file containing UN country codes (downloaded from the GitHub repository).
-
-- **Input**: Vector Country Boundary: Set the path to the country boundary shapefile.
-
-- **Input**: Target CRS (i.e. Select a relevant equal area projection for your area of interest): Select a CRS for your outputs. This should be an equal area projection relevant to the country being processed.
-
-- **Select folder for outputs**: Select an output folder to store your outputs. The output folder should already exist. Make sure the folder name does not have any spaces.
+Follow the instructions on the tool interface (see screengrab above)
 
 **Click Run**
 
@@ -282,29 +274,7 @@ In the Processing Toolbox, under Models, click on model **A1 Prepare and reclass
 
 **Input parameters**
 
-- **Select country**: Select country to process from the dropdown list.
-
-- **Input: CSV_containing_UN_country_codes**: Set the path to the csv file containing UN country codes (downloaded from the GitHub repository).
-
-- **Select type of LULC data to be used**: Select the type of LULC data (i.e., either global raster, national raster or national vector).
-
-- **Select input landuse landcover dataset**: Set the path to the LULC data file.
-
-- **Enter year of landcover**: Enter the year of the LULC data being used.
-
-- **Field containing landcover values**: If your LULC data is in vector format, enter the name of the field containing landcover values.
-
-- **Input: output resolution**: If your LULC data is in vector format, enter the output resolution in metres.
-
-- **LULC crosswalk to SEEA classes**: You can either upload of a crosswalk text file or enter the crosswalk details directly in this box with the input LULC types on the left and the UN-SEEA reclass values on the right.
-
-- **Input: Target CRS** (i.e. Select a relevant equal area projection for your area of interest): Select a CRS for your outputs. This should be an equal area projection relevant to the country being processed.
-
-- **Input layer style for LULC**: Set the path to the layer style file for this dataset.
-
-- **Select folder for outputs**: Select an output folder to store your outputs. The output folder should already exist. Make sure the folder name does not have any spaces.
-
-- **Input NoData value**: Set this as 999.
+Follow the instructions on the tool interface (see screengrab above)
 
 **Click Run.**
 
