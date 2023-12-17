@@ -299,25 +299,7 @@ In the Processing Toolbox, under Models, click on model **A2 Prepare mountains a
 
 **Input parameters**:
 
-- **Select country**: Select country to process from the dropdown list.
-
-- **CSV_containing_UN_country_codes**: Set the path to the csv file containing UN country codes (downloaded from the GitHub repository).
-
-- **LULC in SEEA classes**: Set the path to the LULC in SEEA classes (output from previous model layer A1).
-
-- **Enter year of landcover**: Enter the year of the LULC data being used.
-
-- **Input: SDG1542_Mntn_BioclimaticBelts raster layer**: Set the path to the Global Mountain Descriptor Map developed by FAO.
-
-- **Input: Target CRS (i.e., Select a relevant equal area projection for your area of interest)**: Select a CRS for your outputs. This should be an equal area projection relevant to the country being processed.
-
-- **Input NoData value:** Set this as 999.
-
-- **Select folder for outputs**: Select an output folder to store your outputs. The output folder should already exist. Make sure the folder name does not have any spaces.
-
-- **Input: Layer style for mountains**: Set the path to the layer style file for the mountain layer.
-
-- **Input: Layer style for aggregated vegetation and mountains**: Set the path to the layer style file for the aggregated vegetation and mountain layer.
+Follow the instructions on the tool interface (see screengrab above)
 
 First we will run for the year 2000
 
