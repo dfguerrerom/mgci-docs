@@ -394,7 +394,7 @@ This output is the main statistics table from the analysis, from which other sum
 
 |SubA_A5_tool_results|
 
-**Please note: when running this geoprocessing step the following red warning messages can be ignored. They do not affect the functioning of the tool**
+**Note: when running this step the following red warning messages will appear and can be ignored. They do not affect the functioning of the tool: **
 
 - WARNING: Concurrent mapset locking is not supported on Windows
     *All GRASS geoprocessing tools run from QGIS in Windows return that warning. It can be ignored as QGIS does not use this.*
