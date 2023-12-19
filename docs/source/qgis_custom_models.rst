@@ -268,6 +268,8 @@ If the LULC dataset is a regional or global extent it will need projecting and c
 
 |crosswalk_textfile|
 
+First we will run for the year 2000.
+
 In the Processing Toolbox, under Models, click on model **A1 Prepare and reclassify LULC dataset into UN-SEEA classes**.
 
 |SubA_A1_tool_interface|
@@ -279,6 +281,7 @@ Follow the instructions on the tool interface (see screengrab above)
 **Click Run.**
 
 You should now see the unique LULC classes present within the AOI for the country.
+You can run subsequent years by then clicking  **Change parameters** and change the LULC  to the 2015 dataset and year to 2015. **Click Run.** Repeat this until you have run all the years you wish to run. .
 
 |SubA_A1_tool_results|
 
@@ -293,6 +296,8 @@ Step A2 Prepare mountain layer and combine with LULC
 
 The development of mountain map consists in clipping and reprojecting the SDG 15.4.2. Global Mountain Descriptor Map developed by FAO to area of interest, in this case, the national border of Colombia. Once we have the two raster datasets in their native resolutions, we need to bring the datasets together and ensure that correct aggregation is undertaken and that the all the layers align to a common resolution. As SGD Indicator 15.4.2a requires disaggregation by both the 10 land cover classes and the 4 bioclimatic belts and the tools within QGIS will only allow a single input for zones, we will combine the two datasets. We need to ensure that the layers are aggregated to a common spatial resolution.
 
+First we will run for the year 2000.
+
 In the Processing Toolbox, under Models, click on model **A2 Prepare mountains and combine with LULC**.
 
 |SubA_A2_tool_interface|
@@ -300,8 +305,6 @@ In the Processing Toolbox, under Models, click on model **A2 Prepare mountains a
 **Input parameters**:
 
 Follow the instructions on the tool interface (see screengrab above)
-
-First we will run for the year 2000
 
 **Click Run.**
 
@@ -352,19 +355,7 @@ In the Processing Toolbox, under Models, click on model **A4 Generate Real Surfa
 
 **Input parameters**:
 
-- **Select country**: Select country to process from the dropdown list.
-
-- **CSV_containing_UN_country_codes**: Set the path to the csv file containing UN country codes (downloaded from the GitHub repository).
-
-- **Input: DEM raster**: Set the path to the DEM raster chosen in the previous step.
-
-- **Input NoData value**: Set this as -9999.
-
-- **Input: Target CRS** (i.e., Select a relevant equal area projection for your area of interest): Select a CRS for your outputs. This should be an equal area projection relevant to the country being processed.
-
-- **Select folder for outputs**: Select an output folder to store your outputs. The output folder should already exist. Make sure the folder name does not have any spaces.
-
-- **Cellsize**: Enter the cell size of the DEM raster in metres.
+Follow the instructions on the tool interface (see screengrab above)
 
 **Click Run.**
 
