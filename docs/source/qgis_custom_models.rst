@@ -242,7 +242,7 @@ In the Processing Toolbox, under Models, click on model **A0 Prepare country bou
 
 **Input parameters**
 
-Follow the instructions on the tool interface (see screengrab above)
+Follow the instructions in the right-hand panel of the tool interface (see screengrab above)
 
 **Click Run**
 
@@ -276,12 +276,13 @@ In the Processing Toolbox, under Models, click on model **A1 Prepare and reclass
 
 **Input parameters**
 
-Follow the instructions on the tool interface (see screengrab above)
+Follow the instructions in the right-hand panel of the tool interface (see screengrab above)
 
 **Click Run.**
 
 You should now see the unique LULC classes present within the AOI for the country.
-You can run subsequent years by then clicking  **Change parameters** and change the LULC  to the 2015 dataset and year to 2015. **Click Run.** Repeat this until you have run all the years you wish to run. .
+
+You can run subsequent years by then clicking  **Change parameters** and change the LULC to e.g. the 2015 dataset and year to 2015. **Click Run.** Repeat this until you have run all the years you wish to run. .
 
 |SubA_A1_tool_results|
 
@@ -304,12 +305,12 @@ In the Processing Toolbox, under Models, click on model **A2 Prepare mountains a
 
 **Input parameters**:
 
-Follow the instructions on the tool interface (see screengrab above)
+Follow the instructions in the right-hand panel of the tool interface (see screengrab above)
 
 **Click Run.**
 
 You can run subsequent years by
-then clicking  **Change parameters** and change the LULC  to the 2015 dataset and year to 2015. **Click Run.** Repeat this until you have run all the years you wish to run. .
+then clicking  **Change parameters** and change the LULC to e.g. the 2015 dataset and year to 2015. **Click Run.** Repeat this until you have run all the years you wish to run.
 
 This should produce the following outputs on the map canvas:
 
@@ -342,12 +343,14 @@ The selection of which DEM to use for this can be chosen by the countries. We do
 
 |SubA_A3_tool_interface|
 
-For the purposes of this example we will use a global DEM at 230m resolution as the Landuse landcover dataset that we are using in this example is 300m resolution so the DEM has a higher the resolution (smaller the grid cells)
+These instructions are also present in the right-hand panel of the tool interface Step A3. The tool step A3 does not actually run anything other than pointing users to the documentation.
 
 Step A4 Generate real surface area raster
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The final layer that needs generating is the Real Surface Area raster from the DEM. The tools should have all been tested to check your R integration is working in the initial setup. Refer to the workflow diagram in the overview section for an explanation of the process to calculate the real surface area from a DEM.
+
+For the purposes of this example we will use a global DEM at 230m resolution as the Landuse landcover dataset that we are using in this example is 300m resolution so the DEM has a higher the resolution (smaller the grid cells).
 
 In the Processing Toolbox, under Models, click on model **A4 Generate Real Surface Area Raster**.
 
@@ -355,7 +358,7 @@ In the Processing Toolbox, under Models, click on model **A4 Generate Real Surfa
 
 **Input parameters**:
 
-Follow the instructions on the tool interface (see screengrab above)
+Follow the instructions in the right-hand panel of the tool interface (see screengrab above)
 
 **Click Run.**
 
@@ -382,29 +385,16 @@ In the Processing Toolbox, under Models, click on model **A5 Generate Planimetri
 
 **Input parameters**
 
-- **What statistics do you wish to calculate?**: Select either Planimetric area or Planimetric area and real surface area.
-
-- **Select country**: Select country to process from the dropdown list.
-
-- **CSV_containing_UN_country_codes**: Set the path to the csv file containing UN country codes (downloaded from the GitHub repository).
-
-- **Enter year of landcover**: Enter the year of the LULC data being used.
-
-- **Input: Output A1a: LULC_UNSEEA in Equal Area projection**: Set the path for the UNSEEA reclassified vegetation layer for the year you are processing (Generated in step A1).
-
-- **Enter Output A2c**: Set the path for the combined mountain and vegetation layer for the year you are processing (generated in step A2).
-
-- **Input: RSA raster:** Set the path to the RSA raster (generated in step A4).
-
-- **Input: Target CRS** (i.e., Select a relevant equal area projection for your area of interest): Select a CRS for your outputs. This should be an equal area projection relevant to the country being processed.
-
-- **Select folder for outputs**: Select an output folder to store your outputs. The output folder should already exist. Make sure the folder name does not have any spaces.
+Follow the instructions in the right-hand panel of the tool interface (see screengrab above)
 
 **Click Run.**
 
 This output is the main statistics table from the analysis, from which other summary statistics tables will be generated:
 
 |SubA_A5_tool_results|
+
+You can run subsequent years by
+then clicking  **Change parameters** and change the LULC to e.g. the 2015 dataset and year to 2015. **Click Run.** Repeat this until you have run all the years you wish to run.
 
 **Tool A5 model diagram**
 
@@ -449,9 +439,13 @@ In the Processing Toolbox, under Models, click on model **A6 Formatting to Repor
 
 **Click Run.**
 
+You can run subsequent years by
+then clicking  **Change parameters** and change the LULC to e.g. the 2015 dataset and year to 2015. **Click Run.** Repeat this until you have run all the years you wish to run.
+
 Sub-indicator a is now complete.
 
-Repeat for each of the reporting years.
+You can run subsequent years by
+then clicking  **Change parameters** and change the LULC to e.g. the 2015 dataset and year to 2015. **Click Run.** Repeat this until you have run all the years you wish to run.
 
 **Tool A6 model diagram**
 
