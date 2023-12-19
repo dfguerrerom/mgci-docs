@@ -394,11 +394,14 @@ This output is the main statistics table from the analysis, from which other sum
 
 |SubA_A5_tool_results|
 
-*Please note: when running this geoprocessing step the following red warning messages can be ignored. They do not affect the functioning of the tool*
-- WARNING: Concurrent mapset locking is not supported on Windows
-- ERROR 6: ..\output.tif, band 1: SetColorTable() only supported for Byte or UInt16 bands in TIFF format.
-- WARNING: Too many values, color table cut to 65535 entries
+**Please note: when running this geoprocessing step the following red warning messages can be ignored. They do not affect the functioning of the tool**
 
+- WARNING: Concurrent mapset locking is not supported on Windows
+    *All GRASS geoprocessing tools run from QGIS in Windows return that warning. It can be ignored as QGIS does not use this.*
+- ERROR 6: ..\output.tif, band 1: SetColorTable() only supported for Byte or UInt16 bands in TIFF format.
+    *This is not an issue as the raster in this step needs to be of type Float and does not require a colour table*
+- WARNING: Too many values, color table cut to 65535 entries
+    *This is not an issue as the raster in this step needs to be of type Float and does not require a colour table, the error is only related to the color table, not the actual data.*
 
 **Tool A5 model diagram**
 
