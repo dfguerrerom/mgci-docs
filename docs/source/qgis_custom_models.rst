@@ -282,7 +282,7 @@ Follow the instructions in the right-hand panel of the tool interface (see scree
 
 You should now see the unique LULC classes present within the AOI for the country.
 
-You can run subsequent years by then clicking  **Change parameters** and change the LULC to e.g. the 2015 dataset and year to 2015. **Click Run.** Repeat this until you have run all the years you wish to run. .
+You can run subsequent years by then clicking  **Change parameters** and change the LULC to e.g. the 2015 dataset and year to 2015. **Click Run.** Repeat this until you have run all the years you wish to run.
 
 |SubA_A1_tool_results|
 
@@ -309,8 +309,7 @@ Follow the instructions in the right-hand panel of the tool interface (see scree
 
 **Click Run.**
 
-You can run subsequent years by
-then clicking  **Change parameters** and change the LULC to e.g. the 2015 dataset and year to 2015. **Click Run.** Repeat this until you have run all the years you wish to run.
+You can run subsequent years by then clicking  **Change parameters** and change the LULC to e.g. the 2015 dataset and year to 2015. **Click Run.** Repeat this until you have run all the years you wish to run.
 
 This should produce the following outputs on the map canvas:
 
@@ -389,12 +388,17 @@ Follow the instructions in the right-hand panel of the tool interface (see scree
 
 **Click Run.**
 
+You can run subsequent years by then clicking  **Change parameters** and change the LULC to e.g. the 2015 dataset and year to 2015. **Click Run.** Repeat this until you have run all the years you wish to run.
+
 This output is the main statistics table from the analysis, from which other summary statistics tables will be generated:
 
 |SubA_A5_tool_results|
 
-You can run subsequent years by
-then clicking  **Change parameters** and change the LULC to e.g. the 2015 dataset and year to 2015. **Click Run.** Repeat this until you have run all the years you wish to run.
+*Please note: when running this geoprocessing step the following red warning messages can be ignored. They do not affect the functioning of the tool*
+- WARNING: Concurrent mapset locking is not supported on Windows
+- ERROR 6: ..\output.tif, band 1: SetColorTable() only supported for Byte or UInt16 bands in TIFF format.
+- WARNING: Too many values, color table cut to 65535 entries
+
 
 **Tool A5 model diagram**
 
@@ -439,8 +443,7 @@ In the Processing Toolbox, under Models, click on model **A6 Formatting to Repor
 
 **Click Run.**
 
-You can run subsequent years by
-then clicking  **Change parameters** and change the LULC to e.g. the 2015 dataset and year to 2015. **Click Run.** Repeat this until you have run all the years you wish to run.
+You can run subsequent years by then clicking  **Change parameters** and change the LULC to e.g. the 2015 dataset and year to 2015. **Click Run.** Repeat this until you have run all the years you wish to run.
 
 Sub-indicator a is now complete.
 
