@@ -242,7 +242,7 @@ In the Processing Toolbox, under Models, click on model **A0 Prepare country bou
 
 **Input parameters**
 
-Follow the instructions on the tool interface (see screengrab above)
+Follow the instructions in the right-hand panel of the tool interface (see screengrab above)
 
 **Click Run**
 
@@ -276,12 +276,13 @@ In the Processing Toolbox, under Models, click on model **A1 Prepare and reclass
 
 **Input parameters**
 
-Follow the instructions on the tool interface (see screengrab above)
+Follow the instructions in the right-hand panel of the tool interface (see screengrab above)
 
 **Click Run.**
 
 You should now see the unique LULC classes present within the AOI for the country.
-You can run subsequent years by then clicking  **Change parameters** and change the LULC  to the 2015 dataset and year to 2015. **Click Run.** Repeat this until you have run all the years you wish to run. .
+
+You can run subsequent years by then clicking  **Change parameters** and change the LULC to e.g. the 2015 dataset and year to 2015. **Click Run.** Repeat this until you have run all the years you wish to run.
 
 |SubA_A1_tool_results|
 
@@ -304,12 +305,11 @@ In the Processing Toolbox, under Models, click on model **A2 Prepare mountains a
 
 **Input parameters**:
 
-Follow the instructions on the tool interface (see screengrab above)
+Follow the instructions in the right-hand panel of the tool interface (see screengrab above)
 
 **Click Run.**
 
-You can run subsequent years by
-then clicking  **Change parameters** and change the LULC  to the 2015 dataset and year to 2015. **Click Run.** Repeat this until you have run all the years you wish to run. .
+You can run subsequent years by then clicking  **Change parameters** and change the LULC to e.g. the 2015 dataset and year to 2015. **Click Run.** Repeat this until you have run all the years you wish to run.
 
 This should produce the following outputs on the map canvas:
 
@@ -342,12 +342,14 @@ The selection of which DEM to use for this can be chosen by the countries. We do
 
 |SubA_A3_tool_interface|
 
-For the purposes of this example we will use a global DEM at 230m resolution as the Landuse landcover dataset that we are using in this example is 300m resolution so the DEM has a higher the resolution (smaller the grid cells)
+These instructions are also present in the right-hand panel of the tool interface Step A3. The tool step A3 does not actually run anything other than pointing users to the documentation.
 
 Step A4 Generate real surface area raster
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The final layer that needs generating is the Real Surface Area raster from the DEM. The tools should have all been tested to check your R integration is working in the initial setup. Refer to the workflow diagram in the overview section for an explanation of the process to calculate the real surface area from a DEM.
+
+For the purposes of this example we will use a global DEM at 230m resolution as the Landuse landcover dataset that we are using in this example is 300m resolution so the DEM has a higher the resolution (smaller the grid cells).
 
 In the Processing Toolbox, under Models, click on model **A4 Generate Real Surface Area Raster**.
 
@@ -355,7 +357,7 @@ In the Processing Toolbox, under Models, click on model **A4 Generate Real Surfa
 
 **Input parameters**:
 
-Follow the instructions on the tool interface (see screengrab above)
+Follow the instructions in the right-hand panel of the tool interface (see screengrab above)
 
 **Click Run.**
 
@@ -382,29 +384,24 @@ In the Processing Toolbox, under Models, click on model **A5 Generate Planimetri
 
 **Input parameters**
 
-- **What statistics do you wish to calculate?**: Select either Planimetric area or Planimetric area and real surface area.
-
-- **Select country**: Select country to process from the dropdown list.
-
-- **CSV_containing_UN_country_codes**: Set the path to the csv file containing UN country codes (downloaded from the GitHub repository).
-
-- **Enter year of landcover**: Enter the year of the LULC data being used.
-
-- **Input: Output A1a: LULC_UNSEEA in Equal Area projection**: Set the path for the UNSEEA reclassified vegetation layer for the year you are processing (Generated in step A1).
-
-- **Enter Output A2c**: Set the path for the combined mountain and vegetation layer for the year you are processing (generated in step A2).
-
-- **Input: RSA raster:** Set the path to the RSA raster (generated in step A4).
-
-- **Input: Target CRS** (i.e., Select a relevant equal area projection for your area of interest): Select a CRS for your outputs. This should be an equal area projection relevant to the country being processed.
-
-- **Select folder for outputs**: Select an output folder to store your outputs. The output folder should already exist. Make sure the folder name does not have any spaces.
+Follow the instructions in the right-hand panel of the tool interface (see screengrab above)
 
 **Click Run.**
+
+You can run subsequent years by then clicking  **Change parameters** and change the LULC to e.g. the 2015 dataset and year to 2015. **Click Run.** Repeat this until you have run all the years you wish to run.
 
 This output is the main statistics table from the analysis, from which other summary statistics tables will be generated:
 
 |SubA_A5_tool_results|
+
+**Note: when running this step the following red warning messages will appear and can be ignored. They do not affect the functioning of the tool: **
+
+- WARNING: Concurrent mapset locking is not supported on Windows
+    *All GRASS geoprocessing tools run from QGIS in Windows return that warning. It can be ignored as QGIS does not use this.*
+- ERROR 6: ..\output.tif, band 1: SetColorTable() only supported for Byte or UInt16 bands in TIFF format.
+    *All GRASS geoprocessing tools run from QGIS will report this when an output is of type float. In this case it can be ignored as the tool is correctly generating a raster of type float in an intermediate processing step and does not require a colour table) to be generated.*
+- WARNING: Too many values, color table cut to 65535 entries
+    *All GRASS geoprocessing tools run from QGIS will report this when an output is of type float. In this case it can be ignored as the tool is correctly generating a raster of type float in an intermediate processing step and does not require a colour table to be generated.*
 
 **Tool A5 model diagram**
 
@@ -421,37 +418,13 @@ In the Processing Toolbox, under Models, click on model **A6 Formatting to Repor
 
 **Input parameters**
 
-- **Select country**: Select country to process from the dropdown list.
-
-- **CSV_containing_UN_country_codes**: Set the path to the csv file containing UN country codes (downloaded from the GitHub repository).
-
-- **Input: Statistics table**: Set the path to the statistics table (generated in step A5).
-
-- **Input: MGCI_template_table1**: Set the path to MGCI template table 1 (downloaded from the GitHub repository).
-
-- **Input: MGCI_template_table2**: Set the path to MGCI template table 2 (downloaded from the GitHub repository).
-
-- **Input: MGCI_template_table3**: Set the path to MGCI template table 3 (downloaded from the GitHub repository).
-
-- **NATURE**: Information on the production and dissemination of the data. For what regards to the values produced by countries using the tools only two possible values are allowed: C (Country Data) for data values and N (Non relevant) when a given bioclimatc belt does not occur in a given country. When Nature = N then OBS_VALUE = NA. Linked to OBS_STATUS
-
-- **OBS_STATUS**: Information on the quality of a value or an unusual or missing value. For what regards to the values produced by countries using the tools only two possible values are allowed: A (Official figure) for data values and M (Missing) when a given bioclimatc belt does not occur in a given country. When Nature = N then OBS_STATUS=M and  OBS_VALUE = NA.
-
-- **TIME_DETAIL**: Point in time to which the observation actually refers (in practice, the reference year of the land cover product used to compute the values). Same as TIME_PERIOD
-
-- **TIME_PERIOD**: Point in time to which the observation actually refers (in practice, the reference year of the land cover product used to compute the values). Same as TIME_DETAIL.
-
-- **COMMENT_OBS**: Descriptive text which can be attached to the observation. Additional information on specific aspects of each observation, such as how the observation was computed/estimated or details that could affect the comparability of this data point with others in a time series (i.e. interpolated value).
-
-- **SOURCE_DETAIL**: Name of the institution which computed the indicator value (e.g. National Statistical Office of XXX).
-
-- **Select folder for outputs**: Select an output folder to store your outputs. The output folder should already exist. Make sure the folder name does not have any spaces.
+Follow the instructions in the right-hand panel of the tool interface (see screengrab above)
 
 **Click Run.**
 
-Sub-indicator a is now complete.
+You can run subsequent years by then clicking  **Change parameters** and change the LULC to e.g. the 2015 dataset and year to 2015. **Click Run.** Repeat this until you have run all the years you wish to run.
 
-Repeat for each of the reporting years.
+Sub-indicator a is now complete.
 
 **Tool A6 model diagram**
 
@@ -503,25 +476,15 @@ We will calculate the baseline period first i.e., using 2000 landcover (year 1) 
 
 **Input parameters**
 
-- **Select country**: Select country to process from the dropdown list.
-
-- **CSV_containing_UN_country_codes**: Set the path to the csv file containing UN country codes (downloaded from the GitHub repository).
-
-- **Enter year of landcover year 1**: Enter the year of the LULC data used for year 1.
-
-- **Enter year of landcover year 2**: Enter the year of the LULC data used for year 2.
-
-- **Select folder for outputs**: Select an output folder to store your outputs. The output folder should already exist. Make sure the folder name does not have any spaces.
-
-- **Input: LULC year 1**: Set the path to your LULC data for year 1.
-
-- **Input: LULC year 2**: Set the path to your LULC data for year 2.
+Follow the instructions in the right-hand panel of the tool interface (see screengrab above)
 
 **Click Run.**
 
-Repeat the above step for the next reporting period i.e., using 2015 landcover (year 1) and 2018 landcover (year 2).
+You can run subsequent years by then clicking  **Change parameters** and change the landcover period and datasets to the next reporting period e.g., using 2015 landcover (year 1) and 2018 landcover (year 2). **Click Run.** Repeat this until you have run all the periods you wish to run.
 
-When using the default UN-SEEA land cover legend, this means that a value of 2001 means a land cover class 2 in year 1 and a land cover class 1 in year 2. A value of 10010 would mean a land cover class 10 in year 1 and a land cover class 10 in year 2. In other words, year 1 is represented by the first digit for values 1 to 9, and by the first 2 digits for land cover class 10. Year 2, on the other hand, is represented by the right hand digit (for values 1-9) and the right hand 2 digits for value 10.
+*When using the default UN-SEEA land cover legend, this means that a value of 2001 means a land cover class 2 in year 1 and a land cover class 1 in year 2. A value of 10010 would mean a land cover class 10 in year 1 and a land cover class 10 in year 2. In other words, year 1 is represented by the first digit for values 1 to 9, and by the first 2 digits for land cover class 10. Year 2, on the other hand, is represented by the right hand digit (for values 1-9) and the right hand 2 digits for value 10.*
+
+By default the raster will appear with a graded colour ramp. This can be changed by right-clicking on the output dataset and selecting **properties>>Symbology** and changing the render type from Singleband gray to **Paletted/Unique values** , then clicking the **Classify** button. This will show all the unique combinations of landcover 1 and landcover 2 in the combined dataset.
 
 |SubB_B1_tool_results|
 
