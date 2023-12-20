@@ -418,40 +418,13 @@ In the Processing Toolbox, under Models, click on model **A6 Formatting to Repor
 
 **Input parameters**
 
-- **Select country**: Select country to process from the dropdown list.
-
-- **CSV_containing_UN_country_codes**: Set the path to the csv file containing UN country codes (downloaded from the GitHub repository).
-
-- **Input: Statistics table**: Set the path to the statistics table (generated in step A5).
-
-- **Input: MGCI_template_table1**: Set the path to MGCI template table 1 (downloaded from the GitHub repository).
-
-- **Input: MGCI_template_table2**: Set the path to MGCI template table 2 (downloaded from the GitHub repository).
-
-- **Input: MGCI_template_table3**: Set the path to MGCI template table 3 (downloaded from the GitHub repository).
-
-- **NATURE**: Information on the production and dissemination of the data. For what regards to the values produced by countries using the tools only two possible values are allowed: C (Country Data) for data values and N (Non relevant) when a given bioclimatc belt does not occur in a given country. When Nature = N then OBS_VALUE = NA. Linked to OBS_STATUS
-
-- **OBS_STATUS**: Information on the quality of a value or an unusual or missing value. For what regards to the values produced by countries using the tools only two possible values are allowed: A (Official figure) for data values and M (Missing) when a given bioclimatc belt does not occur in a given country. When Nature = N then OBS_STATUS=M and  OBS_VALUE = NA.
-
-- **TIME_DETAIL**: Point in time to which the observation actually refers (in practice, the reference year of the land cover product used to compute the values). Same as TIME_PERIOD
-
-- **TIME_PERIOD**: Point in time to which the observation actually refers (in practice, the reference year of the land cover product used to compute the values). Same as TIME_DETAIL.
-
-- **COMMENT_OBS**: Descriptive text which can be attached to the observation. Additional information on specific aspects of each observation, such as how the observation was computed/estimated or details that could affect the comparability of this data point with others in a time series (i.e. interpolated value).
-
-- **SOURCE_DETAIL**: Name of the institution which computed the indicator value (e.g. National Statistical Office of XXX).
-
-- **Select folder for outputs**: Select an output folder to store your outputs. The output folder should already exist. Make sure the folder name does not have any spaces.
+Follow the instructions in the right-hand panel of the tool interface (see screengrab above)
 
 **Click Run.**
 
 You can run subsequent years by then clicking  **Change parameters** and change the LULC to e.g. the 2015 dataset and year to 2015. **Click Run.** Repeat this until you have run all the years you wish to run.
 
 Sub-indicator a is now complete.
-
-You can run subsequent years by
-then clicking  **Change parameters** and change the LULC to e.g. the 2015 dataset and year to 2015. **Click Run.** Repeat this until you have run all the years you wish to run.
 
 **Tool A6 model diagram**
 
@@ -503,25 +476,15 @@ We will calculate the baseline period first i.e., using 2000 landcover (year 1) 
 
 **Input parameters**
 
-- **Select country**: Select country to process from the dropdown list.
-
-- **CSV_containing_UN_country_codes**: Set the path to the csv file containing UN country codes (downloaded from the GitHub repository).
-
-- **Enter year of landcover year 1**: Enter the year of the LULC data used for year 1.
-
-- **Enter year of landcover year 2**: Enter the year of the LULC data used for year 2.
-
-- **Select folder for outputs**: Select an output folder to store your outputs. The output folder should already exist. Make sure the folder name does not have any spaces.
-
-- **Input: LULC year 1**: Set the path to your LULC data for year 1.
-
-- **Input: LULC year 2**: Set the path to your LULC data for year 2.
+Follow the instructions in the right-hand panel of the tool interface (see screengrab above)
 
 **Click Run.**
 
-Repeat the above step for the next reporting period i.e., using 2015 landcover (year 1) and 2018 landcover (year 2).
+You can run subsequent years by then clicking  **Change parameters** and change the landcover period and datasets to the next reporting period e.g., using 2015 landcover (year 1) and 2018 landcover (year 2). **Click Run.** Repeat this until you have run all the periods you wish to run.
 
-When using the default UN-SEEA land cover legend, this means that a value of 2001 means a land cover class 2 in year 1 and a land cover class 1 in year 2. A value of 10010 would mean a land cover class 10 in year 1 and a land cover class 10 in year 2. In other words, year 1 is represented by the first digit for values 1 to 9, and by the first 2 digits for land cover class 10. Year 2, on the other hand, is represented by the right hand digit (for values 1-9) and the right hand 2 digits for value 10.
+*When using the default UN-SEEA land cover legend, this means that a value of 2001 means a land cover class 2 in year 1 and a land cover class 1 in year 2. A value of 10010 would mean a land cover class 10 in year 1 and a land cover class 10 in year 2. In other words, year 1 is represented by the first digit for values 1 to 9, and by the first 2 digits for land cover class 10. Year 2, on the other hand, is represented by the right hand digit (for values 1-9) and the right hand 2 digits for value 10.*
+
+By default the raster will appear with a graded colour ramp. This can be changed by right-clicking on the output dataset and selecting **properties>>Symbology** and changing the render type from Singleband gray to **Paletted/Unique values** , then clicking the **Classify** button. This will show all the unique combinations of landcover 1 and landcover 2 in the combined dataset.
 
 |SubB_B1_tool_results|
 
