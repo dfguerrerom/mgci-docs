@@ -53,7 +53,7 @@ R software and packages installation
 Download and install R from https://www.r-project.org/ and then download and install RStudio Desktop from https://www.rstudio.com/products/rstudio/. 
 A step-by-step guide on how to install R and R Studio (with images) can be found in Annex 1.
 
-It is important to use a current version of R software (we currently recommend R-4.1.1). Although there have been a number of releases since 4.4.1,  we have found that some of the later versions cause the r-scripts to run slower within the QGIS toolbox. If you already have R installed, the R version can be easily checked on the text within the ‘R Console’ box at the beginning of a new session (see Figures below for standalone R and  R Studio). You can have multiple versions of R installed on your computer at a time so if you don’t have this version.
+It is important to use a current version of R software (we currently recommend R-4.1.3). Although there have been a number of releases since 4.1.3,  we have found that some of the later versions cause the r-scripts to run considerably slower within the QGIS toolbox. If you already have R installed, the R version can be easily checked on the text within the ‘R Console’ box at the beginning of a new session (see Figures below for standalone R and  R Studio). You can have multiple versions of R installed on your computer at a time so if you don’t have this version.
 
 |image5_orig|
 
@@ -76,7 +76,7 @@ Users will also need to download the SDG_15_4_2_beta_Toolbox and set of template
    
   |setup2b|
    
-- Right-click on **SDG15_4_2_beta.zi** and click on **7-ZIP>>Extract file**. Note we are clicking on extract files this time and not extract here as we want to make some modifications to the path we are unzipping to.
+- Right-click on **SDG15_4_2_beta.zip** and click on **7-ZIP>>Extract file**. Note we are clicking on extract files this time and not extract here as we want to make some modifications to the path we are unzipping to.
 
   |setup3|
 
