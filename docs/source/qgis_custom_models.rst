@@ -552,6 +552,7 @@ In the Processing Toolbox, under Models, click on model **B3 Reclassify LULC Tra
 
 Follow the instructions in the right-hand panel of the tool interface (see screengrab above)
 
+
 **Click Run.**
 
 - Repeat the above step for the next reporting period i.e., using 2015 landcover (year 1) and 2018 landcover (year 2)
@@ -561,6 +562,8 @@ You can ignore the two warning messages that appear in red– these do not affec
 - WARNING: Concurrent mapset locking is not supported on Windows
 
 - ERROR 6: C:\workspace\MGCI\outputs\UNSEEA_LULC2000_2015_EqArea_reclassed_impact.tif, band 1: SetColorTable() only supported for Byte or UInt16 bands in TIFF format.
+
+The resultant map should show  should look like this:
 
 |SubB_B3_tool_results|
 
