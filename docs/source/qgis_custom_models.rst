@@ -16,7 +16,7 @@ About QGIS-SDG 15.4.2 :sub:`beta`
 
 This documentation and geospatial workflow has been developed by the UN Environment Programme World Conservation Monitoring Centre (UNEP-WCMC) in collaboration with the Food and Agriculture Organization (FAO) of the United Nations to support relevant national authorities to compute and report against SDG Indicator 15.4.2.
 
-The geospatial workflow was developed using QGIS 3.22.16, a free and open-source geographic information system licensed under the GNU General Public License. QGIS is an official project of the Open Source Geospatial Foundation (OSGeo). It runs on Linux, Unix, Mac OSX, Windows and Android and supports numerous vector, raster, and database formats and functionalities. To run this workflow, you will also need to have R Software installed.
+The geospatial workflow was developed using QGIS 3.28.11, a free and open-source geographic information system licensed under the GNU General Public License. QGIS is an official project of the Open Source Geospatial Foundation (OSGeo). It runs on Linux, Unix, Mac OSX, Windows and Android and supports numerous vector, raster, and database formats and functionalities. To run this workflow, you will also need to have R Software installed.
 
 The QGIS-SDG 15.4.2 :sub:`beta` workflow is in a beta stage and therefore it is still under development. Please contact the QGIS-SDG 15.4.2 :sub:`beta` development team with any comments or suggestions.
 
@@ -53,7 +53,7 @@ R software and packages installation
 Download and install R from https://www.r-project.org/ and then download and install RStudio Desktop from https://www.rstudio.com/products/rstudio/. 
 A step-by-step guide on how to install R and R Studio (with images) can be found in Annex 1.
 
-It is important to use a current version of R software (we currently recommend R-4.1.1). Although there have been a number of releases since 4.4.1,  we have found that some of the later versions cause the r-scripts to run slower within the QGIS toolbox. If you already have R installed, the R version can be easily checked on the text within the ‘R Console’ box at the beginning of a new session (see Figures below for standalone R and  R Studio). You can have multiple versions of R installed on your computer at a time so if you don’t have this version.
+It is important to use a current version of R software (we currently recommend R-4.1.3). Although there have been a number of releases since 4.1.3,  we have found that some of the later versions cause the r-scripts to run considerably slower within the QGIS toolbox. If you already have R installed, the R version can be easily checked on the text within the ‘R Console’ box at the beginning of a new session (see Figures below for standalone R and  R Studio). You can have multiple versions of R installed on your computer at a time so if you don’t have this version.
 
 |image5_orig|
 
@@ -76,7 +76,7 @@ Users will also need to download the SDG_15_4_2_beta_Toolbox and set of template
    
   |setup2b|
    
-- Right-click on **SDG15_4_2_beta.zi** and click on **7-ZIP>>Extract file**. Note we are clicking on extract files this time and not extract here as we want to make some modifications to the path we are unzipping to.
+- Right-click on **SDG15_4_2_beta.zip** and click on **7-ZIP>>Extract file**. Note we are clicking on extract files this time and not extract here as we want to make some modifications to the path we are unzipping to.
 
   |setup3|
 
@@ -299,7 +299,7 @@ You can run subsequent years by then clicking  **Change parameters** and change 
 Step A2 Prepare mountain layer and combine with LULC
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The development of mountain map consists in clipping and reprojecting the SDG 15.4.2. Global Mountain Descriptor Map developed by FAO to area of interest, in this case, the national border of Colombia. Once we have the two raster datasets in their native resolutions, we need to bring the datasets together and ensure that correct aggregation is undertaken and that the all the layers align to a common resolution. As SGD Indicator 15.4.2a requires disaggregation by both the 10 land cover classes and the 4 bioclimatic belts and the tools within QGIS will only allow a single input for zones, we will combine the two datasets. We need to ensure that the layers are aggregated to a common spatial resolution.
+The development of mountain map consists in clipping and reprojecting the SDG 15.4.2. Global Mountain Descriptor Map developed by FAO to area of interest, in this case, the national border of Colombia. Once we have the two raster datasets in their native resolutions, we need to bring the datasets together and ensure that correct aggregation is undertaken and that the all the layers align to a common resolution. As SGD Indicator 15.4.2a requires disaggregation by both the 10 land cover classes and the 4 bioclimatic belts and the tools within QGIS will only allow a single input for zones, we will combine the two datasets. We need to ensure that the layers are aggregated to a common spatial resolution. During this step we ensure we maintain the resolution of the Lamdcover dataset as this is the most import layer in the analysis,  rather than the mountain layer as this is only used to determine mountain extent and report on the disagregated values.
 
 First we will run for the year 2000.
 
@@ -321,7 +321,17 @@ This should produce the following outputs on the map canvas:
 
 - The combined mountain and vegetation layer. In order to distinguish the vegetation class from the mountain all the vegetation values will be multiplied by 10. This means for example a value of 35 in the output means the pixel has class 3 in landcover layer and class 5 in the Mountain descriptor layer.
 
-|SubA_A2_tool_results|
+Result A2a is the global mountain map in its native resolution clipped to the country buffer to reduce the loss of data around the edges when clipping to the country boundary at the landcover resolution:
+
+|SubA_A2_tool_results1|
+
+Result A2b is the global mountain map in its landcover resolution clipped to the country boundary:
+
+|SubA_A2_tool_results2|
+
+Result A2c is the combined landcover and mountain map in its landcover resolution clipped to the country boundary:
+
+|SubA_A2_tool_results3|
 
 *The boundaries and names shown, and the designations used on this map do not imply official endorsement or acceptance by the United Nations.*
 
@@ -439,16 +449,6 @@ Instructions to calculate Sub-indicator 15.4.2b in QGIS using the custom models
 
 This section of the tutorial explains in detail how to calculate value estimates for sub-indicator 15.4.2b in QGIS, continuing to use Colombia as a case study. Sub-Indicator 15.4.2b is designed to monitor the extent of degraded mountain land as a result of landcover change of a given country and for given reporting year.
 
-This sub-indicator looks at the proportion of degraded mountain area, calculated using a binary score (degraded/non-degraded) showing the extent of degraded land over total mountain area. This is calculated using the following formula:
-
-|DML_formula|
-
-Where:
-
-- **Degraded mountain area n** = Total degraded mountain area (in Km2) in the reporting period n. This is, the sum of the areas where landcover change is considered to constitute degradation from the baseline period.
-
-- **Total mountain area** = Total area of mountains (in Km2).
-
 As a reminder, in accordance with the SDG indicator’s metadata countries are required to compute estimates for Sub-Indicator 15.4.2b for a baseline for approximately 2000-2015, and subsequently every three years (2018, 2021, 2024, 2027 and 2030). Therefore, for the example in this tutorial we will use the ESA-CCI landcover products for 2000, 2015 (for the baseline) and 2018 (for the reporting year). ESA-CCI landcover data are not yet available beyond 2021 so we have therefore not yet been able to calculate subsequent years in this example.
 
 This section of the tutorial assumes that the user has already calculated sub-indicator 15.4.2a and has therefore already downloaded and translated the landcover datasets to UN-SEEA classes for the baseline and reporting years as presented in the figure below.
@@ -465,8 +465,8 @@ Countries may choose to either calculate degradation using the default land cove
 
 In this tutorial the default method is described using the default legend and transition matrix, while Annex 2 outlines the additional/alternative steps required to generate a transitions matrix using a nationally adapted land cover legend. In both cases the output results in the same 3 classes (stable, degradation and improving) and both needed to be disaggregated and reported by both landcover transition and bioclimatic belt.
 
-Step B1 Combine LULC datasets
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Step B1 Combine landcover datasets
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 First, we will generate a single raster containing a value to represent both year 1 landcover and year 2 landcover. We will demonstrate using the default method using the UN-SEEA reclassified landcover rasters in equal area projection that were previously reclassified for the computation of sub-indicator a. As indicated above, users can choose to use the rasters projected to equal area projection containing the full or a simplified national landcover legend if there is a preference/advantage of calculating landcover transitions compared to using the default legend and transition matrix. The processing is the same regardless which method is chosen.
 
@@ -533,8 +533,8 @@ The resultant table should look like this:
 
 |SubB_B2_tool_model|
 
-Step B3 Reclassify LULC transitions to impacts
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Step B3 Reclassify landcover transitions to impacts
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The next step is to reclassify the outputs from the combined landcover datasets for year 1 and year 2, first for the baseline period (2000 to 2015) and then for the reporting period (e.g., 2018). We will use the transitions matrix generated in the previous steps. In this example we use the default transitions matrix, but the steps are the same if a national transitions matrix is being used.
 
@@ -544,7 +544,7 @@ After calculating the baseline reporting period, for assessing the area of degra
 
 This basically means that area degraded for the reporting period 2018 is calculated by summing : (i) new areas degraded in 2016-2018 period and (ii) areas identified as degraded in the baseline period that remain degraded. If we were to do the same for the next reporting year (2021), we would calculate the degraded land for the 2016 -2021 period, and follow exactly the same approach. Please let me know if this is not clear.
 
-In the Processing Toolbox, under Models, click on model **B3 Reclassify LULC Transitions to Impacts**.
+In the Processing Toolbox, under Models, click on model **B3 Reclassify landcover transitions to impacts**.
 
 |SubB_B3_tool_interface|
 
@@ -562,6 +562,8 @@ You can ignore the two warning messages that appear in red– these do not affec
 
 - ERROR 6: C:\workspace\MGCI\outputs\UNSEEA_LULC2000_2015_EqArea_reclassed_impact.tif, band 1: SetColorTable() only supported for Byte or UInt16 bands in TIFF format.
 
+The resultant map should show should show the three impact categories:
+
 |SubB_B3_tool_results|
 
 *The boundaries and names shown, and the designations used on this map do not imply official endorsement or acceptance by the United Nations.*
@@ -570,21 +572,21 @@ You can ignore the two warning messages that appear in red– these do not affec
 
 |SubB_B3_tool_model|
 
-Step B4 Combine Bioclimatic belts, LULC transitions and impact layers
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Step B4 Combine Bioclimatic belts, landcover transitions and impact layers
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-We now have all the layers we need for generating statistics. To make it easier we will again sum the layers together using different factors to change the values in some of the datasets. We have the following datasets which we need to combine to generate the proportion of degraded mountain area disaggregated by LULC transitions, impact status and bioclimatic belt:
+We now have all the layers we need for generating statistics. To make it easier we will again sum the layers together using different factors to change the values in some of the datasets. We have the following datasets which we need to combine to generate the proportion of degraded mountain area disaggregated by landcover transitions, impact status and bioclimatic belt:
 
-- LULC transitions (which in our case using have values 1001-10010 where LULC for year 1 has already been multiplied by 1000 and summed with year 2 values)
-We will leave these LULC transitions dataset values as they are.
+- Landcover transitions (which in our case using have values 1001-10010 where landcover for year 1 has already been multiplied by 1000 and summed with year 2 values)
+We will leave these landcover transitions dataset values as they are.
 
 - Bioclimatic belts (which have values 1-4 representing the 4 bioclimatic belts)
 We will multiply the bioclimatic belts by 100,000.
 
-- LULC transition impact status (values -1, 0 and 1)
+- Landcover transition impact status (values -1, 0 and 1)
 We will change the impact status by adding 2 to each of the values and multiplying by 1,000,000 thus changing values -1 to 1,000,000 (degradation), 0 to 2,000,000 (stable) and 1 to 3,000,000 (improving)
 
-In the Processing Toolbox, under Models, click on model **B4 Combine Bioclimatic Belts, LULC Transitions and Impact Layers**.
+In the Processing Toolbox, under Models, click on model **B4 Combine Bioclimatic Belts, landcover transitions and impact layers**.
 
 |SubB_B4_tool_interface|
 
@@ -595,6 +597,8 @@ Follow the instructions in the right-hand panel of the tool interface (see scree
 **Click Run.**
 
 - Repeat the above step for the next reporting period i.e., using 2015 landcover (year 1) and 2018 landcover (year 2).
+
+The resultant map should look similar to the image below. Remember that we used various multiplication factors to distinguish between the layers we were combining so they shoud have some very high values. 
 
 |SubB_B4_tool_results|
 
@@ -619,8 +623,9 @@ Follow the instructions in the right-hand panel of the tool interface (see scree
 
 **Click Run.**
 
-|SubB_B5_tool_results|
+The resultant table should look similar to the image below:
 
+|SubB_B5_tool_results|
 
 **Tool B5 model diagram**
 
@@ -643,7 +648,11 @@ Follow the instructions in the right-hand panel of the tool interface (see scree
 
 Repeat the above step for the next reporting period i.e., using 2015 landcover (year 1) and 2018 landcover (year 2) and any other reporting periods.
 
-|SubB_B6_tool_results|
+The resultant tables should look similar to the images below:
+
+|SubB_B6_tool_results1|
+
+|SubB_B6_tool_results2|
 
 **Tool B6 model diagram**
 
@@ -726,8 +735,13 @@ Repeat the above step for the next reporting period i.e., using 2015 landcover (
 
 .. |SubA_A2_tool_interface| image:: media_toolbox/SubA_A2_tool_interface.png
    :width: 1200
-.. |SubA_A2_tool_results| image:: media_toolbox/SubA_A2_tool_results.png
+.. |SubA_A2_tool_results1| image:: media_toolbox/SubA_A2_tool_results1.png
    :width: 1200
+.. |SubA_A2_tool_results2| image:: media_toolbox/SubA_A2_tool_results2.png
+   :width: 1200
+.. |SubA_A2_tool_results3| image:: media_toolbox/SubA_A2_tool_results3.png
+   :width: 1200
+
 .. |SubA_A2_tool_model| image:: media_toolbox/SubA_A2_tool_model.png
    :width: 1200
 
@@ -805,7 +819,9 @@ Repeat the above step for the next reporting period i.e., using 2015 landcover (
 
 .. |SubB_B6_tool_interface| image:: media_toolbox/SubB_B6_tool_interface.png
    :width: 1200
-.. |SubB_B6_tool_results| image:: media_toolbox/SubB_B6_tool_results.png
+.. |SubB_B6_tool_results1| image:: media_toolbox/SubB_B6_tool_results1.png
+   :width: 1200
+.. |SubB_B6_tool_results2| image:: media_toolbox/SubB_B6_tool_results2.png
    :width: 1200
 .. |SubB_B6_tool_model| image:: media_toolbox/SubB_B6_tool_model.png
    :width: 1200
