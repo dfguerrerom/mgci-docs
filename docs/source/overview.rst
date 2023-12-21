@@ -2,36 +2,28 @@ Background
 ==========
 SDG Indicator 15.4.2 is one of the two indicators under SDG Target 15.4, which aims to "*ensure the conservation of mountain ecosystems, including their biodiversity, to enhance their capacity to provide benefits which are essential for sustainable development*". The Food and Agriculture Organization (FAO) of the United Nations is the custodian agency of this indicator.
 
-The indicator is composed of two sub-indicators to monitor progress towards the conservation of mountain ecosystems.
-
-
-Overview of computation of Sub-Indicator a) Mountain Green Cover Index
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The indicator is composed of two sub-indicators to monitor progress towards the conservation of mountain ecosystems:
 
 **Sub-indicator 15.4.2a**, Mountain Green Cover Index (MGCI), is designed to measure the extent and changes of green cover - i.e. forest, shrubs, trees, pasture land, cropland, etc. – in mountain areas. MGCI is defined as the percentage of green cover over the total surface of the mountain area of a given country and for given reporting year. The aim of the index is to monitor the evolution of the green cover and thus assess the status of conservation of mountain ecosystems.
 
 .. math::
 
-    MGCI = (Mountain Green Cover Area)/(Total Mountain Area)
+    MGCI = (Mountain Green Cover Area n )/(Total Mountain Area)
 
 Where:
 
-- **Mountain Green Cover Area n** = Sum of areas (in km :sup:`2`) covered by (1) tree-covered areas, (2) croplands,(3) grasslands, (4) shrub-covered areas and (5) shrubs and/or herbaceous vegetation, aquatic or regularly flooded classes in the reporting period n
+- **Mountain Green Cover Area** :sub:`n` = Sum of areas (in km :sup:`2`) covered by (1) tree-covered areas, (2) croplands,(3) grasslands, (4) shrub-covered areas and (5) shrubs and/or herbaceous vegetation, aquatic or regularly flooded classes in the reporting period *n*
 - **Total mountain area** = Total area of mountains (in km :sup:`2`). In both the numerator and denominator, mountain area is defined according to UNEP-WCMC (2002).
 
-
-Overview of computation of Sub-Indicator b) Proportion of degraded mountain land
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-**Sub-indicator 15.4.2b**, Proportion of degraded mountain land, is designed to monitor the extent of degraded mountain land as a result of land cover change of a given country and for given reporting year. Similarly to sub-indicator ‘’trends in land cover” under SDG Indicator 15.3.1 (Sims et al. 2021), mountain ecosystem degradation and recovery is assessed based on the definition of land cover type transitions that constitute degradation, as either improving, stable or degraded. The definition of degradation adopted for the computation of this indicator is the one established Intergovernmental Science-Policy Platform on Biodiversity and Ecosystem Services (IPBES) [1]_.
+**Sub-indicator 15.4.2b**, Proportion of degraded mountain land, is designed to monitor the extent of degraded mountain land is based on land cover change of a given country and for given reporting year. Similarly to sub-indicator ‘’trends in land cover” under SDG Indicator 15.3.1 (Sims et al. 2021), mountain ecosystem degradation and recovery is assessed based on the definition of land cover type transitions that constitute degradation, as either improving, stable or degraded. The definition of degradation adopted for the computation of this indicator is the one established by the Intergovernmental Science-Policy Platform on Biodiversity and Ecosystem Services (IPBES) [1]_.
 
 .. math::
 
-   Proportion Of Degraded Mountain Land =  (Degraded Mountain Area n) / (Total Mountain Area) * 100
+   Proportion of Degraded Mountain Land =  (Degraded Mountain Area n) / (Total Mountain Area) * 100
 
 Where:
 
-- **Degraded mountain area n** = Total degraded mountain area (in km :sup:`2`) in the reporting period n. This is, the sum of the areas where land cover change is considered to constitute degradation from the baseline period. Degraded mountain land will be assessed based on the land cover transition matrix in Annex 1.
+- **Degraded mountain area** :sub:`n` = Total degraded mountain area (in km :sup:`2`) in the reporting period *n*. This is, the sum of the areas where land cover change is considered to constitute degradation from the baseline period. Degraded mountain land will be assessed based on the land cover transition matrix in Annex 1.
 - **Total mountain area** = Total area of mountains (in km :sup:`2`). In both the numerator and denominator, mountain area is defined according to UNEP-WCMC (2002).
 
 If the country/region has no mountain area, it will be assigned value NA
@@ -42,8 +34,9 @@ If the country/region has no mountain area, it will be assigned value NA
 **Disaggregation:**
 
 Both of these sub-indicators are disaggregated by mountain bioclimatic belts as defined by Körner et al. (2011). In addition, sub-indicator 15.4.2a is
-disaggregated by the 10 SEEA classes based on UN Statistical Division (2014).  Those values are reported both as proportions (percent) and area (in square kilometres)
+disaggregated by the 10 SEEA (System of Environmental and Economic Accounting) landcover classes based on UN Statistical Division (2014). The resulting values are reported both as proportions (percent) and area (in square kilometres)
 
+An overview of the spatial workflow for computing the both sub indicators is provided in  Figure 1 below. 
 
 |imageworkflow|
 
@@ -59,7 +52,7 @@ For the purposes of standardization and international comparability of nationall
 
 For disaggregation purposes, this mountain area is subdivided into bioclimatic belts as defined by Körner et al. (2011). Körner et al. subdivides mountains vertically into seven bioclimatic belts based on average temperatures, therefore accounting the latitudinal change in elevation of thermally similar areas in the world’s mountains. For the purposes of this indicator, these seven bioclimatic belts are aggregated into four (Nival, Alpine, Montane and Remaining mountain areas), as illustrated in Table 1.
 
-**Table 1.** Mountain bioclimatic belts as defined by Körner et al. (2011) and reclassification for data disaggregation of SDG Indicator 15.4.2. Growing season is defined as the number of days between daily mean temperature exceeds 0.9 °C then falls below 0.9 °C
+**Table 1.** Mountain bioclimatic belts as defined by Körner et al. (2011) and reclassification for data disaggregation of SDG Indicator 15.4.2. Growing season is defined as the number of days between the daily mean temperature exceeding 0.9 °C then falling below 0.9 °C
 
 +----------------------+-----------------------+------------------+-------------------------------+
 | **Bioclimatic**      |**Growning season**    |**Growing season**|**Bioclimatic belts adopted**  |
@@ -91,10 +84,10 @@ A global mountain area map sub-divided by bioclimatic belts has been developed b
 Overview of the land cover data
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Land cover refers to the observed physical cover of the Earth’s surface. It includes vegetation and manmade features as well as bare rock, bare soil and inland water surfaces (FAO-GTOS, 2009). The primary units for characterizing land cover are categories (e.g. Forest or Open Water). These categories must be defined following a standardized land cover
+Land cover refers to the observed physical cover of the Earth’s surface. It includes vegetation and manmade features as well as bare rock, bare soil and inland water surfaces (FAO-GTOS, 2009). The primary units for characterizing land cover are categories (e.g. Forest or Open Water) that must be defined following a standardized land cover
 classification in order to identify land cover changes consistently over time.
 
-Several global standards of land cover classifications have been developed by international initiatives for this purpose. For the purposes of standardization and harmonization when reporting on SDG Indicator 15.4.2, this indicator has adapted the land cover classification established by the United Nations Statistical Commission’s System of Environmental and Economic Accounting (UN-SEEA)(UN Statistical Division, 2014) by selecting the most relevant SEEA classes for mountain ecosystems and aggregating all croplands classes in the following classification (Table 2).
+Several global standards of land cover classifications have been developed by international initiatives for this purpose. For the purposes of standardization and harmonization when reporting on SDG Indicator 15.4.2, the land cover classification established by the United Nations Statistical Commission’s System of Environmental and Economic Accounting (UN-SEEA)(UN Statistical Division, 2014) has been adapted by selecting the most relevant SEEA classes for mountain ecosystems and aggregating all croplands classes (Table 2).
 
 
 **Table 2 Adapted UN-SEEA land cover classification for the computation and aggregate reporting on SDG Indicator 15.4.2.**
@@ -185,7 +178,7 @@ Several global standards of land cover classifications have been developed by in
     |                                       | across multiple years.                                       |
     +---------------------------------------+--------------------------------------------------------------+
 
-Land cover maps developed by relevant national authorities will generally provide the most relevant data source to compute this indicator. However, in certain cases, such data may not be available. In those cases, various regional or global products provide a viable alternative.
+Land cover maps developed by relevant national authorities will generally provide the most appropriate data source to compute this indicator. However, in certain cases, such data may not be available. In those cases, various regional or global products provide a viable alternative.
 
 The global default source of land cover data for this indicator is the European Space Agency Climate Change Initiative (ESA-CCI) Land Cover product (ESA, 2017). The ESA-CCI product consists of a series of annual Land Cover maps at 300 m resolution, providing 22 land cover classes based on 300m MERIS, 1km SPOT – VEGETATION, 1km PROBA –V and 1km AVHRR. The ESA CCI adheres to the Cover Classification System of the United Nations Food and Agriculture Organization (UN FAO) (Santoro et al. 2015). Annual updates are currently available from 1992 to 2020. Additional years will be made available by the European Space Agency.
 
@@ -201,16 +194,16 @@ To improve the accuracy of the calculation of SDG Indicator 15.4.2, this analyti
 
 
 
-Potential / known limitations of current methodology
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Potential / known limitations of current SDG Indicator 15.4.2 methodology
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Recognizing that this indicator cannot fully capture the complexity of mountain ecosystems across the world, national authorities are encouraged to use other relevant national or sub-national indicators, data, and information to strengthen their interpretation, as well as taking into account the following limitations:
 
-- Sub-indicator 15.4.2a should be interpreted with care given that: 1) lack of green cover does not necessarily mean that a particular mountain area is degraded (i.e. areas of permanent snow and ice, scree slopes and natural sparsely vegetated areas above the tree line, 2) it does not capture significant drivers of change such as conversion of natural areas to cropland or pastureland, and 3) increase in green cover may due to impacts of climate change in mountain areas (i.e. increase in green cover due to snow and glacier retreat due to global warming).
+- Sub-indicator 15.4.2a should be interpreted with care given that: 1) lack of green cover does not necessarily mean that a particular mountain area is degraded (e.g. areas of permanent snow and ice, scree slopes and natural sparsely vegetated areas above the tree line all have low green cover, 2) it does not capture significant drivers of change such as conversion of natural areas to cropland or pastureland, and 3) increase in green cover may be due to impacts of climate change in mountain areas (e.g. increase in green cover due to snow and glacier retreat as a result of global warming).
 
-- Because land cover refers to the naturally stable aspects of land and the structure of its key elements, transient aspects such as changes in vegetation phenology, snow or flooding dynamics cannot be captured by land cover transitions as measured in sub-indicator 15.4.2b. In the context of SDG Target 15.4, this is particularly relevant for snow cover dynamics (snow cover duration within a year).
+- For Sub-indicator 15.4.2b, because Because land cover refers to the naturally stable aspects of land and the structure of its key elements, transient aspects such as changes in vegetation phenology, snow or flooding dynamics cannot be captured by land cover transitions as measured in sub-indicator 15.4.2b. In the context of SDG Target 15.4, this is particularly relevant for snow cover dynamics (snow cover duration within a year).
 
-- Both sub-indicators are not able to capture ecosystem degradation drivers that do not necessarily result in changes in land cover.
+- Neither sub-indicators is able to capture ecosystem degradation drivers that do not necessarily result in changes in land cover.
 
 - Area estimations based on remote-sensing-derived land cover maps via pixel counting may lead to biased area estimates due to map errors. National authorities are encouraged to further refine those estimates by comparing them against reference datasets and applying bias corrections.
 
