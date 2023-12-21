@@ -444,11 +444,34 @@ Follow the instructions in the right-hand panel of the tool interface (see scree
 
 You can run subsequent years by then clicking  **Change parameters** and change the LULC to e.g. the 2015 dataset and year to 2015. **Click Run.** Repeat this until you have run all the years you wish to run.
 
-Sub-indicator a is now complete.
+If you had landcover for all the reporting years and have run these steps for all the years then Sub-indicator a is now complete, otherwise there is one last interpolation step to interpolate values for the missing years.
 
 **Tool A6 model diagram**
 
 |SubA_A6_tool_model|
+
+Step A7 Interpolation of reporting tables
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+This step is an interpolation step for countries who do not have the exact landcover years for their reporting. You will need to have run steps A1 to A6 for the closest years before and after the missing reporting year before you can run this tool. The tool will need to be run three times for each missing reporting year i.e. on the formatted reporting tables (Table1_ER_MTN_TOTL, Table2_ER_MTN_GRNCOV and Table3_ER_MTN_GRNCVI) located in your ..\SDG15_4_2_beta\output_tables folder.
+
+In the Processing Toolbox, under Models, click on model **A7 Interpolation for missing reporting years**.
+
+|SubA_A7_tool_interface|
+
+**Input parameters**
+
+Follow the instructions in the right-hand panel of the tool interface (see screengrab above)
+
+**Click Run.**
+
+You can run subsequent tables and years by then clicking  **Change parameters** and changing the parameters accordingly. **Click Run.** Repeat this until you have run for all three reporting tables and for all the missing years you wish to interpolate.
+
+Sub-indicator a is now complete.
+
+**Tool A7 model diagram**
+
+|SubA_A7_tool_model|
 
 Instructions to calculate Sub-indicator 15.4.2b in QGIS using the custom models
 -------------------------------------------------------------------------------
