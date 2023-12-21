@@ -27,7 +27,7 @@ If you have specific bugs to report or improvements to the tool that you would l
 Authors
 ^^^^^^^
 
-QGIS-SDG 15.4.2 :sub:`beta` has been developed by the UN Environment Programme World Conservation Monitoring Centre (UNEP-WCMC) in collaboration with the Food and Agriculture Organization (FAO) of the United Nations. Contributors to QGIS-SDG 15.4.2 :sub:`beta` and its documentation include Corinna Ravilious, Vignesh Kamath Cannanure, Boipelo Tshwene-Mauchaza, Cristina Telhado and Valerie Kapos (UNEP-WCMC) and Xavier de Lamo, Chiara Patriarca and Daniel Guerrero (FAO.
+QGIS-SDG 15.4.2 :sub:`beta` has been developed by the UN Environment Programme World Conservation Monitoring Centre (UNEP-WCMC) in collaboration with the Food and Agriculture Organization (FAO) of the United Nations. Contributors to QGIS-SDG 15.4.2 :sub:`beta` and its documentation include Corinna Ravilious, Vignesh Kamath Cannanure, Boipelo Tshwene-Mauchaza, Cristina Telhado and Valerie Kapos (UNEP-WCMC) and Xavier de Lamo, Chiara Patriarca and Daniel Guerrero (FAO).
 
 Suggested Citation
 ^^^^^^^^^^^^^^^^^^
