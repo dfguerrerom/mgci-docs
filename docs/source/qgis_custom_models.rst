@@ -154,6 +154,12 @@ Next some QGIS settings will be changed to ensure QGIS knows where to find the R
 - Navigate to the QGIS models folder in the SDG15_4_2_beta folder. e.g. in this example **C:\\workspace\\SDG15_4_2_beta\\QGIS_models**. Then click **OK**.
 
   |setup12|
+
+- In the same **settings>>processing** window, shrink down the Model tab and expand **Scripts**. Double click on the models path to expose the three dots. Click on this and click **Add**.
+
+- Navigate to the QGIS scripts folder in the SDG15_4_2_beta folder. e.g. in this example **C:\\workspace\\SDG15_4_2_beta\\QGIS_scripts**. Then click **OK**.
+
+  |setup12b|
    
 - Next on the left hand panel click on **Data Sources** and change the **Representation of null values** from Null to **NA** (this will ensure  the correct NA representation of Null values in the output reporting tables).
    
@@ -685,6 +691,8 @@ The resultant tables should look similar to the images below:
 .. |setup11| image:: media_toolbox/setup11.png
    :width: 800
 .. |setup12| image:: media_toolbox/setup12.png
+   :width: 800
+.. |setup12b| image:: media_toolbox/setup12b.png
    :width: 800
 .. |setup13| image:: media_toolbox/setup13.png
    :width: 800
