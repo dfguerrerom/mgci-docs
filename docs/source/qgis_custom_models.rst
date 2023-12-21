@@ -449,16 +449,6 @@ Instructions to calculate Sub-indicator 15.4.2b in QGIS using the custom models
 
 This section of the tutorial explains in detail how to calculate value estimates for sub-indicator 15.4.2b in QGIS, continuing to use Colombia as a case study. Sub-Indicator 15.4.2b is designed to monitor the extent of degraded mountain land as a result of landcover change of a given country and for given reporting year.
 
-This sub-indicator looks at the proportion of degraded mountain area, calculated using a binary score (degraded/non-degraded) showing the extent of degraded land over total mountain area. This is calculated using the following formula:
-
-|DML_formula|
-
-Where:
-
-- **Degraded mountain area n** = Total degraded mountain area (in Km2) in the reporting period n. This is, the sum of the areas where landcover change is considered to constitute degradation from the baseline period.
-
-- **Total mountain area** = Total area of mountains (in Km2).
-
 As a reminder, in accordance with the SDG indicator’s metadata countries are required to compute estimates for Sub-Indicator 15.4.2b for a baseline for approximately 2000-2015, and subsequently every three years (2018, 2021, 2024, 2027 and 2030). Therefore, for the example in this tutorial we will use the ESA-CCI landcover products for 2000, 2015 (for the baseline) and 2018 (for the reporting year). ESA-CCI landcover data are not yet available beyond 2021 so we have therefore not yet been able to calculate subsequent years in this example.
 
 This section of the tutorial assumes that the user has already calculated sub-indicator 15.4.2a and has therefore already downloaded and translated the landcover datasets to UN-SEEA classes for the baseline and reporting years as presented in the figure below.
