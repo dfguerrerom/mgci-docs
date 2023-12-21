@@ -299,7 +299,7 @@ You can run subsequent years by then clicking  **Change parameters** and change 
 Step A2 Prepare mountain layer and combine with LULC
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The development of mountain map consists in clipping and reprojecting the SDG 15.4.2. Global Mountain Descriptor Map developed by FAO to area of interest, in this case, the national border of Colombia. Once we have the two raster datasets in their native resolutions, we need to bring the datasets together and ensure that correct aggregation is undertaken and that the all the layers align to a common resolution. As SGD Indicator 15.4.2a requires disaggregation by both the 10 land cover classes and the 4 bioclimatic belts and the tools within QGIS will only allow a single input for zones, we will combine the two datasets. We need to ensure that the layers are aggregated to a common spatial resolution.
+The development of mountain map consists in clipping and reprojecting the SDG 15.4.2. Global Mountain Descriptor Map developed by FAO to area of interest, in this case, the national border of Colombia. Once we have the two raster datasets in their native resolutions, we need to bring the datasets together and ensure that correct aggregation is undertaken and that the all the layers align to a common resolution. As SGD Indicator 15.4.2a requires disaggregation by both the 10 land cover classes and the 4 bioclimatic belts and the tools within QGIS will only allow a single input for zones, we will combine the two datasets. We need to ensure that the layers are aggregated to a common spatial resolution. During this step we ensure we maintain the resolution of the Lamdcover dataset as this is the most import layer in the analysis,  rather than the mountain layer as this is only used to determine mountain extent and report on the disagregated values.
 
 First we will run for the year 2000.
 
@@ -321,7 +321,17 @@ This should produce the following outputs on the map canvas:
 
 - The combined mountain and vegetation layer. In order to distinguish the vegetation class from the mountain all the vegetation values will be multiplied by 10. This means for example a value of 35 in the output means the pixel has class 3 in landcover layer and class 5 in the Mountain descriptor layer.
 
-|SubA_A2_tool_results|
+Result A2a is the global mountain map in its native resolution clipped to the country buffer to reduce the loss of data around the edges when clipping to the country boundary at the landcover resolution:
+
+|SubA_A2_tool_results1|
+
+Result A2b is the global mountain map in its landcover resolution clipped to the country boundary:
+
+|SubA_A2_tool_results2|
+
+Result A2c is the combined landcover and mountain map in its landcover resolution clipped to the country boundary:
+
+|SubA_A2_tool_results3|
 
 *The boundaries and names shown, and the designations used on this map do not imply official endorsement or acceptance by the United Nations.*
 
@@ -726,8 +736,13 @@ Repeat the above step for the next reporting period i.e., using 2015 landcover (
 
 .. |SubA_A2_tool_interface| image:: media_toolbox/SubA_A2_tool_interface.png
    :width: 1200
-.. |SubA_A2_tool_results| image:: media_toolbox/SubA_A2_tool_results.png
+.. |SubA_A2_tool_results1| image:: media_toolbox/SubA_A2_tool_results1.png
    :width: 1200
+.. |SubA_A2_tool_results2| image:: media_toolbox/SubA_A2_tool_results2.png
+   :width: 1200
+.. |SubA_A2_tool_results3| image:: media_toolbox/SubA_A2_tool_results3.png
+   :width: 1200
+
 .. |SubA_A2_tool_model| image:: media_toolbox/SubA_A2_tool_model.png
    :width: 1200
 
