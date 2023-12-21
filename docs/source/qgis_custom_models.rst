@@ -806,7 +806,12 @@ The resultant tables should look similar to the images below:
 .. |SubA_A6_tool_model| image:: media_toolbox/SubA_A6_tool_model.png
    :width: 1200
 
-
+.. |SubA_A7_tool_interface| image:: media_toolbox/SubA_A7_tool_interface.png
+   :width: 1200
+.. |SubA_A7_tool_results| image:: media_toolbox/SubA_A7_tool_results.png
+   :width: 1200
+.. |SubA_A7_tool_model| image:: media_toolbox/SubA_A7_tool_model.png
+   :width: 1200
 
 
 .. |SubB_B1_tool_interface| image:: media_toolbox/SubB_B1_tool_interface.png
