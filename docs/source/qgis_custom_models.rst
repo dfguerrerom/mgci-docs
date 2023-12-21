@@ -27,7 +27,11 @@ If you have specific bugs to report or improvements to the tool that you would l
 Authors
 ^^^^^^^
 
-QGIS-SDG 15.4.2 :sub:`beta` has been developed by the UN Environment Programme World Conservation Monitoring Centre (UNEP-WCMC) in collaboration with the Food and Agriculture Organization (FAO) of the United Nations. Contributors to QGIS-SDG 15.4.2 :sub:`beta` and its documentation include Corinna Ravilious, Vignesh Kamath Cannanure, Boipelo Tshwene-Mauchaza, Cristina Telhado and Valerie Kapos.
+QGIS-SDG 15.4.2 :sub:`beta` has been developed by the UN Environment Programme World Conservation Monitoring Centre (UNEP-WCMC) in collaboration with the Food and Agriculture Organization (FAO) of the United Nations. Contributors to QGIS-SDG 15.4.2 :sub:`beta` and its documentation include Corinna Ravilious, Vignesh Kamath Cannanure, Boipelo Tshwene-Mauchaza, Cristina Telhado and Valerie Kapos (UNEP-WCMC) and Xavier de Lamo, Chiara Patriarca and Daniel Guerrero (FAO.
+
+Suggested Citation
+^^^^^^^^^^^^^^^^^^
+UNEP-WCMC and FAO (2023) SDG 15.4.2 Computation:  Technical documentation for QGIS to aid the calculation of SDG Indicator 15.4.2: (a) Mountain Green Cover Index and (b) proportion of degraded mountain land. United Nations Environment Programme World Conservation Monitoring Centre, Cambridge.
 
 License
 ^^^^^^^
