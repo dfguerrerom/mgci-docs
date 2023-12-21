@@ -36,7 +36,7 @@ If the country/region has no mountain area, it will be assigned value NA
 Both of these sub-indicators are disaggregated by mountain bioclimatic belts as defined by Körner et al. (2011). In addition, sub-indicator 15.4.2a is
 disaggregated by the 10 SEEA (System of Environmental and Economic Accounting) landcover classes based on UN Statistical Division (2014). The resulting values are reported both as proportions (percent) and area (in square kilometres)
 
-An overview of the spatial workflow for computing the both sub indicators is provided in  Figure 1 below. 
+An overview of the spatial workflow for computing both sub-indicators is provided in Figure 1 below. 
 
 |imageworkflow|
 
