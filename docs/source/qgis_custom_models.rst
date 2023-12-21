@@ -465,8 +465,8 @@ Countries may choose to either calculate degradation using the default land cove
 
 In this tutorial the default method is described using the default legend and transition matrix, while Annex 2 outlines the additional/alternative steps required to generate a transitions matrix using a nationally adapted land cover legend. In both cases the output results in the same 3 classes (stable, degradation and improving) and both needed to be disaggregated and reported by both landcover transition and bioclimatic belt.
 
-Step B1 Combine LULC datasets
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Step B1 Combine landcover datasets
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 First, we will generate a single raster containing a value to represent both year 1 landcover and year 2 landcover. We will demonstrate using the default method using the UN-SEEA reclassified landcover rasters in equal area projection that were previously reclassified for the computation of sub-indicator a. As indicated above, users can choose to use the rasters projected to equal area projection containing the full or a simplified national landcover legend if there is a preference/advantage of calculating landcover transitions compared to using the default legend and transition matrix. The processing is the same regardless which method is chosen.
 
@@ -533,8 +533,8 @@ The resultant table should look like this:
 
 |SubB_B2_tool_model|
 
-Step B3 Reclassify LULC transitions to impacts
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Step B3 Reclassify landcover transitions to impacts
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The next step is to reclassify the outputs from the combined landcover datasets for year 1 and year 2, first for the baseline period (2000 to 2015) and then for the reporting period (e.g., 2018). We will use the transitions matrix generated in the previous steps. In this example we use the default transitions matrix, but the steps are the same if a national transitions matrix is being used.
 
@@ -544,14 +544,13 @@ After calculating the baseline reporting period, for assessing the area of degra
 
 This basically means that area degraded for the reporting period 2018 is calculated by summing : (i) new areas degraded in 2016-2018 period and (ii) areas identified as degraded in the baseline period that remain degraded. If we were to do the same for the next reporting year (2021), we would calculate the degraded land for the 2016 -2021 period, and follow exactly the same approach. Please let me know if this is not clear.
 
-In the Processing Toolbox, under Models, click on model **B3 Reclassify LULC Transitions to Impacts**.
+In the Processing Toolbox, under Models, click on model **B3 Reclassify landcover transitions to impacts**.
 
 |SubB_B3_tool_interface|
 
 **Input parameters**
 
 Follow the instructions in the right-hand panel of the tool interface (see screengrab above)
-
 
 **Click Run.**
 
@@ -563,7 +562,7 @@ You can ignore the two warning messages that appear in red– these do not affec
 
 - ERROR 6: C:\workspace\MGCI\outputs\UNSEEA_LULC2000_2015_EqArea_reclassed_impact.tif, band 1: SetColorTable() only supported for Byte or UInt16 bands in TIFF format.
 
-The resultant map should show  should look like this:
+The resultant map should show should show the three impact categories:
 
 |SubB_B3_tool_results|
 
@@ -573,21 +572,21 @@ The resultant map should show  should look like this:
 
 |SubB_B3_tool_model|
 
-Step B4 Combine Bioclimatic belts, LULC transitions and impact layers
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Step B4 Combine Bioclimatic belts, landcover transitions and impact layers
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-We now have all the layers we need for generating statistics. To make it easier we will again sum the layers together using different factors to change the values in some of the datasets. We have the following datasets which we need to combine to generate the proportion of degraded mountain area disaggregated by LULC transitions, impact status and bioclimatic belt:
+We now have all the layers we need for generating statistics. To make it easier we will again sum the layers together using different factors to change the values in some of the datasets. We have the following datasets which we need to combine to generate the proportion of degraded mountain area disaggregated by landcover transitions, impact status and bioclimatic belt:
 
-- LULC transitions (which in our case using have values 1001-10010 where LULC for year 1 has already been multiplied by 1000 and summed with year 2 values)
-We will leave these LULC transitions dataset values as they are.
+- Landcover transitions (which in our case using have values 1001-10010 where landcover for year 1 has already been multiplied by 1000 and summed with year 2 values)
+We will leave these landcover transitions dataset values as they are.
 
 - Bioclimatic belts (which have values 1-4 representing the 4 bioclimatic belts)
 We will multiply the bioclimatic belts by 100,000.
 
-- LULC transition impact status (values -1, 0 and 1)
+- Landcover transition impact status (values -1, 0 and 1)
 We will change the impact status by adding 2 to each of the values and multiplying by 1,000,000 thus changing values -1 to 1,000,000 (degradation), 0 to 2,000,000 (stable) and 1 to 3,000,000 (improving)
 
-In the Processing Toolbox, under Models, click on model **B4 Combine Bioclimatic Belts, LULC Transitions and Impact Layers**.
+In the Processing Toolbox, under Models, click on model **B4 Combine Bioclimatic Belts, landcover transitions and impact layers**.
 
 |SubB_B4_tool_interface|
 
@@ -622,8 +621,9 @@ Follow the instructions in the right-hand panel of the tool interface (see scree
 
 **Click Run.**
 
-|SubB_B5_tool_results|
+The resultant table should look similar to the image below:
 
+|SubB_B5_tool_results|
 
 **Tool B5 model diagram**
 
@@ -646,7 +646,11 @@ Follow the instructions in the right-hand panel of the tool interface (see scree
 
 Repeat the above step for the next reporting period i.e., using 2015 landcover (year 1) and 2018 landcover (year 2) and any other reporting periods.
 
-|SubB_B6_tool_results|
+The resultant tables should look similar to the images below:
+
+|SubB_B6_tool_results1|
+
+|SubB_B6_tool_results2|
 
 **Tool B6 model diagram**
 
@@ -813,7 +817,9 @@ Repeat the above step for the next reporting period i.e., using 2015 landcover (
 
 .. |SubB_B6_tool_interface| image:: media_toolbox/SubB_B6_tool_interface.png
    :width: 1200
-.. |SubB_B6_tool_results| image:: media_toolbox/SubB_B6_tool_results.png
+.. |SubB_B6_tool_results1| image:: media_toolbox/SubB_B6_tool_results1.png
+   :width: 1200
+.. |SubB_B6_tool_results2| image:: media_toolbox/SubB_B6_tool_results2.png
    :width: 1200
 .. |SubB_B6_tool_model| image:: media_toolbox/SubB_B6_tool_model.png
    :width: 1200
