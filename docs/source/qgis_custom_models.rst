@@ -16,7 +16,7 @@ About QGIS-SDG 15.4.2 :sub:`beta`
 
 This documentation and geospatial workflow has been developed by the UN Environment Programme World Conservation Monitoring Centre (UNEP-WCMC) in collaboration with the Food and Agriculture Organization (FAO) of the United Nations to support relevant national authorities to compute and report against SDG Indicator 15.4.2.
 
-The geospatial workflow was developed using QGIS 3.22.16, a free and open-source geographic information system licensed under the GNU General Public License. QGIS is an official project of the Open Source Geospatial Foundation (OSGeo). It runs on Linux, Unix, Mac OSX, Windows and Android and supports numerous vector, raster, and database formats and functionalities. To run this workflow, you will also need to have R Software installed.
+The geospatial workflow was developed using QGIS 3.28.11, a free and open-source geographic information system licensed under the GNU General Public License. QGIS is an official project of the Open Source Geospatial Foundation (OSGeo). It runs on Linux, Unix, Mac OSX, Windows and Android and supports numerous vector, raster, and database formats and functionalities. To run this workflow, you will also need to have R Software installed.
 
 The QGIS-SDG 15.4.2 :sub:`beta` workflow is in a beta stage and therefore it is still under development. Please contact the QGIS-SDG 15.4.2 :sub:`beta` development team with any comments or suggestions.
 
