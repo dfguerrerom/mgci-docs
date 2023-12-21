@@ -598,6 +598,8 @@ Follow the instructions in the right-hand panel of the tool interface (see scree
 
 - Repeat the above step for the next reporting period i.e., using 2015 landcover (year 1) and 2018 landcover (year 2).
 
+The resultant map should look similar to the image below. Remember that we used various multiplication factors to distinguish between the layers we were combining so they shoud have some very high values. 
+
 |SubB_B4_tool_results|
 
 *The boundaries and names shown, and the designations used on this map do not imply official endorsement or acceptance by the United Nations.*
