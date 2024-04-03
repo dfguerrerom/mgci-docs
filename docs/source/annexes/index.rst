@@ -20,4 +20,10 @@ Annexes
         - Manual steps to calculate Sub-indicator 15.4.2a in QGIS
         - Manual steps to calculate Sub-indicator 15.4.2b in QGIS
 
+    .. grid-item-card:: :fas:`table` Download SEPAL sdg 15.4.2 tables
+        :link: ../annexes/annex3.html
+
+        - Manual steps to calculate Sub-indicator 15.4.2a in QGIS
+        - Manual steps to calculate Sub-indicator 15.4.2b in QGIS
+
 .. line-break::
