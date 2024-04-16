@@ -107,35 +107,35 @@ GEE accepts a number of data formats namely: shapefiles, raster images,and CSV t
 1. To do so, choose the **Shapefiles** option in the drop-down list. A pop-up window will appear prompting you to navigate to the location of your data.
 2. Select the file you want to upload from your computer.You can either upload the vector data as a compressed file :code:`.zip` or :code:`.shp` .Remember that a :code:`.shp` file alone is not sufficient and must be accompanied with all the other files describing the vector data i.e. :code:`.shx`, :code:`.dbf` and :code:`.prj`.
 
-.. image:: C:/Users/Rotich/DOCUMENTATION/SEPAL/Media/sepal_corrections/uploading_vector.PNG
+.. imag ../_static/sepal/uploading_vector.PNGPNG
    :align: center
    :width: 400
    :alt: Vector_File
 
 Any file errors will be highlighted by the uploader, as in the example below:
 
-.. image:: C:/Users/Rotich/DOCUMENTATION/SEPAL/Media/sepal_corrections/vector_error_warning.PNG
+.. imag ../_static/sepal/vector_error_warning.PNGPNG
    :align: center
    :width: 400
    :alt: Vector_Error
 
 3. Once all files are loaded correctly, the upload progress is displayed in the task manager. Typically this process takes a couple of minutes depending on the size of the dataset. The progress of the upload is displayed in the task manager as shown below:
 
-.. image:: C:/Users/Rotich/DOCUMENTATION/SEPAL/Media/sepal_corrections/uploading_progress.PNG
+.. image../_static/sepal/uploading_progress.PNGPNG
    :align: center
    :width: 400
    :alt: vector_uploading_process
 
 4. Once completed,the uploaded assets will be listed in the Assets List under the Assets tab. If not displayed, click on the **Refresh** button.
 
-.. image:: C:/Users/Rotich/DOCUMENTATION/SEPAL/Media/sepal_corrections/vector_asset_list.PNG
+.. image../_static/sepal/vector_asset_list.PNGPNG
    :align: center
    :width: 300
    :alt: Assets_listed
 
 5. Clicking on the asset will open an asset details window :The asset is ready for use. You can now visualize, share or delete it accordingly 
 
-.. image:: C:/Users/Rotich/DOCUMENTATION/SEPAL/Media/sepal_corrections/asset_details_gee.PNG
+.. image../_static/sepal/asset_details_gee.PNGPNG
    :align: center
    :width: 800
    :alt: asset_popup
