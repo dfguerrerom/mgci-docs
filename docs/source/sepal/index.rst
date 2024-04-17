@@ -453,7 +453,7 @@ Defining your land cover dataset
 
 **1.	Click on the Land cover dataset drawer in the left panel menu.** A pop-up questionnaire will ask you to indicate the land cover map you wish to use. 
 
-.. image:: C:/Users/Rotich/DOCUMENTATION/SEPAL/Media/sepal_corrections/default_datasets.PNG
+.. image:: ../_static/sepal/default_datasets.PNG
    :align: center
    :width: 900
    :alt: land cover module
@@ -476,7 +476,7 @@ Using Custom Landcover maps
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - Select :guilabel:`yes`  to the first question. Then click on :guilabel:`Open Parameters Settings`  as shown below:
 
-.. image:: C:/Users/Rotich/DOCUMENTATION/SEPAL/Media/sepal_corrections/custom_lc.PNG
+.. image:: ../_static/sepal/custom_lc.PNG
    :align: center
    :width: 900
    :alt: Using-custom_landcover
@@ -484,7 +484,7 @@ Using Custom Landcover maps
 
 - This opens a new pop-up window that allows you to select your land cover maps as a GEE asset (remember that they must be stored as a `GEE image collection <https://developers.google.com/earth-engine/guides/ic_creating>`_ to be able to be imported.) Use the bottom arrow to choose your asset or copy/paste it directly from GEE. Then click on :guilabel:`Get classes`
 
-.. image:: C:/Users/Rotich/DOCUMENTATION/SEPAL/Media/sepal_corrections/custom_datasets_1.PNG
+.. image:: ../_static/sepal/custom_datasets_1.PNG
    :width: 900
    :alt: custom_landcover map
 
@@ -494,7 +494,7 @@ Reclassifying the landcover map legend for sub-Indicator A computation.
 
 - Once you have specified your custom image collection, you will be required to reclassify the legend of your land cover maps into the 10 landcover classes as defined by the UN-SEEA , which is,as explained earlier,the FAO-defined land cover legend for SDG 15.4.2 computation.
 
-.. image:: C:/Users/Rotich/DOCUMENTATION/SEPAL/Media/sepal_corrections/custom_reclassification_sub_a.PNG
+.. image:: ../_static/sepal/custom_reclassification_sub_a.PNG
    :align: center
    :width: 900
    :alt: reclassifying subA
@@ -529,7 +529,7 @@ Using a reclassification matrix
 .. tip:: The target values must match the UN-SEAA classes codes for sub-indicator A (click on the info button at the top of the table for information on how the SEEA classes are coded).
 
 
-.. image:: C:/Users/Rotich/DOCUMENTATION/SEPAL/Media/sepal_corrections/reclassification_sub_b.PNG
+.. image:: ../_static/sepal/reclassification_sub_b.PNG
    :align: center
    :width: 900
    :alt:  Uploading a reclassification matrix
@@ -547,14 +547,14 @@ Manual Reclassification
 - Directly specify the reclassification rules by manually indicating the SEEA land cover equivalent (in the destination class column) of each of the land cover classes of your land cover map (in the original class column) as shown below:If need be,the information icon located at the tools ribbon(upper right hand can be used to refer to the UN-SEAA classes )
 - After manually reclassifying your legend, you can use the save :guilabel:`💾` button located at the top of the table to save hte table as a CSV file, that can be used at a  future calculation instead of manually filling up the table again.
 
-.. image:: C:/Users/Rotich/DOCUMENTATION/SEPAL/Media/sepal_corrections/custom_reclassification_sub_a.PNG
+.. image:: ../_static/sepal/custom_reclassification_sub_a.PNG
    :align: center
    :width: 900
    :alt: Manual reclassification.
 
 In our example, we will reclassify Nepal’s national land cover class using the following guide:
 
-.. image:: C:/Users/Rotich/DOCUMENTATION/SEPAL/Media/sepal_corrections/nepal_classification_guide.png
+.. image:: ../_static/sepal/nepal_classification_guide.png
    :align: center
    :width: 700
    :alt: Reclassifation table_NEPAL
@@ -583,7 +583,7 @@ Here again the transition matrix should have been previously uploaded in your SE
 
 Check the :ref:`Annex <Annex>` for the  transition matrix template.
 
-.. image:: C:/Users/Rotich/DOCUMENTATION/SEPAL/Media/sepal_corrections/transition_file.PNG/
+.. image:: ../_static/sepal/transition_file.PNG
    :align: center
    :width: 700
    :alt: Transition matrix
@@ -597,14 +597,14 @@ As explained earlier,SEPAL-SDG 15.4.2 :sub:`beta` gives the users liberty to mod
 
 This can be done selecting :guilabel:`Yes` to the second question of the land cover dataset questionnaire, and then clicking on :guilabel:`Open Parameter Settings`.
 
-.. image:: C:/Users/Rotich/DOCUMENTATION/SEPAL/Media/sepal_corrections/default_lc_custom_tm.PNG
+.. image:: ../_static/sepal/default_lc_custom_tm.PNG
    :align: center
    :width: 900
    :alt: Reclassify table
 
 This will open a pop-up window including the default land cover transitions matrix, showing positive land cover transitions in green, negative in red, and stable/neutral transitions in blue. The matrix can be directly modified by clicking on each cell and changing the sign of the transition.
 
-.. image:: C:/Users/Rotich/DOCUMENTATION/SEPAL/Media/sepal_corrections/transition_matrix_modify.PNG
+.. image:: ../_static/sepal/transition_matrix_modify.PNG
    :align: center
    :width: 900
    :alt: Reclassify table
@@ -622,7 +622,7 @@ Indicators Settings
 
 Now that we have defined our area of interest and the land cover data to be used in the analysis, together with the land cover legend reclassification rules and associated transitions , click on the **Indicator Settings drawer** to set the parameters that the tool will base the computation on.
 
-.. image:: C:/Users/Rotich/DOCUMENTATION/SEPAL/Media/sepal_corrections/defining_indicator_settings.PNG
+.. image:: ../_static/sepal/defining_indicator_settings.PNG
    :align: center
    :width: 900
    :alt: Reclassify table
@@ -635,14 +635,14 @@ Defining parameters for Sub-indicator A: Mountain Green Cover Index
 
 **1. Click on the add layer icon (highlighted below) to define the years for which the indicator will be calculated**
 
-.. image:: C:/Users/Rotich/DOCUMENTATION/SEPAL/Media/sepal_corrections/adding_reporting_years.PNG
+.. image:: ../_static/sepal/adding_reporting_years.PNG
    :align: center
    :width: 800
    :alt: Indicator settings
 
 **2. In the pop-up window that will appear you need to link each of the land maps (either the default ones or the custom ones that you may have uploaded in the prior steps) to the corresponding reference year of each map. You can report one or multiple years. To increase the number of years to be reported, just click on the + sign to define additional years that you need to report.** 
 
-.. image:: C:/Users/Rotich/DOCUMENTATION/SEPAL/Media/sepal_corrections/defining_reporting_years_subA.PNG
+.. image:: ../_static/sepal/defining_reporting_years_subA.PNG
    :align: center
    :width: 500
    :alt: Reclassify table
@@ -651,7 +651,7 @@ Defining parameters for Sub-indicator A: Mountain Green Cover Index
 .. note:: Remember that reporting years for Sub-indicator A are **2000, 2005, 2010, 2015 and subsequently every 3 years (2018, 2021, 2024,...).** If you are using custom national land cover maps that are not annually updated and does not exactly match reporting years (for example, you may have a land cover map for 2004 instead of 2005), the tool will automatically interpolate values for the reporting years based on the years for which land cover data is available. 
 
 
-.. image:: C:/Users/Rotich/DOCUMENTATION/SEPAL/Media/sepal_corrections/multiple_years.PNG
+.. image:: ../_static/sepal/multiple_years.PNG
    :align: center
    :width: 350
    :alt: Defining Multiple Years
@@ -659,14 +659,14 @@ Defining parameters for Sub-indicator A: Mountain Green Cover Index
 
 **3.	When finished, press OK. The list of reporting years will now be listed at the bottom of the Sub-Indicator A box.**
 
-.. image:: C:/Users/Rotich/DOCUMENTATION/SEPAL/Media/sepal_corrections/defining_years_subA.PNG
+.. image:: ../_static/sepal/defining_years_subA.PNG
    :align: center
    :width: 900
    :alt: Reclassify table
 
 **4. SEPAL SDG 15.4.2 :sub:`beta` offers the following advanced options:**
 
-.. image:: C:/Users/Rotich/DOCUMENTATION/SEPAL/Media/sepal_corrections/advanced_settings.PNG
+.. image:: ../_static/sepal/advanced_settings.PNG
    :width: center
    :align: 900
    :alt: Advanced Options
@@ -678,7 +678,7 @@ Defining parameters for Sub-indicator A: Mountain Green Cover Index
 
 Defining parameters for Sub-Indicator B: Proportion of Degraded Mountain Land.
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-In contrast to Sub-Indicator A, in Sub-Indicator B the extent of degraded mountain land is calculated first in the baseline period 2000 - 2015. This baseline sets the benchmark ​from which the extent of land degradation is measured and monitored i.e.​ every 3 years after 2015. Put simply, new land cover degradation in the reporting periods (2018, 2021, 2024, ...) is added to the baseline to estimate the current extent of land cover degradation.  This is why in this instance the tool automatically uses the 2000-2015 as baseline.
+In contrast to Sub-Indicator A, in Sub-Indicator B the extent of degraded mountain land is calculated first in the baseline period 2000 - 2015. This baseline sets the benchmark ​from which the extent of land degradation is measured and monitored i.e. every 3 years after 2015. Put simply, new land cover degradation in the reporting periods (2018, 2021, 2024, ...) is added to the baseline to estimate the current extent of land cover degradation.  This is why in this instance the tool automatically uses the 2000-2015 as baseline.
 
 **1. Define your landcover maps for the baseline years (2000 and 2015) by linking each of the land maps to the corresponding reference year of each map. If you are using custom national land cover maps that does not exactely match reporting years of the baseline, select the map whose reference year is closest to the reporting year (For example, you could select a land cover map for 1998 for the reporting year 2000).**
 
