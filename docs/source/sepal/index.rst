@@ -1,3 +1,6 @@
+
+
+
 SEPAL-SDG 15.4.2 :sub:`beta`
 ============================
 
@@ -153,7 +156,7 @@ When computing SDG 15.4.2, land cover maps are uploaded as raster files and  mad
 .. Note:: 
    Please ensure that the name includes the reference year of the land cover map e.g Nepal_2000 for Nepal's landcover map for 2000.
 
-.. image:: C:/Users/Rotich/DOCUMENTATION/SEPAL/Media/sepal_corrections/uploading_rasters.PNG
+.. image:: ../_static/sepal/uploading_rasters.PNG
    :align: center
    :width: 400
    :alt: Geotiff_upload
@@ -169,28 +172,28 @@ To create an Image Collection;
 
 1. Click on the **Assets Tab** and then New > **Image collection.**
 
-.. image:: C:/Users/Rotich/DOCUMENTATION/SEPAL/Media/sepal_corrections/image_collection.png
+.. image:: ../_static/sepal/image_collection.png
    :align: center
    :width: 300
    :alt: Image-collection
 
 2. This will open the image collection constructor that will first prompt you to name your image collection as shown below:
 
-.. image:: C:/Users/Rotich/DOCUMENTATION/SEPAL/Media/sepal_corrections/naming_image_collection.png
+.. image:: ../_static/sepal/naming_image_collection.png
    :align: center
    :width: 400
    :alt: Naming Image-collection
 
 3. Once the image collection is created, you can load it by pasting an Earth Engine asset ID into the Image Collection constructor (Ensure the **Edit** button is on) or by simply dragging the individual assets to the image collection in the assets list as shown below:
 
-.. image:: C:/Users/Rotich/DOCUMENTATION/SEPAL/Media/sepal_corrections/image_collection_process.png
+.. image:: ../_static/sepal/naming_image_collection.png
    :align: center
    :width: 700
    :alt: Creating Image-collection
 
 4. Repeat this for each asset. Clicking on the Image Collection(in the asset list) should now show all the images that are contained in that collection and should now be ready to be used in your analysis or visualization.
  
-.. image:: C:/Users/Rotich/DOCUMENTATION/SEPAL/Media/sepal_corrections/image_collection_result.png
+.. image:: ../_static/sepal/image_collection_result.png
    :align: center
    :width: 700
    :alt: Image-collection-result
