@@ -682,14 +682,14 @@ In contrast to Sub-Indicator A, in Sub-Indicator B the extent of degraded mounta
 
 **1. Define your landcover maps for the baseline years (2000 and 2015) by linking each of the land maps to the corresponding reference year of each map. If you are using custom national land cover maps that does not exactely match reporting years of the baseline, select the map whose reference year is closest to the reporting year (For example, you could select a land cover map for 1998 for the reporting year 2000).**
 
-.. image:: C:/Users/Rotich/DOCUMENTATION/SEPAL/Media/sepal_corrections/baseline_definition.PNG
+.. image:: ../_static/sepal/baseline_definition.PNG
    :align: center
    :width: 500
    :alt: Reclassify table
 
 **2. Then define the land cover maps for each of the reporting years and click OK**
 
-.. image:: C:/Users/Rotich/DOCUMENTATION/SEPAL/Media/sepal_corrections/reporting_definition.PNG
+.. image:: ../_static/sepal/reporting_definition.PNG
    :align: center
    :width: 500
    :alt: Reclassify table
@@ -700,7 +700,7 @@ Calculation of SDG Indicator 15.4.2
 
 Once you have set the parameters of each sub-indicator, the tool is now ready to compute the sub-indicators as shown below:
 
-.. image:: C:/Users/Rotich/DOCUMENTATION/SEPAL/Media/sepal_corrections/defining_reporting_years_results.PNG
+.. image:: ../_static/sepal/defining_reporting_years_results.PNG
    :align: center
    :width: 1000
    :alt: Sub-indicator computations.
@@ -709,7 +709,7 @@ Once you have set the parameters of each sub-indicator, the tool is now ready to
 
 2. Once computation is completed, you should see a resemblance of the image below:
 
-.. image:: C:/Users/Rotich/DOCUMENTATION/SEPAL/Media/sepal_corrections/mgci_results_processing.PNG
+.. image:: ../_static/sepal/mgci_results_processing.PNG
    :align: center
    :width: 1200
    :alt: Reclassify table
@@ -720,7 +720,7 @@ Once you have set the parameters of each sub-indicator, the tool is now ready to
 
 3. The entire computataion is done "on the fly” and thus you need to export your reporting tables to visualize and use them as and if required. To do that, click on  the :guilabel:`Export Reporting Tables`.  When completed, a message will appear indicating where the tables have been exported. 
 
-.. image:: C:/Users/Rotich/DOCUMENTATION/SEPAL/Media/sepal_corrections/exporting_results.PNG
+.. image:: ../_static/sepal/exporting_results.PNG
    :align: center
    :width: 800
    :alt:  Exporting Reporting table
