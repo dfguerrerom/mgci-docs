@@ -385,7 +385,7 @@ A pop-up displays the available options to set your AoI,namely:
 - Administrative definitions
 - Custom layers
 
-.. image:: C:/Users/Rotich/DOCUMENTATION/SEPAL/Media/sepal_corrections/defining_aoi.PNG
+.. image:: ../_static/sepal/defining_aoi.PNG
    :align: center
    :width: 800
    :alt: Defining_AOI
@@ -399,7 +399,7 @@ A pop-up displays the available options to set your AoI,namely:
 - Select **Country** under AOI selection method.
 - In the dropdown list that will appear, select the country or territory in which you want to calculate SDG Indicator 15.4.2. In this example, we will select Nepal, as shown below.
 
-.. image:: C:/Users/Rotich/DOCUMENTATION/SEPAL/Media/sepal_corrections/aoi_definition_country.PNG
+.. image:: ../_static/sepal/aoi_definition_country.PNG
    :align: center
    :width: 450
    :alt: selecting_nepal
@@ -407,7 +407,7 @@ A pop-up displays the available options to set your AoI,namely:
 
 - Click on **Select Area of Interest (AOI)** and the map will display your selection. A corresponding legend is also displayed. The algorithm automatically generates a legend based on the mountain bioclimatic belt classes and the area for each of them as defined in the global mountain map developed by FAO to compute this indicator. 
 
-.. image:: C:/Users/Rotich/DOCUMENTATION/SEPAL/Media/sepal_corrections/aoi_defined.PNG
+.. image:: ../_static/sepal/aoi_defined.PNG
    :align: center
    :width: 700
    :alt: displaying_nepal
@@ -424,7 +424,7 @@ A pop-up displays the available options to set your AoI,namely:
 - Copy the **Asset ID** in GEE and paste under "Select an asset"
 - Specify the column or leave the "Use all features" option to leave the default settings.
 
-.. image:: C:/Users/Rotich/DOCUMENTATION/SEPAL/Media/sepal_corrections/aoi_definition_gee.PNG
+.. image:: ../_static/sepal/aoi_definition_gee.PNG
    :align: center
    :width: 600
    :alt: Defining AOI using GEE Asset
@@ -435,7 +435,7 @@ A pop-up displays the available options to set your AoI,namely:
 - This will prompt you to choose your vector file (Remember the vector file must already be in the SEPAL environment).Check the :ref:`Uploading vector files using the vector file manager chapter <Vector_File_Manager>` to see how to see how that's done.
 - Specify the column or leave the "Use all features" option and click :guilabel:`Select Area of Interest`
 
-.. image:: C:/Users/Rotich/DOCUMENTATION/SEPAL/Media/sepal_corrections/vector_file_selector.PNG
+.. image:: ../_static/sepal/aoi_definition_gee.PNG
    :align: center
    :width: 500
    :alt: Defining AoI using a vector file
