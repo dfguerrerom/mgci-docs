@@ -785,21 +785,21 @@ As explained earlier, once computation is completed, users can export the report
 
 **1. To locate the tables, navigate to the Files Tab > Under the Downloads, you should see your table under MGCI reports as shown below:**
 
-.. image:: C:/Users/Rotich/DOCUMENTATION/SEPAL/Media/sepal_corrections/locating_exported_results.png
+.. image:: ../_static/sepal/locating_exported_results.png
    :align: center
    :width: 900
    :alt: Locating Exported Tables
 
 **2. To download the report from SEPAL, click on the report; this activates the download icon in the top right side of the screen.**
 
-.. image:: C:/Users/Rotich/DOCUMENTATION/SEPAL/Media/sepal_corrections/downloading_export_report.png
+.. image:: ../_static/sepal/downloading_export_report.png
    :align: center
    :width: 900
    :alt: Downloading Exported Tables
 
 **3. Once the report is downloaded, you can visualize the results of the computation as seen below for all the reporting years defined earlier on.**
 
-.. image:: C:/Users/Rotich/DOCUMENTATION/SEPAL/Media/sepal_corrections/results_csv.png
+.. image:: ../_static/sepal/results_csv.png
    :align: center
    :width: 700
    :alt: Visualization using the reported tables
