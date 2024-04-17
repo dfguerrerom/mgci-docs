@@ -226,7 +226,7 @@ Apart from Google Earth Engine,you can directly upload your tabular datasets ( v
 1. Navigate to the **Apps** tab (located on the left of the SEPAL interface) and find the **Vector File Manager** by either navigating through the app list or using the search bar.
 2. Clicking on the app opens the vector file manager as shown below:
    
-.. image:: C:/Users/Rotich/DOCUMENTATION/SEPAL/Media/sepal_corrections/vf_interface.PNG
+.. image:: ../_static/sepal/uploading_csv.PNG
    :align: center
    :width: 800
    :alt: Vector File Manager Interface
@@ -234,21 +234,21 @@ Apart from Google Earth Engine,you can directly upload your tabular datasets ( v
 3. Clicking on the drop down arrow allows you to select the table type.(Accepted formats are shapefiles :code:`.shp` and table file :code:`.csv`)
 4. Choose the shapefile option and click on the :code:`📎` icon to navigate to your files and choose all appropriate files and click :guilabel:`Import`.
 
-.. image:: C:/Users/Rotich/DOCUMENTATION/SEPAL/Media/sepal_corrections/vector_files_uploaded.PNG
+.. image:: ../_static/sepal/uploading_csv.PNG
    :align: center
    :width: 1000
    :alt:   Uploading Vector Files.
 
 5. The vector file manager notifies you when the importation is complete and shows its location as follows:
    
-.. image:: C:/Users/Rotich/DOCUMENTATION/SEPAL/Media/sepal_corrections/importation_complete.PNG
+.. image:: ../_static/sepal/importation_complete.PNG
    :align: center
    :width: 1000
    :alt: Vector File Upload Notification
 
 6. To locate the file you just uploaded into SEPAL, Click on the Module_Results > AOI in the Home page:
    
-.. image:: C:/Users/Rotich/DOCUMENTATION/SEPAL/Media/sepal_corrections/vector_location.PNG
+.. image:: ../_static/sepal/vector_location.PNG
    :align: center
    :width: 450
    :alt: Vector File Location
