@@ -271,7 +271,7 @@ Selecting an app automatically initiates the smallest instance to run the SEPAL 
 
 1. Go to the `SEPAL terminal <https://docs.sepal.io/en/latest/setup/presentation.html#terminal>`_ (blue icon in the left panel in the image below) and wait for the instance selector to start.
 
-.. image:: C:/Users/Rotich/DOCUMENTATION/SEPAL/Media/sepal_corrections/setting_instance.PNG
+.. image:: ../_static/sepal/setting_instance.PNG
    :align: center
    :width: 600
    :alt: Setting_instances
@@ -285,7 +285,7 @@ Accessing SEPAL-SDG 15.4.2 :sub:`beta`
 
 To access the the SEPAL-SDG 15.4.2 :sub:`beta` module use the `apps tab <https://docs.sepal.io/en/latest/setup/presentation.html#apps-tab>`_ and navigate through the list of apps until you find the module (alternatively, you can type in the search box "SEPAL-SDG 15.4.2"). Once you have found it, click over the app drawer and wait patiently until SEPAL-SDG 15.4.2 :sub:`beta` module is displayed (it may take a few minutes). 
 
-.. image:: C:/Users/Rotich/DOCUMENTATION/SEPAL/Media/sepal_corrections/accessing_sepal_module.png
+.. image:: ../_static/sepal/accessing_sepal_module.png
    :align: center
    :width: 1000
    :alt: Accessing_module
@@ -306,18 +306,20 @@ The module should look like the image below. As with any other SEPAL module, SEP
 Personalising SEPAL-SDG 15.4.2 :sub:`beta`
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-SEPAL includes functionalities for users to personalize the appearance of the module.
+SEPAL includes functionalities for users to personalize the appearance of the module to their liking.
 
 **Theme customization:**
+
 SEPAL SDG 14.4.2 :sub:`beta` allows users to choose between a dark or light theme. To change the theme, click the light mode/dark mode icon (highlighted) at the top ribbon of the interface. The application will need to be restarted to apply the changes.
 
-.. image:: C:/Users/Rotich/DOCUMENTATION/SEPAL/Media/sepal_corrections/theme_customization.PNG
+.. image:: ../_static/sepal/theme_customization.PNG
    :align: center
    :width: 800
    :alt: Module_personalization
 
 
 **Language selection:**
+
 SEPAL-SDG 15.4.2 :sub:`beta` is currently only available in English. New language versions will be made available soon. 
 
 
