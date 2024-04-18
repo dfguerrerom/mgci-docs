@@ -257,7 +257,7 @@ Apart from Google Earth Engine,you can directly upload your tabular datasets ( v
 The vector files you just uploaded are now within the SEPAL environment and can be used when required.
 
 
-.. seealso:: The methods are expplained above should suffice for our case. However,since SEPAL’s built-in tools for uploading and downloading are limited, large amounts of data should be uploaded or downloaded using an FTP solution.More on this can be found `here <https://docs.sepal.io/en/latest/setup/filezilla.html#>`_.
+.. seealso:: The methods are explained above should suffice for our case. However,since SEPAL’s built-in tools for uploading and downloading are limited, large amounts of data should be uploaded or downloaded using an FTP solution.More on this can be found `here <https://docs.sepal.io/en/latest/setup/filezilla.html#>`_.
 
 
 The SEPAL interface and the SEPAL-SDG 15.4.2 :sub:`beta` module
@@ -870,7 +870,7 @@ The results, shown as transitions in land cover types for a given belt will be d
 Annex
 -----
 
-This section contains supplementary information and resources for an enhanced understanding and usage of SEPAL-SDG 15.4.2 :sub:`beta`.
+This section contains supplementary information and resources for an enhanced understanding and operationalization of SEPAL-SDG 15.4.2 :sub:`beta`.
 
 Computation resources:Template Tables
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -882,29 +882,49 @@ Template A :Default Land Cover Map Reclassification Template.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 In the computation of sub-indicator A using **custom** landcover maps,SEPAL SDG 15.4.2 :sub:`beta` calls for reclassifying the landcover legends into the UN-SEAA defined one.
-The development team recommends countries to adopt this template to reclassify their land-cover maps .(It is important to note that the origin and target names and codes must be properly defined for the reclassification to work properly) Remember that SEPAL SDG 15.4.2 :sub:`beta` only accepts :code:`.csv` files.
+The development team recommends countries to adopt this template to reclassify their land-cover maps .(It is important to note that the origin and target names and codes must be properly defined for the reclassification to work properly) 
+The table structure calls users to have the following fields defined as columns:
 
-.. Default LC_map_reclassification.csv to be linked here.
+- from_name: Associated name of each land cover class of the custom land cover map.
+- from_code: Numerical code (pixel value) of each land cover class of the custom land cover map.
+
+.. raw:: htm  
+   <a href="../_static/sepal_tables/Custom_LC_Classification_SubB.csv" download="_static/sepal_tables/Custom_LC_Classification_SubB.csv">Custom_LC_Classification_SubB</a>
 
 
 Template B: Custom LandCover Classification Template(Sub-indicator B) 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 As explained earlier,countries must use the UN-SEAA defined classes in sub-indicator A but have more liberty when defining the classification scheme for sub-indicator B.
-Countries can opt to use the UN-SEAA classification legend(defined in the earlier step) or use the FAO-defined template to develop their classification legends.
+Countries can opt to use the UN-SEAA classification legend(defined in the earlier step) or use the FAO-defined template to develop their classification legehere
 
-.. Custom_LC_map_reclassification.csv to be linked here
-
-Download Template B here:
+Download Template B 
+h.. raw:: html
+
+   <a href="../_static/sepal_tables/Default LC_map_reclassification.csv" download="_static/sepal_tables/Default LC_map_reclassification.csv">LC_map_reclassification</a
+>ere:
 
 
 Template C:Transition matrix
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 This template is to be used when a custom land classification legend is used in Sub-Indicator B computation.It enables countries fully capture the transitions occurring in land-cover.
-When adopting this template,remember to fully capture the original and resultant classes,the impact and their subsequent codes for the transition to be fully captured by SEPAL SDG 15.4.2 :sub:`beta`.
+When adopting this template,remember to fully capture the original and resultant classes,the impact and their subsequent codes for the transition to be fully captured by SEPAL SDG 15.4.2 :sub:`
+The following fields must be defined:
 
-Download Template here:
+- from_name: Associated name of the original land cover class.
+- from_code: Numerical code (pixel value) of the original land cover class.
+- to_name: Associated name of the final land cover class.
+- to_code: Numerical code (pixel value) of the final land cover class.
+- impact_name: Expected impact of the land cover transition. Only 3 values are allowed: (degraded, stable, improved).
+- impact_code : Associated code of the expected impact of the land cover transition. Only 3 values are allowed: (1 for degraded, 2 for stable, 3 for improved).
 
-.. Transition_Matrix_SubB.csv to be linked here.
+Download the template here:
+
+.. raw:: html
+
+   <a href="../_static/sepal_tables/Transition_Matrix_SubB.csv" download="_static/sepal_tables/Transition_Matrix_SubB.csv">Transition_Matrix_SubB</a>
+b
+.. note:: Remember that SEPAL SDG 15.4.2 :sub:`beta` only accepts :code:`.csv` files. Therefore,once all these tables are modified as per the countries'needs ,they should be made into :code:`.CSV` and imported into the SEPAL environment as described in earlier sections.
+ here.
 
 
