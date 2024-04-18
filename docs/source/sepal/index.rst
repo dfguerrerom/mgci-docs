@@ -727,44 +727,50 @@ Once you have set the parameters of each sub-indicator, the tool is now ready to
 
 Calculation from Task
 ^^^^^^^^^^^^^^^^^^^^^
-As explained in the previous sections, SEPAL runs on the Google Earth Interface. This means that the computation is restricted by available GEE resources. One of  its limitations,however, is the time to get the results on the fly (see `computation time out <https://developers.google.com/earth-engine/guides/debugging#timed-out>`_). So any computation that takes more than five minutes will throw an exception. To overcome this limitation, the process will be executed as a task —which are operations that are capable of running much longer than the standard timeout. If the computation is created as a task, you will see a similar message as the shown in the image below:
+As explained in the previous sections, SEPAL runs on the Google Earth Interface. This means that the computation is restricted by available GEE resources. One limitation,however, is the time allowable to get results on the fly (see `computation time out <https://developers.google.com/earth-engine/guides/debugging#timed-out>`_). So any computation that takes more than five minutes will automatically throw an exception. To overcome this limitation, the process will be executed as a task —which are operations that are capable of running much longer than the standard timeout.Simply put, the computation is redirected to run on  GEE as opposed to the module. If the computation is created as a task, you will see a similar message as the shown in the image below:
 
-.. image:: C:/Users/Rotich/DOCUMENTATION/SEPAL/Media/sepal_corrections/computtaion_in-task_sepal.PNG
+.. image:: ../_static/sepal/tasks_notification.PNG
    :align: center
    :width: 1200
-   :alt: Calculation from Task
+   :alt: Calculation from Task Notification
 
 The computation in GEE can be seen running under the GEE tasks as shown here:
 
-.. image:: C:/Users/Rotich/DOCUMENTATION/SEPAL/Media/sepal_corrections/tasks_tab.PNG
+.. image:: ../_static/sepal/tasks_tab.PNG
    :width: 400
    :align: center
    :alt: Computation in GEE
 
-When computation can’t be done on the fly, a new file containing the id of the task is created and stored in the **../module_results/sdg_indicators/mgci/tasks** folder. This file will help you to track the status of the task at any moment. An alternative way to track the progress of the task is by using the GEE task tracker, there you can find the tasks that are running on the server.
+When computation can’t be done on the fly, a new file containing the id of the task is created and stored in the **../module_results/sdg_indicators/mgci/tasks** folder. This file will help you to track the status of the task at any moment. An alternative way to track the progress of the task is by using the GEE task tracker as shown above- there you can find the tasks that are running on the server.
+Once the computation is complete in GEE,we will return to SEPAL-SDG 15.4.2 :sub:`beta` to continue with the rest of the computation.
+
+Click on the **Export from Tasks** drawer on the left menu panel. This window highlights the steps to process GEE tasks as seen below:
+
+.. image:: ../_static/sepal/export_from_task.PNG
+   :align: center
+   :width: 900
+   :alt: Exporting task from file
 
 **1. To enable a computation from task; first we need to locate the tasks file within SEPAL.**
 
-To do so, you can either search for this file in your SEPAL environment using the navigator by clicking on the search file button, and then clicking over the **Calculate MGCI** button and the result will be displayed if the process status is completed .Alternatively,you can locate the tasks manually by navigating to the **File Layer > Downloads > Module results>Tasks** on SEPAL as shown below:
+To do so, you can either search for a :code:`.JSON` task file in your SEPAL environment using the navigator by clicking on the search file button, and then clicking over the :guilabel:`Download Reporting Tables` button and the result will be displayed if the process status is completed .
+
+.. image:: ../_static/sepal/locating_task_file.PNG
+   :align: center
+   :width: 900
+   :alt: Locating the task file
+
+
+**2. Alternatively,you can locate the tasks manually by navigating to the **File Layer > Downloads > Module results>Tasks** on SEPAL as shown below:
 
 .. image:: C:/Users/Rotich/DOCUMENTATION/SEPAL/Media/sepal_corrections/locating_tasks.png
    :align: center
    :width: 900
    :alt: Task File Location
 
-**2. Once that’s done in GEE, you will need to bring it back to SEPAL for the tool to finish computation. Click on the "Calculation from Task" tab to initiate this process.**
 
-.. image:: C:/Users/Rotich/DOCUMENTATION/SEPAL/Media/sepal_corrections/task.PNG
-   :align: center
-   :width: 1000
-   :alt: Computation from task
+**3. Clicking on the Download and Export Tables will finalize the computation**
 
-**3. Load your task to finish computation.**
-
-.. image:: C:/Users/Rotich/DOCUMENTATION/SEPAL/Media/sepal_corrections/task_2.PNG
-   :align: center
-   :width: 1100
-   :alt: Computation from task
 
 
 Visualizing the results
