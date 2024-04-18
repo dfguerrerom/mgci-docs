@@ -257,6 +257,9 @@ Apart from Google Earth Engine,you can directly upload your tabular datasets ( v
 The vector files you just uploaded are now within the SEPAL environment and can be used when required.
 
 
+.. seealso:: The methods are expplained above should suffice for our case. However,since SEPAL’s built-in tools for uploading and downloading are limited, large amounts of data should be uploaded or downloaded using an FTP solution.More on this can be found `here <https://docs.sepal.io/en/latest/setup/filezilla.html#>`_.
+
+
 The SEPAL interface and the SEPAL-SDG 15.4.2 :sub:`beta` module
 ---------------------------------------------------------------
 
