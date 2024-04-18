@@ -499,7 +499,7 @@ Reclassifying the landcover map legend for sub-Indicator A computation.
    :width: 900
    :alt: reclassifying subA
 
-Reclassification can be done in two different ways: By manually reclassifying your landclasses or by uploading a reclassification matrix as explained below:
+Reclassification can be done in two different ways; By manually reclassifying your source and target landclasses or by uploading a reclassification matrix.
 
 Using a reclassification matrix
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -536,10 +536,9 @@ Using a reclassification matrix
 
 
 - Clicking on :guilabel:`load` will automatically reclassify your landcover legend into the legend defined by the reclassification matrix.
-- **In certain cases, landcover classes might be classified as No Data,Missing Values or Unclassified.In such cases leaving the classes blank will be interpreted as O values by SEPAL SDG 15.4.2 :sub:`beta` and consequently not included in the computation.**
-  
+- **In certain cases, landcover classes might be classified as No Data,Missing Values or Unclassified.In such cases leaving the classes blank will be interpreted as O values by SEPAL SDG 15.4.2 :sub:`beta` and consequently not included in the computation. Note: Any values left blank will be interpreted as 0.**
 
-.. Important::For ease and comparability in defining the reclassifiaction matrix,the development team have created a CSV template that countries can download and modify for their use.You can also find the template in the :ref:`Annex section <Annex>`.Remember you have to upload the CSV file into SEPAL for you to use it.
+.. Important:: For ease and comparability in defining the reclassifiaction matrix,the development team have created a CSV template that countries can download and modify for their use.You can also find the template in the :ref:`Annex section <Annex>`.Remember you have to upload the CSV file into SEPAL for you to use it.
 
 
 Manual Reclassification 
@@ -671,9 +670,9 @@ Defining parameters for Sub-indicator A: Mountain Green Cover Index
    :align: 900
    :alt: Advanced Options
 
-- Using Real Surface Area methods instead of Planimetric options used by default by SEPAL SDG 15.4.2 :sub:`beta`.
-- Running in GEE for large datasets(large datasets are automatically thrown into GEE for computation)
-- Process scale: This option caters for the spatial resolution of the landcover maps used in the computation.
+- Using Real Surface Area methods instead of Planimetric options used by default by SEPAL SDG 15.4.2 :sub:`beta`.(For more on this check the indicator's metadata )
+- Running in GEE for large datasets(large datasets are automatically thrown into GEE for computation).This option should be chosen when there are computational time errors(usually associated with large datasets hence cannot be run on the fly).
+- Process scale:If this capability is activated,allows the user to define the computational scale. Remember,the scale chosen will affect the speed of computation( finer scales will take more time and vice versa) and the accuracy of the results.If this option is not chosen,computation will run at the scale of the input data.
   
 
 Defining parameters for Sub-Indicator B: Proportion of Degraded Mountain Land.
