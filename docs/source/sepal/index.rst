@@ -296,10 +296,10 @@ The module should look like the image below. As with any other SEPAL module, SEP
 
 - **Help drawers**: Located just below the process drawers,the help drawers describes the tool, its objectives and gives a background on its development. In SEPAL-SDG 15.4.2 :sub:`beta`,its composed of the source code (the module was developed under a MIT license, which means that the development is freely accessible, and the code is public in GitHub); the Wiki (the latest documentation on the tool) and the Bug report (use this section to report any unexpected results or behavior. To do so, please follow the `contribution guidelines <https://github.com/dfguerrerom/sepal_mgci/blob/master/CONTRIBUTE.md>`_.)
 
-.. image:: C:/Users/Rotich/DOCUMENTATION/SEPAL/Media/sepal_corrections/module_interface.PNG
+.. image:: ../_static/sepal/module_interface.PNG
    :align: center
    :width: 1000
-   :alt: MGCI module
+   :alt: MGCI module interface
 
 
 
