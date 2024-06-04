@@ -878,10 +878,10 @@ This section contains supplementary information and resources for an enhanced un
 Computation resources:Template Tables
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. Tip:: All the templates contain a Readme section to guide users to populate the template.
+.. Tip:: All the templates contain a README section to guide users to populate the template.
 
 
-Template A :Default Land Cover Map Reclassification Template.
+Template A :Custom Land Cover Map Reclassification Template.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 In the computation of sub-indicator A using **custom** landcover maps,SEPAL SDG 15.4.2 :sub:`beta` calls for reclassifying the landcover legends into the UN-SEAA defined one.
@@ -891,7 +891,7 @@ The table structure calls users to have the following fields defined as columns:
 - from_name: Associated name of each land cover class of the custom land cover map.
 - from_code: Numerical code (pixel value) of each land cover class of the custom land cover map.
 
-.. raw:: htm  
+.. raw:: lhtm  
    <a href="../_static/sepal_tables/Custom_LC_Classification_SubB.csv" download="_static/sepal_tables/Custom_LC_Classification_SubB.csv">Custom_LC_Classification_SubB</a>
 
 
@@ -899,12 +899,12 @@ Template B: Custom LandCover Classification Template(Sub-indicator B)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 As explained earlier,countries must use the UN-SEAA defined classes in sub-indicator A but have more liberty when defining the classification scheme for sub-indicator B.
-Countries can opt to use the UN-SEAA classification legend(defined in the earlier step) or use the FAO-defined template to develop their classification legehere
+Countries can opt to use the UN-SEAA classification legend(defined in the earlier step) or use the FAO-defined template to develop their classification nd legehere
 
-Download Template B 
-h.. raw:: html
+Download TemplateB 
+h.. raw:: tml
 
-   <a href="../_static/sepal_tables/Default LC_map_reclassification.csv" download="_static/sepal_tables/Default LC_map_reclassification.csv">LC_map_reclassification</a
+   <a href="../_static/sepal_tables/Default LC_map_reclassification.csv" download="_static/sepal_tables/Default LC_map_reclassification.csv">LC_map_reclassificato
 >ere:
 
 
@@ -923,11 +923,12 @@ The following fields must be defined:
 
 Download the template here:
 
-.. raw:: html
+.. raw: html
 
-   <a href="../_static/sepal_tables/Transition_Matrix_SubB.csv" download="_static/sepal_tables/Transition_Matrix_SubB.csv">Transition_Matrix_SubB</a>
+   <a href="../_static/sepal_tables/Transition_Matrix_SubB.csv" download="_static/sepal_tables/Transition_Matrix_SubB.csv">Transition_Matrix_Su
+</a>
 b
-.. note:: Remember that SEPAL SDG 15.4.2 :sub:`beta` only accepts :code:`.csv` files. Therefore,once all these tables are modified as per the countries'needs ,they should be made into :code:`.CSV` and imported into the SEPAL environment as described in earlier sections.
+.. note:: Remember that SEPAL SDG 15.4.2 :sub:`beta` only accepts :code:`.csv` files. Therefore,once all these tables are modified as per the countries'needs ,they should be made     into :code:`.CSV` and imported into the SEPAL environment as described in earlier sect   ions.
  here.
 
 
