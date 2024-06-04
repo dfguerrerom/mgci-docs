@@ -86,7 +86,7 @@ Similar to the national administrative boundary dataset, SEPAL-SDG 15.4.2 :sub:`
   
   .. Note::
      Country-defined datasets must be made available as GEE assets as an `image collection <https://developers.google.com/earth-engine/guides/ic_creating>`_ for SEPAL-SDG 15.4.2    :sub:`beta` to access it. This will be demonstrated in the next section of the tutorial. 
-l. 
+ 
 
 
 Uploading files into Google Earth Engine
@@ -113,35 +113,35 @@ GEE accepts a number of data formats namely: shapefiles, raster images,and CSV t
 1. To do so, choose the **Shapefiles** option in the drop-down list. A pop-up window will appear prompting you to navigate to the location of your data.
 2. Select the file you want to upload from your computer.You can either upload the vector data as a compressed file :code:`.zip` or :code:`.shp` .Remember that a :code:`.shp` file alone is not sufficient and must be accompanied with all the other files describing the vector data i.e. :code:`.shx`, :code:`.dbf` and :code:`.prj`.
 
-.. imag ../_static/sepal/uploading_vector.PNGPNG
+.. imag ../_static/sepal/uploading_vector.PNG
    :align: center
    :width: 400
    :alt: Vector_File
 
 Any file errors will be highlighted by the uploader, as in the example below:
 
-.. imag ../_static/sepal/vector_error_warning.PNGPNG
+.. imag ../_static/sepal/vector_error_warning.PNG
    :align: center
    :width: 400
    :alt: Vector_Error
 
 3. Once all files are loaded correctly, the upload progress is displayed in the task manager. Typically this process takes a couple of minutes depending on the size of the dataset. The progress of the upload is displayed in the task manager as shown below:
 
-.. image../_static/sepal/uploading_progress.PNGPNG
+.. image../_static/sepal/uploading_progress.PNG
    :align: center
    :width: 400
    :alt: vector_uploading_process
 
 4. Once completed,the uploaded assets will be listed in the Assets List under the Assets tab. If not displayed, click on the **Refresh** button.
 
-.. image../_static/sepal/vector_asset_list.PNGPNG
+.. image../_static/sepal/vector_asset_list.PNG
    :align: center
    :width: 300
    :alt: Assets_listed
 
 5. Clicking on the asset will open an asset details window :The asset is ready for use. You can now visualize, share or delete it accordingly 
 
-.. image../_static/sepal/asset_details_gee.PNGPNG
+.. image../_static/sepal/asset_details_gee.PNG
    :align: center
    :width: 800
    :alt: asset_popup
