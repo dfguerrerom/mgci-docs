@@ -672,8 +672,8 @@ Defining parameters for Sub-indicator A: Mountain Green Cover Index
 **4. SEPAL SDG 15.4.2 :sub:`beta` offers the following advanced options:**
 
 .. image:: ../_static/sepal/advanced_settings.PNG
-   :width: center
-   :align: 900
+   :align: center
+   :width: 900
    :alt: Advanced Options
 
 - Using Real Surface Area methods instead of Planimetric options used by default by SEPAL SDG 15.4.2 :sub:`beta`.(For more on this check the indicator's metadata )
