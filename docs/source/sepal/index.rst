@@ -84,8 +84,8 @@ Land cover maps represent spatially the physical coverage of the Earth's surface
 The collection of land cover maps to compute this indicator should be available from the year **2000**. SEPAL SDG 15.4.2 :sub:`beta` facilitates national authorities to use relevant national or regional land cover datasets. 
 Similar to the national administrative boundary dataset, SEPAL-SDG 15.4.2 :sub:`beta` provides access to default land cover datasets, selected by FAO to compute the indicator when national datasets are not available see the :ref:`Data Sources section <DataSources>`
   
-  .. Note::
-     Country-defined datasets must be made available as GEE assets as an `image collection <https://developers.google.com/earth-engine/guides/ic_creating>`_ for SEPAL-SDG 15.4.2    :sub:`beta` to access it. This will be demonstrated in the next section of the tutorial. 
+.. Note:: 
+   Country-defined datasets must be made available as GEE assets as an `image collection <https://developers.google.com/earth-engine/guides/ic_creating>`_ for SEPAL-SDG 15.4.2       :sub:`beta` to access it. This will be demonstrated in the next section of the tutorial. 
  
 
 
