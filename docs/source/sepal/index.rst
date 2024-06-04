@@ -928,7 +928,7 @@ Download the template here:
    <a href="../_static/sepal_tables/Transition_Matrix_SubB.csv" download="_static/sepal_tables/Transition_Matrix_SubB.csv">Transition_Matrix_Su
 </a>
 b
-.. note:: Remember that SEPAL SDG 15.4.2 :sub:`beta` only accepts :code:`.csv` files. Therefore,once all these tables are modified as per the countries'needs ,they should be made     into :code:`.CSV` and imported into the SEPAL environment as described in earlier sect   ions.
+.. note:: Remember that SEPAL SDG 15.4.2 :sub:`beta` only accepts :code:`.csv` files. Therefore,once all these tables are modified as per the countries'needs ,they should be made  into :code:`.CSV` and imported into the SEPAL environment as described in earlier sectons.
  here.
 
 
