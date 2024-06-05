@@ -200,6 +200,7 @@ Downloading GMTED2010 DEM data from USGS Earth Explorer application
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 **Before you get started**
 - **Bulk Download Application**
+
    In order to download a large number of files from the USGS website, a bulk download application is required. To install this on your machine, go to https://dds.cr.usgs.gov/bulk and follow the instructions.
 
    When downloading the USGS Bulk Download Application, you may come across an error saying the application could not find a Javascript Runtime Environment on your system. You need Java Runtime Environment to be installed on your system prior to download. However, this error may occur even if you have the program installed on your operating system. If this is the case, please follow these steps at the end of this section.
