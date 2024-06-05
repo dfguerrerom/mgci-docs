@@ -31,7 +31,7 @@ Defining an area of interest
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 An area of interest (AOI) needs to be defined at the outset of this
-analysis. Due to the nature of the calculations of the the real surface area layer
+analysis. Due to the nature of the calculations of the real surface area layer
 this needs to go beyond the boundary of the country by at least 7km as the calculations
 look at focal cells around an individual pixel in the DEM dataset. We suggest
 users buffer the bounding box of the country boundary out by 10km.
@@ -51,13 +51,13 @@ or
 
 **Where**:
 
-**resolution** =  ground resolution (the size in (m) that a pixel represents.
+- **resolution** =  ground resolution (the size in (m) that a pixel represents.
 
-**PPI** =  the screen resolution (pixels number that every inch contains on the screen (default 96dpi).
+- **PPI** =  the screen resolution (pixels number that every inch contains on the screen (default 96dpi).
 
-**0.0254** = (m/inch),  the unit conversion between meter and inches.
+- **0.0254** = (m/inch),  the unit conversion between meter and inches.
 
-**scale** = nominal scale of vector dataset
+- **scale** = nominal scale of vector dataset
 
 Some examples are provided in the table below:
 
@@ -80,7 +80,7 @@ In addition, land cover is used to disaggregate the indicator into the
 indicator’s policy relevance.
 
 **Table 3.** Classification of SEEA land cover classes into green and
-non-green cover.\ * *
+non-green cover. **
 
 +---------------------------------------------------------------------------+------------------------+
 | **SEEA land cover classes**                                               | **Green/Non-green**    |

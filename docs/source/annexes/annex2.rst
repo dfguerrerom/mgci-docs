@@ -35,7 +35,7 @@ The AOI should go beyond the country boundary as outlined in the \ **Defining a
 -  Click \ **Add** and **Close** to close the Data Source Manager:
    Vector dialogue window
 
--  Right-click on the country boundary layer and click \ **Zoom to
+-  Right-click on the country boundary layer and click **Zoom to
    Layer**
 
 In this example, the boundary layer is in Geographic coordinate system
@@ -58,13 +58,13 @@ Once you have defined the projection to use in the analysis, change the
 projection set for the QGIS project to your chosen projection. In this
 example it is the national projection for Colombia.
 
--  Click on the project projection \ **EPSG: 4326** in the bottom right
+-  Click on the project projection **EPSG: 4326** in the bottom right
    hand corner of your QGIS project
 
 |image4|
 
 -  In the Project Properties dialogue window search for the chosen
-   projection in the \ **Filter** tab, in this case the projection EPSG
+   projection in the **Filter** tab, in this case the projection EPSG
    9377
 
 |image5|
@@ -74,7 +74,7 @@ example it is the national projection for Colombia.
 -  Once located click on the chosen projection to set your QGIS project
    to be displayed in the chosen projection.
 
--  Click \ **Apply** and **OK **
+-  Click **Apply** and **OK **
 
 See that the project now displays the custom projection in the bottom
 right hand corner.
@@ -84,17 +84,17 @@ right hand corner.
 Next use the reproject tool to project the country boundary layer to the
 9377 projection
 
--  In the processing toolbox search for the \ **Reproject** tool
+-  In the processing toolbox search for the **Reproject** tool
 
 |image7|
 
--  Set the Input layer to be the \ **country boundary**
+-  Set the Input layer to be the **country boundary**
 
--  Set the Target CRS to be the \ **Project CRS** (i.e. the EPSG 9377
+-  Set the Target CRS to be the **Project CRS** (i.e. the EPSG 9377
    projection)
 
 -  Set the output name to be the same as the input with a suffix to
-   indicate the projection e.g. in this example \ **Colombia\_9377. **
+   indicate the projection e.g. in this example **Colombia_9377. **
 
 |image8|
 
@@ -127,18 +127,18 @@ to Geotiffs, these can be added directly to QGIS.
 
 |image18|
 
--  Click \ **Add**
+-  Click **Add**
 
 For most formats this will add the LULC dataset to the QGIS session. The
 Global ESA CCI LULC netcdf file however contains 7 different layers
 (similar to bands in an image) and users need to select
-the lccs\_class layer.
+the lccs_class layer.
 
--  Click \ **lccs\_class** to select the LULC layer
+-  Click **lccs_class** to select the LULC layer
 
--  Click \ **OK** and the LULC layer will be added to your QGIS project
+-  Click **OK** and the LULC layer will be added to your QGIS project
 
--  Click \ **Close** to close the Data Source Manager: Raster dialogue
+-  Click **Close** to close the Data Source Manager: Raster dialogue
    window
 
 |image19|
@@ -157,7 +157,7 @@ appears in the correct place in the QGIS project.
    information is missing.
 
 -  If projection information is missing define the projection using
-   the \ **Define Shapefile projection** tool in the processing toolbox
+   the **Define Shapefile projection** tool in the processing toolbox
    (this will permanently attach projection information to the layer)
    alternatively you can just define it within the current QGIS project
    by right clicking on the layer.
@@ -177,29 +177,29 @@ the raster and save it in the equal area projection.
 
 -  In the processing toolbox search for \ **Clip**
 
--  Double click on the \ **Clip raster by mask layer** under the GDAL
+-  Double click on the **Clip raster by mask layer** under the GDAL
    toolset
 
 |image12|
 
 -  Select the **LULC dataset** for the input layer
 
--  Select the \ **national border of the country** for the \ **Mask
+-  Select the **national border of the country** for the **Mask
    Layer**
 
--  Select the \ **Project CRS** for the \ **Target CRS**
+-  Select the **Project CRS** for the **Target CRS**
 
--  Tick \ **Match the extent of the clipped raster to the extent of the
+-  Tick **Match the extent of the clipped raster to the extent of the
    mask layer**
 
--  Tick \ **set the output file resolution**
+-  Tick **set the output file resolution**
 
--  Type the \ **X and Y resolution in metres** (in this case the
+-  Type the **X and Y resolution in metres** (in this case the
    resolution of the LULC dataset is 300)
 
--  Tick \ **Use Input Layer Data Type**
+-  Tick **Use Input Layer Data Type**
 
--  Set the output \ **Clipped (mask)** e.g. to LULC\_2020\_Colombia.tif
+-  Set the output **Clipped (mask)** e.g. to LULC_2020_Colombia.tif
    (see screengrab below)
 
 |image22|
@@ -209,14 +209,14 @@ the raster and save it in the equal area projection.
 -  **Click Run** to run the tool
 
 The new clipped LULC dataset in the equal area projection should be
-added should be added to the map canvas\ **.** LULC\_2020\_Colombia
-layer) and click \ **properties>>Symbology**
+added should be added to the map canvas **.** LULC_2020_Colombia
+layer) and click **properties>>Symbology**
 
 |image24|
 
--  Change the render type to \ **Palleted/Unique Values**
+-  Change the render type to **Palleted/Unique Values**
 
--  Click \ **Classify** and then \ **OK**
+-  Click **Classify** and then **OK**
 
 You should now see the unique LULC classes present within the AOI for
 the country.
@@ -232,7 +232,7 @@ The next step is to reclassify the LULC map into the 10 UN-SEEA classes
 defined for SDG Indicator 15.4.2
 
 QGIS provides several tools for reclassification. The easiest one to use
-in this instance is the \ **r.reclass** tool in the GRASS toolset as it
+in this instance is the **r.reclass** tool in the GRASS toolset as it
 allows the upload of a simple crosswalk textfile containing the input
 LULC types on the left and the UN-SEEA reclass values on the right.
 
@@ -242,33 +242,33 @@ LULC types on the left and the UN-SEEA reclass values on the right.
 
 |image26|
 
--  Search for \ **reclass** in the processing toolbox
+-  Search for **reclass** in the processing toolbox
 
 |image27|
 
--  Double click on \ **r.reclass**
+-  Double click on **r.reclass**
 
--  Select the LULC output as the \ **input raster layer**
+-  Select the LULC output as the **input raster layer**
 
--  Set the \ **GRASS GIS region extent** to be the same as the input
+-  Set the **GRASS GIS region extent** to be the same as the input
    layer
 
--  Set the \ **Reclassified** output e.g.
-   VegetationDescriptor\_Colombia.tif
+-  Set the **Reclassified** output e.g.
+   VegetationDescriptor_Colombia.tif
 
 |image28|
 
--  Click \ **Run** to run the tool. The
-   new \ **VegetationDescriptor** layer is added to the map.
+-  Click **Run** to run the tool. The
+   new **VegetationDescriptor** layer is added to the map.
 
 Although the reclassification only had 6 output classes the symbology
 initially show values 0-255. This is a QGIS visualisation only and you
 can see that the actual layer only has 10 values.
 
--  Right click on the layer \ **properties>>>Symbology**
+-  Right click on the layer **properties>>>Symbology**
 
--  Change the Render type to \ **Palleted/Unique values** and
-   click \ **Classify** to see only the classes present in the raster
+-  Change the Render type to **Palleted Unique values** and
+   click **Classify** to see only the classes present in the raster
    (i.e. the 1-10 Vegetation descriptor classes) and rename the classes
    following the UN-SEEA terminology. Give each class a distinctive and
    identifiable colour.
@@ -283,53 +283,53 @@ Step-by-step equivalent of Tool step A2 Prepare mountains and combine with LULC
 The following steps are covered by this tool:
 
 Generate the mountain map for the chosen country
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The development of mountain map consists in clipping and reprojecting
 the SDG 15.4.2. Global Mountain Descriptor Map developed by FAO to area
 of interest, in this case, the national border of Colombia.
 
-**`Clip and project global mountain map**
+**Clip and project global mountain map**
 
 
-From the QGIS main toolbar click on \ **Layer>>Add Layer>>Add Raster
+From the QGIS main toolbar click on **Layer>>Add Layer>>Add Raster
 Layer** to add the global mountain map file to your QGIS session.
 
 |image9|
 
 |image10|
 
--  Click \ **Add**
+-  Click **Add**
 
 |image11|
 
 *The boundaries and names shown, and the designations used on this map do not imply official endorsement or acceptance by the United Nations.*
 
--  In the processing toolbox search for \ **Clip**
+-  In the processing toolbox search for **Clip**
 
--  Double click on the \ **Clip raster by mask layer** under the GDAL
+-  Double click on the **Clip raster by mask layer** under the GDAL
    toolset
 
 |image12|
 
--  Select the \ **global mountain descriptor map** for the \ **Input
+-  Select the **global mountain descriptor map** for the **Input
    Layer**
 
--  Select the \ **national border of the country** for the \ **Mask
+-  Select the **national border of the country** for the **Mask
    Layer**
 
--  Select the \ **Project CRS** for the \ **Target CRS**
+-  Select the **Project CRS** for the **Target CRS**
 
--  Tick \ **Match the extent of the clipped raster to the extent of the
+-  Tick **Match the extent of the clipped raster to the extent of the
    mask layer**
 
--  Tick \ **set the output file resolution**
+-  Tick **set the output file resolution**
 
--  Type the \ **X and Y resolution in metres** (in this case 832)
+-  Type the **X and Y resolution in metres** (in this case 832)
 
--  Tick \ **Use Input Layer Data Type**
+-  Tick **Use Input Layer Data Type**
 
--  Set the output \ **Clipped (mask)** e.g. to Mountains\_Colombia.tif
+-  Set the output **Clipped (mask)** e.g. to Mountains_Colombia.tif
 
 |image13|
 
@@ -338,17 +338,17 @@ Layer** to add the global mountain map file to your QGIS session.
 -  **Click Run** to run the tool
 
 The new clipped mountain descriptor dataset in the national projection
-should be added to the map canvas\ **.**
+should be added to the map canvas.
 
 |image15|
 
 *The boundaries and names shown, and the designations used on this map do not imply official endorsement or acceptance by the United Nations.*
 
 -  Right click on the clipped mountain dataset (i.e. in this example the
-   Mountains\_Colombia layer) and click \ **properties>>Symbology**
+   Mountains_Colombia layer) and click **properties>>Symbology**
 
 -  Click on **Style >> Load Style, and select the**
-   SDG1542\_Mntn\_BioclimaticBelts.qml included in the Global Descriptor
+   SDG1542_Mntn_BioclimaticBelts.qml included in the Global Descriptor
    Dataset Folder
 
 |image16|
@@ -377,20 +377,20 @@ There are various tools that can be used but we have opted for the GRASS
 tool **r.resample** as it allowed to resample the mountain descriptor to
 the vegetation layer, which has a finer grid.
 
-In the processing toolbox search for \ **\*r.resample\***
+In the processing toolbox search for ***r.resample***
 
 |image30|
 
 -  Select the mountain descriptor (in this example
-   **Mountains\_Colombia.tif)** as the \ **Input Layer**
+   **Mountains_Colombia.tif)** as the **Input Layer**
 
 -  Set the cellsize to the the same resolution as your Vegetation
    Descriptor layer e.g. in this example 300m
 
--  Set the \ **Resampled Aggregated** layer to a name that distinguishes
-   the resampling of the layer e.g. \ **Mountains\_Colombia\_300.tif**
+-  Set the **Resampled Aggregated** layer to a name that distinguishes
+   the resampling of the layer e.g. **Mountains_Colombia_300.tif**
 
--  Click \ **Run** to run the tool
+-  Click **Run** to run the tool
 
 |image31|
 
@@ -401,8 +401,8 @@ As SGD Indicator 15.4.2a requires disaggregation by both the 10 land
 cover classes and the 4 bioclimatic belts and the tools within QGIS will
 only allow a single input for zones, we will combine the two datasets.
 
--  In the \ **processing toolbox**, search for and double click on
-   the \ **raster calculator**
+-  In the **processing toolbox**, search for and double click on
+   the **raster calculator**
 
 -  In the expression window we will sum the two dataset together but in
    order to distinguish the vegetation class from the mountain all the
@@ -413,14 +413,14 @@ only allow a single input for zones, we will combine the two datasets.
 
 -  In the expression box formulate the expression:
 
-(“VEGETATION\_DESCRIPTOR@1”`\* <https://mgci-docs.readthedocs.io/en/latest/qgis.html#id5>`__\ 10)
+(“VEGETATION_DESCRIPTOR@1”`* <https://mgci-docs.readthedocs.io/en/latest/qgis.html#id5>`__ 10)
 + “MoutainDescriptor@1”
 
 |image32|
 
 -  Set the Reference layer as the Vegetation Descriptor layer
 
--  Click \ **Run** to run the tool
+-  Click **Run** to run the tool
 
 |image33|
 
@@ -461,7 +461,7 @@ planimetric area in the output.
 This output is the main statistics table from the analysis, from which
 other summary statistics tables will be generated.
 
--  In the \ **processing toolbox** search for Zonal Statistics
+-  In the **processing toolbox** search for Zonal Statistics
 
 -  Double click on the Raster layer unique values report.
 
@@ -471,12 +471,12 @@ other summary statistics tables will be generated.
 -  Under the Unique values table click on ... and choose Save to File….
    Enter a name for the file, in this case LULC\_Areas\_COL\_2020.gpkg.
 
--  Click \ **Run**.
+-  Click **Run**.
 
 |image34|
 
-Now the LULC\_Areas\_COL\_2020  layer will be added to the Layers panel.
-Right-click on the layer and click \ **Open Attribute Table**. The
+Now the LULC_Areas_COL_2020  layer will be added to the Layers panel.
+Right-click on the layer and click **Open Attribute Table**. The
 column m2 contains the area for each class in square meters.
 
 |image35|
@@ -484,42 +484,42 @@ column m2 contains the area for each class in square meters.
 *The boundaries and names shown, and the designations used on this map do not imply official endorsement or acceptance by the United Nations.*
 
 Let’s convert the area to square kilometers. In the Processing Toolbox,
-search and select \ **Vector table >> Field Calculator.**
+search and select **Vector table >> Field Calculator.**
 
--  In the Field Calculator dialog, select the LULC\_Areas\_COL\_2020
+-  In the Field Calculator dialog, select the LULC_Areas_COL_2020
    layer
 
--  Enter the Field name as Area\_sqkm.
+-  Enter the Field name as Area_sqkm.
 
 -  In the Result field type choose **Float**
 
 -  In the Expression window, enter the below expression. This will
    convert the sqmt to sqkm and round the result to 2 decimal places.
    Under the Calculated click on **…** and choose Save To File… . Enter
-   the name as LULC\_Areas\_COL\_2020\_sqkm.csv
+   the name as LULC_Areas_COL_2020_sqkm.csv
 
    round("m2"/1e6, 2)
 
--  Click \ **Run.**
+-  Click **Run.**
 
 |image36|
 
-Now the **LULC\_Areas\_COL\_2020\_sqkm** will be loaded in canvas. Open
-the Attribute table and examine the newly added area\_sqkm column. You
+Now the **LULC_Areas_COL_2020_sqkm** will be loaded in canvas. Open
+the Attribute table and examine the newly added area_sqkm column. You
 will notice that the Value column contains numbers for each class. To
 make the results easier to interpret. Let’s also add the land cover name
 for each class number
 
-In the Attribute Table, select “\ **Open** **Field Calculator”** in the
+In the Attribute Table, select “ **Open** **Field Calculator”** in the
 top bar.
 
--  Enter the Field name as Land\_cover.
+-  Enter the Field name as Land_cover.
 
 -  In the Result field type, choose String. In Output field length enter
    100.
 
 -  In the Expression window enter the below expression. This expression
-   uses the \ **CASE** statement to assign a value based on multiple
+   uses the **CASE** statement to assign a value based on multiple
    conditions. In this case it extract the first string of the value
    field, which indicate the type of land cover, to assign the name of
    the land cover in the new field name called “Land cover”
@@ -549,9 +549,9 @@ WHEN (substr("value",1,1))=9 THEN 'Permanent snow and glaciers'
 
 END
 
--  Click \ **Run.**
+-  Click **Run.**
 
-|image37|\ |image38|
+|image37| |image38|
 
 Do the same again to add the Bioclimatic belt for each end string for
 each value number, using the below expression:
@@ -588,22 +588,22 @@ The following steps are covered by this tool (although when undertaken manually 
 
 Now, we will export this result as an excel file. Before export we will
 also organize the table and remove unwanted fields. In the Processing
-Toolbox, search and select \ **Vector table ‣ Refactor fields**.
+Toolbox, search and select **Vector table ‣ Refactor fields**.
 
 In the Refactor Fields dialog, select the layer edited in the prior step
-as an Input layer (in this case LULC\_Areas\_COL\_2020\_SQKM), select
-all columns except *area\_sqkm*, *Land\_cover*, *Bioclimatic\_belt* and
+as an Input layer (in this case LULC_Areas_COL_2020_SQKM), select
+all columns except *area_sqkm*, *Land_cover*, *Bioclimatic_belt* and
 then click Delete selected field.
 
 Once you are done with the edits, click on the ... button next
-to Refactored and choose Save To File…. Select XLSX Files (\*.xlsx) as
-the format. Enter the file name as 15.4.2a\_2020.xlsx and click Save. In
+to Refactored and choose Save To File…. Select XLSX Files (*.xlsx) as
+the format. Enter the file name as 15.4.2a_2020.xlsx and click Save. In
 the Refactor Fields dialog, click Run to apply your changes.
 
 |image40|
 
-The result will be a spreadheet with *area\_sqkm* , land\_cover and
-Bioclimatic\_belt columns.
+The result will be a spreadheet with *area_sqkm* , land_cover and
+Bioclimatic_belt columns.
 
 |image41|
 
@@ -614,7 +614,7 @@ summing the area of each specific land cover type across all bioclimatic
 belts) and finally; (3) the total mountain area of the country (by
 summing the area of all land cover types across all bioclimatic belts).
 
-Save this excel tab as 15.4.2a\_dis\_landcover. This data contains the
+Save this excel tab as 15.4.2a_dis_landcover. This data contains the
 estimates of 15.4.2 sub-indicator a, disaggregated by land cover type.
 Let’s now calculate the Mountain Green Cover Index estimates.
 
@@ -755,14 +755,14 @@ on which LULC transitions are present).
 We will calculate the baseline period first i.e. using 2000 landcover
 (year 1) and 2015 landcover (year2)
 
--  In the \ **processing toolbox**, search for and double click on
-   the \ **raster calculator**
+-  In the **processing toolbox**, search for and double click on
+   the **raster calculator**
 
 -  In the **expression box** formulate the expression (in this example
    using the UN-SEEA datasets):
 
-(“UNSEEA\_LULC2000\_BND\_AOI\_EqArea@1”`\* <https://mgci-docs.readthedocs.io/en/latest/qgis.html#id5>`__\ 1000)
-+ “UNSEEA\_LULC2015\_BND\_AOI\_EqArea@1”
+(“UNSEEA_LULC2000_BND_AOI_EqArea@1”`* <https://mgci-docs.readthedocs.io/en/latest/qgis.html#id5>`__ 1000)
++ “UNSEEA_LULC2015_BND_AOI_EqArea@1”
 
 |image46|
 
@@ -772,12 +772,12 @@ We will calculate the baseline period first i.e. using 2000 landcover
 
  Set the Reference layer as one of the landcover datasets
    to set the extent, cellsize and CRS e.g.
-   **UNSEEA\_LULC2015\_BND\_AOI\_EqArea layer**
+   **UNSEEA_LULC2015_BND_AOI_EqArea layer**
 
 -  Set the Output dataset to a new name e.g.
-   **UNSEEA\_LULC2000\_2015\_BND\_AOI\_EqArea.tif** for the baseline
+   **UNSEEA_LULC2000_2015_BND_AOI_EqArea.tif** for the baseline
 
--  Click \ **Run** to run the tool
+-  Click **Run** to run the tool
 
 When using the default UN-SEEA land cover legend, this means that a
 value of 2001 means a land cover class 2 in year 1 and a land cover
@@ -825,14 +825,14 @@ tool.
 -  In the Geoprocessing toolbox search for **Field Calculator**
 
 In the field calculator add a new **string** field called
-**QGIS\_syntax** with length **30**.
+**QGIS_syntax** with length **30**.
 
 In the **expression builder** paste in the following text. Note that we
 are taking the Landcover code for year 1 and multiplying it by 1000 (as
 described above) and summing it with the landcover code for year 2
 before combining it with the rest of the QGIS syntax
 
-("from\_code" \*1000 + "to\_code") \|\| ' = ' \|\| "impact\_code" \|\| '
+("from_code" *1000 + "to_code") \|\| ' = ' \|\| "impact\_code" \|\| '
 ' \|\| "impact"
 
 |image50|
@@ -842,17 +842,19 @@ The resultant table should look like this:
 |image51|
 
 -  Next search for the **List unique values** tool in the geoprocessing
-   toolbox, this will be used to export the new column, **QGIS\_syntax**
+   toolbox, this will be used to export the new column, **QGIS_syntax**
    to a new csv file
 
--  Select the **transitions\_matrix\_QGIS** as the input layer
+-  Select the **transitions_matrix_QGIS** as the input layer
 
--  |image52|\ Select the **QGIS\_syntax** field in the target field
+|image52|
+
+Select the **QGIS_syntax** field in the target field
 
 |image53|
 
 -  Save the unique values to a new csv file e.g.
-   **transition\_matrix\_for\_qgis.csv**
+   **transition_matrix_for_qgis.csv**
 
 -  Click **Run**
 
@@ -860,7 +862,7 @@ The resultant table should look like this:
    and open in notepad
 
 -  Remove the header row and save the file as
-   **transition\_matrix\_for\_qgis.txt**
+   **transition_matrix_for_qgis.txt**
 
 -  **Return to QGIS**
 
@@ -878,10 +880,10 @@ for illustration purposes only)
    Report**
 
 -  Select the combined LULC dataset for year 1 and year 2 as the input
-   layer e.g. **SEEA\_LULC2000\_2015\_BND\_AOI\_EqArea.tif**
+   layer e.g. **SEEA_LULC2000_2015_BND_AOI_EqArea.tif**
 
 -  Set the Unique values report to a new output table **e.g.
-   UNSEAA\_2000\_20015\_trans.csv**
+   UNSEAA_2000_20015_trans.csv**
 
 |image54|
 
@@ -891,7 +893,7 @@ The resultant table looks like this:
 
 Delete the count and m2 columns by clicking on the **toggle editing
 button** on the top menu bar of the attribute table and then click the
-Delete Field button. Select the **“\ *count”*** and **“\ *m2***\ *”*
+Delete Field button. Select the **“ *count”*** and **“ *m2*** *”*
 fields and click **OK** to delete
 
 |image56| |image57|
@@ -901,12 +903,12 @@ fields and click **OK** to delete
 
 We can then add the to and from codes and descriptions.
 
-In the Attribute Table, click the “\ **Open** **Field Calculator”**
+In the Attribute Table, click the “ **Open** **Field Calculator”**
 button in the top bar.
 
 |image58|
 
--  Enter the Field name as **from\_code**.
+-  Enter the Field name as **from_code**.
 
 -  In the Result field type, choose **Whole Number (Integer).** In
    Output field length enter 3.
@@ -915,53 +917,53 @@ button in the top bar.
 
    |image59|
 
--  Click \ **OK**
+-  Click  **OK**
 
 The result looks like this:
 
 |image60|
 
-In the Attribute Table, select “\ **Open** **Field Calculator”** in the
+In the Attribute Table, select “**Open** **Field Calculator”** in the
 top bar again.
 
--  Enter the Field name as **from\_desc**.
+-  Enter the Field name as **from_desc**.
 
--  In the Result field type, choose **Text**\ ( **String)**. In Output
+-  In the Result field type, choose **Text** ( **String)**. In Output
    field length enter **100**.
 
 -  In the Expression window enter the below expression, replacing the
    names of the default UN-SEEEA LULC classes by the names of the
-   national LULC legend. This expression uses the \ **CASE** statement
+   national LULC legend. This expression uses the **CASE** statement
    to assign a value based on multiple conditions.
 
     CASE
 
-    WHEN "from\_code" =10 THEN 'Inland water bodies'
+    WHEN "from_code" =10 THEN 'Inland water bodies'
 
-    WHEN "from\_code" =1 THEN 'Artificial Surfaces'
+    WHEN "from_code" =1 THEN 'Artificial Surfaces'
 
-    WHEN "from\_code" =2 THEN 'Cropland'
+    WHEN "from_code" =2 THEN 'Cropland'
 
-    WHEN "from\_code" =3 THEN 'Grassland'
+    WHEN "from_code" =3 THEN 'Grassland'
 
-    WHEN "from\_code" =4 THEN 'Tree-covered areas'
+    WHEN "from_code" =4 THEN 'Tree-covered areas'
 
-    WHEN "from\_code" =5 THEN 'Shrub-covered areas'
+    WHEN "from_code" =5 THEN 'Shrub-covered areas'
 
-    WHEN "from\_code" =6 THEN 'Shrubs and/or herbaceous vegetation,
+    WHEN "from_code" =6 THEN 'Shrubs and/or herbaceous vegetation,
     aquatic or regularly flooded'
 
-    WHEN "from\_code" =7 THEN 'Sparsely natural vegetated areas'
+    WHEN "from_code" =7 THEN 'Sparsely natural vegetated areas'
 
-    WHEN "from\_code" =8 THEN 'Terrestrial barren land'
+    WHEN "from_code" =8 THEN 'Terrestrial barren land'
 
-    WHEN "from\_code" =9 THEN 'Permanent snow and glaciers'
+    WHEN "from_code" =9 THEN 'Permanent snow and glaciers'
 
     END
 
     |image61|
 
--  Click \ **OK **
+-  Click **OK **
 
     The result looks like this:
 
@@ -969,13 +971,13 @@ top bar again.
 
 -  In the Geoprocessing toolbox search for **Field Calculator**
 
--  Enter the Field name as **to\_code**.
+-  Enter the Field name as **to_code**.
 
 -  In the Result field type, choose **Whole Number (Integer).** In
    Output field length enter 3.
 
 -  In the Expression window enter the expression: "value" -
-   ("from\_code" \*1000)
+   ("from_code" *1000)
 
 |image63|
 
@@ -985,12 +987,12 @@ The result looks like this:
 
 |image64|
 
-In the Attribute Table, select “\ **Open** **Field Calculator”** in the
+In the Attribute Table, select “ **Open** **Field Calculator”** in the
 top bar again.
 
--  Enter the Field name as to\_desc.
+-  Enter the Field name as to_desc.
 
--  In the Result field type, choose **Text**\ (**String)**. In Output
+-  In the Result field type, choose **Text** (**String)**. In Output
    field length enter **100**
 
 -  In the Expression window enter the below expression. Again, replacing
@@ -1000,26 +1002,26 @@ top bar again.
 
     CASE
 
-    WHEN "to\_code" =10 THEN 'Inland water bodies'
+    WHEN "to_code" =10 THEN 'Inland water bodies'
 
-    WHEN "to\_code" =1 THEN 'Artificial Surfaces'
+    WHEN "to_code" =1 THEN 'Artificial Surfaces'
 
-    WHEN "to\_code" =2 THEN 'Cropland'
+    WHEN "to_code" =2 THEN 'Cropland'
 
-    WHEN "to\_code" =3 THEN 'Grassland'
+    WHEN "to_code" =3 THEN 'Grassland'
 
-    WHEN "to\_code" =4 THEN 'Tree-covered areas'
+    WHEN "to_code" =4 THEN 'Tree-covered areas'
 
-    WHEN "to\_code" =5 THEN 'Shrub-covered areas'
+    WHEN "to_code" =5 THEN 'Shrub-covered areas'
 
-    WHEN "to\_code" =6 THEN 'Shrubs and/or herbaceous vegetation,
+    WHEN "to_code" =6 THEN 'Shrubs and/or herbaceous vegetation,
     aquatic or regularly flooded'
 
-    WHEN "to\_code" =7 THEN 'Sparsely natural vegetated areas'
+    WHEN "to_code" =7 THEN 'Sparsely natural vegetated areas'
 
-    WHEN "to\_code" =8 THEN 'Terrestrial barren land'
+    WHEN "to_code" =8 THEN 'Terrestrial barren land'
 
-    WHEN "from\_code" =9 THEN 'Permanent snow and glaciers'
+    WHEN "from_code" =9 THEN 'Permanent snow and glaciers'
 
     END
 
@@ -1027,7 +1029,7 @@ top bar again.
 
 |image66|
 
--  Click \ **OK.**
+-  Click **OK.**
 
 -  The result looks like this
 
@@ -1037,7 +1039,7 @@ top bar again.
     |image67| |image68|
 
 Users can then either manually enter the impact (stable, degradation or
-improving) and impact\_codes (0,-1,1) or use the select button to select
+improving) and impact_codes (0,-1,1) or use the select button to select
 groups of transitions and calculate to particular impact types
 
 e.g. select those landcover types that have not changed between year 1
@@ -1047,8 +1049,8 @@ and year 2 and calculate as impact code = 0 and impact = “stable”
 
 |image69|
 
--  In the expression box enter the expression **“from\_code” =
-   “to\_code”**
+-  In the expression box enter the expression **“from_code” =
+   “to_code”**
 
 -  Click **Select features**
 
@@ -1070,17 +1072,19 @@ The selected features are highlighted in blue:
 
 |image72|
 
--  |image73|\ Click on the **Open field calculator** button again
+-  |image73| Click on the **Open field calculator** button again
 
 -  Tick **Update existing field**
 
--  Choose the field **impact\_code**
+-  Choose the field **impact_code**
 
 -  In the expression box type **0**
 
 -  Click **OK**
 
-|image74|\ The selected features highlighted in blue are now populated:
+|image74|
+
+The selected features highlighted in blue are now populated:
 
 **Once all the impact values are populated,** we need to add an
 additional field as the reclassification tools in QGIS that will use the
@@ -1091,14 +1095,14 @@ file which can be used by the QGIS geoprocessing tool.
 -  Click on the **Open field calculator** button
 
     In the field calculator add a new **string** field called
-    **QGIS\_syntax** with length **30**.
+    **QGIS_syntax** with length **30**.
 
     In the **expression window** paste in the following text. Note that
     we are taking the Landcover code for year 1 and multiplying it by
     1000 (as described above) and summing it with the landcover code for
     year 2 before combining it with the rest of the QGIS syntax:
 
-    **("from\_code" \*1000 + "to\_code") \|\| ' = ' \|\| "impact\_code"
+    **("from_code" *1000 + "to_code") \|\| ' = ' \|\| "impact\_code"
     \|\| ' ' \|\| "impact"**
 
     |image75|
@@ -1113,14 +1117,14 @@ The resultant table should look like this:
    toolbox, this will be used to export the new column, **QGIS\_syntax**
    to a new csv file
 
--  Select the **UNSEA\_2000\_2015\_trans** as the input layer
+-  Select the **UNSEA_2000_2015_trans** as the input layer
 
--  Select the **QGIS\_synta**\ x field in the target field
+-  Select the **QGIS_synta** x field in the target field
 
 |image77| |image52|
 
 -  Save the unique values to a new csv file e.g.
-   **transition\_matrix\_nat\_for\_qgis.csv**
+   **transition_matrix_nat_for_qgis.csv**
 
 -  Click **Run**
 
@@ -1144,8 +1148,8 @@ Reclassify LULC transitions using the transitions matrix
 
 The next step is to reclassify the outputs from step 5.2 (i.e. the
 combined landcover datasets for year1 and year 2), first for the
-baseline period **UNSEEA\_LULC2000\_2015\_EqArea.tif** and **then for
-the 2018 reporting period UNSEEA\_LULC2015\_2018\_EqArea.tif.** We will
+baseline period **UNSEEA_LULC2000_2015_EqArea.tif** and **then for
+the 2018 reporting period UNSEEA_LULC2015_2018_EqArea.tif.** We will
 use the transitions matrix generated in the previous steps (5.3.1 or
 5.3.2). In this example we use the default transitions matrix (from
 5.3.1) but the steps are the same if a national transitions matrix is
@@ -1153,19 +1157,19 @@ being used.
 
 -  In the processing toolbox search **for r.reclass**
 
--  Set the input raster layer to **UNSEEA\_LULC2000\_2015\_EqArea.tif**
+-  Set the input raster layer to **UNSEEA_LULC2000_2015_EqArea.tif**
 
 -  Set the file containing the reclass rules by navigating to the
-   transitions matrix e.g. **transition\_matrix\_for\_qgis.csv**
+   transitions matrix e.g. **transition_matrix_for_qgis.csv**
 
 -  Set the GRASS GIS 7 Region extent to
-   **UNSEEA\_LULC2000\_2015\_EqArea.tif**
+   **UNSEEA_LULC2000_2015_EqArea.tif**
 
--  Set the cellsize to be the same as UNSEEA\_LULC2000\_2015\_EqArea.tif
+-  Set the cellsize to be the same as UNSEEA_LULC2000_2015_EqArea.tif
    e.g. in this case **307.896977**
 
 -  Save the reclassified file to a new name e.g.
-   **UNSEEA\_LULC2000\_2015\_EqArea\_reclassed\_impact.tif**
+   **UNSEEA_LULC2000_2015_EqArea_reclassed_impact.tif**
 
    |image78|
 
@@ -1174,11 +1178,11 @@ being used.
    **(you can the two ignore the 2 warning messages that appear in red–
    these do not affect the correct generation of the outputs**
 
-   **“**\ WARNING: Concurrent mapset locking is not supported on
+   **“** WARNING: Concurrent mapset locking is not supported on
    Windows”
 
-   **“**\ ERROR 6:
-   C:\\workspace\\MGCI\\outputs\\UNSEEA\_LULC2000\_2015\_EqArea\_reclassed\_impact.tif,
+   **“** ERROR 6:
+   C:\\workspace\\MGCI\\outputs\\UNSEEA_LULC2000_2015_EqArea_reclassed_impact.tif,
    band 1: SetColorTable() only supported for Byte or UInt16 bands in
    TIFF format.”)
 
@@ -1186,7 +1190,7 @@ being used.
    **paletted/unique** values and click the **Classify** button to show
    the classes present in the output layer.
 
-    |image79|
+|image79|
 
    (you can also change the label to indicate 0 = stable -1 =
    degradation and 1 = improving)
@@ -1197,7 +1201,7 @@ being used.
 
 -  Repeat the above step for the next reporting period i.e. using 2015
    landcover (year 1) and 2018 landcover (year2) i.e. using the layer
-   **UNSEEA\_LULC2015\_2018\_EqArea.tif**
+   **UNSEEA_LULC2015_2018_EqArea.tif**
 
 Step-by-step equivalent of Tool B4 Combine Bioclimatic belts, LULC transitions and impact layers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1241,18 +1245,18 @@ impact status and bioclimatic belt:
    resampled to the resolution of the LULC dataset in the processing for
    sub-indicator a and the third dataset is the impact status):
 
-   "UNSEEA\_LULC2000\_2015\_EqArea@1" +
-   ("MNTBelts\_BND\_AOI\_ResampledNN\_EqArea@1" \*100000) +
-   (("UNSEEA\_LULC2000\_2015\_EqArea\_reclassed\_impact@1" +2)\*1000000)
+   "UNSEEA_LULC2000_2015\_EqArea@1" +
+   ("MNTBelts_BND_AOI_ResampledNN_EqArea@1" *100000) +
+   (("UNSEEA_LULC2000_2015_EqArea_reclassed_impact@1" +2)*1000000)
 
    |image81|
 
--  Set the reference dataset as the UNSEEA\_LULC2000\_2015\_EqArea@1
+-  Set the reference dataset as the UNSEEA_LULC2000_2015_EqArea@1
    which is a quick way to determine the output extent, cellsize and
    projection of the output dataset.
 
 -  Set the output dataset as e.g.
-   **UNSEEA\_LULC2000\_2015\_MTN\_combined\_.tif**
+   **UNSEEA_LULC2000_2015_MTN_combined_.tif**
 
 -  |image82|
 
@@ -1288,7 +1292,7 @@ disaggregation’s we require.
 This output is the main statistics table from the analysis, from which
 other summary statistics tables will be generated.
 
--  In the \ **processing toolbox** search for **Raster layer unique
+-  In the **processing toolbox** search for **Raster layer unique
    values report**
 
 -  Double click on the **Raster layer unique values report**.
@@ -1296,53 +1300,53 @@ other summary statistics tables will be generated.
 -  Set the input layer to the combined layer created in the previous
    step
 
-   e.g. **UNSEEA\_LULC2000\_2015\_MTN\_combined\_.tif**.
+   e.g. **UNSEEA_LULC2000_2015_MTN_combined_.tif**.
 
 -  Under the Unique values table click on ... and choose Save to File….
    Enter a name for the file, in this case
-   **subIndicator\_b\_Areas\_COL\_basline2000\_2015.gpkg**.
+   **subIndicator_b_Areas_COL_basline2000_2015.gpkg**.
 
    |image84|
 
--  Click \ **Run**.
+-  Click **Run**.
 
-Now the **subIndicator\_b\_Areas\_COL\_basline2000\_2015** layer will be
-added to the Layers panel. Right-click on the layer and click \ **Open
+Now the **subIndicator_b_Areas_COL_basline2000_2015** layer will be
+added to the Layers panel. Right-click on the layer and click  **Open
 Attribute Table**. The column m2 contains the area for each class in
 square meters.
 
 |image85|
 
 Let’s convert the area to square kilometers. In the Processing Toolbox,
-search and select \ **Vector table >> Field Calculator.**
+search and select **Vector table >> Field Calculator.**
 
 -  In the Field Calculator dialog, select
-   the \ **subIndicator\_b\_Areas\_COL\_basline2000\_2015** layer
+   the **subIndicator_b_Areas_COL_basline2000_2015** layer
 
--  Enter the Field name as **Area\_sqkm**.
+-  Enter the Field name as **Area_sqkm**.
 
 -  In the Result field type choose **Float  **
 
 -  In the Expression window, enter the below expression. This will
    convert the sqmt to sqkm and round the result to 2 decimal places.
    Under the Calculated click on **…** and choose Save To File… . Enter
-   the name as **subIndicator\_b\_Areas\_COL\_basline2000\_2015\_sqkm**
+   the name as **subIndicator_b_Areas_COL_basline2000_2015_sqkm**
 
    round("m2"/1e6, 2)
 
 |image86|
 
--  Click \ **Run.**
+-  Click **Run.**
 
-Now the **subIndicator\_b\_Areas\_COL\_basline2000\_2015\_sqkm** will be
+Now the **subIndicator_b_Areas_COL_basline2000_2015_sqkm** will be
 loaded in canvas. Open the Attribute table and examine the newly
-added area\_sqkm column.
+added area_sqkm column.
 
 As indicated before the Value column contains numbers for each unique
 class combination. To make the results easier to interpret. Let’s also
 re-add all the descriptive attributes
 
-In the Attribute Table, click the “\ **Open** **Field Calculator”**
+In the Attribute Table, click the “ **Open** **Field Calculator”**
 button in the top bar.
 
 -  Enter the Field name as **BioclimaticBelt**.
@@ -1351,10 +1355,10 @@ button in the top bar.
    length enter **100**.
 
 -  In the Expression window enter the below expression. This expression
-   uses the \ **CASE** statement to assign a value based on multiple
+   uses the **CASE** statement to assign a value based on multiple
    conditions. In this case it extracts the second string of the value
    field, which indicate the type of land cover, to assign the name of
-   the land cover in the new field name called “\ **BioclimaticBelt”**
+   the land cover in the new field name called “ **BioclimaticBelt”**
 
    CASE
 
@@ -1372,10 +1376,10 @@ END
 
 -  Click on the Save button on the attribute menu to save the edits.
 
-In the Attribute Table, click the “\ **Open** **Field Calculator”**
+In the Attribute Table, click the “ **Open** **Field Calculator”**
 button in the top bar again.
 
--  Enter the Field name as **LULC\_transition**.
+-  Enter the Field name as **LULC_transition**.
 
 -  In the Result field type, choose **Whole Number (Integer).**.
 
@@ -1390,20 +1394,20 @@ button in the top bar again.
 -  Click on the **toggle editing** button to turn off the attribute
    editing
 
-We can now use the LULC\_transitions field to join on the rest of the
+We can now use the LULC_transitions field to join on the rest of the
 attributes from the transitions matrix file.
 
--  Open the transitions\_matrix\_for\_QGIS.csv file . It should be the
+-  Open the transitions_matrix_for_QGIS.csv file . It should be the
    one containing the following fields. We are going to use the
-   **Value** field in this file to join to the **LULC\_transition**
+   **Value** field in this file to join to the **LULC_transition**
    field in our statistic file
-   (subIndicator\_b\_Areas\_COL\_basline2000\_2015\_sqkm)
+   (subIndicator_b_Areas_COL_basline2000_2015_sqkm)
 
 |image89|
 
 -  Right click and select properties on the statistics file
 
-   i.e. **subIndicator\_b\_Areas\_COL\_basline2000\_2015\_sqkm**
+   i.e. **subIndicator_b_Areas_COL_basline2000_2015_sqkm**
 
 -  Click on the **joins tab** and click on the **green + button**
 
@@ -1412,7 +1416,7 @@ attributes from the transitions matrix file.
 
 -  For the join field pick **Value**
 
--  For the target field pick **LULC\_transition**
+-  For the target field pick **LULC_transition**
 
 |image90|
 
@@ -1426,14 +1430,14 @@ attributes from the transitions matrix file.
 
 -  Open the attribute table of the statistics file again and you should
    now see that it includes the joined fields. (i.e. the
-   subIndicator\_b\_Areas\_COL\_basline2000\_2015\_sqkm file\ **)**
+   subIndicator_b_Areas_COL_basline2000_2015_sqkm file **)**
 
    |image92|
 
 -  These are only temporarily joined so we need to save as a new file.
    We will use the refactor field tool as this allows us to remove the
    joinfield preface (in this example
-   **transition\_matrix\_for\_qgis\_**)that was added to the joined on
+   **transition_matrix_for_qgis_**)that was added to the joined on
    fields and also set the correct output types for the other fields (as
    below)
 
@@ -1441,7 +1445,7 @@ attributes from the transitions matrix file.
 
 -  Save the refactored file to a new name within the geopackage
 
-   e.g. subInd\_b\_Areas\_COL\_basline2000\_2015\_sqkm\_joined
+   e.g. subInd_b_Areas_COL_basline2000_2015_sqkm_joined
 
 Step-by-step equivalent of Tool B6 B6 Formatting to reporting tables
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1464,11 +1468,11 @@ Calculate area statistics and format statistics to reporting format
 
 |image95|
 
--  Drag the **Area\_sqkm** field into the **Value** box
+-  Drag the **Area_sqkm** field into the **Value** box
 
 -  Drag **sum** into the Value box
 
--  Drag **BioclimaticBelt,** and **to\_desc** into the **Rows** box
+-  Drag **BioclimaticBelt,** and **to_desc** into the **Rows** box
 
 -  Drag **impact** into the **Columns** box
 
@@ -1517,7 +1521,7 @@ A summary table will appear in the **Group Stats** window
 -  Again add and calculate columns for **ProportionDegraded,
    ProportionNetDegraded, %Degraded and %NetDegraded**
 
--  Save to **.xlsx format e.g. COL\_2000\_2015\_SDG15\_4\_2b.xls**
+-  Save to **.xlsx format e.g. COL_2000_2015_SDG15_4_2b.xls**
 
 -  Repeat the above step for the next reporting period i.e. using 2015
    landcover (year 1) and 2018 landcover (year2) and any other reporting
@@ -1714,7 +1718,7 @@ Looking at this plugin:
 .. |image78| image:: ../media_QGIS/image78.png
    :width: 1200
 .. |image79| image:: ../media_QGIS/image79.png
-   :width:1200
+   :width: 1200
 .. |image80| image:: ../media_QGIS/image80.png
    :width: 1200
 .. |image81| image:: ../media_QGIS/image81.png
