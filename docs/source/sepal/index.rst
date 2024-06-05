@@ -209,7 +209,7 @@ Tabular data can be uploaded into Google Earth Engine as comma-separated values 
 1. Select New > **csv file upload**. 
 2. In the pop-up window that appears, select the file you want to upload from your computer 
 
-.. image:: C:/Users/Rotich/DOCUMENTATION/SEPAL/Media/sepal_corrections/uploading_csv.PNG
+.. image:: ../_static/sepal/uploading_csv.PNG
    :align: center
    :width: 400
    :alt: Geotiff_upload
@@ -768,7 +768,7 @@ To do so, you can either search for a :code:`.JSON` task file in your SEPAL envi
 
 **2. Alternatively,you can locate the tasks manually by navigating to the **File Layer > Downloads > Module results>Tasks** on SEPAL as shown below:
 
-.. image:: C:/Users/Rotich/DOCUMENTATION/SEPAL/Media/sepal_corrections/locating_tasks.png
+.. image:: ../_static/sepal/locating_tasks.png
    :align: center
    :width: 900
    :alt: Task File Location
@@ -888,11 +888,15 @@ In the computation of sub-indicator A using **custom** landcover maps,SEPAL SDG 
 The development team recommends countries to adopt this template to reclassify their land-cover maps .(It is important to note that the origin and target names and codes must be properly defined for the reclassification to work properly) 
 The table structure calls users to have the following fields defined as columns:
 
-- from_name: Associated name of each land cover class of the custom land cover map.
-- from_code: Numerical code (pixel value) of each land cover class of the custom land cover map.
-
-.. raw:: lhtm  
-   <a href="../_static/sepal_tables/Custom_LC_Classification_SubB.csv" download="_static/sepal_tables/Custom_LC_Classification_SubB.csv">Custom_LC_Classification_SubB</a>
+- from_name: Associated name of each land cover class of the custom land cover map.
+
+- from_code: Numerical code (pixel value) of each land cover class of the custom land cover map.
+
+
+
+.. raw:: html
+
+   <a target="_blank" href="../_static/sepal_tables/Custom_LC_Classification_SubB.csv" download="_static/sepal_tables/Custom_LC_Classification_SubB.csv">Custom_LC_Classification_SubB</a>
 
 
 Template B: Custom LandCover Classification Template(Sub-indicator B) 
@@ -902,10 +906,12 @@ As explained earlier,countries must use the UN-SEAA defined classes in sub-indic
 Countries can opt to use the UN-SEAA classification legend(defined in the earlier step) or use the FAO-defined template to develop their classification nd legehere
 
 Download TemplateB 
-h.. raw:: tml
-
-   <a href="../_static/sepal_tables/Default LC_map_reclassification.csv" download="_static/sepal_tables/Default LC_map_reclassification.csv">LC_map_reclassificato
->ere:
+
+
+.. raw:: html
+
+   <a target="_blank" href="../_static/sepal_tables/Default LC_map_reclassification.csv" download="_static/sepal_tables/LC_map_reclassification.csv">LC_map_reclassificato</a>
+
 
 
 Template C:Transition matrix
@@ -923,12 +929,13 @@ The following fields must be defined:
 
 Download the template here:
 
-.. raw: html
+.. raw:: html
 
-   <a href="../_static/sepal_tables/Transition_Matrix_SubB.csv" download="_static/sepal_tables/Transition_Matrix_SubB.csv">Transition_Matrix_Su
-</a>
-b
-.. note:: Remember that SEPAL SDG 15.4.2 :sub:`beta` only accepts :code:`.csv` files. Therefore,once all these tables are modified as per the countries'needs ,they should be made  into :code:`.CSV` and imported into the SEPAL environment as described in earlier sectons.
- here.
+   <a target="_blank" href="../_static/sepal_tables/Transition_Matrix_SubB.csv" download="_static/sepal_tables/Transition_Matrix_SubB.csv">Transition_Matrix_SubB</a>
+
+
+.. note:: 
+   
+   Remember that SEPAL SDG 15.4.2 :sub:`beta` only accepts :code:`.csv` files. Therefore,once all these tables are modified as per the countries'needs ,they should be made  into :code:`.CSV` and imported into the SEPAL environment as described in earlier sectons.
 
 
