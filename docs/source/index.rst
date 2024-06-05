@@ -8,7 +8,7 @@
 .. line-break::
 
 SDG 15.4.2 Computation Tools Documentation
-=========================================
+==========================================
 
 
 Welcome to the technical documentation of SDG Indicator 15.4.2 computation tools. These tools support the use of earth observation data to monitor progress on the two sub-indicators under SDG 15.4.2: namely Sub-Indicator 15.4.2a: Mountain Green Cover Index, and Sub-Indicator 15.4.2b: Proportion of degraded mountain land. 
