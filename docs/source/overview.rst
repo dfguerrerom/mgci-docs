@@ -1,4 +1,4 @@
-Background
+Background on the methodology of SDG Indicator 15.4.2
 ==========
 SDG Indicator 15.4.2 is one of the two indicators under SDG Target 15.4, which aims to "*ensure the conservation of mountain ecosystems, including their biodiversity, to enhance their capacity to provide benefits which are essential for sustainable development*". The Food and Agriculture Organization (FAO) of the United Nations is the custodian agency of this indicator.
 
@@ -26,12 +26,13 @@ Where:
 - **Degraded mountain area** :sub:`n` = Total degraded mountain area (in km :sup:`2`) in the reporting period *n*. This is, the sum of the areas where land cover change is considered to constitute degradation from the baseline period. Degraded mountain land will be assessed based on the land cover transition matrix in Annex 1.
 - **Total mountain area** = Total area of mountains (in km :sup:`2`). In both the numerator and denominator, mountain area is defined according to UNEP-WCMC (2002).
 
-If the country/region has no mountain area, it will be assigned value NA
 
 .. [1] IPBES defines land degradation as “the many human-caused processes that drive the decline or loss in biodiversity, ecosystem functions or ecosystem services in any terrestrial and associated aquatic ecosystems” (IPBES, 2018)
 
 
-**Disaggregation:**
+
+**Disaggregation**
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Both of these sub-indicators are disaggregated by mountain bioclimatic belts as defined by Körner et al. (2011). In addition, sub-indicator 15.4.2a is
 disaggregated by the 10 SEEA (System of Environmental and Economic Accounting) landcover classes based on UN Statistical Division (2014). The resulting values are reported both as proportions (percent) and area (in square kilometres)
@@ -43,8 +44,7 @@ An overview of the spatial workflow for computing both sub-indicators is provide
 Figure 1: Simplified Workflow
 
 
-Overview of Mountain Area Map
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+**1. Mountain Area Map and its disaggregation in bioclimatic belts** 
 
 Several methodologies have been developed in the last decades to consistently classify and map global mountain systems, using a variety of parameters such as elevation, topography, climate and ecology.
 
@@ -65,7 +65,7 @@ For disaggregation purposes, this mountain area is subdivided into bioclimatic b
 +----------------------+-----------------------+------------------+                               |
 | Lower alpine         | < 6.4°C               | < 54 days        |                               |
 +----------------------+-----------------------+------------------+-------------------------------+
-|...........................................................................THE TREELINE..........|
+|..........................................THE TREELINE...........................................|
 +----------------------+-----------------------+------------------+-------------------------------+
 | Upper montane        | > 6.4°C & ≤ 10 °C     | ---              | Montane                       |
 +----------------------+-----------------------+                  |                               |
@@ -79,10 +79,10 @@ For disaggregation purposes, this mountain area is subdivided into bioclimatic b
 +----------------------+-----------------------+------------------+-------------------------------+
 
 
-A global mountain area map sub-divided by bioclimatic belts has been developed by FAO and made available to national authorities to facilitate the computation of this indicator. This map is the result of combining a global mountain area map developed from the Global Multi-Resolution Terrain Elevation Data (GMTED2010), following the UNEP-WCMC methodology (Ravilious et al. 2021) and a mountain bioclimatic belt map created by the Global Mountain Biodiversity Assessment
+A global mountain area map sub-divided by bioclimatic belts has been developed by FAO to facilitate the computation of this indicator and is made available as part of these materials. This map is the result of combining a global mountain area map developed from the Global Multi-Resolution Terrain Elevation Data (GMTED2010), following the UNEP-WCMC methodology (Ravilious et al. 2021) and a mountain bioclimatic belt map created by the Global Mountain Biodiversity Assessment (GMBA)
 
-Overview of the land cover data
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+**2. Land Cover Data** 
+
 
 Land cover refers to the observed physical cover of the Earth’s surface. It includes vegetation and manmade features as well as bare rock, bare soil and inland water surfaces (FAO-GTOS, 2009). The primary units for characterizing land cover are categories (e.g. Forest or Open Water) that must be defined following a standardized land cover
 classification in order to identify land cover changes consistently over time.
@@ -183,7 +183,7 @@ Land cover maps developed by relevant national authorities will generally provid
 The global default source of land cover data for this indicator is the European Space Agency Climate Change Initiative (ESA-CCI) Land Cover product (ESA, 2017). The ESA-CCI product consists of a series of annual Land Cover maps at 300 m resolution, providing 22 land cover classes based on 300m MERIS, 1km SPOT – VEGETATION, 1km PROBA –V and 1km AVHRR. The ESA CCI adheres to the Cover Classification System of the United Nations Food and Agriculture Organization (UN FAO) (Santoro et al. 2015). Annual updates are currently available from 1992 to 2020. Additional years will be made available by the European Space Agency.
 
 
-Planimetric area calculation vs Real surface area calculation
+Area calculation: Planimetric area vs Real surface area 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Area calculation is an important component of the methodology to calculate SDG Indicator 15.4.2. Many of the algorithms used by default in some of the most widely used geospatial software tools and cloud-based platforms calculate area values based on 2-dimensional representations of the features on the Earth’s surface, commonly known as planimetric maps. In mountain regions, this method is known to significantly underestimate area values due to the complex topography of mountain landscapes. To address this, methods have been developed to take into account the third dimension of mountain surfaces through the use of digital elevation models and, in this way, obtain closer estimates of the real surface area of mountain regions.

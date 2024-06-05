@@ -23,3 +23,10 @@ def docs(session):
         "-w",
         "warnings.txt",
     )
+
+
+@nox.session(name="lint", reuse_venv=True)
+def lint(session):
+    """Lint the documentation repository"""
+    session.install("pre-commit")
+    session.run("pre-commit", "run", "-a")

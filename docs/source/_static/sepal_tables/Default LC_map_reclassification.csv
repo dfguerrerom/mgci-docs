@@ -1,0 +1,11 @@
+from_name,from_code,to_name,to_code
+,,Artificial surfaces,1
+,,Croplands,2
+,,Grassland,3
+,,Tree-covered areas,4
+,,Shrub-covered areas,5
+,,"Shrubs and/or herbaceous vegetation, aquatic or regularly flooded",6
+,,Sparsely natural vegetated areas,7
+,,Terrestrial barren land ,8
+,,Permanent snow and glaciers,9
+,,Inland water bodies,10
