@@ -1,0 +1,4 @@
+﻿from_name,from_code,to_name,to_code,impact_name,impact_code
+,,,,Degraded,1
+,,,,Stable,2
+,,,,Improved,3
