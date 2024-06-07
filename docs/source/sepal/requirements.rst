@@ -1,15 +1,15 @@
-Module requirements
+Module Requirements
 ===================
 
 Initial Setup
 ^^^^^^^^^^^^^
-SEPAL is closely linked to Google Earth Engine (GEE), a Google-powered Earth-observation cloud-computing platform, as it builds in many of its functionalities. This means that to run SEPAL-SDG 15.4.2 :sub:`beta` you will need to have **connected SEPAL and GEE accounts**.
+SEPAL is closely linked to Google Earth Engine (GEE), a Google-powered Earth-observation cloud-computing platform, as it integrates many of its functionalities. Consequently,to run SEPAL-SDG 15.4.2 :sub:`beta` you will need to have **connected SEPAL and GEE accounts**.
 
 Before getting started with SEPAL-SDG 15.4.2 :sub:`beta` you need:
 
-- To **Create a SEPAL account** please follow the `registration steps described here <https://docs.sepal.io/en/latest/setup/register.html#sign-up-to-sepal>`_ and then familiarize yourself with the tool by exploring its interface.
-- To **Create a Google Earth Engine (GEE) account** please follow these `steps <https://docs.sepal.io/en/latest/setup/gee.html#create-a-gee-account>`_ and don't forget to `initialize the home folder <https://docs.sepal.io/en/latest/setup/gee.html#initialize-the-home-folder>`_.
-- To **Connect your SEPAL and GEE accounts** follow the `instructions described here <https://docs.sepal.io/en/latest/setup/gee.html#connection-between-gee-and-sepal>`_
+- To **Create a SEPAL account** , please follow the `registration steps described here <https://docs.sepal.io/en/latest/setup/register.html#sign-up-to-sepal>`_ and then familiarize yourself with the tool by exploring its interface.
+- To **Create a Google Earth Engine (GEE) account** , please follow these `steps <https://docs.sepal.io/en/latest/setup/gee.html#create-a-gee-account>`_ and don't forget to `initialize the home folder <https://docs.sepal.io/en/latest/setup/gee.html#initialize-the-home-folder>`_.
+- To **Connect your SEPAL and GEE accounts**, follow the `instructions described here <https://docs.sepal.io/en/latest/setup/gee.html#connection-between-gee-and-sepal>`_
 
 
 Data Requirements
@@ -26,17 +26,17 @@ SEPAL-SDG 15.4.2 :sub:`beta` has been conceived to facilitate the computation of
 
 - **A collection of Land Cover Maps for the country of interest** 
   
-Land cover maps represent spatially the physical coverage of the Earth's surface into different types (classes) e.g. forests, grasslands, croplands, lakes, wetlands. This data serves different functions for SDG Indicator 15.4.2: 
+Land cover maps represent spatially the physical coverage of the Earth's surfacev categorized into different types (classes) e.g. forests, grasslands, croplands, lakes, wetlands. This data serves different functions for SDG Indicator 15.4.2: 
   
 **In Sub-Indicator 15.4.2a**, land cover is used to categorize land into green and non-green cover areas. 
   
 **In Sub-Indicator 15.4.2b**, land cover is used to identify areas where changes in the type of land cover may indicate a decline or loss of biodiversity, mountain ecosystem functions or services that are considered desirable in a local or national context. 
  
 The collection of land cover maps to compute this indicator should be available from the year **2000**. SEPAL SDG 15.4.2 :sub:`beta` facilitates national authorities to use relevant national or regional land cover datasets. 
-Similar to the national administrative boundary dataset, SEPAL-SDG 15.4.2 :sub:`beta` provides access to default land cover datasets, selected by FAO to compute the indicator when national datasets are not available see the :ref:`Data Sources section <DataSources>`
+Similarly, SEPAL-SDG 15.4.2 :sub:`beta` provides access to default land cover datasets, selected by FAO to compute the indicator when national datasets are not available see the :ref:`Data Sources section <DataSources>`
   
 .. Note:: 
-   Country-defined datasets must be made available as GEE assets as an `image collection <https://developers.google.com/earth-engine/guides/ic_creating>`_ for SEPAL-SDG 15.4.2       :sub:`beta` to access it. This will be demonstrated in the next section of the tutorial. 
+   Country-defined datasets must be made available as GEE assets as an `image collection <https://developers.google.com/earth-engine/guides/ic_creating>`_ for SEPAL-SDG 15.4.2  :sub:`beta`  to access it. Creating Image Collections in GEE will be demonstrated in the next section of the tutorial. 
  
 
 
@@ -49,13 +49,13 @@ GEE accepts a number of data formats namely: shapefiles, raster images,and CSV t
 
 .. image:: ../_static/sepal/uploading_data.PNG
    :align: center
-   :width: 800
+   :width: 900
    :alt: GEE_Interface
 
 2. Clicking on the  **New** button will list the acceptable options, including **Raster** (Geotiffs or TFRecords), **Vector** (Shapefiles) and **Data tables** (CSV files), which will be described in the following subsections.
 
-2.1.Uploading Vector Files
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+Uploading Vector Files
+~~~~~~~~~~~~~~~~~~~~~~
 
 .. Note::
    In SEPAL-SDG 15.4.2 :sub:`beta` custom country boundaries need to be uploaded in vector format.
@@ -90,7 +90,7 @@ Any file errors will be highlighted by the uploader, as in the example below:
    :width: 300
    :alt: Assets_listed
 
-5. Clicking on the asset will open an asset details window :The asset is ready for use. You can now visualize, share or delete it accordingly 
+5. Clicking on the asset will open an asset details window ; The asset is ready for use. You can now visualize, share or delete it accordingly.
 
 .. image../_static/sepal/asset_details_gee.PNG
    :align: center
@@ -142,7 +142,7 @@ To create an Image Collection;
 
 .. image:: ../_static/sepal/naming_image_collection.png
    :align: center
-   :width: 700
+   :width: 500
    :alt: Creating Image-collection
 
 4. Repeat this for each asset. Clicking on the Image Collection(in the asset list) should now show all the images that are contained in that collection and should now be ready to be used in your analysis or visualization.
@@ -153,7 +153,7 @@ To create an Image Collection;
    :alt: Image-collection-result
 
 
-Uploading  Table files
+Uploading  Table Files
 ~~~~~~~~~~~~~~~~~~~~~~
 Tabular data can be uploaded into Google Earth Engine as comma-separated values (CSV) or Javascript Object Notation(JSON) files :code:`.csv`, or :code:`.json`). To upload a tabular files do the following:
 
@@ -172,7 +172,7 @@ Tabular data can be uploaded into Google Earth Engine as comma-separated values 
 
 .. _Vector_File_Manager:
 
-Uploading vector files into SEPAL via the Vector File Manager.
+Uploading Vector Files into SEPAL via the Vector File Manager.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Apart from Google Earth Engine,you can directly upload your tabular datasets ( vector or CSV tables) into the SEPAL environment through the Vector File Manager.Read more on the `Vector File Manager here <https://docs.sepal.io/en/latest/modules/dwn/vector_manager.html>`_.
@@ -182,7 +182,7 @@ Apart from Google Earth Engine,you can directly upload your tabular datasets ( v
    
 .. image:: ../_static/sepal/uploading_csv.PNG
    :align: center
-   :width: 800
+   :width: 700
    :alt: Vector File Manager Interface
 
 3. Clicking on the drop down arrow allows you to select the table type.(Accepted formats are shapefiles :code:`.shp` and table file :code:`.csv`)
@@ -190,14 +190,14 @@ Apart from Google Earth Engine,you can directly upload your tabular datasets ( v
 
 .. image:: ../_static/sepal/uploading_csv.PNG
    :align: center
-   :width: 1000
+   :width: 800
    :alt:   Uploading Vector Files.
 
 5. The vector file manager notifies you when the importation is complete and shows its location as follows:
    
 .. image:: ../_static/sepal/importation_complete.PNG
    :align: center
-   :width: 1000
+   :width: 1200
    :alt: Vector File Upload Notification
 
 6. To locate the file you just uploaded into SEPAL, Click on the Module_Results > AOI in the Home page:

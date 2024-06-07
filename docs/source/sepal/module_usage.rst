@@ -1,4 +1,4 @@
-Module user interface
+Module User Interface
 =====================
 
 
@@ -8,7 +8,7 @@ The SEPAL interface and the SEPAL-SDG 15.4.2 :sub:`beta` module
 New SEPAL users are recommended to look over the interface and familiarize themselves with the SEPAL interface, main tools,functionalities and workflows. A detailed description of the features can be consulted in the `SEPAL documentation <https://docs.sepal.io/en/latest/setup/presentation.html#sepal-interface>`_.
 
 
-Setting up a SEPAL instance
+Setting up a SEPAL Instance
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 SEPAL-applications such as the SEPAL-SDG 15.4.2 :sub:`beta` make use of instances (computational/processing units); running them will use your SEPAL computing resources.
 
@@ -21,7 +21,7 @@ Selecting an app automatically initiates the smallest instance to run the SEPAL 
    :width: 600
    :alt: Setting_instances
 
-2. Type the instance name (In our case **m2** or **m4** should suffice), then press **ENTER**.
+2. Type the instance name ( e.g. **t1**, **m2** or **m4** . In our case since computation especially for larger countries are carried out in GEE ,a smaller instance like *t1* should suffice), then press **ENTER**.
 3. Wait for the instance to finish loading.
 4. Once completed, go back to the dashboard of the application and launch your app, this will automatically use the instance you have set.
 
@@ -37,13 +37,13 @@ To access the the SEPAL-SDG 15.4.2 :sub:`beta` module use the `apps tab <https:/
 
 The module should look like the image below. As with any other SEPAL module, SEPAL-SDG 15.4.2 :sub:`beta` is divided into two main sections:
 
-- **Process drawers**: Located on the top left of the interface,this is where you find the processing steps to accomplish the goal of the module. In SEPAL-SDG 15.4.2 :sub:`beta`, this is composed by 4 processing steps: Area of Interest; Land Cover Settings; Indicator Settings and Results.
+- **Process drawers**: Located on the top left of the interface,this is where you find the processing steps to accomplish the goal of the module. In SEPAL-SDG 15.4.2 :sub:`beta`, this is composed of four processing steps: Area of Interest; Land Cover Settings; Indicator Settings and Results.
 
-- **Help drawers**: Located just below the process drawers,the help drawers describes the tool, its objectives and gives a background on its development. In SEPAL-SDG 15.4.2 :sub:`beta`,its composed of the source code (the module was developed under a MIT license, which means that the development is freely accessible, and the code is public in GitHub); the Wiki (the latest documentation on the tool) and the Bug report (use this section to report any unexpected results or behavior. To do so, please follow the `contribution guidelines <https://github.com/dfguerrerom/sepal_mgci/blob/master/CONTRIBUTE.md>`_.)
+- **Help drawers**: Located just below the process drawers,the help drawers describes the tool, its objectives and gives a background on its development. In SEPAL-SDG 15.4.2 :sub:`beta`, the Help drawer is composed of the source code (the module was developed under a MIT license, which means that the development is freely accessible, and the code is public in GitHub); the Wiki (the latest documentation on the tool) and the Bug report (use this section to report any unexpected results or behavior. To do so, please follow the `contribution guidelines <https://github.com/dfguerrerom/sepal_mgci/blob/master/CONTRIBUTE.md>`_.)
 
 .. image:: ../_static/sepal/module_interface.PNG
    :align: center
-   :width: 1000
+   :width: 1100
    :alt: MGCI module interface
 
 
@@ -74,20 +74,20 @@ Calculating SDG Indicator 15.4.2
 
 Conceptual Framework
 ^^^^^^^^^^^^^^^^^^^^
-This section will guide you through the sequence of processing steps to calculate SDG indicator 15.4.2.
+This section will guide you through the computational steps of SDG Indicator 15.4.2.
 
-Our main goal is to assess the changes in land cover in mountain areas by bioclimatic belts. The algorithm works using land cover data, a digital elevation model, a mountain area map and a national administrative boundary layer.
+With the main goal of assessing the changes in land cover in mountain areas by bioclimatic belts,the algorithm works using land cover data, a digital elevation model, a mountain area map and a national administrative boundary layer.
 
-Overview of Sub-Indicator 15.4.2 :sub:`a`: (Mountain Green Cover Index)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Overview of Sub-Indicator 15.4.2a : (Mountain Green Cover Index)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-**Sub-indicator 15.4.2a: Mountain Green Cover Index (MGCI)**, is designed to measure the extent and changes of green cover - i.e. forest, shrubs, trees, pasture land, cropland, etc. – in mountain areas. MGCI is defined as the percentage of green cover over the total surface of the mountain area of a given country and for given reporting year.
+**Sub-indicator 15.4.2a: Mountain Green Cover Index (MGCI)**, measures the extent of changes in green cover - i.e. forest, shrubs, trees, pasture land, cropland, etc. – occurring in  mountain areas. MGCI is defined as the percentage of green cover over the total surface of the mountain area of a given country and for given reporting year.
 
 The aim of the index is to monitor the evolution of the green cover and thus assess the status of conservation of mountain ecosystems and is defined as follows:
 
 .. math::
     
-    MGCI = (Mountain Green Cover Area n)/(Total Mountain Area)
+    MGCI = (Mountain Green Cover Area n) / (Total Mountain Area)
 
 Where: 
 
@@ -97,7 +97,9 @@ Where:
 Overview of Sub-Indicator 15.4.2b (Proportion of Degraded Mountain Land)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-**Sub-indicator 15.4.2b, Proportion Degraded Mountain Land**, is designed to monitor the extent of degraded mountain land as a result of land cover change of a given country and for given reporting year. Similarly to sub-indicator ‘’trends in land cover” under SDG Indicator 15.3.1 (Sims et al. 2021), mountain ecosystem degradation and recovery is assessed based on the definition of land cover type transitions that constitute degradation, as either improving, stable or degraded. The definition of degradation adopted for the computation of this indicator is the one established Intergovernmental Science-Policy Platform on Biodiversity and Ecosystem Services (IPBES).
+**Sub-indicator 15.4.2b, Proportion Degraded Mountain Land**, is designed to monitor the extent of degraded mountain land as a result of land cover change of a given country and for given reporting year. 
+
+Similarly to sub-indicator ‘’trends in land cover” under SDG Indicator 15.3.1 (Sims et al. 2021), mountain ecosystem degradation and recovery is assessed based on the definition of land cover type transitions that constitute degradation, as either improving, stable or degraded. The definition of degradation adopted for the computation of this indicator is the one established Intergovernmental Science-Policy Platform on Biodiversity and Ecosystem Services (IPBES).
 
 .. math::
 
@@ -110,7 +112,9 @@ Where:
 
 **Disaggregation:**
 
-In the computation,sub-indicator 15.4.2a is disaggregated by the 10 SEEA classes based on UN Statistical Division (2014).Both of these sub-indicators are disaggregated by mountain bioclimatic belts as defined by Körner et al. (2011).  Those values are reported both as proportions (percent) and area (in square kilometres)
+In the computation,sub-indicator 15.4.2a is disaggregated by the 10 SEEA classes based on UN Statistical Division (2014).
+
+Both sub-indicators  A and B are disaggregated by mountain bioclimatic belts as defined by Körner et al. (2011).  Those values are reported both as proportions (percent) and area (in square kilometres)
 
 More detailed information on the overall conceptual framework of the indicator is available in the `indicator's metadata <https://unstats.un.org/sdgs/metadata/files/Metadata-15-04-02.pdf>`_.
 
@@ -132,7 +136,7 @@ A pop-up displays the available options to set your AoI,namely:
 
 .. image:: ../_static/sepal/defining_aoi.PNG
    :align: center
-   :width: 800
+   :width: 900
    :alt: Defining_AOI
 
 
@@ -142,15 +146,15 @@ A pop-up displays the available options to set your AoI,namely:
 **2.The Administrative definitions option uses the predifined administrative boundary layers available by default in the module.(FAO GAUL,2015),To define the Area of Interest using this option:**
 
 - Select **Country** under AOI selection method.
-- In the dropdown list that will appear, select the country or territory in which you want to calculate SDG Indicator 15.4.2. In this example, we will select Nepal, as shown below.
+- In the dropdown list that will appear, select the country or territory in which you want to calculate SDG Indicator 15.4.2. In this example, we will select Nepal, as shown below;
 
 .. image:: ../_static/sepal/aoi_definition_country.PNG
    :align: center
-   :width: 450
+   :width: 400
    :alt: selecting_nepal
 
 
-- Click on **Select Area of Interest (AOI)** and the map will display your selection. A corresponding legend is also displayed. The algorithm automatically generates a legend based on the mountain bioclimatic belt classes and the area for each of them as defined in the global mountain map developed by FAO to compute this indicator. 
+- Clicking on the :guilabel:`Select Area of Interest (AOI)`  will display a map with your selection. A corresponding legend is also displayed. The algorithm automatically generates a legend based on the mountain bioclimatic belt classes.The area for each of the bioclimatic belts is also aggregated for each bioclimatic belt. 
 
 .. image:: ../_static/sepal/aoi_defined.PNG
    :align: center
@@ -159,7 +163,7 @@ A pop-up displays the available options to set your AoI,namely:
 
 .. warning:: The  administrative boundaries available on SEPAL-SDG 15.4.2 :sub:`beta` are extracted from FAO GAUL (Global Administrative Unit Layers) 2015 data set. The designations employed and the presentation of material on this map do not imply the expression of any opinion whatsoever on the part of the Secretariat of the United Nations concerning the legal status of any country, territory, city or area or of its authorities, or concerning the delimitation of its frontiers or boundaries. 
 
-**Custom geometries**
+**Custom Geometries**
 
 **3.The Custom layers option allow users to use their own national administrative boundary layers.** To define the Area of Interest using your own custom administrative boundary layer you have two options: use a vector file that you have previously uploaded in GEE as an asset (GEE asset name option), or use a vector file that you have previously uploaded in your SEPAL environment (Vector file option).
 
@@ -171,7 +175,7 @@ A pop-up displays the available options to set your AoI,namely:
 
 .. image:: ../_static/sepal/aoi_definition_gee.PNG
    :align: center
-   :width: 600
+   :width: 500
    :alt: Defining AOI using GEE Asset
 
 **Using a vector file;**
@@ -186,10 +190,10 @@ A pop-up displays the available options to set your AoI,namely:
    :alt: Defining AoI using a vector file
 
 
-Land cover dataset 
+Land Cover Dataset 
 ------------------
 
-Having defined the Area of Interest in the previous section,we are now going to stipulate which landcover data we are going to use in the analysis.
+Having defined the Area of Interest in the previous section,we are now going to stipulate which landcover dataset we are going to use in the analysis.
 
 .. Note:: As mentioned earlier,users have an option of using national datasets or the default (ESA-CCI derived ones). If using custom land cover maps , you will also be requested to set up land cover legend reclassification rules for Sub-indicator A and B, as well as the land cover transition matrix for computing Sub-Indicator B.This will be described in detail in the following sections.
 
@@ -200,7 +204,7 @@ Defining your land cover dataset
 
 .. image:: ../_static/sepal/default_datasets.PNG
    :align: center
-   :width: 900
+   :width: 1000
    :alt: land cover module
 
 
@@ -223,14 +227,14 @@ Using Custom Landcover maps
 
 .. image:: ../_static/sepal/custom_lc.PNG
    :align: center
-   :width: 900
+   :width: 1000
    :alt: Using-custom_landcover
 
 
 - This opens a new pop-up window that allows you to select your land cover maps as a GEE asset (remember that they must be stored as a `GEE image collection <https://developers.google.com/earth-engine/guides/ic_creating>`_ to be able to be imported.) Use the bottom arrow to choose your asset or copy/paste it directly from GEE. Then click on :guilabel:`Get classes`
 
 .. image:: ../_static/sepal/custom_datasets_1.PNG
-   :width: 900
+   :width: 1000
    :alt: custom_landcover map
 
 
@@ -268,7 +272,7 @@ Using a reclassification matrix
 
 
 - To upload a reclassification table,click on the arrow icon :guilabel:`⬆`  located in the top right corner of the reclassification pop-up window(see the image above).
-- Upload a reclassification matrix table in :code:`.CSV` format, indicating the SEEA land cover equivalent of the classes of your land cover map.Remember the table must already be uploaded in your SEPAL environment. To learn how to do that, please see the `how to exchange files in SEPAL <https://docs.sepal.io/en/latest/setup/filezilla.html#exchange-files-with-sepal>`_. 
+- Upload a reclassification matrix table in :code:`.CSV` format, indicating the SEEA land cover equivalent to the classes of your land cover map.Remember the table must already be uploaded in your SEPAL environment. To learn how to do that, please see the `how to exchange files in SEPAL <https://docs.sepal.io/en/latest/setup/filezilla.html#exchange-files-with-sepal>`_. 
 
 
 .. tip:: The target values must match the UN-SEAA classes codes for sub-indicator A (click on the info button at the top of the table for information on how the SEEA classes are coded).
@@ -281,19 +285,20 @@ Using a reclassification matrix
 
 
 - Clicking on :guilabel:`load` will automatically reclassify your landcover legend into the legend defined by the reclassification matrix.
-- **In certain cases, landcover classes might be classified as No Data,Missing Values or Unclassified.In such cases leaving the classes blank will be interpreted as O values by SEPAL SDG 15.4.2 :sub:`beta` and consequently not included in the computation. Note: Any values left blank will be interpreted as 0.**
+
+**In certain cases, landcover classes might be classified as No Data,Missing Values or Unclassified.In such cases leaving the classes blank will be interpreted as 0 values by SEPAL SDG 15.4.2 :sub:`beta` and consequently not included in the computation. Note: Any values left blank will be interpreted as 0.**
 
 .. Important:: For ease and comparability in defining the reclassifiaction matrix,the development team have created a CSV template that countries can download and modify for their use.You can also find the template in the :ref:`Annex section <Annex>`.Remember you have to upload the CSV file into SEPAL for you to use it.
 
 
 Manual Reclassification 
 ~~~~~~~~~~~~~~~~~~~~~~~~
-- Directly specify the reclassification rules by manually indicating the SEEA land cover equivalent (in the destination class column) of each of the land cover classes of your land cover map (in the original class column) as shown below:If need be,the information icon located at the tools ribbon(upper right hand can be used to refer to the UN-SEAA classes )
+- Directly specify the reclassification rules by manually indicating the SEEA land cover equivalent (in the destination class column) for each of the land cover classes of your land cover map (in the original class column) as shown below:If need be,the information icon located at the tools ribbon upper right hand can be used to refer to the UN-SEAA classes .
 - After manually reclassifying your legend, you can use the save :guilabel:`💾` button located at the top of the table to save hte table as a CSV file, that can be used at a  future calculation instead of manually filling up the table again.
 
 .. image:: ../_static/sepal/custom_reclassification_sub_a.PNG
    :align: center
-   :width: 900
+   :width: 1000
    :alt: Manual reclassification.
 
 In our example, we will reclassify Nepal’s national land cover class using the following guide:
@@ -309,11 +314,11 @@ Reclassifying your landcover map legend for sub-Indicator B computation.
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 This step allows you to reclassify the legend of your land cover map for computing Sub-Indicator B. 
 
-.. Note:: In contrast to Sub-Indicator A, the land cover legend used for the calculation of Sub-Indicator B does not necessarily have to be the 10 UN-SEEA classes. In this sub-indicator, the UN-SEEA legend can be adapted to the national context to ensure that it adequately captures the key degradation and improvement transitions identified in the prior step. For instance, a given country may decide to differentiate "natural forests" from "tree plantations" in sub-indicator B. 
+.. Note:: In contrast to Sub-Indicator A, the land cover legend used for the calculation of Sub-Indicator B does not necessarily have to be the 10 UN-SEEA classes. In this sub-indicator, the classification legend can be adapted to the national context to ensure that it adequately captures the key degradation and improvement transitions identified in the country. For instance, a given country may decide to differentiate "natural forests" from "tree plantations" in sub-indicator B. 
 
 For this reason, this step allows users to apply a new reclassification, or alternatively, use the same reclassification rules defined in Sub-Indicator A. In the latter case,you can access the the reclassification matrix you created and saved earlier by clicking the upload button amnd choosing the file. For both cases, the land cover reclassification rules must be a :code:`.CSV` file, following the same method as in the prior step.
 
-Check the :ref:`Annex <Annex>` for the template that can be modified for your landcover legend.
+Check the :ref:`Annex <Annex>` for a template that can be modified for your landcover legend.
 
 
 Uploading a transition matrix for computing Sub-Indicator B
@@ -405,14 +410,14 @@ Defining parameters for Sub-indicator A: Mountain Green Cover Index
 
 .. image:: ../_static/sepal/defining_years_subA.PNG
    :align: center
-   :width: 900
+   :width: 1000
    :alt: Reclassify table
 
-**4. SEPAL SDG 15.4.2 :sub:`beta` offers the following advanced options:**
+4. SEPAL SDG 15.4.2 :sub:`beta` offers the following advanced options:
 
 .. image:: ../_static/sepal/advanced_settings.PNG
    :align: center
-   :width: 900
+   :width: 1000
    :alt: Advanced Options
 
 - Using Real Surface Area methods instead of Planimetric options used by default by SEPAL SDG 15.4.2 :sub:`beta`.(For more on this check the indicator's metadata )
@@ -446,16 +451,16 @@ Once you have set the parameters of each sub-indicator, the tool is now ready to
 
 .. image:: ../_static/sepal/defining_reporting_years_results.PNG
    :align: center
-   :width: 1000
+   :width: 1300
    :alt: Sub-indicator computations.
 
-1. Click on the :guilabel:`Calculate MGCI`  to initiate the computation.
+1. Click on the :guilabel:`Calculate MGCI` button to initiate the computation.
 
 2. Once computation is completed, you should see a resemblance of the image below:
 
 .. image:: ../_static/sepal/mgci_results_processing.PNG
    :align: center
-   :width: 1200
+   :width: 1300
    :alt: Reclassify table
 
 .. tip::
@@ -471,7 +476,8 @@ Once you have set the parameters of each sub-indicator, the tool is now ready to
 
 Calculation from Task
 ^^^^^^^^^^^^^^^^^^^^^
-As explained in the previous sections, SEPAL runs on the Google Earth Interface. This means that the computation is restricted by available GEE resources. One limitation,however, is the time allowable to get results on the fly (see `computation time out <https://developers.google.com/earth-engine/guides/debugging#timed-out>`_). So any computation that takes more than five minutes will automatically throw an exception. To overcome this limitation, the process will be executed as a task —which are operations that are capable of running much longer than the standard timeout.Simply put, the computation is redirected to run on  GEE as opposed to the module. If the computation is created as a task, you will see a similar message as the shown in the image below:
+As explained in the previous sections, SEPAL runs on the Google Earth Interface. This means that the computation is restricted by available GEE resources. One limitation,however, is the time allowable to get results on the fly (see `computation time out <https://developers.google.com/earth-engine/guides/debugging#timed-out>`_). So any computation that takes more than five minutes will automatically be thrown an exception. To overcome this limitation, the process will be executed as a task —which are operations that are capable of running much longer than the standard timeout.Simply put, the computation is redirected to run on  GEE as opposed to the module. If the computation is created as a task, you  will see a similar message as the shown in the image below:
+To showcase the Calculation from Task,an example on computation on the United States will be used.
 
 .. image:: ../_static/sepal/tasks_notification.PNG
    :align: center
@@ -492,7 +498,7 @@ Click on the **Export from Tasks** drawer on the left menu panel. This window hi
 
 .. image:: ../_static/sepal/export_from_task.PNG
    :align: center
-   :width: 900
+   :width: 1000
    :alt: Exporting task from file
 
 **1. To enable a computation from task; first we need to locate the tasks file within SEPAL.**
@@ -566,14 +572,14 @@ SEPAL-SDG 15.4.2 :sub:`beta` also allows users to explore the results of the com
 
 .. image:: ../_static/sepal/results_drawer.PNG
    :align: center
-   :width: 1000
+   :width: 1200
    :alt: Results drawer
 
 2. The **Visualization Tab**  on the top left of the Results dashboard generates a map of your AoI. Click on the tab and choose a year to visualize in the drop down list and click **+** as seen below:
 
 .. image:: ../_static/sepal/results_mapped.PNG
    :align: center
-   :width: 1000
+   :width: 1200
    :alt:   Visualization
 
 As seen above the map generated by the tool shows the landclasses and the degradation status for each of the years.
@@ -614,14 +620,14 @@ Annex
 
 This section contains supplementary information and resources for an enhanced understanding and operationalization of SEPAL-SDG 15.4.2 :sub:`beta`.
 
-Computation resources:Template Tables
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Computation resources:  Template Tables
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. Tip:: All the templates contain a README section to guide users to populate the template.
+.. Tip:: All the templates contain a README section to guide users in populating the templates for the transition and reclassification matrices.
 
 
-Template A :Custom Land Cover Map Reclassification Template.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Template A :Custom Land Cover Reclassification Template.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 In the computation of sub-indicator A using **custom** landcover maps,SEPAL SDG 15.4.2 :sub:`beta` calls for reclassifying the landcover legends into the UN-SEAA defined one.
 The development team recommends countries to adopt this template to reclassify their land-cover maps .(It is important to note that the origin and target names and codes must be properly defined for the reclassification to work properly) 

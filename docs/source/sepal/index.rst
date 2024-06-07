@@ -2,9 +2,9 @@
 SEPAL-SDG 15.4.2 :sub:`beta`
 ============================
 
-*SEPAL-SDG 15.4.2 :sub:`beta` is a tool to support the computation of SDG Indicator 15.4.2 namely: (a) **Mountain Green Cover Index** and (b) **Proportion of Degraded Mountain Land** using SEPAL (System for Earth Observation Data Access, Processing, and Analysis for Land Monitoring)*
+SEPAL-SDG 15.4.2  :sub:`beta`  is a tool to support the computation of SDG Indicator 15.4.2 namely: **Mountain Green Cover Index** and  **Proportion of Degraded Mountain Land** using SEPAL (System for Earth Observation Data Access, Processing, and Analysis for Land Monitoring)
 
-This guide will introduce you to SEPAL-SDG 15.4.2 :sub:`beta` , provide detailed instructions on setting-up the tool and computing both sub-indicators step-by-step with screenshots included for better comprehension.
+This guide will introduce you to SEPAL-SDG 15.4.2 :sub:`beta` , provide detailed instructions on setting-up the tool and computing both sub-indicators step-by-step.Screenshots,hints and tips have been included for better comprehension.
 
 
 General Information
@@ -13,7 +13,7 @@ General Information
 About SEPAL-SDG 15.4.2 :sub:`beta`
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-SEPAL-SDG 15.4.2 :sub:`beta` has been developed by the Food and Agriculture Organization (FAO) of the United Nations to support national authorities to compute and report against SDG Indicator 15.4.2. 
+SEPAL-SDG 15.4.2 :sub:`beta` has been developed by the Food and Agriculture Organization (FAO) of the United Nations to support national authorities to compute and report SDG Indicator 15.4.2. 
 
 SEPAL-SDG 15.4.2 :sub:`beta` is built on **SEPAL**, an open-source cloud-based platform that allows users to query and process satellite data quickly and efficiently, tailor products for local needs, and produce sophisticated and relevant geospatial analyses quickly.
 To know more about SEPAL visit the `SEPAL website <https://docs.sepal.io/en/latest/>`_.
