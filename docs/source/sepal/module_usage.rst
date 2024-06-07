@@ -154,7 +154,7 @@ A pop-up displays the available options to set your AoI,namely:
    :alt: selecting_nepal
 
 
-- Clicking on the :guilabel:`Select Area of Interest (AOI)`  will display a map with your selection. A corresponding legend is also displayed. The algorithm automatically generates a legend based on the mountain bioclimatic belt classes.The area for each of the bioclimatic belts is also displayed. 
+- Clicking on the :guilabel:`Select Area of Interest (AOI)`  will display a map with your selection. A corresponding legend is also displayed. The algorithm automatically generates a legend based on the mountain bioclimatic belt classes.The area for each of the bioclimatic belts is also aggregated for each bioclimatic belt. 
 
 .. image:: ../_static/sepal/aoi_defined.PNG
    :align: center
@@ -163,7 +163,7 @@ A pop-up displays the available options to set your AoI,namely:
 
 .. warning:: The  administrative boundaries available on SEPAL-SDG 15.4.2 :sub:`beta` are extracted from FAO GAUL (Global Administrative Unit Layers) 2015 data set. The designations employed and the presentation of material on this map do not imply the expression of any opinion whatsoever on the part of the Secretariat of the United Nations concerning the legal status of any country, territory, city or area or of its authorities, or concerning the delimitation of its frontiers or boundaries. 
 
-**Custom geometries**
+**Custom Geometries**
 
 **3.The Custom layers option allow users to use their own national administrative boundary layers.** To define the Area of Interest using your own custom administrative boundary layer you have two options: use a vector file that you have previously uploaded in GEE as an asset (GEE asset name option), or use a vector file that you have previously uploaded in your SEPAL environment (Vector file option).
 
@@ -175,7 +175,7 @@ A pop-up displays the available options to set your AoI,namely:
 
 .. image:: ../_static/sepal/aoi_definition_gee.PNG
    :align: center
-   :width: 600
+   :width: 500
    :alt: Defining AOI using GEE Asset
 
 **Using a vector file;**
@@ -190,10 +190,10 @@ A pop-up displays the available options to set your AoI,namely:
    :alt: Defining AoI using a vector file
 
 
-Land cover dataset 
+Land Cover Dataset 
 ------------------
 
-Having defined the Area of Interest in the previous section,we are now going to stipulate which landcover data we are going to use in the analysis.
+Having defined the Area of Interest in the previous section,we are now going to stipulate which landcover dataset we are going to use in the analysis.
 
 .. Note:: As mentioned earlier,users have an option of using national datasets or the default (ESA-CCI derived ones). If using custom land cover maps , you will also be requested to set up land cover legend reclassification rules for Sub-indicator A and B, as well as the land cover transition matrix for computing Sub-Indicator B.This will be described in detail in the following sections.
 
@@ -204,7 +204,7 @@ Defining your land cover dataset
 
 .. image:: ../_static/sepal/default_datasets.PNG
    :align: center
-   :width: 900
+   :width: 1000
    :alt: land cover module
 
 
@@ -227,14 +227,14 @@ Using Custom Landcover maps
 
 .. image:: ../_static/sepal/custom_lc.PNG
    :align: center
-   :width: 900
+   :width: 1000
    :alt: Using-custom_landcover
 
 
 - This opens a new pop-up window that allows you to select your land cover maps as a GEE asset (remember that they must be stored as a `GEE image collection <https://developers.google.com/earth-engine/guides/ic_creating>`_ to be able to be imported.) Use the bottom arrow to choose your asset or copy/paste it directly from GEE. Then click on :guilabel:`Get classes`
 
 .. image:: ../_static/sepal/custom_datasets_1.PNG
-   :width: 900
+   :width: 1000
    :alt: custom_landcover map
 
 
