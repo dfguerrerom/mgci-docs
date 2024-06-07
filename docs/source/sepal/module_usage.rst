@@ -136,7 +136,7 @@ A pop-up displays the available options to set your AoI,namely:
 
 .. image:: ../_static/sepal/defining_aoi.PNG
    :align: center
-   :width: 800
+   :width: 900
    :alt: Defining_AOI
 
 
@@ -146,15 +146,15 @@ A pop-up displays the available options to set your AoI,namely:
 **2.The Administrative definitions option uses the predifined administrative boundary layers available by default in the module.(FAO GAUL,2015),To define the Area of Interest using this option:**
 
 - Select **Country** under AOI selection method.
-- In the dropdown list that will appear, select the country or territory in which you want to calculate SDG Indicator 15.4.2. In this example, we will select Nepal, as shown below.
+- In the dropdown list that will appear, select the country or territory in which you want to calculate SDG Indicator 15.4.2. In this example, we will select Nepal, as shown below;
 
 .. image:: ../_static/sepal/aoi_definition_country.PNG
    :align: center
-   :width: 450
+   :width: 400
    :alt: selecting_nepal
 
 
-- Click on **Select Area of Interest (AOI)** and the map will display your selection. A corresponding legend is also displayed. The algorithm automatically generates a legend based on the mountain bioclimatic belt classes and the area for each of them as defined in the global mountain map developed by FAO to compute this indicator. 
+- Clicking on the :guilabel:`Select Area of Interest (AOI)`  will display a map with your selection. A corresponding legend is also displayed. The algorithm automatically generates a legend based on the mountain bioclimatic belt classes.The area for each of the bioclimatic belts is also displayed. 
 
 .. image:: ../_static/sepal/aoi_defined.PNG
    :align: center
