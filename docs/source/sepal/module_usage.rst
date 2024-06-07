@@ -8,7 +8,7 @@ The SEPAL interface and the SEPAL-SDG 15.4.2 :sub:`beta` module
 New SEPAL users are recommended to look over the interface and familiarize themselves with the SEPAL interface, main tools,functionalities and workflows. A detailed description of the features can be consulted in the `SEPAL documentation <https://docs.sepal.io/en/latest/setup/presentation.html#sepal-interface>`_.
 
 
-Setting up a SEPAL instance
+Setting up a SEPAL Instance
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 SEPAL-applications such as the SEPAL-SDG 15.4.2 :sub:`beta` make use of instances (computational/processing units); running them will use your SEPAL computing resources.
 
@@ -21,7 +21,7 @@ Selecting an app automatically initiates the smallest instance to run the SEPAL 
    :width: 600
    :alt: Setting_instances
 
-2. Type the instance name (In our case **m2** or **m4** should suffice), then press **ENTER**.
+2. Type the instance name ( e.g. **t1**, **m2** or **m4** . In our case since computation especially for larger countries are carried out in GEE ,a smaller instance like *t1* should suffice), then press **ENTER**.
 3. Wait for the instance to finish loading.
 4. Once completed, go back to the dashboard of the application and launch your app, this will automatically use the instance you have set.
 
@@ -37,13 +37,13 @@ To access the the SEPAL-SDG 15.4.2 :sub:`beta` module use the `apps tab <https:/
 
 The module should look like the image below. As with any other SEPAL module, SEPAL-SDG 15.4.2 :sub:`beta` is divided into two main sections:
 
-- **Process drawers**: Located on the top left of the interface,this is where you find the processing steps to accomplish the goal of the module. In SEPAL-SDG 15.4.2 :sub:`beta`, this is composed by 4 processing steps: Area of Interest; Land Cover Settings; Indicator Settings and Results.
+- **Process drawers**: Located on the top left of the interface,this is where you find the processing steps to accomplish the goal of the module. In SEPAL-SDG 15.4.2 :sub:`beta`, this is composed of four processing steps: Area of Interest; Land Cover Settings; Indicator Settings and Results.
 
-- **Help drawers**: Located just below the process drawers,the help drawers describes the tool, its objectives and gives a background on its development. In SEPAL-SDG 15.4.2 :sub:`beta`,its composed of the source code (the module was developed under a MIT license, which means that the development is freely accessible, and the code is public in GitHub); the Wiki (the latest documentation on the tool) and the Bug report (use this section to report any unexpected results or behavior. To do so, please follow the `contribution guidelines <https://github.com/dfguerrerom/sepal_mgci/blob/master/CONTRIBUTE.md>`_.)
+- **Help drawers**: Located just below the process drawers,the help drawers describes the tool, its objectives and gives a background on its development. In SEPAL-SDG 15.4.2 :sub:`beta`, the Help drawer is composed of the source code (the module was developed under a MIT license, which means that the development is freely accessible, and the code is public in GitHub); the Wiki (the latest documentation on the tool) and the Bug report (use this section to report any unexpected results or behavior. To do so, please follow the `contribution guidelines <https://github.com/dfguerrerom/sepal_mgci/blob/master/CONTRIBUTE.md>`_.)
 
 .. image:: ../_static/sepal/module_interface.PNG
    :align: center
-   :width: 1000
+   :width: 1100
    :alt: MGCI module interface
 
 
@@ -74,20 +74,20 @@ Calculating SDG Indicator 15.4.2
 
 Conceptual Framework
 ^^^^^^^^^^^^^^^^^^^^
-This section will guide you through the sequence of processing steps to calculate SDG indicator 15.4.2.
+This section will guide you through the computational steps of SDG Indicator 15.4.2.
 
-Our main goal is to assess the changes in land cover in mountain areas by bioclimatic belts. The algorithm works using land cover data, a digital elevation model, a mountain area map and a national administrative boundary layer.
+With the main goal of assessing the changes in land cover in mountain areas by bioclimatic belts,the algorithm works using land cover data, a digital elevation model, a mountain area map and a national administrative boundary layer.
 
-Overview of Sub-Indicator 15.4.2 :sub:`a`: (Mountain Green Cover Index)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Overview of Sub-Indicator 15.4.2a : (Mountain Green Cover Index)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-**Sub-indicator 15.4.2a: Mountain Green Cover Index (MGCI)**, is designed to measure the extent and changes of green cover - i.e. forest, shrubs, trees, pasture land, cropland, etc. – in mountain areas. MGCI is defined as the percentage of green cover over the total surface of the mountain area of a given country and for given reporting year.
+**Sub-indicator 15.4.2a: Mountain Green Cover Index (MGCI)**, measures the extent of changes in green cover - i.e. forest, shrubs, trees, pasture land, cropland, etc. – occurring in  mountain areas. MGCI is defined as the percentage of green cover over the total surface of the mountain area of a given country and for given reporting year.
 
 The aim of the index is to monitor the evolution of the green cover and thus assess the status of conservation of mountain ecosystems and is defined as follows:
 
 .. math::
     
-    MGCI = (Mountain Green Cover Area n)/(Total Mountain Area)
+    MGCI = (Mountain Green Cover Area n) / (Total Mountain Area)
 
 Where: 
 
@@ -97,7 +97,9 @@ Where:
 Overview of Sub-Indicator 15.4.2b (Proportion of Degraded Mountain Land)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-**Sub-indicator 15.4.2b, Proportion Degraded Mountain Land**, is designed to monitor the extent of degraded mountain land as a result of land cover change of a given country and for given reporting year. Similarly to sub-indicator ‘’trends in land cover” under SDG Indicator 15.3.1 (Sims et al. 2021), mountain ecosystem degradation and recovery is assessed based on the definition of land cover type transitions that constitute degradation, as either improving, stable or degraded. The definition of degradation adopted for the computation of this indicator is the one established Intergovernmental Science-Policy Platform on Biodiversity and Ecosystem Services (IPBES).
+**Sub-indicator 15.4.2b, Proportion Degraded Mountain Land**, is designed to monitor the extent of degraded mountain land as a result of land cover change of a given country and for given reporting year. 
+
+Similarly to sub-indicator ‘’trends in land cover” under SDG Indicator 15.3.1 (Sims et al. 2021), mountain ecosystem degradation and recovery is assessed based on the definition of land cover type transitions that constitute degradation, as either improving, stable or degraded. The definition of degradation adopted for the computation of this indicator is the one established Intergovernmental Science-Policy Platform on Biodiversity and Ecosystem Services (IPBES).
 
 .. math::
 
@@ -110,7 +112,9 @@ Where:
 
 **Disaggregation:**
 
-In the computation,sub-indicator 15.4.2a is disaggregated by the 10 SEEA classes based on UN Statistical Division (2014).Both of these sub-indicators are disaggregated by mountain bioclimatic belts as defined by Körner et al. (2011).  Those values are reported both as proportions (percent) and area (in square kilometres)
+In the computation,sub-indicator 15.4.2a is disaggregated by the 10 SEEA classes based on UN Statistical Division (2014).
+
+Both sub-indicators  A and B are disaggregated by mountain bioclimatic belts as defined by Körner et al. (2011).  Those values are reported both as proportions (percent) and area (in square kilometres)
 
 More detailed information on the overall conceptual framework of the indicator is available in the `indicator's metadata <https://unstats.un.org/sdgs/metadata/files/Metadata-15-04-02.pdf>`_.
 
