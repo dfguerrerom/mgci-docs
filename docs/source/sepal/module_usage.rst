@@ -1,4 +1,4 @@
-Module user interface
+Module User Interface
 =====================
 
 
