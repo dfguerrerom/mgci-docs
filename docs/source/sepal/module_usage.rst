@@ -1,18 +1,18 @@
 Module user interface
 =====================
 
-The SEPAL interface and the SEPAL-SDG 15.4.2 :sub:`beta` module
+The SEPAL interface and the SEPAL-SDG 15.4.2 module
 ---------------------------------------------------------------
 
 New SEPAL users are recommended to familiarize themselves with the SEPAL interface, main tools, functionalities and workflows (for more information, see `SEPAL documentation <https://docs.sepal.io/en/latest/setup/presentation.html#sepal-interface>`_).
 
 Setting up a SEPAL instance
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-SEPAL applications such as the SEPAL-SDG 15.4.2 :sub:`beta` tool make use of instances (computational/processing units); running them will use your SEPAL computing resources.
+SEPAL applications such as the SEPAL-SDG 15.4.2 tool make use of instances (computational/processing units); running them will use your SEPAL computing resources.
 
 Selecting an app automatically initiates the smallest instance to run the SEPAL sandbox. 
 
-However, in some cases, especially where more powerful processing is required, you might need larger instances. For this reason, you may need to manually set up a larger SEPAL instance before running the SEPAL-SDG 15.4.2 :sub:`beta` tool. 
+However, in some cases, especially where more powerful processing is required, you might need larger instances. For this reason, you may need to manually set up a larger SEPAL instance before running the SEPAL-SDG 15.4.2 tool. 
 
 To manually set up an instance:
 
@@ -27,10 +27,10 @@ To manually set up an instance:
 3. Wait for the instance to finish loading.
 4. Once completed, go back to the dashboard of the application and launch your app, which will automatically use the instance you have set.
 
-Accessing the SEPAL-SDG 15.4.2 :sub:`beta` tool
+Accessing the SEPAL-SDG 15.4.2 tool
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-To access the the SEPAL-SDG 15.4.2 :sub:`beta` module, use the `Apps tab <https://docs.sepal.io/en/latest/setup/presentation.html#apps-tab>`_ and navigate through the list of apps until you find the module (or type "SEPAL-SDG 15.4.2" in the search box). Once you have found it, hover over the app drawer and patiently wait until the SEPAL-SDG 15.4.2 :sub:`beta` module is displayed (it may take a few minutes). 
+To access the the SEPAL-SDG 15.4.2 module, use the `Apps tab <https://docs.sepal.io/en/latest/setup/presentation.html#apps-tab>`_ and navigate through the list of apps until you find the module (or type "SEPAL-SDG 15.4.2" in the search box). Once you have found it, hover over the app drawer and patiently wait until the SEPAL-SDG 15.4.2 module is displayed (it may take a few minutes). 
 
 .. image:: ../_static/sepal/accessing_sepal_module.png
    :align: center
@@ -39,18 +39,18 @@ To access the the SEPAL-SDG 15.4.2 :sub:`beta` module, use the `Apps tab <https:
 
 The module should look like the image below. 
 
-As with any other SEPAL module, SEPAL-SDG 15.4.2 :sub:`beta` is divided into two main sections:
+As with any other SEPAL module, SEPAL-SDG 15.4.2 is divided into two main sections:
 
-- **Process drawers**: Located in the upper-left of the interface, these processing steps to accomplish the goal of the module. In SEPAL-SDG 15.4.2 :sub:`beta`, there are four processing steps: **Area of Interest**, **Land Cover Settings**, **Indicator Settings**, and **Results**.
+- **Process drawers**: Located in the upper-left of the interface, these processing steps to accomplish the goal of the module. In SEPAL-SDG 15.4.2, there are four processing steps: **Area of Interest**, **Land Cover Settings**, **Indicator Settings**, and **Results**.
 
-- **Help drawers**: Located just below the **Process** drawers, the **Help** drawers describe the tool, its objectives and gives a background on its development. In SEPAL-SDG 15.4.2 :sub:`beta`, it's composed of the **source code** (the module was developed under a MIT license, which means that the development is freely accessible, and the code is public in GitHub); the **Wiki** (the latest documentation on the tool) and the **Bug report** (use this section to report any unexpected results or behaviour by following the `contribution guidelines <https://github.com/dfguerrerom/sepal_mgci/blob/master/CONTRIBUTE.md>`_.)
+- **Help drawers**: Located just below the **Process** drawers, the **Help** drawers describe the tool, its objectives and gives a background on its development. In SEPAL-SDG 15.4.2, it's composed of the **source code** (the module was developed under a MIT license, which means that the development is freely accessible, and the code is public in GitHub); the **Wiki** (the latest documentation on the tool) and the **Bug report** (use this section to report any unexpected results or behaviour by following the `contribution guidelines <https://github.com/dfguerrerom/sepal_mgci/blob/master/CONTRIBUTE.md>`_.)
 
 .. image:: ../_static/sepal/module_interface.PNG
    :align: center
    :width: 1000
    :alt: MGCI module interface
 
-Personalizing the SEPAL-SDG 15.4.2 :sub:`beta` tool
+Personalizing the SEPAL-SDG 15.4.2 tool
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 SEPAL includes functionalities for users to personalize the appearance of the module to their liking.
@@ -66,7 +66,7 @@ The SEPAL SDG 14.4.2 :sub:`beta` tool allows users to choose between a dark or l
 
 **Language selection:**
 
-The SEPAL-SDG 15.4.2 :sub:`beta` tool is currently only available in English. New language versions will be made available soon. 
+The SEPAL-SDG 15.4.2 tool is currently only available in English. New language versions will be made available soon. 
 
 Calculating SDG Indicator 15.4.2
 --------------------------------
@@ -155,7 +155,7 @@ A pop-up window displays the available options to set your AOI:
    :width: 700
    :alt: Displaying Nepal
 
-.. Attention:: The  administrative boundaries available on SEPAL-SDG 15.4.2 :sub:`beta` are extracted from the FAO GAUL (2015) dataset. The designations employed and the presentation of material on this map do not imply the expression of any opinion whatsoever on the part of the Secretariat of the United Nations concerning the legal status of any country, territory, city or area or of its authorities, or concerning the delimitation of its frontiers or boundaries. 
+.. Attention:: The  administrative boundaries available on SEPAL-SDG 15.4.2 are extracted from the FAO GAUL (2015) dataset. The designations employed and the presentation of material on this map do not imply the expression of any opinion whatsoever on the part of the Secretariat of the United Nations concerning the legal status of any country, territory, city or area or of its authorities, or concerning the delimitation of its frontiers or boundaries. 
 
 **Custom geometries**
 
@@ -322,7 +322,7 @@ Uploading a transition matrix for computing Sub-indicator B
 
 .. Important:: **This step should only be completed if you have provided different land cover reclassification rules for Sub-indicator B in the prior step.** 
 
-The next step is to upload a land cover transition matrix that defines the transitions between the land cover classes. We will consider the transitions to be either **degraded** , **stable** or **improved** (consistent with the legend you provided in the prior step). This will allow SEPAL-SDG 15.4.2 :sub:`beta` to compute this sub-indicator in the next processing steps.
+The next step is to upload a land cover transition matrix that defines the transitions between the land cover classes. We will consider the transitions to be either **degraded** , **stable** or **improved** (consistent with the legend you provided in the prior step). This will allow SEPAL-SDG 15.4.2 to compute this sub-indicator in the next processing steps.
 
 Here again the transition matrix should have been previously uploaded in your SEPAL environment as a :code:`.csv` file. Remember that the transition matrix must include the following columns: **from_code, to_code, from_name, to_name, impact_name, impact_code** (indication of change between land cover classes).
 
@@ -338,7 +338,7 @@ Check the :ref:`Annex <Annex>` for the transition matrix template.
 Changing the default land cover transition matrix for computing Sub-indicator B using default global land cover data
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-As explained earlier, SEPAL-SDG 15.4.2 :sub:`beta` gives users the liberty to modify the land cover transition matrix even when the default landcover maps have been used. This capability allows national authorities to adapt the transition matrix to their local context and consequently capture the main land degradation processes occurring in the country without needing to provide alternative land cover data.
+As explained earlier, SEPAL-SDG 15.4.2 gives users the liberty to modify the land cover transition matrix even when the default landcover maps have been used. This capability allows national authorities to adapt the transition matrix to their local context and consequently capture the main land degradation processes occurring in the country without needing to provide alternative land cover data.
 
 This can be done by selecting :guilabel:`Yes` to the second question of the land cover dataset questionnaire, and then selecting :guilabel:`Open Parameter Settings`.
 
@@ -455,7 +455,7 @@ Once you have set the parameters of each sub-indicator, the tool is now ready to
 
 .. tip::
 
-   SEPAL-SDG 15.4.2 :sub:`beta` calculates the indicator values assuming planimetric area methods by default. To calculate indicator values using the real surface area method (a method that takes into account the third dimension of mountain surfaces through the use of digital elevation models and is known to derive closer estimates of the real surface area of mountain regions), select **Use Real Surface Area**.
+   SEPAL-SDG 15.4.2 calculates the indicator values assuming planimetric area methods by default. To calculate indicator values using the real surface area method (a method that takes into account the third dimension of mountain surfaces through the use of digital elevation models and is known to derive closer estimates of the real surface area of mountain regions), select **Use Real Surface Area**.
 
 3. The entire computation is done on the fly. Thus, you need to export your reporting tables to visualize and use them as required by selecting :guilabel:`Export Reporting Tables`.  When completed, a message will appear indicating where the tables have been exported. 
 
@@ -482,7 +482,7 @@ The computation in GEE can be seen running under the GEE tasks as shown here:
 
 When computation can’t be done on the fly, a new file containing the ID of the task is created and stored in the folder, **../module_results/sdg_indicators/mgci/tasks**. This file will help you to track the status of the task at any moment. An alternative way to track the progress of the task is by using the **GEE task tracker** as shown above, where you can find the tasks that are running on the server.
 
-Once the computation in GEE is complete, return to SEPAL-SDG 15.4.2 :sub:`beta` to continue with the rest of the computation.
+Once the computation in GEE is complete, return to SEPAL-SDG 15.4.2 to continue with the rest of the computation.
 
 Select the **Export from tasks** drawer in the left menu panel. This window highlights the steps to process GEE tasks as seen below:
 
@@ -553,7 +553,7 @@ As explained earlier, once computation is completed, users can export the report
 Visualizing results through the MGCI Results drawer
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-To explore the results of the computation visually, SEPAL-SDG 15.4.2 :sub:`beta` can generate dashboards and maps that show changes that occurred in the AOI, simply by following these steps:
+To explore the results of the computation visually, SEPAL-SDG 15.4.2 can generate dashboards and maps that show changes that occurred in the AOI, simply by following these steps:
 
 1.	Select the **MGCI results** drawer in the left panel (as seen below).
 
@@ -603,7 +603,7 @@ The results (shown as transitions in land cover types for a given belt) will be 
 Annex
 -----
 
-This section contains supplementary information and resources for an enhanced understanding and operationalization of SEPAL-SDG 15.4.2 :sub:`beta`.
+This section contains supplementary information and resources for an enhanced understanding and operationalization of SEPAL-SDG 15.4.2.
 
 Computation resources: template tables
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
