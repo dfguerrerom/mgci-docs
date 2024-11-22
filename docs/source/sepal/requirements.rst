@@ -4,9 +4,9 @@ Module requirements
 Initial setup
 ^^^^^^^^^^^^^
 
-SEPAL is closely linked to Google Earth Engine (GEE) – a Google-powered Earth-observation cloud-computing platform – as it builds upon many of its functionalities. This means that to run the SEPAL-SDG 15.4.2 :sub:`beta` tool, you will need to connect your SEPAL and GEE accounts.
+SEPAL is closely linked to Google Earth Engine (GEE) – a Google-powered Earth-observation cloud-computing platform – as it builds upon many of its functionalities. This means that to run the SEPAL-SDG 15.4.2 tool, you will need to connect your SEPAL and GEE accounts.
 
-Before getting started with SEPAL-SDG 15.4.2 :sub:`beta`, you need to:
+Before getting started with SEPAL-SDG 15.4.2, you need to:
 
 - **create a SEPAL account** (see `this article <https://docs.sepal.io/en/latest/setup/register.html#sign-up-to-sepal>`_), then familiarize yourself with the tool by exploring its interface;
 - **create a Google Earth Engine (GEE) account** (see `this article <https://docs.sepal.io/en/latest/setup/gee.html#create-a-gee-account>`_), then `initialize the home folder <https://docs.sepal.io/en/latest/setup/gee.html#initialize-the-home-folder>`_; and
@@ -18,11 +18,11 @@ SDG Indicator 15.4.2 requires several spatial data inputs to be computed, namely
 
 - **Mountain Area Map** 
   
-For the purposes of standardization and international comparability of indicator values, SDG Indicator 15.4.2 adheres to the UNEP-WCMC mountain definition (UNEP-WCMC, 2002). The UNEP-WCMC method defines total global mountain area as the sum of seven classes (commonly known as **Kapos mountain classes**), based on elevation, slope and local elevation range parameters. This mountain area is subdivided into **bioclimatic belts** (**Nival, Alpine, Montane, Remaining Mountain Area**) based on average temperatures as defined by Körner *et al.* (2011). A global mountain area map based on these definitions and methodologies has been developed by FAO and is used by default by SEPAL-SDG 15.4.2 :sub:`beta` as part of the computations. 
+For the purposes of standardization and international comparability of indicator values, SDG Indicator 15.4.2 adheres to the UNEP-WCMC mountain definition (UNEP-WCMC, 2002). The UNEP-WCMC method defines total global mountain area as the sum of seven classes (commonly known as **Kapos mountain classes**), based on elevation, slope and local elevation range parameters. This mountain area is subdivided into **bioclimatic belts** (**Nival, Alpine, Montane, Remaining Mountain Area**) based on average temperatures as defined by Körner *et al.* (2011). A global mountain area map based on these definitions and methodologies has been developed by FAO and is used by default by SEPAL-SDG 15.4.2 as part of the computations. 
 
 - **National Administrative Boundary for the country of interest** 
   
-SEPAL-SDG 15.4.2 :sub:`beta` has been conceived to facilitate the computation of SDG Indicator 15.4.2 at country level. To facilitate this, the tool uses a default global data source for national boundaries: the FAO GAUL Global Administrative Unit Layers 2015 dataset. However, the tool also allows national agencies to use their own national country boundary layer if available. 
+SEPAL-SDG 15.4.2 has been conceived to facilitate the computation of SDG Indicator 15.4.2 at country level. To facilitate this, the tool uses a default global data source for national boundaries: the FAO GAUL Global Administrative Unit Layers 2015 dataset. However, the tool also allows national agencies to use their own national country boundary layer if available. 
 
 - **Collection of Land Cover Maps for the country of interest** 
   
@@ -34,10 +34,10 @@ Land cover maps spatially represent the physical coverage of the Earth's surface
  
 The collection of land cover maps to compute this indicator should be available from the year **2000**. SEPAL SDG 15.4.2 :sub:`beta` allows national authorities to use relevant national or regional land cover datasets.
 
-Similar to the national administrative boundary dataset, SEPAL-SDG 15.4.2 :sub:`beta` provides access to default land cover datasets selected by FAO to compute the indicator when national datasets are not available (see the :ref:`Data Sources section <DataSources>`_).
+Similar to the national administrative boundary dataset, SEPAL-SDG 15.4.2 provides access to default land cover datasets selected by FAO to compute the indicator when national datasets are not available (see the :ref:`Data Sources section <DataSources>`_).
   
 .. Note:: 
-   Country-defined datasets must be made available as GEE assets as an `image collection <https://developers.google.com/earth-engine/guides/ic_creating>`_ for SEPAL-SDG 15.4.2 :sub:`beta` to access it. This will be demonstrated in the next section of the tutorial.
+   Country-defined datasets must be made available as GEE assets as an `image collection <https://developers.google.com/earth-engine/guides/ic_creating>`_ for SEPAL-SDG 15.4.2 to access it. This will be demonstrated in the next section of the tutorial.
 
 Uploading files into Google Earth Engine
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -58,7 +58,7 @@ GEE accepts a number of data formats, namely: shapefiles, raster images, and .cs
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. Note::
-   In SEPAL-SDG 15.4.2 :sub:`beta`, custom country boundaries need to be uploaded in vector format.
+   In SEPAL-SDG 15.4.2, custom country boundaries need to be uploaded in vector format.
 
 1. To do so, choose the **Shapefiles** option in the dropdown list. A pop-up window will appear prompting you to navigate to the location of your data.
 
@@ -100,7 +100,7 @@ Any file errors will be highlighted by the uploader, as in the example below:
 Uploading raster files
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-When computing SDG 15.4.2, land cover maps are uploaded as raster files and made available as `image collections <https://developers.google.com/earth-engine/guides/ic_creating>`_ to be usable in SEPAL-SDG 15.4.2 :sub:`beta`. 
+When computing SDG 15.4.2, land cover maps are uploaded as raster files and made available as `image collections <https://developers.google.com/earth-engine/guides/ic_creating>`_ to be usable in SEPAL-SDG 15.4.2. 
 
 1. To upload the rasters, select **New** > Image Upload**.
 
@@ -167,7 +167,7 @@ Tabular data can be uploaded into GEE as a comma-separated value (.csv) file or 
    :alt: Geotiff upload
 
 .. tip::
-   Now that all of your files have been uploaded in GEE, you can now access and use your assets in SEPAL. Since you've already connected your GEE and SEPAL accounts, all of your assets are synced and available in SEPAL. You will be able to select them from the dropdown list, or copy and paste them directly from GEE when prompted in SEPAL-SDG 15.4.2 :sub:`beta`
+   Now that all of your files have been uploaded in GEE, you can now access and use your assets in SEPAL. Since you've already connected your GEE and SEPAL accounts, all of your assets are synced and available in SEPAL. You will be able to select them from the dropdown list, or copy and paste them directly from GEE when prompted in SEPAL-SDG 15.4.2
 
 .. _Vector_File_Manager:
 
