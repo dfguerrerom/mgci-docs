@@ -2,7 +2,7 @@ Module user interface
 =====================
 
 The SEPAL interface and the SEPAL-SDG 15.4.2 module
----------------------------------------------------------------
+---------------------------------------------------
 
 New SEPAL users are recommended to familiarize themselves with the SEPAL interface, main tools, functionalities and workflows (for more information, see `SEPAL documentation <https://docs.sepal.io/en/latest/setup/presentation.html#sepal-interface>`_).
 
@@ -28,7 +28,7 @@ To manually set up an instance:
 4. Once completed, go back to the dashboard of the application and launch your app, which will automatically use the instance you have set.
 
 Accessing the SEPAL-SDG 15.4.2 tool
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 To access the the SEPAL-SDG 15.4.2 module, use the `Apps tab <https://docs.sepal.io/en/latest/setup/presentation.html#apps-tab>`_ and navigate through the list of apps until you find the module (or type "SEPAL-SDG 15.4.2" in the search box). Once you have found it, hover over the app drawer and patiently wait until the SEPAL-SDG 15.4.2 module is displayed (it may take a few minutes). 
 
@@ -51,7 +51,7 @@ As with any other SEPAL module, SEPAL-SDG 15.4.2 is divided into two main sectio
    :alt: MGCI module interface
 
 Personalizing the SEPAL-SDG 15.4.2 tool
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 SEPAL includes functionalities for users to personalize the appearance of the module to their liking.
 

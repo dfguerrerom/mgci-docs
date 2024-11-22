@@ -26,7 +26,7 @@ Annexes
         - Manual steps to calculate Sub-indicator 15.4.2a in QGIS
         - Manual steps to calculate Sub-indicator 15.4.2b in QGIS
     
-    .. grid-item-card:: :fas:`table` Download World Mountain MAp
+    .. grid-item-card:: :fas:`table` Download World Mountain Map
         :link: ../annexes/annex4.html
 
         - World Mountain Map Layer
